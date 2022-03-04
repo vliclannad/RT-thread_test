@@ -30,6 +30,7 @@
   #define G_VAR_PREFIX extern  //前缀G_VAR_PREFIX定义为"extern"
 #endif
 //（在此增加全局变量）
+G_VAR_PREFIX vuint16_t grt_flag;
 //（系统保留）
 G_VAR_PREFIX vuint16_t gcRecvLen;
 G_VAR_PREFIX vuint16_t gcRecvDCLen;

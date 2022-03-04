@@ -23,7 +23,10 @@ void thread_greenlight()
     	{
     		uart_send_string(UART_User,(void *)"在绿灯线程中，收到绿灯事件，绿灯反转\r\n");
             gpio_reverse(LIGHT_GREEN);     //转换绿灯状态
-			rt_event_send(EventWord,BLUE_LIGHT_EVENT);
+			if(grt_flag==1)
+			{
+				rt_event_send(EventWord,BLUE_LIGHT_EVENT);
+			}
     	}
     }//（2）======主循环（结束）==========================================
 }
