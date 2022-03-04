@@ -1,4 +1,4 @@
-obj/thread_greenlight.o: srcc/thread_greenlight.c \
+obj/thread_rulechoose.o: srcc/thread_rulechoose.c \
  E:\GIT\RT-thread_test\07_AppPrg/includes.h \
  E:\GIT\RT-thread_test\05_UserBoard/user.h \
  E:\GIT\RT-thread_test\05_UserBoard/printf.h \
