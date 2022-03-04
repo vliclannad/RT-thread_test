@@ -28,6 +28,7 @@ void app_init(void)
 	gpio_init(LIGHT_BLUE,GPIO_OUTPUT,LIGHT_OFF);
 	uart_init(UART_User,115200); 
 	//（1.7）使能模块中断
+	uart_enable_re_int(UART_User);
 	//（1.8）【不变】开总中断
 	ENABLE_INTERRUPTS;
 	printf("【金葫芦提示】本程序为带RT-Thread的STM32用户程序\r\n");

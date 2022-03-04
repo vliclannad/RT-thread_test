@@ -13,14 +13,14 @@ void thread_bluelight()
     uint32_t recvedstate;
 
     printf("---第一次进入运行蓝灯线程!\r\n");
-    gpio_init(LIGHT_BLUE,GPIO_OUTPUT,LIGHT_OFF);
+    gpio_init(LIGHT_BLUE,GPIO_OUTPUT,LIGHT_ON);
     
 
     //（2）======主循环（开始）==========================================
     while (1)   //主循环
     {
       rt_event_recv(EventWord,BLUE_LIGHT_EVENT,RT_EVENT_FLAG_OR|RT_EVENT_FLAG_CLEAR,RT_WAITING_FOREVER,&recvedstate);//等待接收蓝灯事件信号
-      if(recvedstate==GREEN_LIGHT_EVENT)
+      if(recvedstate==BLUE_LIGHT_EVENT)
      {  //如果接收完成且正确
     	uart_send_string(UART_User,(void *)"----进入蓝灯线程-----\r\n");
     	uart_send_string(UART_User,(void *)"在蓝灯线程中，设置绿灯事件\r\n");

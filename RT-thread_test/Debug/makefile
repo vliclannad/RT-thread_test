@@ -33,11 +33,11 @@ SRC_sList := $(wildcard ./srcs/*.s)
 SRC_SList := $(wildcard ./srcs/*.S)
 
 #链接文件(.ld)的存储路径
-linkFile := "E:\毕业论文材料\RT-thread_test\03_MCU\Linker_file\STM32L431RCTX_FLASH.ld"
+linkFile := "E:\GIT\RT-thread_test\03_MCU\Linker_file\STM32L431RCTX_FLASH.ld"
 #定义生成的文件名
 finalGoal := RT-thread_test
 #定义头文件所在的路径
-include := -I"E:\毕业论文材料\RT-thread_test\.settings" -I"E:\毕业论文材料\RT-thread_test\01_Doc" -I"E:\毕业论文材料\RT-thread_test\02_CPU" -I"E:\毕业论文材料\RT-thread_test\03_MCU" -I"E:\毕业论文材料\RT-thread_test\04_GEC" -I"E:\毕业论文材料\RT-thread_test\05_UserBoard" -I"E:\毕业论文材料\RT-thread_test\06_SoftComponent" -I"E:\毕业论文材料\RT-thread_test\07_AppPrg" -I"E:\毕业论文材料\RT-thread_test\Debug" -I"E:\毕业论文材料\RT-thread_test\03_MCU\Linker_file" -I"E:\毕业论文材料\RT-thread_test\03_MCU\MCU_drivers" -I"E:\毕业论文材料\RT-thread_test\03_MCU\startup" -I"E:\毕业论文材料\RT-thread_test\03_MCU\MCU_drivers\__Previews" -I"E:\毕业论文材料\RT-thread_test\Debug\obj" -I"E:\毕业论文材料\RT-thread_test\Debug\srcc" -I"E:\毕业论文材料\RT-thread_test\Debug\srcs"
+include := -I"E:\GIT\RT-thread_test\.settings" -I"E:\GIT\RT-thread_test\01_Doc" -I"E:\GIT\RT-thread_test\02_CPU" -I"E:\GIT\RT-thread_test\03_MCU" -I"E:\GIT\RT-thread_test\04_GEC" -I"E:\GIT\RT-thread_test\05_UserBoard" -I"E:\GIT\RT-thread_test\06_SoftComponent" -I"E:\GIT\RT-thread_test\07_AppPrg" -I"E:\GIT\RT-thread_test\Debug" -I"E:\GIT\RT-thread_test\03_MCU\Linker_file" -I"E:\GIT\RT-thread_test\03_MCU\MCU_drivers" -I"E:\GIT\RT-thread_test\03_MCU\startup" -I"E:\GIT\RT-thread_test\03_MCU\MCU_drivers\__Previews" -I"E:\GIT\RT-thread_test\Debug\obj" -I"E:\GIT\RT-thread_test\Debug\srcc" -I"E:\GIT\RT-thread_test\Debug\srcs"
 #定义优化级别。共有O0、O1、O2、Os和Og，默认使用Og
 opt := Og
 #.o文件列表
