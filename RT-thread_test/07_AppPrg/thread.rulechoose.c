@@ -13,6 +13,7 @@ void thread_rulechoose()
         uint32_t recvedstate;
     while(1)
     {
+        printf("进入命令选择线程，等待事件信号/n");
         rt_event_recv(EventWord,RULE_CHOOSE_EVENT,RT_EVENT_FLAG_OR|RT_EVENT_FLAG_CLEAR,RT_WAITING_FOREVER,&recvedstate);
         if(recvedstate==RULE_CHOOSE_EVENT)  //如果接收完成且正确
     	{
