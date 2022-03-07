@@ -11,6 +11,7 @@
 void thread_rulechoose()
 {
         uint32_t recvedstate;
+        uint8_t recvData[9];
     while(1)
     {
         printf("进入命令选择线程，等待事件信号\n");
@@ -38,8 +39,14 @@ void thread_rulechoose()
 
             if(gcRecvBuf[7]==0x91) //命令字为91，代表“消息队列功能”
             {
+                //取出收到的数据作为一个消息
+			for(int i=0;i<9;i++)
+				recvData[i] = gcRecvBuf[i];
+		     //将该消息存放到消息队列
+			    rt_mq_send(mq,recvData,sizeof(recvData));
+		    }
 
-            }
+            
 
             if(gcRecvBuf[7]==0x92) //命令字为90，代表“信号量功能”
             {

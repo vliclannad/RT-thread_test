@@ -37,11 +37,13 @@ G_VAR_PREFIX vuint16_t gcRecvDCLen;
 G_VAR_PREFIX vuint8_t  gcRecvBuf[MCU_SECTORSIZE];
 //（用户增加）
 G_VAR_PREFIX rt_event_t EventWord;
+G_VAR_PREFIX rt_mq_t mq;
 //线程函数声明
 void app_init(void);
 void thread_rulechoose();
 void thread_greenlight();
 void thread_bluelight();
+void thread_messagerecv();
 #define delay_ms(x)  rt_thread_delay(x)
 //----------------------------------------------------------------------
 
