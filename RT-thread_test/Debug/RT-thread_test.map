@@ -40,6 +40,7 @@ Common symbol       size              file
 
 grt_flag            0x2               ./obj/main.o
 component_fun       0x4               ./obj/gec.o
+mq                  0x4               ./obj/main.o
 EventWord           0x4               ./obj/main.o
 gcRecvLen           0x2               ./obj/main.o
 gcRecvDCLen         0x2               ./obj/main.o
@@ -885,8 +886,6 @@ Discarded input sections
  .text          0x00000000        0x0 ./obj/uart.o
  .data          0x00000000        0x0 ./obj/uart.o
  .bss           0x00000000        0x0 ./obj/uart.o
- .text.uart_sendN
-                0x00000000       0x34 ./obj/uart.o
  .text.uart_reN
                 0x00000000       0x48 ./obj/uart.o
  .text.uart_disable_re_int
@@ -1086,6 +1085,87 @@ Discarded input sections
  .debug_macro   0x00000000      0x15a ./obj/isr.o
  .debug_macro   0x00000000       0x34 ./obj/isr.o
  .debug_macro   0x00000000       0x22 ./obj/isr.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .group         0x00000000        0xc ./obj/thread_messagerecv.o
+ .text          0x00000000        0x0 ./obj/thread_messagerecv.o
+ .data          0x00000000        0x0 ./obj/thread_messagerecv.o
+ .bss           0x00000000        0x0 ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000      0xa5a ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000       0x2e ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000       0x28 ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000       0x22 ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000       0x87 ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000       0x51 ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000       0xef ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000       0x6a ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000      0x1df ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000       0x1c ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000       0x22 ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000       0xd8 ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000     0x1018 ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000    0x150d6 ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000       0x43 ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000       0x34 ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000       0x3a ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000       0x46 ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000       0x17 ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000       0x3c ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000       0x9c ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000      0x174 ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000       0x52 ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000       0x1f ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000       0x43 ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000       0x20 ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000      0x1a3 ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000      0x32a ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000       0x10 ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000       0x35 ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000       0x28 ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000       0x9a ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000       0x70 ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000       0x3a ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000       0x34 ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000      0x102 ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000      0x15a ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000       0x34 ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000       0x22 ./obj/thread_messagerecv.o
  .group         0x00000000        0xc ./obj/printf.o
  .group         0x00000000        0xc ./obj/printf.o
  .group         0x00000000        0xc ./obj/printf.o
@@ -1258,6 +1338,7 @@ LOAD ./obj/gec.o
 LOAD ./obj/uart.o
 LOAD ./obj/threadauto_appinit.o
 LOAD ./obj/isr.o
+LOAD ./obj/thread_messagerecv.o
 LOAD ./obj/printf.o
 LOAD ./obj/startup_stm32l431rctx.o
 START GROUP
@@ -1301,7 +1382,7 @@ LOAD d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv
                 0x0800d190                . = ALIGN (0x8)
  *fill*         0x0800d18c        0x4 
 
-.text           0x0800d800     0x2130
+.text           0x0800d800     0x2280
                 0x0800d800                . = ALIGN (0x8)
  *(.text)
  .text          0x0800d800       0x40 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
@@ -1409,241 +1490,248 @@ LOAD d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv
                 0x0800e9ac       0x48 ./obj/gpio.o
                 0x0800e9ac                gpio_reverse
  .text.thread_rulechoose
-                0x0800e9f4       0xa4 ./obj/thread_rulechoose.o
+                0x0800e9f4       0xdc ./obj/thread_rulechoose.o
                 0x0800e9f4                thread_rulechoose
  .text.Vectors_Init
-                0x0800ea98       0xa4 ./obj/gec.o
-                0x0800ea98                Vectors_Init
+                0x0800ead0       0xa4 ./obj/gec.o
+                0x0800ead0                Vectors_Init
  .text.uart_is_uartNo
-                0x0800eb3c       0x10 ./obj/uart.o
-                0x0800eb3c                uart_is_uartNo
+                0x0800eb74       0x10 ./obj/uart.o
+                0x0800eb74                uart_is_uartNo
  .text.uart_init
-                0x0800eb4c      0x14c ./obj/uart.o
-                0x0800eb4c                uart_init
+                0x0800eb84      0x14c ./obj/uart.o
+                0x0800eb84                uart_init
  .text.uart_send1
-                0x0800ec98       0x48 ./obj/uart.o
-                0x0800ec98                uart_send1
+                0x0800ecd0       0x48 ./obj/uart.o
+                0x0800ecd0                uart_send1
+ .text.uart_sendN
+                0x0800ed18       0x34 ./obj/uart.o
+                0x0800ed18                uart_sendN
  .text.uart_send_string
-                0x0800ece0       0x2a ./obj/uart.o
-                0x0800ece0                uart_send_string
- *fill*         0x0800ed0a        0x2 
+                0x0800ed4c       0x2a ./obj/uart.o
+                0x0800ed4c                uart_send_string
+ *fill*         0x0800ed76        0x2 
  .text.uart_re1
-                0x0800ed0c       0x50 ./obj/uart.o
-                0x0800ed0c                uart_re1
+                0x0800ed78       0x50 ./obj/uart.o
+                0x0800ed78                uart_re1
  .text.uart_enable_re_int
-                0x0800ed5c       0x40 ./obj/uart.o
-                0x0800ed5c                uart_enable_re_int
+                0x0800edc8       0x40 ./obj/uart.o
+                0x0800edc8                uart_enable_re_int
  .text.uart_get_re_int
-                0x0800ed9c       0x38 ./obj/uart.o
-                0x0800ed9c                uart_get_re_int
+                0x0800ee08       0x38 ./obj/uart.o
+                0x0800ee08                uart_get_re_int
  .text.app_init
-                0x0800edd4      0x128 ./obj/threadauto_appinit.o
-                0x0800edd4                app_init
+                0x0800ee40      0x16c ./obj/threadauto_appinit.o
+                0x0800ee40                app_init
  .text.useremuart_frame
-                0x0800eefc       0x68 ./obj/isr.o
-                0x0800eefc                useremuart_frame
+                0x0800efac       0x68 ./obj/isr.o
+                0x0800efac                useremuart_frame
  .text.USART2_IRQHandler
-                0x0800ef64       0x64 ./obj/isr.o
-                0x0800ef64                USART2_IRQHandler
+                0x0800f014       0x64 ./obj/isr.o
+                0x0800f014                USART2_IRQHandler
+ .text.thread_messagerecv
+                0x0800f078       0xa4 ./obj/thread_messagerecv.o
+                0x0800f078                thread_messagerecv
  .text.printk_putc
-                0x0800efc8       0x2a ./obj/printf.o
+                0x0800f11c       0x2a ./obj/printf.o
  .text.printk_mknumstr
-                0x0800eff2       0x68 ./obj/printf.o
+                0x0800f146       0x68 ./obj/printf.o
  .text.printk_pad_zero
-                0x0800f05a       0x1e ./obj/printf.o
+                0x0800f1ae       0x1e ./obj/printf.o
  .text.printk_pad_space
-                0x0800f078       0x1e ./obj/printf.o
+                0x0800f1cc       0x1e ./obj/printf.o
  .text.out_char
-                0x0800f096        0xc ./obj/printf.o
-                0x0800f096                out_char
- *fill*         0x0800f0a2        0x6 
+                0x0800f1ea        0xc ./obj/printf.o
+                0x0800f1ea                out_char
+ *fill*         0x0800f1f6        0x2 
  .text.printk_mkfloatstr
-                0x0800f0a8      0x1c4 ./obj/printf.o
-                0x0800f0a8                printk_mkfloatstr
- .text.printk   0x0800f26c      0x5b8 ./obj/printf.o
-                0x0800f26c                printk
+                0x0800f1f8      0x1c4 ./obj/printf.o
+                0x0800f1f8                printk_mkfloatstr
+ .text.printk   0x0800f3bc      0x5b8 ./obj/printf.o
+                0x0800f3bc                printk
  .text.myprintf
-                0x0800f824       0x28 ./obj/printf.o
-                0x0800f824                myprintf
+                0x0800f974       0x28 ./obj/printf.o
+                0x0800f974                myprintf
  .text.Reset_Handler
-                0x0800f84c       0x54 ./obj/startup_stm32l431rctx.o
-                0x0800f84c                Reset_Handler
+                0x0800f99c       0x54 ./obj/startup_stm32l431rctx.o
+                0x0800f99c                Reset_Handler
  .text.Default_Handler
-                0x0800f8a0        0x6 ./obj/startup_stm32l431rctx.o
-                0x0800f8a0                RTC_Alarm_IRQHandler
-                0x0800f8a0                EXTI2_IRQHandler
-                0x0800f8a0                DebugMon_Handler
-                0x0800f8a0                TIM1_CC_IRQHandler
-                0x0800f8a0                TSC_IRQHandler
-                0x0800f8a0                HardFault_Handler
-                0x0800f8a0                SysTick_Handler
-                0x0800f8a0                TAMP_STAMP_IRQHandler
-                0x0800f8a0                PendSV_Handler
-                0x0800f8a0                NMI_Handler
-                0x0800f8a0                EXTI3_IRQHandler
-                0x0800f8a0                LPTIM2_IRQHandler
-                0x0800f8a0                I2C3_ER_IRQHandler
-                0x0800f8a0                EXTI0_IRQHandler
-                0x0800f8a0                I2C2_EV_IRQHandler
-                0x0800f8a0                CAN1_RX0_IRQHandler
-                0x0800f8a0                FPU_IRQHandler
-                0x0800f8a0                TIM1_UP_TIM16_IRQHandler
-                0x0800f8a0                UsageFault_Handler
-                0x0800f8a0                SPI1_IRQHandler
-                0x0800f8a0                TIM6_DAC_IRQHandler
-                0x0800f8a0                DMA2_Channel2_IRQHandler
-                0x0800f8a0                DMA1_Channel4_IRQHandler
-                0x0800f8a0                ADC1_IRQHandler
-                0x0800f8a0                USART3_IRQHandler
-                0x0800f8a0                DMA1_Channel7_IRQHandler
-                0x0800f8a0                CAN1_RX1_IRQHandler
-                0x0800f8a0                DMA2_Channel1_IRQHandler
-                0x0800f8a0                QUADSPI_IRQHandler
-                0x0800f8a0                I2C1_EV_IRQHandler
-                0x0800f8a0                DMA1_Channel6_IRQHandler
-                0x0800f8a0                DMA2_Channel4_IRQHandler
-                0x0800f8a0                RCC_IRQHandler
-                0x0800f8a0                TIM1_TRG_COM_IRQHandler
-                0x0800f8a0                DMA1_Channel1_IRQHandler
-                0x0800f8a0                Default_Handler
-                0x0800f8a0                DMA2_Channel7_IRQHandler
-                0x0800f8a0                EXTI15_10_IRQHandler
-                0x0800f8a0                TIM7_IRQHandler
-                0x0800f8a0                SDMMC1_IRQHandler
-                0x0800f8a0                I2C3_EV_IRQHandler
-                0x0800f8a0                EXTI9_5_IRQHandler
-                0x0800f8a0                RTC_WKUP_IRQHandler
-                0x0800f8a0                PVD_PVM_IRQHandler
-                0x0800f8a0                SPI2_IRQHandler
-                0x0800f8a0                MemManage_Handler
-                0x0800f8a0                CAN1_TX_IRQHandler
-                0x0800f8a0                SVC_Handler
-                0x0800f8a0                DMA2_Channel5_IRQHandler
-                0x0800f8a0                CRS_IRQHandler
-                0x0800f8a0                DMA1_Channel5_IRQHandler
-                0x0800f8a0                EXTI4_IRQHandler
-                0x0800f8a0                RNG_IRQHandler
-                0x0800f8a0                DMA1_Channel3_IRQHandler
-                0x0800f8a0                COMP_IRQHandler
-                0x0800f8a0                WWDG_IRQHandler
-                0x0800f8a0                LPUART1_IRQHandler
-                0x0800f8a0                DMA2_Channel6_IRQHandler
-                0x0800f8a0                TIM2_IRQHandler
-                0x0800f8a0                EXTI1_IRQHandler
-                0x0800f8a0                I2C2_ER_IRQHandler
-                0x0800f8a0                DMA1_Channel2_IRQHandler
-                0x0800f8a0                CAN1_SCE_IRQHandler
-                0x0800f8a0                FLASH_IRQHandler
-                0x0800f8a0                BusFault_Handler
-                0x0800f8a0                USART1_IRQHandler
-                0x0800f8a0                SPI3_IRQHandler
-                0x0800f8a0                I2C1_ER_IRQHandler
-                0x0800f8a0                SWPMI1_IRQHandler
-                0x0800f8a0                LPTIM1_IRQHandler
-                0x0800f8a0                SAI1_IRQHandler
-                0x0800f8a0                DMA2_Channel3_IRQHandler
-                0x0800f8a0                TIM1_BRK_TIM15_IRQHandler
- *fill*         0x0800f8a6        0x2 
+                0x0800f9f0        0x6 ./obj/startup_stm32l431rctx.o
+                0x0800f9f0                RTC_Alarm_IRQHandler
+                0x0800f9f0                EXTI2_IRQHandler
+                0x0800f9f0                DebugMon_Handler
+                0x0800f9f0                TIM1_CC_IRQHandler
+                0x0800f9f0                TSC_IRQHandler
+                0x0800f9f0                HardFault_Handler
+                0x0800f9f0                SysTick_Handler
+                0x0800f9f0                TAMP_STAMP_IRQHandler
+                0x0800f9f0                PendSV_Handler
+                0x0800f9f0                NMI_Handler
+                0x0800f9f0                EXTI3_IRQHandler
+                0x0800f9f0                LPTIM2_IRQHandler
+                0x0800f9f0                I2C3_ER_IRQHandler
+                0x0800f9f0                EXTI0_IRQHandler
+                0x0800f9f0                I2C2_EV_IRQHandler
+                0x0800f9f0                CAN1_RX0_IRQHandler
+                0x0800f9f0                FPU_IRQHandler
+                0x0800f9f0                TIM1_UP_TIM16_IRQHandler
+                0x0800f9f0                UsageFault_Handler
+                0x0800f9f0                SPI1_IRQHandler
+                0x0800f9f0                TIM6_DAC_IRQHandler
+                0x0800f9f0                DMA2_Channel2_IRQHandler
+                0x0800f9f0                DMA1_Channel4_IRQHandler
+                0x0800f9f0                ADC1_IRQHandler
+                0x0800f9f0                USART3_IRQHandler
+                0x0800f9f0                DMA1_Channel7_IRQHandler
+                0x0800f9f0                CAN1_RX1_IRQHandler
+                0x0800f9f0                DMA2_Channel1_IRQHandler
+                0x0800f9f0                QUADSPI_IRQHandler
+                0x0800f9f0                I2C1_EV_IRQHandler
+                0x0800f9f0                DMA1_Channel6_IRQHandler
+                0x0800f9f0                DMA2_Channel4_IRQHandler
+                0x0800f9f0                RCC_IRQHandler
+                0x0800f9f0                TIM1_TRG_COM_IRQHandler
+                0x0800f9f0                DMA1_Channel1_IRQHandler
+                0x0800f9f0                Default_Handler
+                0x0800f9f0                DMA2_Channel7_IRQHandler
+                0x0800f9f0                EXTI15_10_IRQHandler
+                0x0800f9f0                TIM7_IRQHandler
+                0x0800f9f0                SDMMC1_IRQHandler
+                0x0800f9f0                I2C3_EV_IRQHandler
+                0x0800f9f0                EXTI9_5_IRQHandler
+                0x0800f9f0                RTC_WKUP_IRQHandler
+                0x0800f9f0                PVD_PVM_IRQHandler
+                0x0800f9f0                SPI2_IRQHandler
+                0x0800f9f0                MemManage_Handler
+                0x0800f9f0                CAN1_TX_IRQHandler
+                0x0800f9f0                SVC_Handler
+                0x0800f9f0                DMA2_Channel5_IRQHandler
+                0x0800f9f0                CRS_IRQHandler
+                0x0800f9f0                DMA1_Channel5_IRQHandler
+                0x0800f9f0                EXTI4_IRQHandler
+                0x0800f9f0                RNG_IRQHandler
+                0x0800f9f0                DMA1_Channel3_IRQHandler
+                0x0800f9f0                COMP_IRQHandler
+                0x0800f9f0                WWDG_IRQHandler
+                0x0800f9f0                LPUART1_IRQHandler
+                0x0800f9f0                DMA2_Channel6_IRQHandler
+                0x0800f9f0                TIM2_IRQHandler
+                0x0800f9f0                EXTI1_IRQHandler
+                0x0800f9f0                I2C2_ER_IRQHandler
+                0x0800f9f0                DMA1_Channel2_IRQHandler
+                0x0800f9f0                CAN1_SCE_IRQHandler
+                0x0800f9f0                FLASH_IRQHandler
+                0x0800f9f0                BusFault_Handler
+                0x0800f9f0                USART1_IRQHandler
+                0x0800f9f0                SPI3_IRQHandler
+                0x0800f9f0                I2C1_ER_IRQHandler
+                0x0800f9f0                SWPMI1_IRQHandler
+                0x0800f9f0                LPTIM1_IRQHandler
+                0x0800f9f0                SAI1_IRQHandler
+                0x0800f9f0                DMA2_Channel3_IRQHandler
+                0x0800f9f0                TIM1_BRK_TIM15_IRQHandler
+ *fill*         0x0800f9f6        0x2 
  .text.__libc_init_array
-                0x0800f8a8       0x48 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-init.o)
-                0x0800f8a8                __libc_init_array
- .text.memcpy   0x0800f8f0       0x16 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memcpy-stub.o)
-                0x0800f8f0                memcpy
- .text.memset   0x0800f906       0x10 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memset.o)
-                0x0800f906                memset
+                0x0800f9f8       0x48 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-init.o)
+                0x0800f9f8                __libc_init_array
+ .text.memcpy   0x0800fa40       0x16 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memcpy-stub.o)
+                0x0800fa40                memcpy
+ .text.memset   0x0800fa56       0x10 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memset.o)
+                0x0800fa56                memset
  *(.glue_7)
- .glue_7        0x0800f916        0x0 linker stubs
+ .glue_7        0x0800fa66        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0800f916        0x0 linker stubs
+ .glue_7t       0x0800fa66        0x0 linker stubs
  *(.eh_frame)
- *fill*         0x0800f916        0x2 
- .eh_frame      0x0800f918        0x0 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+ *fill*         0x0800fa66        0x2 
+ .eh_frame      0x0800fa68        0x0 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
  *(.init)
- .init          0x0800f918        0x4 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crti.o
-                0x0800f918                _init
- .init          0x0800f91c        0x8 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+ .init          0x0800fa68        0x4 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+                0x0800fa68                _init
+ .init          0x0800fa6c        0x8 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
  *(.fini)
- .fini          0x0800f924        0x4 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crti.o
-                0x0800f924                _fini
- .fini          0x0800f928        0x8 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
-                0x0800f930                . = ALIGN (0x8)
-                0x0800f930                _etext = .
+ .fini          0x0800fa74        0x4 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+                0x0800fa74                _fini
+ .fini          0x0800fa78        0x8 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+                0x0800fa80                . = ALIGN (0x8)
+                0x0800fa80                _etext = .
 
-.vfp11_veneer   0x0800f930        0x0
- .vfp11_veneer  0x0800f930        0x0 linker stubs
+.vfp11_veneer   0x0800fa80        0x0
+ .vfp11_veneer  0x0800fa80        0x0 linker stubs
 
-.v4_bx          0x0800f930        0x0
- .v4_bx         0x0800f930        0x0 linker stubs
+.v4_bx          0x0800fa80        0x0
+ .v4_bx         0x0800fa80        0x0 linker stubs
 
-.iplt           0x0800f930        0x0
- .iplt          0x0800f930        0x0 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+.iplt           0x0800fa80        0x0
+ .iplt          0x0800fa80        0x0 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
 
-.rodata         0x0800f930      0x348
-                0x0800f930                . = ALIGN (0x8)
+.rodata         0x0800fa80      0x398
+                0x0800fa80                . = ALIGN (0x8)
  *(.rodata)
  *(.rodata*)
  .rodata.thread_greenlight.str1.4
-                0x0800f930       0x63 ./obj/thread_greenlight.o
- *fill*         0x0800f993        0x1 
+                0x0800fa80       0x63 ./obj/thread_greenlight.o
+ *fill*         0x0800fae3        0x1 
  .rodata.thread_bluelight.str1.4
-                0x0800f994       0x6f ./obj/thread_bluelight.o
- *fill*         0x0800fa03        0x1 
+                0x0800fae4       0x6f ./obj/thread_bluelight.o
+ *fill*         0x0800fb53        0x1 
  .rodata.thread_rulechoose.str1.4
-                0x0800fa04       0x85 ./obj/thread_rulechoose.o
- *fill*         0x0800fa89        0x3 
+                0x0800fb54       0x85 ./obj/thread_rulechoose.o
+ *fill*         0x0800fbd9        0x3 
  .rodata.Vectors_Init.str1.4
-                0x0800fa8c       0x48 ./obj/gec.o
+                0x0800fbdc       0x48 ./obj/gec.o
  .rodata.app_init.str1.4
-                0x0800fad4      0x1a0 ./obj/threadauto_appinit.o
-                                0x19e (size before relaxing)
-                0x0800fc78                . = ALIGN (0x8)
- *fill*         0x0800fc74        0x4 
+                0x0800fc24      0x1b0 ./obj/threadauto_appinit.o
+ .rodata.thread_messagerecv.str1.4
+                0x0800fdd4       0x44 ./obj/thread_messagerecv.o
+                                 0x48 (size before relaxing)
+                0x0800fe18                . = ALIGN (0x8)
 
-.ARM.extab      0x0800fc78        0x0
-                0x0800fc78                . = ALIGN (0x8)
+.ARM.extab      0x0800fe18        0x0
+                0x0800fe18                . = ALIGN (0x8)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0800fc78                . = ALIGN (0x8)
+                0x0800fe18                . = ALIGN (0x8)
 
-.ARM            0x0800fc78        0x8
-                0x0800fc78                . = ALIGN (0x8)
-                0x0800fc78                __exidx_start = .
+.ARM            0x0800fe18        0x8
+                0x0800fe18                . = ALIGN (0x8)
+                0x0800fe18                __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x0800fc78        0x8 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_udivmoddi4.o)
-                0x0800fc80                __exidx_end = .
-                0x0800fc80                . = ALIGN (0x8)
+ .ARM.exidx     0x0800fe18        0x8 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_udivmoddi4.o)
+                0x0800fe20                __exidx_end = .
+                0x0800fe20                . = ALIGN (0x8)
 
-.rel.dyn        0x0800fc80        0x0
- .rel.iplt      0x0800fc80        0x0 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+.rel.dyn        0x0800fe20        0x0
+ .rel.iplt      0x0800fe20        0x0 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
 
-.preinit_array  0x0800fc80        0x0
-                0x0800fc80                . = ALIGN (0x8)
-                0x0800fc80                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x0800fe20        0x0
+                0x0800fe20                . = ALIGN (0x8)
+                0x0800fe20                PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
-                0x0800fc80                PROVIDE (__preinit_array_end, .)
-                0x0800fc80                . = ALIGN (0x8)
+                0x0800fe20                PROVIDE (__preinit_array_end, .)
+                0x0800fe20                . = ALIGN (0x8)
 
-.init_array     0x0800fc80        0x8
-                0x0800fc80                . = ALIGN (0x8)
-                0x0800fc80                PROVIDE (__init_array_start, .)
+.init_array     0x0800fe20        0x8
+                0x0800fe20                . = ALIGN (0x8)
+                0x0800fe20                PROVIDE (__init_array_start, .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x0800fc80        0x4 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
-                0x0800fc84                PROVIDE (__init_array_end, .)
-                0x0800fc88                . = ALIGN (0x8)
- *fill*         0x0800fc84        0x4 
+ .init_array    0x0800fe20        0x4 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+                0x0800fe24                PROVIDE (__init_array_end, .)
+                0x0800fe28                . = ALIGN (0x8)
+ *fill*         0x0800fe24        0x4 
 
-.fini_array     0x0800fc88        0x8
-                0x0800fc88                . = ALIGN (0x8)
+.fini_array     0x0800fe28        0x8
+                0x0800fe28                . = ALIGN (0x8)
                 [!provide]                PROVIDE (__fini_array_start, .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0800fc88        0x4 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+ .fini_array    0x0800fe28        0x4 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
                 [!provide]                PROVIDE (__fini_array_end, .)
-                0x0800fc90                . = ALIGN (0x8)
- *fill*         0x0800fc8c        0x4 
-                0x0800fc90                _sidata = LOADADDR (.data)
+                0x0800fe30                . = ALIGN (0x8)
+ *fill*         0x0800fe2c        0x4 
+                0x0800fe30                _sidata = LOADADDR (.data)
 
-.data           0x20003000       0x30 load address 0x0800fc90
+.data           0x20003000       0x30 load address 0x0800fe30
                 0x20003000                . = ALIGN (0x4)
                 0x20003000                _sdata = .
  *(.data)
@@ -1661,35 +1749,36 @@ LOAD d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv
                 0x20003028        0x3 ./obj/uart.o
                 0x20003028                table_irq_uart
  *fill*         0x2000302b        0x1 
- .data.index.7472
+ .data.index.7474
                 0x2000302c        0x2 ./obj/isr.o
- .data.length.7473
+ .data.length.7475
                 0x2000302e        0x2 ./obj/isr.o
                 0x20003030                . = ALIGN (0x4)
                 0x20003030                _edata = .
 
-.igot.plt       0x20003030        0x0 load address 0x0800fcc0
+.igot.plt       0x20003030        0x0 load address 0x0800fe60
  .igot.plt      0x20003030        0x0 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
                 0x20003030                . = ALIGN (0x4)
 
-.bss            0x20003030      0x82c load address 0x0800fcc0
+.bss            0x20003030      0x830 load address 0x0800fe60
                 0x20003030                _sbss = .
                 0x20003030                __bss_start__ = _sbss
  *(.bss)
  .bss           0x20003030       0x1c d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
  *(.bss*)
  *(COMMON)
- COMMON         0x2000304c      0x80c ./obj/main.o
+ COMMON         0x2000304c      0x810 ./obj/main.o
                 0x2000304c                grt_flag
-                0x20003050                EventWord
-                0x20003054                gcRecvLen
-                0x20003056                gcRecvDCLen
-                0x20003058                gcRecvBuf
- COMMON         0x20003858        0x4 ./obj/gec.o
-                0x20003858                component_fun
-                0x2000385c                . = ALIGN (0x4)
-                0x2000385c                _ebss = .
-                0x2000385c                __bss_end__ = _ebss
+                0x20003050                mq
+                0x20003054                EventWord
+                0x20003058                gcRecvLen
+                0x2000305a                gcRecvDCLen
+                0x2000305c                gcRecvBuf
+ COMMON         0x2000385c        0x4 ./obj/gec.o
+                0x2000385c                component_fun
+                0x20003860                . = ALIGN (0x4)
+                0x20003860                _ebss = .
+                0x20003860                __bss_end__ = _ebss
 
 /DISCARD/
  libc.a(*)
@@ -1726,68 +1815,72 @@ LOAD d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv
  .ARM.attributes
                 0x00000290       0x39 ./obj/isr.o
  .ARM.attributes
-                0x000002c9       0x39 ./obj/printf.o
+                0x000002c9       0x39 ./obj/thread_messagerecv.o
  .ARM.attributes
-                0x00000302       0x21 ./obj/startup_stm32l431rctx.o
+                0x00000302       0x39 ./obj/printf.o
  .ARM.attributes
-                0x00000323       0x34 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-init.o)
+                0x0000033b       0x21 ./obj/startup_stm32l431rctx.o
  .ARM.attributes
-                0x00000357       0x34 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memcpy-stub.o)
+                0x0000035c       0x34 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-init.o)
  .ARM.attributes
-                0x0000038b       0x34 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memset.o)
+                0x00000390       0x34 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memcpy-stub.o)
  .ARM.attributes
-                0x000003bf       0x1b d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-strlen.o)
+                0x000003c4       0x34 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memset.o)
  .ARM.attributes
-                0x000003da       0x22 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_addsubdf3.o)
+                0x000003f8       0x1b d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-strlen.o)
  .ARM.attributes
-                0x000003fc       0x22 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_muldivdf3.o)
+                0x00000413       0x22 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_addsubdf3.o)
  .ARM.attributes
-                0x0000041e       0x22 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_cmpdf2.o)
+                0x00000435       0x22 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_muldivdf3.o)
  .ARM.attributes
-                0x00000440       0x22 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_fixunsdfsi.o)
+                0x00000457       0x22 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_cmpdf2.o)
  .ARM.attributes
-                0x00000462       0x22 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_aeabi_uldivmod.o)
+                0x00000479       0x22 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_fixunsdfsi.o)
  .ARM.attributes
-                0x00000484       0x34 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_fixunsdfdi.o)
+                0x0000049b       0x22 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_aeabi_uldivmod.o)
  .ARM.attributes
-                0x000004b8       0x34 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_udivmoddi4.o)
+                0x000004bd       0x34 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_fixunsdfdi.o)
  .ARM.attributes
-                0x000004ec       0x22 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_dvmd_tls.o)
+                0x000004f1       0x34 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_udivmoddi4.o)
  .ARM.attributes
-                0x0000050e       0x22 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+                0x00000525       0x22 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x00000547       0x22 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
 OUTPUT(RT-thread_test.elf elf32-littlearm)
 
-.debug_info     0x00000000     0xb22d
- .debug_info    0x00000000      0xbe6 ./obj/thread_greenlight.o
- .debug_info    0x00000be6      0x847 ./obj/system_stm32l4xx.o
- .debug_info    0x0000142d      0xc51 ./obj/thread_bluelight.o
- .debug_info    0x0000207e      0xb01 ./obj/main.o
- .debug_info    0x00002b7f      0xf66 ./obj/flash.o
- .debug_info    0x00003ae5     0x16fa ./obj/gpio.o
- .debug_info    0x000051df      0xb9e ./obj/thread_rulechoose.o
- .debug_info    0x00005d7d      0xfd1 ./obj/gec.o
- .debug_info    0x00006d4e     0x1485 ./obj/uart.o
- .debug_info    0x000081d3      0xefb ./obj/threadauto_appinit.o
- .debug_info    0x000090ce      0xc09 ./obj/isr.o
- .debug_info    0x00009cd7     0x1534 ./obj/printf.o
- .debug_info    0x0000b20b       0x22 ./obj/startup_stm32l431rctx.o
+.debug_info     0x00000000     0xc446
+ .debug_info    0x00000000      0xc83 ./obj/thread_greenlight.o
+ .debug_info    0x00000c83      0x847 ./obj/system_stm32l4xx.o
+ .debug_info    0x000014ca      0xcee ./obj/thread_bluelight.o
+ .debug_info    0x000021b8      0xba4 ./obj/main.o
+ .debug_info    0x00002d5c      0xf66 ./obj/flash.o
+ .debug_info    0x00003cc2     0x16fa ./obj/gpio.o
+ .debug_info    0x000053bc      0xc85 ./obj/thread_rulechoose.o
+ .debug_info    0x00006041     0x106e ./obj/gec.o
+ .debug_info    0x000070af     0x1485 ./obj/uart.o
+ .debug_info    0x00008534     0x100c ./obj/threadauto_appinit.o
+ .debug_info    0x00009540      0xca6 ./obj/isr.o
+ .debug_info    0x0000a1e6      0xd0a ./obj/thread_messagerecv.o
+ .debug_info    0x0000aef0     0x1534 ./obj/printf.o
+ .debug_info    0x0000c424       0x22 ./obj/startup_stm32l431rctx.o
 
-.debug_abbrev   0x00000000     0x1c02
- .debug_abbrev  0x00000000      0x1d4 ./obj/thread_greenlight.o
- .debug_abbrev  0x000001d4      0x18e ./obj/system_stm32l4xx.o
- .debug_abbrev  0x00000362      0x1e1 ./obj/thread_bluelight.o
- .debug_abbrev  0x00000543      0x197 ./obj/main.o
- .debug_abbrev  0x000006da      0x2eb ./obj/flash.o
- .debug_abbrev  0x000009c5      0x38c ./obj/gpio.o
- .debug_abbrev  0x00000d51      0x1e1 ./obj/thread_rulechoose.o
- .debug_abbrev  0x00000f32      0x275 ./obj/gec.o
- .debug_abbrev  0x000011a7      0x336 ./obj/uart.o
- .debug_abbrev  0x000014dd      0x1e1 ./obj/threadauto_appinit.o
- .debug_abbrev  0x000016be      0x245 ./obj/isr.o
- .debug_abbrev  0x00001903      0x2ed ./obj/printf.o
- .debug_abbrev  0x00001bf0       0x12 ./obj/startup_stm32l431rctx.o
+.debug_abbrev   0x00000000     0x1e9d
+ .debug_abbrev  0x00000000      0x1e5 ./obj/thread_greenlight.o
+ .debug_abbrev  0x000001e5      0x18e ./obj/system_stm32l4xx.o
+ .debug_abbrev  0x00000373      0x1f2 ./obj/thread_bluelight.o
+ .debug_abbrev  0x00000565      0x1a8 ./obj/main.o
+ .debug_abbrev  0x0000070d      0x2eb ./obj/flash.o
+ .debug_abbrev  0x000009f8      0x38c ./obj/gpio.o
+ .debug_abbrev  0x00000d84      0x208 ./obj/thread_rulechoose.o
+ .debug_abbrev  0x00000f8c      0x286 ./obj/gec.o
+ .debug_abbrev  0x00001212      0x336 ./obj/uart.o
+ .debug_abbrev  0x00001548      0x1f2 ./obj/threadauto_appinit.o
+ .debug_abbrev  0x0000173a      0x256 ./obj/isr.o
+ .debug_abbrev  0x00001990      0x20e ./obj/thread_messagerecv.o
+ .debug_abbrev  0x00001b9e      0x2ed ./obj/printf.o
+ .debug_abbrev  0x00001e8b       0x12 ./obj/startup_stm32l431rctx.o
 
-.debug_aranges  0x00000000      0x300
+.debug_aranges  0x00000000      0x320
  .debug_aranges
                 0x00000000       0x20 ./obj/thread_greenlight.o
  .debug_aranges
@@ -1811,26 +1904,29 @@ OUTPUT(RT-thread_test.elf elf32-littlearm)
  .debug_aranges
                 0x00000258       0x28 ./obj/isr.o
  .debug_aranges
-                0x00000280       0x58 ./obj/printf.o
+                0x00000280       0x20 ./obj/thread_messagerecv.o
  .debug_aranges
-                0x000002d8       0x28 ./obj/startup_stm32l431rctx.o
+                0x000002a0       0x58 ./obj/printf.o
+ .debug_aranges
+                0x000002f8       0x28 ./obj/startup_stm32l431rctx.o
 
-.debug_ranges   0x00000000      0x250
+.debug_ranges   0x00000000      0x278
  .debug_ranges  0x00000000       0x10 ./obj/thread_greenlight.o
  .debug_ranges  0x00000010       0x20 ./obj/system_stm32l4xx.o
  .debug_ranges  0x00000030       0x10 ./obj/thread_bluelight.o
  .debug_ranges  0x00000040       0x10 ./obj/main.o
  .debug_ranges  0x00000050       0x80 ./obj/flash.o
  .debug_ranges  0x000000d0       0x68 ./obj/gpio.o
- .debug_ranges  0x00000138       0x10 ./obj/thread_rulechoose.o
- .debug_ranges  0x00000148       0x18 ./obj/gec.o
- .debug_ranges  0x00000160       0x60 ./obj/uart.o
- .debug_ranges  0x000001c0       0x10 ./obj/threadauto_appinit.o
- .debug_ranges  0x000001d0       0x18 ./obj/isr.o
- .debug_ranges  0x000001e8       0x48 ./obj/printf.o
- .debug_ranges  0x00000230       0x20 ./obj/startup_stm32l431rctx.o
+ .debug_ranges  0x00000138       0x28 ./obj/thread_rulechoose.o
+ .debug_ranges  0x00000160       0x18 ./obj/gec.o
+ .debug_ranges  0x00000178       0x60 ./obj/uart.o
+ .debug_ranges  0x000001d8       0x10 ./obj/threadauto_appinit.o
+ .debug_ranges  0x000001e8       0x18 ./obj/isr.o
+ .debug_ranges  0x00000200       0x10 ./obj/thread_messagerecv.o
+ .debug_ranges  0x00000210       0x48 ./obj/printf.o
+ .debug_ranges  0x00000258       0x20 ./obj/startup_stm32l431rctx.o
 
-.debug_macro    0x00000000     0x20df
+.debug_macro    0x00000000     0x230c
  .debug_macro   0x00000000      0x22d ./obj/thread_greenlight.o
  .debug_macro   0x0000022d       0x87 ./obj/thread_greenlight.o
  .debug_macro   0x000002b4       0x51 ./obj/thread_greenlight.o
@@ -1857,49 +1953,53 @@ OUTPUT(RT-thread_test.elf elf32-littlearm)
  .debug_macro   0x00001904      0x1b9 ./obj/uart.o
  .debug_macro   0x00001abd      0x22d ./obj/threadauto_appinit.o
  .debug_macro   0x00001cea      0x22d ./obj/isr.o
- .debug_macro   0x00001f17      0x1c8 ./obj/printf.o
+ .debug_macro   0x00001f17      0x22d ./obj/thread_messagerecv.o
+ .debug_macro   0x00002144      0x1c8 ./obj/printf.o
 
-.debug_line     0x00000000     0x37ea
+.debug_line     0x00000000     0x3c68
  .debug_line    0x00000000      0x460 ./obj/thread_greenlight.o
  .debug_line    0x00000460      0x2bd ./obj/system_stm32l4xx.o
  .debug_line    0x0000071d      0x468 ./obj/thread_bluelight.o
  .debug_line    0x00000b85      0x44c ./obj/main.o
  .debug_line    0x00000fd1      0x513 ./obj/flash.o
  .debug_line    0x000014e4      0x517 ./obj/gpio.o
- .debug_line    0x000019fb      0x46c ./obj/thread_rulechoose.o
- .debug_line    0x00001e67      0x4cb ./obj/gec.o
- .debug_line    0x00002332      0x509 ./obj/uart.o
- .debug_line    0x0000283b      0x470 ./obj/threadauto_appinit.o
- .debug_line    0x00002cab      0x48f ./obj/isr.o
- .debug_line    0x0000313a      0x633 ./obj/printf.o
- .debug_line    0x0000376d       0x7d ./obj/startup_stm32l431rctx.o
+ .debug_line    0x000019fb      0x483 ./obj/thread_rulechoose.o
+ .debug_line    0x00001e7e      0x4cb ./obj/gec.o
+ .debug_line    0x00002349      0x509 ./obj/uart.o
+ .debug_line    0x00002852      0x473 ./obj/threadauto_appinit.o
+ .debug_line    0x00002cc5      0x48f ./obj/isr.o
+ .debug_line    0x00003154      0x464 ./obj/thread_messagerecv.o
+ .debug_line    0x000035b8      0x633 ./obj/printf.o
+ .debug_line    0x00003beb       0x7d ./obj/startup_stm32l431rctx.o
 
-.debug_str      0x00000000    0x83575
- .debug_str     0x00000000    0x82727 ./obj/thread_greenlight.o
-                              0x82a29 (size before relaxing)
- .debug_str     0x00082727      0x301 ./obj/system_stm32l4xx.o
+.debug_str      0x00000000    0x83634
+ .debug_str     0x00000000    0x82791 ./obj/thread_greenlight.o
+                              0x82a9b (size before relaxing)
+ .debug_str     0x00082791      0x301 ./obj/system_stm32l4xx.o
                               0x7e01c (size before relaxing)
- .debug_str     0x00082a28       0x29 ./obj/thread_bluelight.o
-                              0x82a27 (size before relaxing)
- .debug_str     0x00082a51       0x2b ./obj/main.o
-                              0x829c5 (size before relaxing)
- .debug_str     0x00082a7c      0x111 ./obj/flash.o
+ .debug_str     0x00082a92       0x29 ./obj/thread_bluelight.o
+                              0x82a99 (size before relaxing)
+ .debug_str     0x00082abb       0x2b ./obj/main.o
+                              0x82a37 (size before relaxing)
+ .debug_str     0x00082ae6      0x111 ./obj/flash.o
                               0x81604 (size before relaxing)
- .debug_str     0x00082b8d      0x580 ./obj/gpio.o
+ .debug_str     0x00082bf7      0x580 ./obj/gpio.o
                               0x81c3e (size before relaxing)
- .debug_str     0x0008310d       0x2b ./obj/thread_rulechoose.o
-                              0x82a01 (size before relaxing)
- .debug_str     0x00083138       0x47 ./obj/gec.o
-                              0x82ac2 (size before relaxing)
- .debug_str     0x0008317f       0xd7 ./obj/uart.o
+ .debug_str     0x00083177       0x34 ./obj/thread_rulechoose.o
+                              0x82a7c (size before relaxing)
+ .debug_str     0x000831ab       0x47 ./obj/gec.o
+                              0x82b34 (size before relaxing)
+ .debug_str     0x000831f2       0xd7 ./obj/uart.o
                               0x81adc (size before relaxing)
- .debug_str     0x00083256      0x12d ./obj/threadauto_appinit.o
-                              0x82b43 (size before relaxing)
- .debug_str     0x00083383       0x68 ./obj/isr.o
-                              0x82a59 (size before relaxing)
- .debug_str     0x000833eb      0x15e ./obj/printf.o
+ .debug_str     0x000832c9      0x137 ./obj/threadauto_appinit.o
+                              0x82bbf (size before relaxing)
+ .debug_str     0x00083400       0x68 ./obj/isr.o
+                              0x82acb (size before relaxing)
+ .debug_str     0x00083468       0x42 ./obj/thread_messagerecv.o
+                              0x82a9f (size before relaxing)
+ .debug_str     0x000834aa      0x15e ./obj/printf.o
                               0x81835 (size before relaxing)
- .debug_str     0x00083549       0x2c ./obj/startup_stm32l431rctx.o
+ .debug_str     0x00083608       0x2c ./obj/startup_stm32l431rctx.o
                                  0x48 (size before relaxing)
 
 .comment        0x00000000       0x7e
@@ -1915,38 +2015,42 @@ OUTPUT(RT-thread_test.elf elf32-littlearm)
  .comment       0x0000007e       0x7f ./obj/uart.o
  .comment       0x0000007e       0x7f ./obj/threadauto_appinit.o
  .comment       0x0000007e       0x7f ./obj/isr.o
+ .comment       0x0000007e       0x7f ./obj/thread_messagerecv.o
  .comment       0x0000007e       0x7f ./obj/printf.o
 
-.debug_frame    0x00000000      0x9cc
+.debug_frame    0x00000000      0x9fc
  .debug_frame   0x00000000       0x28 ./obj/thread_greenlight.o
  .debug_frame   0x00000028       0x54 ./obj/system_stm32l4xx.o
  .debug_frame   0x0000007c       0x28 ./obj/thread_bluelight.o
  .debug_frame   0x000000a4       0x28 ./obj/main.o
  .debug_frame   0x000000cc      0x130 ./obj/flash.o
  .debug_frame   0x000001fc      0x180 ./obj/gpio.o
- .debug_frame   0x0000037c       0x28 ./obj/thread_rulechoose.o
- .debug_frame   0x000003a4       0x54 ./obj/gec.o
- .debug_frame   0x000003f8      0x138 ./obj/uart.o
- .debug_frame   0x00000530       0x38 ./obj/threadauto_appinit.o
- .debug_frame   0x00000568       0x50 ./obj/isr.o
- .debug_frame   0x000005b8      0x130 ./obj/printf.o
- .debug_frame   0x000006e8       0x2c d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-init.o)
- .debug_frame   0x00000714       0x28 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memcpy-stub.o)
- .debug_frame   0x0000073c       0x20 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memset.o)
- .debug_frame   0x0000075c       0xac d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_addsubdf3.o)
- .debug_frame   0x00000808       0x50 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_muldivdf3.o)
- .debug_frame   0x00000858       0xc4 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_cmpdf2.o)
- .debug_frame   0x0000091c       0x24 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_fixunsdfsi.o)
- .debug_frame   0x00000940       0x2c d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_aeabi_uldivmod.o)
- .debug_frame   0x0000096c       0x2c d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_fixunsdfdi.o)
- .debug_frame   0x00000998       0x34 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x0000037c       0x2c ./obj/thread_rulechoose.o
+ .debug_frame   0x000003a8       0x54 ./obj/gec.o
+ .debug_frame   0x000003fc      0x138 ./obj/uart.o
+ .debug_frame   0x00000534       0x38 ./obj/threadauto_appinit.o
+ .debug_frame   0x0000056c       0x50 ./obj/isr.o
+ .debug_frame   0x000005bc       0x2c ./obj/thread_messagerecv.o
+ .debug_frame   0x000005e8      0x130 ./obj/printf.o
+ .debug_frame   0x00000718       0x2c d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-init.o)
+ .debug_frame   0x00000744       0x28 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x0000076c       0x20 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memset.o)
+ .debug_frame   0x0000078c       0xac d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_addsubdf3.o)
+ .debug_frame   0x00000838       0x50 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_muldivdf3.o)
+ .debug_frame   0x00000888       0xc4 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_cmpdf2.o)
+ .debug_frame   0x0000094c       0x24 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_fixunsdfsi.o)
+ .debug_frame   0x00000970       0x2c d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x0000099c       0x2c d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_fixunsdfdi.o)
+ .debug_frame   0x000009c8       0x34 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_udivmoddi4.o)
 
-.debug_loc      0x00000000     0x244f
+.debug_loc      0x00000000     0x24b1
  .debug_loc     0x00000000      0x246 ./obj/system_stm32l4xx.o
  .debug_loc     0x00000246      0x66d ./obj/flash.o
  .debug_loc     0x000008b3      0x451 ./obj/gpio.o
- .debug_loc     0x00000d04      0x149 ./obj/gec.o
- .debug_loc     0x00000e4d      0x3c2 ./obj/uart.o
- .debug_loc     0x0000120f       0x5a ./obj/threadauto_appinit.o
- .debug_loc     0x00001269       0xaa ./obj/isr.o
- .debug_loc     0x00001313     0x113c ./obj/printf.o
+ .debug_loc     0x00000d04       0x13 ./obj/thread_rulechoose.o
+ .debug_loc     0x00000d17      0x149 ./obj/gec.o
+ .debug_loc     0x00000e60      0x3c2 ./obj/uart.o
+ .debug_loc     0x00001222       0x78 ./obj/threadauto_appinit.o
+ .debug_loc     0x0000129a       0xaa ./obj/isr.o
+ .debug_loc     0x00001344       0x31 ./obj/thread_messagerecv.o
+ .debug_loc     0x00001375     0x113c ./obj/printf.o

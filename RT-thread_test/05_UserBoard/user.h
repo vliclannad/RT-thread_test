@@ -36,4 +36,10 @@
 //（4）【变动】中断服务函数宏定义
 #define UART_User_Handler   USART2_IRQHandler  //用户串口中断函数
 
+// (5)命令宏定义
+#define EVENT_CODE  0x90    //事件功能用户指令
+#define MESSAGE_CODE 0x91   //消息队列功能用户指令
+#define SEM_CODE 0x92       //信号量功能用户指令
+#define MUTEX_CODE 0x93     //互斥量功能用户指令
+
 #endif    //防止重复定义（USER_H 结尾）

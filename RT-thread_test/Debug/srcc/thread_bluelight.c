@@ -28,16 +28,16 @@ void thread_bluelight()
       if(grt_flag==1)
       {
         rt_event_send(EventWord,GREEN_LIGHT_EVENT);
+        uart_send_string(UART_User,(void *)"------¿∂µ∆…¡À∏------\r\n");
+	  	  gpio_reverse(LIGHT_BLUE);
+        delay_ms(10000);
       }
-      
-    	uart_send_string(UART_User,(void *)"------¿∂µ∆…¡À∏------\r\n");
-	  	gpio_reverse(LIGHT_BLUE);
       if(grt_flag==0)
       {
         gpio_init(LIGHT_BLUE,GPIO_OUTPUT,LIGHT_ON);
         gpio_init(LIGHT_GREEN,GPIO_OUTPUT,LIGHT_OFF);
       }
-		  delay_ms(10000);
+
      }
     }//£®2£©======÷˜—≠ª∑£®Ω· ¯£©==========================================
 }

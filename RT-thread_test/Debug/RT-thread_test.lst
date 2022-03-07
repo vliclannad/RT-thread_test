@@ -5,45 +5,45 @@ Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
   0 .isr_vector   00000190  0800d000  0800d000  0000d000  2**0
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  1 .text         00002130  0800d800  0800d800  0000d800  2**3
+  1 .text         00002280  0800d800  0800d800  0000d800  2**3
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .rodata       00000348  0800f930  0800f930  0000f930  2**2
+  2 .rodata       00000398  0800fa80  0800fa80  0000fa80  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  3 .ARM.extab    00000000  0800fc78  0800fc78  00013030  2**0
+  3 .ARM.extab    00000000  0800fe18  0800fe18  00013030  2**0
                   CONTENTS
-  4 .ARM          00000008  0800fc78  0800fc78  0000fc78  2**2
+  4 .ARM          00000008  0800fe18  0800fe18  0000fe18  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  5 .preinit_array 00000000  0800fc80  0800fc80  00013030  2**0
+  5 .preinit_array 00000000  0800fe20  0800fe20  00013030  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  6 .init_array   00000008  0800fc80  0800fc80  0000fc80  2**2
+  6 .init_array   00000008  0800fe20  0800fe20  0000fe20  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  7 .fini_array   00000008  0800fc88  0800fc88  0000fc88  2**2
+  7 .fini_array   00000008  0800fe28  0800fe28  0000fe28  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  8 .data         00000030  20003000  0800fc90  00013000  2**2
+  8 .data         00000030  20003000  0800fe30  00013000  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  9 .bss          0000082c  20003030  0800fcc0  00013030  2**2
+  9 .bss          00000830  20003030  0800fe60  00013030  2**2
                   ALLOC
  10 .ARM.attributes 00000030  00000000  00000000  00013030  2**0
                   CONTENTS, READONLY
- 11 .debug_info   0000b22d  00000000  00000000  00013060  2**0
+ 11 .debug_info   0000c446  00000000  00000000  00013060  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_abbrev 00001c02  00000000  00000000  0001e28d  2**0
+ 12 .debug_abbrev 00001e9d  00000000  00000000  0001f4a6  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_aranges 00000300  00000000  00000000  0001fe90  2**3
+ 13 .debug_aranges 00000320  00000000  00000000  00021348  2**3
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_ranges 00000250  00000000  00000000  00020190  2**3
+ 14 .debug_ranges 00000278  00000000  00000000  00021668  2**3
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_macro  000020df  00000000  00000000  000203e0  2**0
+ 15 .debug_macro  0000230c  00000000  00000000  000218e0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_line   000037ea  00000000  00000000  000224bf  2**0
+ 16 .debug_line   00003c68  00000000  00000000  00023bec  2**0
                   CONTENTS, READONLY, DEBUGGING
- 17 .debug_str    00083575  00000000  00000000  00025ca9  2**0
+ 17 .debug_str    00083634  00000000  00000000  00027854  2**0
                   CONTENTS, READONLY, DEBUGGING
- 18 .comment      0000007e  00000000  00000000  000a921e  2**0
+ 18 .comment      0000007e  00000000  00000000  000aae88  2**0
                   CONTENTS, READONLY
- 19 .debug_frame  000009cc  00000000  00000000  000a929c  2**2
+ 19 .debug_frame  000009fc  00000000  00000000  000aaf08  2**2
                   CONTENTS, READONLY, DEBUGGING
- 20 .debug_loc    0000244f  00000000  00000000  000a9c68  2**0
+ 20 .debug_loc    000024b1  00000000  00000000  000ab904  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -62,7 +62,7 @@ Disassembly of section .text:
  800d816:	bd10      	pop	{r4, pc}
  800d818:	20003030 	.word	0x20003030
  800d81c:	00000000 	.word	0x00000000
- 800d820:	0800f918 	.word	0x0800f918
+ 800d820:	0800fa68 	.word	0x0800fa68
 
 0800d824 <frame_dummy>:
  800d824:	b508      	push	{r3, lr}
@@ -74,7 +74,7 @@ Disassembly of section .text:
  800d832:	bd08      	pop	{r3, pc}
  800d834:	00000000 	.word	0x00000000
  800d838:	20003034 	.word	0x20003034
- 800d83c:	0800f918 	.word	0x0800f918
+ 800d83c:	0800fa68 	.word	0x0800fa68
 
 0800d840 <strlen>:
  800d840:	4603      	mov	r3, r0
@@ -1168,7 +1168,7 @@ void thread_greenlight()
     uint32_t recvedstate;
     printf("第一次进入绿灯线程!\r\n");
  800e484:	4819      	ldr	r0, [pc, #100]	; (800e4ec <thread_greenlight+0x6c>)
- 800e486:	f001 f9cd 	bl	800f824 <myprintf>
+ 800e486:	f001 fa75 	bl	800f974 <myprintf>
 	gpio_init(LIGHT_GREEN,GPIO_OUTPUT,LIGHT_OFF);
  800e48a:	2201      	movs	r2, #1
  800e48c:	4611      	mov	r1, r2
@@ -1180,7 +1180,7 @@ void thread_greenlight()
     	uart_send_string(UART_User,(void *)"在绿灯线程中，等待绿灯事件被触发\r\n");
  800e496:	4916      	ldr	r1, [pc, #88]	; (800e4f0 <thread_greenlight+0x70>)
  800e498:	2002      	movs	r0, #2
- 800e49a:	f000 fc21 	bl	800ece0 <uart_send_string>
+ 800e49a:	f000 fc57 	bl	800ed4c <uart_send_string>
     	//一直等待GREEN_LIGHT_EVENT事件字
         rt_event_recv(EventWord,GREEN_LIGHT_EVENT,RT_EVENT_FLAG_OR|RT_EVENT_FLAG_CLEAR,RT_WAITING_FOREVER,&recvedstate);
  800e49e:	4b15      	ldr	r3, [pc, #84]	; (800e4f4 <thread_greenlight+0x74>)
@@ -1199,20 +1199,21 @@ void thread_greenlight()
  800e4ba:	2b04      	cmp	r3, #4
  800e4bc:	d1eb      	bne.n	800e496 <thread_greenlight+0x16>
     	{
-    		uart_send_string(UART_User,(void *)"在绿灯线程中，收到绿灯事件，绿灯反转\r\n");
- 800e4be:	490f      	ldr	r1, [pc, #60]	; (800e4fc <thread_greenlight+0x7c>)
- 800e4c0:	2002      	movs	r0, #2
- 800e4c2:	f000 fc0d 	bl	800ece0 <uart_send_string>
-            gpio_reverse(LIGHT_GREEN);     //转换绿灯状态
- 800e4c6:	f44f 7084 	mov.w	r0, #264	; 0x108
- 800e4ca:	f000 fa6f 	bl	800e9ac <gpio_reverse>
+
 			if(grt_flag==1)
- 800e4ce:	4b0c      	ldr	r3, [pc, #48]	; (800e500 <thread_greenlight+0x80>)
- 800e4d0:	881b      	ldrh	r3, [r3, #0]
- 800e4d2:	b29b      	uxth	r3, r3
- 800e4d4:	2b01      	cmp	r3, #1
- 800e4d6:	d1de      	bne.n	800e496 <thread_greenlight+0x16>
+ 800e4be:	4b0f      	ldr	r3, [pc, #60]	; (800e4fc <thread_greenlight+0x7c>)
+ 800e4c0:	881b      	ldrh	r3, [r3, #0]
+ 800e4c2:	b29b      	uxth	r3, r3
+ 800e4c4:	2b01      	cmp	r3, #1
+ 800e4c6:	d1e6      	bne.n	800e496 <thread_greenlight+0x16>
 			{
+				uart_send_string(UART_User,(void *)"在绿灯线程中，收到绿灯事件，绿灯反转\r\n");
+ 800e4c8:	490d      	ldr	r1, [pc, #52]	; (800e500 <thread_greenlight+0x80>)
+ 800e4ca:	2002      	movs	r0, #2
+ 800e4cc:	f000 fc3e 	bl	800ed4c <uart_send_string>
+                gpio_reverse(LIGHT_GREEN);     //转换绿灯状态
+ 800e4d0:	f44f 7084 	mov.w	r0, #264	; 0x108
+ 800e4d4:	f000 fa6a 	bl	800e9ac <gpio_reverse>
 				rt_event_send(EventWord,BLUE_LIGHT_EVENT);
  800e4d8:	4b06      	ldr	r3, [pc, #24]	; (800e4f4 <thread_greenlight+0x74>)
  800e4da:	681b      	ldr	r3, [r3, #0]
@@ -1223,12 +1224,12 @@ void thread_greenlight()
  800e4e6:	4798      	blx	r3
  800e4e8:	e7d5      	b.n	800e496 <thread_greenlight+0x16>
  800e4ea:	bf00      	nop
- 800e4ec:	0800f930 	.word	0x0800f930
- 800e4f0:	0800f948 	.word	0x0800f948
- 800e4f4:	20003858 	.word	0x20003858
- 800e4f8:	20003050 	.word	0x20003050
- 800e4fc:	0800f96c 	.word	0x0800f96c
- 800e500:	2000304c 	.word	0x2000304c
+ 800e4ec:	0800fa80 	.word	0x0800fa80
+ 800e4f0:	0800fa98 	.word	0x0800fa98
+ 800e4f4:	2000385c 	.word	0x2000385c
+ 800e4f8:	20003054 	.word	0x20003054
+ 800e4fc:	2000304c 	.word	0x2000304c
+ 800e500:	0800fabc 	.word	0x0800fabc
 
 0800e504 <SysClock_Config>:
 //函数返回：1：成功；0：失败
@@ -1399,75 +1400,76 @@ void thread_bluelight()
 
     printf("---第一次进入运行蓝灯线程!\r\n");
  800e5f4:	4827      	ldr	r0, [pc, #156]	; (800e694 <thread_bluelight+0xa4>)
- 800e5f6:	f001 f915 	bl	800f824 <myprintf>
+ 800e5f6:	f001 f9bd 	bl	800f974 <myprintf>
     gpio_init(LIGHT_BLUE,GPIO_OUTPUT,LIGHT_ON);
  800e5fa:	2200      	movs	r2, #0
  800e5fc:	2101      	movs	r1, #1
  800e5fe:	f240 1009 	movw	r0, #265	; 0x109
  800e602:	f000 f99b 	bl	800e93c <gpio_init>
- 800e606:	e006      	b.n	800e616 <thread_bluelight+0x26>
-      if(grt_flag==0)
-      {
-        gpio_init(LIGHT_BLUE,GPIO_OUTPUT,LIGHT_ON);
-        gpio_init(LIGHT_GREEN,GPIO_OUTPUT,LIGHT_OFF);
-      }
-		  delay_ms(10000);
- 800e608:	4b23      	ldr	r3, [pc, #140]	; (800e698 <thread_bluelight+0xa8>)
- 800e60a:	681b      	ldr	r3, [r3, #0]
- 800e60c:	f8d3 3094 	ldr.w	r3, [r3, #148]	; 0x94
- 800e610:	f242 7010 	movw	r0, #10000	; 0x2710
- 800e614:	4798      	blx	r3
-      rt_event_recv(EventWord,BLUE_LIGHT_EVENT,RT_EVENT_FLAG_OR|RT_EVENT_FLAG_CLEAR,RT_WAITING_FOREVER,&recvedstate);//等待接收蓝灯事件信号
- 800e616:	4b20      	ldr	r3, [pc, #128]	; (800e698 <thread_bluelight+0xa8>)
- 800e618:	681b      	ldr	r3, [r3, #0]
- 800e61a:	f8d3 40a8 	ldr.w	r4, [r3, #168]	; 0xa8
- 800e61e:	4b1f      	ldr	r3, [pc, #124]	; (800e69c <thread_bluelight+0xac>)
- 800e620:	6818      	ldr	r0, [r3, #0]
- 800e622:	ab03      	add	r3, sp, #12
- 800e624:	9300      	str	r3, [sp, #0]
- 800e626:	f04f 33ff 	mov.w	r3, #4294967295
- 800e62a:	2206      	movs	r2, #6
- 800e62c:	2108      	movs	r1, #8
- 800e62e:	47a0      	blx	r4
-      if(recvedstate==BLUE_LIGHT_EVENT)
- 800e630:	9b03      	ldr	r3, [sp, #12]
- 800e632:	2b08      	cmp	r3, #8
- 800e634:	d1ef      	bne.n	800e616 <thread_bluelight+0x26>
-    	uart_send_string(UART_User,(void *)"----进入蓝灯线程-----\r\n");
- 800e636:	491a      	ldr	r1, [pc, #104]	; (800e6a0 <thread_bluelight+0xb0>)
- 800e638:	2002      	movs	r0, #2
- 800e63a:	f000 fb51 	bl	800ece0 <uart_send_string>
-    	uart_send_string(UART_User,(void *)"在蓝灯线程中，设置绿灯事件\r\n");
- 800e63e:	4919      	ldr	r1, [pc, #100]	; (800e6a4 <thread_bluelight+0xb4>)
- 800e640:	2002      	movs	r0, #2
- 800e642:	f000 fb4d 	bl	800ece0 <uart_send_string>
-      if(grt_flag==1)
- 800e646:	4b18      	ldr	r3, [pc, #96]	; (800e6a8 <thread_bluelight+0xb8>)
- 800e648:	881b      	ldrh	r3, [r3, #0]
- 800e64a:	b29b      	uxth	r3, r3
- 800e64c:	2b01      	cmp	r3, #1
- 800e64e:	d107      	bne.n	800e660 <thread_bluelight+0x70>
+ 800e606:	e004      	b.n	800e612 <thread_bluelight+0x22>
         rt_event_send(EventWord,GREEN_LIGHT_EVENT);
- 800e650:	4b11      	ldr	r3, [pc, #68]	; (800e698 <thread_bluelight+0xa8>)
- 800e652:	681b      	ldr	r3, [r3, #0]
- 800e654:	f8d3 30ac 	ldr.w	r3, [r3, #172]	; 0xac
- 800e658:	2104      	movs	r1, #4
- 800e65a:	4a10      	ldr	r2, [pc, #64]	; (800e69c <thread_bluelight+0xac>)
- 800e65c:	6810      	ldr	r0, [r2, #0]
- 800e65e:	4798      	blx	r3
-    	uart_send_string(UART_User,(void *)"------蓝灯闪烁------\r\n");
- 800e660:	4912      	ldr	r1, [pc, #72]	; (800e6ac <thread_bluelight+0xbc>)
- 800e662:	2002      	movs	r0, #2
- 800e664:	f000 fb3c 	bl	800ece0 <uart_send_string>
-	  	gpio_reverse(LIGHT_BLUE);
- 800e668:	f240 1009 	movw	r0, #265	; 0x109
- 800e66c:	f000 f99e 	bl	800e9ac <gpio_reverse>
+        uart_send_string(UART_User,(void *)"------蓝灯闪烁------\r\n");
+	  	  gpio_reverse(LIGHT_BLUE);
+        delay_ms(10000);
+      }
       if(grt_flag==0)
- 800e670:	4b0d      	ldr	r3, [pc, #52]	; (800e6a8 <thread_bluelight+0xb8>)
- 800e672:	881b      	ldrh	r3, [r3, #0]
- 800e674:	b29b      	uxth	r3, r3
- 800e676:	2b00      	cmp	r3, #0
- 800e678:	d1c6      	bne.n	800e608 <thread_bluelight+0x18>
+ 800e608:	4b23      	ldr	r3, [pc, #140]	; (800e698 <thread_bluelight+0xa8>)
+ 800e60a:	881b      	ldrh	r3, [r3, #0]
+ 800e60c:	b29b      	uxth	r3, r3
+ 800e60e:	2b00      	cmp	r3, #0
+ 800e610:	d033      	beq.n	800e67a <thread_bluelight+0x8a>
+      rt_event_recv(EventWord,BLUE_LIGHT_EVENT,RT_EVENT_FLAG_OR|RT_EVENT_FLAG_CLEAR,RT_WAITING_FOREVER,&recvedstate);//等待接收蓝灯事件信号
+ 800e612:	4b22      	ldr	r3, [pc, #136]	; (800e69c <thread_bluelight+0xac>)
+ 800e614:	681b      	ldr	r3, [r3, #0]
+ 800e616:	f8d3 40a8 	ldr.w	r4, [r3, #168]	; 0xa8
+ 800e61a:	4b21      	ldr	r3, [pc, #132]	; (800e6a0 <thread_bluelight+0xb0>)
+ 800e61c:	6818      	ldr	r0, [r3, #0]
+ 800e61e:	ab03      	add	r3, sp, #12
+ 800e620:	9300      	str	r3, [sp, #0]
+ 800e622:	f04f 33ff 	mov.w	r3, #4294967295
+ 800e626:	2206      	movs	r2, #6
+ 800e628:	2108      	movs	r1, #8
+ 800e62a:	47a0      	blx	r4
+      if(recvedstate==BLUE_LIGHT_EVENT)
+ 800e62c:	9b03      	ldr	r3, [sp, #12]
+ 800e62e:	2b08      	cmp	r3, #8
+ 800e630:	d1ef      	bne.n	800e612 <thread_bluelight+0x22>
+    	uart_send_string(UART_User,(void *)"----进入蓝灯线程-----\r\n");
+ 800e632:	491c      	ldr	r1, [pc, #112]	; (800e6a4 <thread_bluelight+0xb4>)
+ 800e634:	2002      	movs	r0, #2
+ 800e636:	f000 fb89 	bl	800ed4c <uart_send_string>
+    	uart_send_string(UART_User,(void *)"在蓝灯线程中，设置绿灯事件\r\n");
+ 800e63a:	491b      	ldr	r1, [pc, #108]	; (800e6a8 <thread_bluelight+0xb8>)
+ 800e63c:	2002      	movs	r0, #2
+ 800e63e:	f000 fb85 	bl	800ed4c <uart_send_string>
+      if(grt_flag==1)
+ 800e642:	4b15      	ldr	r3, [pc, #84]	; (800e698 <thread_bluelight+0xa8>)
+ 800e644:	881b      	ldrh	r3, [r3, #0]
+ 800e646:	b29b      	uxth	r3, r3
+ 800e648:	2b01      	cmp	r3, #1
+ 800e64a:	d1dd      	bne.n	800e608 <thread_bluelight+0x18>
+        rt_event_send(EventWord,GREEN_LIGHT_EVENT);
+ 800e64c:	4c13      	ldr	r4, [pc, #76]	; (800e69c <thread_bluelight+0xac>)
+ 800e64e:	6823      	ldr	r3, [r4, #0]
+ 800e650:	f8d3 30ac 	ldr.w	r3, [r3, #172]	; 0xac
+ 800e654:	2104      	movs	r1, #4
+ 800e656:	4a12      	ldr	r2, [pc, #72]	; (800e6a0 <thread_bluelight+0xb0>)
+ 800e658:	6810      	ldr	r0, [r2, #0]
+ 800e65a:	4798      	blx	r3
+        uart_send_string(UART_User,(void *)"------蓝灯闪烁------\r\n");
+ 800e65c:	4913      	ldr	r1, [pc, #76]	; (800e6ac <thread_bluelight+0xbc>)
+ 800e65e:	2002      	movs	r0, #2
+ 800e660:	f000 fb74 	bl	800ed4c <uart_send_string>
+	  	  gpio_reverse(LIGHT_BLUE);
+ 800e664:	f240 1009 	movw	r0, #265	; 0x109
+ 800e668:	f000 f9a0 	bl	800e9ac <gpio_reverse>
+        delay_ms(10000);
+ 800e66c:	6823      	ldr	r3, [r4, #0]
+ 800e66e:	f8d3 3094 	ldr.w	r3, [r3, #148]	; 0x94
+ 800e672:	f242 7010 	movw	r0, #10000	; 0x2710
+ 800e676:	4798      	blx	r3
+ 800e678:	e7c6      	b.n	800e608 <thread_bluelight+0x18>
+      {
         gpio_init(LIGHT_BLUE,GPIO_OUTPUT,LIGHT_ON);
  800e67a:	2200      	movs	r2, #0
  800e67c:	2101      	movs	r1, #1
@@ -1478,14 +1480,14 @@ void thread_bluelight()
  800e688:	4611      	mov	r1, r2
  800e68a:	f44f 7084 	mov.w	r0, #264	; 0x108
  800e68e:	f000 f955 	bl	800e93c <gpio_init>
- 800e692:	e7b9      	b.n	800e608 <thread_bluelight+0x18>
- 800e694:	0800f994 	.word	0x0800f994
- 800e698:	20003858 	.word	0x20003858
- 800e69c:	20003050 	.word	0x20003050
- 800e6a0:	0800f9b4 	.word	0x0800f9b4
- 800e6a4:	0800f9cc 	.word	0x0800f9cc
- 800e6a8:	2000304c 	.word	0x2000304c
- 800e6ac:	0800f9ec 	.word	0x0800f9ec
+ 800e692:	e7be      	b.n	800e612 <thread_bluelight+0x22>
+ 800e694:	0800fae4 	.word	0x0800fae4
+ 800e698:	2000304c 	.word	0x2000304c
+ 800e69c:	2000385c 	.word	0x2000385c
+ 800e6a0:	20003054 	.word	0x20003054
+ 800e6a4:	0800fb04 	.word	0x0800fb04
+ 800e6a8:	0800fb1c 	.word	0x0800fb1c
+ 800e6ac:	0800fb3c 	.word	0x0800fb3c
 
 0800e6b0 <main>:
 //声明使用到的内部函数
@@ -1505,8 +1507,8 @@ int main(void)
  800e6be:	2000      	movs	r0, #0
  800e6c0:	bd08      	pop	{r3, pc}
  800e6c2:	bf00      	nop
- 800e6c4:	20003858 	.word	0x20003858
- 800e6c8:	0800edd5 	.word	0x0800edd5
+ 800e6c4:	2000385c 	.word	0x2000385c
+ 800e6c8:	0800ee41 	.word	0x0800ee41
 
 0800e6cc <flash_erase>:
 //======================================================================
@@ -1583,7 +1585,7 @@ void flash_read_logic(uint8_t *dest,uint16_t sect,uint16_t offset,uint16_t N)
  800e72a:	eb02 21c1 	add.w	r1, r2, r1, lsl #11
     memcpy(dest,src,N);
  800e72e:	461a      	mov	r2, r3
- 800e730:	f001 f8de 	bl	800f8f0 <memcpy>
+ 800e730:	f001 f986 	bl	800fa40 <memcpy>
 }
  800e734:	bd08      	pop	{r3, pc}
 
@@ -1598,7 +1600,7 @@ void flash_read_physical(uint8_t *dest,uint32_t addr,uint16_t N)
     uint8_t *src;
     src=(uint8_t *)addr;
     memcpy(dest,src,N);
- 800e738:	f001 f8da 	bl	800f8f0 <memcpy>
+ 800e738:	f001 f982 	bl	800fa40 <memcpy>
 }
  800e73c:	bd08      	pop	{r3, pc}
 
@@ -1628,7 +1630,7 @@ uint8_t flash_isempty(uint16_t sect,uint16_t N)
  800e756:	4622      	mov	r2, r4
  800e758:	02c9      	lsls	r1, r1, #11
  800e75a:	4668      	mov	r0, sp
- 800e75c:	f001 f8c8 	bl	800f8f0 <memcpy>
+ 800e75c:	f001 f970 	bl	800fa40 <memcpy>
     for(i = 0; i<N; i++)   //遍历区域内字节
  800e760:	2300      	movs	r3, #0
  800e762:	42a3      	cmp	r3, r4
@@ -2032,2464 +2034,2650 @@ void gpio_get_port_pin(uint16_t port_pin,uint8_t* port,uint8_t* pin)
 
 void thread_rulechoose()
 {
- 800e9f4:	b500      	push	{lr}
- 800e9f6:	b085      	sub	sp, #20
- 800e9f8:	e012      	b.n	800ea20 <thread_rulechoose+0x2c>
+ 800e9f4:	b510      	push	{r4, lr}
+ 800e9f6:	b086      	sub	sp, #24
+ 800e9f8:	e016      	b.n	800ea28 <thread_rulechoose+0x34>
     	{
     		if(gcRecvBuf[7]==0x90) //命令字为90，代表“事件功能”
             {
                 if(gcRecvBuf[8]==0x01)//命令参数为01，代表启动该功能，传递事件信号把小灯线程从阻塞队列移到就绪队列
                 {
                     printf("接收到事件功能开启命令，事件功能模块开启\n");
- 800e9fa:	481f      	ldr	r0, [pc, #124]	; (800ea78 <thread_rulechoose+0x84>)
- 800e9fc:	f000 ff12 	bl	800f824 <myprintf>
+ 800e9fa:	482c      	ldr	r0, [pc, #176]	; (800eaac <thread_rulechoose+0xb8>)
+ 800e9fc:	f000 ffba 	bl	800f974 <myprintf>
                     grt_flag=1;
- 800ea00:	4b1e      	ldr	r3, [pc, #120]	; (800ea7c <thread_rulechoose+0x88>)
+ 800ea00:	4b2b      	ldr	r3, [pc, #172]	; (800eab0 <thread_rulechoose+0xbc>)
  800ea02:	2201      	movs	r2, #1
  800ea04:	801a      	strh	r2, [r3, #0]
                     rt_event_send(EventWord,BLUE_LIGHT_EVENT);
- 800ea06:	4b1e      	ldr	r3, [pc, #120]	; (800ea80 <thread_rulechoose+0x8c>)
+ 800ea06:	4b2b      	ldr	r3, [pc, #172]	; (800eab4 <thread_rulechoose+0xc0>)
  800ea08:	681b      	ldr	r3, [r3, #0]
  800ea0a:	f8d3 30ac 	ldr.w	r3, [r3, #172]	; 0xac
  800ea0e:	2108      	movs	r1, #8
- 800ea10:	4a1c      	ldr	r2, [pc, #112]	; (800ea84 <thread_rulechoose+0x90>)
+ 800ea10:	4a29      	ldr	r2, [pc, #164]	; (800eab8 <thread_rulechoose+0xc4>)
  800ea12:	6810      	ldr	r0, [r2, #0]
  800ea14:	4798      	blx	r3
- 800ea16:	e023      	b.n	800ea60 <thread_rulechoose+0x6c>
+ 800ea16:	e027      	b.n	800ea68 <thread_rulechoose+0x74>
                 }
                 
 
             }
 
             if(gcRecvBuf[7]==0x91) //命令字为91，代表“消息队列功能”
- 800ea18:	4b1b      	ldr	r3, [pc, #108]	; (800ea88 <thread_rulechoose+0x94>)
- 800ea1a:	79da      	ldrb	r2, [r3, #7]
-            {
+ 800ea18:	4b28      	ldr	r3, [pc, #160]	; (800eabc <thread_rulechoose+0xc8>)
+ 800ea1a:	79db      	ldrb	r3, [r3, #7]
+ 800ea1c:	b2db      	uxtb	r3, r3
+ 800ea1e:	2b91      	cmp	r3, #145	; 0x91
+ 800ea20:	d042      	beq.n	800eaa8 <thread_rulechoose+0xb4>
+			    rt_mq_send(mq,recvData,sizeof(recvData));
+		    }
 
-            }
+            
 
             if(gcRecvBuf[7]==0x92) //命令字为90，代表“信号量功能”
- 800ea1c:	79da      	ldrb	r2, [r3, #7]
+ 800ea22:	4b26      	ldr	r3, [pc, #152]	; (800eabc <thread_rulechoose+0xc8>)
+ 800ea24:	79da      	ldrb	r2, [r3, #7]
             {
 
             }
 
             if(gcRecvBuf[7]==0x93) //命令字为90，代表“互斥量功能”
- 800ea1e:	79db      	ldrb	r3, [r3, #7]
+ 800ea26:	79db      	ldrb	r3, [r3, #7]
         printf("进入命令选择线程，等待事件信号\n");
- 800ea20:	481a      	ldr	r0, [pc, #104]	; (800ea8c <thread_rulechoose+0x98>)
- 800ea22:	f000 feff 	bl	800f824 <myprintf>
+ 800ea28:	4825      	ldr	r0, [pc, #148]	; (800eac0 <thread_rulechoose+0xcc>)
+ 800ea2a:	f000 ffa3 	bl	800f974 <myprintf>
         rt_event_recv(EventWord,RULE_CHOOSE_EVENT,RT_EVENT_FLAG_OR|RT_EVENT_FLAG_CLEAR,RT_WAITING_FOREVER,&recvedstate);//等待命令选择线程的事件信号，串口接收完数据后会触发
- 800ea26:	4b16      	ldr	r3, [pc, #88]	; (800ea80 <thread_rulechoose+0x8c>)
- 800ea28:	681b      	ldr	r3, [r3, #0]
- 800ea2a:	f8d3 40a8 	ldr.w	r4, [r3, #168]	; 0xa8
- 800ea2e:	4b15      	ldr	r3, [pc, #84]	; (800ea84 <thread_rulechoose+0x90>)
- 800ea30:	6818      	ldr	r0, [r3, #0]
- 800ea32:	ab03      	add	r3, sp, #12
- 800ea34:	9300      	str	r3, [sp, #0]
- 800ea36:	f04f 33ff 	mov.w	r3, #4294967295
- 800ea3a:	2206      	movs	r2, #6
- 800ea3c:	2102      	movs	r1, #2
- 800ea3e:	47a0      	blx	r4
+ 800ea2e:	4b21      	ldr	r3, [pc, #132]	; (800eab4 <thread_rulechoose+0xc0>)
+ 800ea30:	681b      	ldr	r3, [r3, #0]
+ 800ea32:	f8d3 40a8 	ldr.w	r4, [r3, #168]	; 0xa8
+ 800ea36:	4b20      	ldr	r3, [pc, #128]	; (800eab8 <thread_rulechoose+0xc4>)
+ 800ea38:	6818      	ldr	r0, [r3, #0]
+ 800ea3a:	ab05      	add	r3, sp, #20
+ 800ea3c:	9300      	str	r3, [sp, #0]
+ 800ea3e:	f04f 33ff 	mov.w	r3, #4294967295
+ 800ea42:	2206      	movs	r2, #6
+ 800ea44:	2102      	movs	r1, #2
+ 800ea46:	47a0      	blx	r4
         printf("接收到事件信号\n");
- 800ea40:	4813      	ldr	r0, [pc, #76]	; (800ea90 <thread_rulechoose+0x9c>)
- 800ea42:	f000 feef 	bl	800f824 <myprintf>
+ 800ea48:	481e      	ldr	r0, [pc, #120]	; (800eac4 <thread_rulechoose+0xd0>)
+ 800ea4a:	f000 ff93 	bl	800f974 <myprintf>
         if(recvedstate==RULE_CHOOSE_EVENT)  //如果接收完成且正确
- 800ea46:	9b03      	ldr	r3, [sp, #12]
- 800ea48:	2b02      	cmp	r3, #2
- 800ea4a:	d1e9      	bne.n	800ea20 <thread_rulechoose+0x2c>
+ 800ea4e:	9b05      	ldr	r3, [sp, #20]
+ 800ea50:	2b02      	cmp	r3, #2
+ 800ea52:	d1e9      	bne.n	800ea28 <thread_rulechoose+0x34>
     		if(gcRecvBuf[7]==0x90) //命令字为90，代表“事件功能”
- 800ea4c:	4b0e      	ldr	r3, [pc, #56]	; (800ea88 <thread_rulechoose+0x94>)
- 800ea4e:	79db      	ldrb	r3, [r3, #7]
- 800ea50:	b2db      	uxtb	r3, r3
- 800ea52:	2b90      	cmp	r3, #144	; 0x90
- 800ea54:	d1e0      	bne.n	800ea18 <thread_rulechoose+0x24>
+ 800ea54:	4b19      	ldr	r3, [pc, #100]	; (800eabc <thread_rulechoose+0xc8>)
+ 800ea56:	79db      	ldrb	r3, [r3, #7]
+ 800ea58:	b2db      	uxtb	r3, r3
+ 800ea5a:	2b90      	cmp	r3, #144	; 0x90
+ 800ea5c:	d1dc      	bne.n	800ea18 <thread_rulechoose+0x24>
                 if(gcRecvBuf[8]==0x01)//命令参数为01，代表启动该功能，传递事件信号把小灯线程从阻塞队列移到就绪队列
- 800ea56:	4b0c      	ldr	r3, [pc, #48]	; (800ea88 <thread_rulechoose+0x94>)
- 800ea58:	7a1b      	ldrb	r3, [r3, #8]
- 800ea5a:	b2db      	uxtb	r3, r3
- 800ea5c:	2b01      	cmp	r3, #1
- 800ea5e:	d0cc      	beq.n	800e9fa <thread_rulechoose+0x6>
+ 800ea5e:	4b17      	ldr	r3, [pc, #92]	; (800eabc <thread_rulechoose+0xc8>)
+ 800ea60:	7a1b      	ldrb	r3, [r3, #8]
+ 800ea62:	b2db      	uxtb	r3, r3
+ 800ea64:	2b01      	cmp	r3, #1
+ 800ea66:	d0c8      	beq.n	800e9fa <thread_rulechoose+0x6>
                 if(gcRecvBuf[8]==0x00)//命令参数为00，代表关闭该功能，重新启动小灯线程，把小灯线程移入阻塞队列
- 800ea60:	4b09      	ldr	r3, [pc, #36]	; (800ea88 <thread_rulechoose+0x94>)
- 800ea62:	7a1b      	ldrb	r3, [r3, #8]
- 800ea64:	2b00      	cmp	r3, #0
- 800ea66:	d1d7      	bne.n	800ea18 <thread_rulechoose+0x24>
+ 800ea68:	4b14      	ldr	r3, [pc, #80]	; (800eabc <thread_rulechoose+0xc8>)
+ 800ea6a:	7a1b      	ldrb	r3, [r3, #8]
+ 800ea6c:	2b00      	cmp	r3, #0
+ 800ea6e:	d1d3      	bne.n	800ea18 <thread_rulechoose+0x24>
                     printf("接收到事件功能结束命令，事件功能模块结束");
- 800ea68:	480a      	ldr	r0, [pc, #40]	; (800ea94 <thread_rulechoose+0xa0>)
- 800ea6a:	f000 fedb 	bl	800f824 <myprintf>
+ 800ea70:	4815      	ldr	r0, [pc, #84]	; (800eac8 <thread_rulechoose+0xd4>)
+ 800ea72:	f000 ff7f 	bl	800f974 <myprintf>
                     grt_flag=0;
- 800ea6e:	4b03      	ldr	r3, [pc, #12]	; (800ea7c <thread_rulechoose+0x88>)
- 800ea70:	2200      	movs	r2, #0
- 800ea72:	801a      	strh	r2, [r3, #0]
- 800ea74:	e7d0      	b.n	800ea18 <thread_rulechoose+0x24>
- 800ea76:	bf00      	nop
- 800ea78:	0800fa34 	.word	0x0800fa34
- 800ea7c:	2000304c 	.word	0x2000304c
- 800ea80:	20003858 	.word	0x20003858
- 800ea84:	20003050 	.word	0x20003050
- 800ea88:	20003058 	.word	0x20003058
- 800ea8c:	0800fa04 	.word	0x0800fa04
- 800ea90:	0800fa24 	.word	0x0800fa24
- 800ea94:	0800fa60 	.word	0x0800fa60
+ 800ea76:	4b0e      	ldr	r3, [pc, #56]	; (800eab0 <thread_rulechoose+0xbc>)
+ 800ea78:	2200      	movs	r2, #0
+ 800ea7a:	801a      	strh	r2, [r3, #0]
+ 800ea7c:	e7cc      	b.n	800ea18 <thread_rulechoose+0x24>
+				recvData[i] = gcRecvBuf[i+9];
+ 800ea7e:	f103 0209 	add.w	r2, r3, #9
+ 800ea82:	490e      	ldr	r1, [pc, #56]	; (800eabc <thread_rulechoose+0xc8>)
+ 800ea84:	5c89      	ldrb	r1, [r1, r2]
+ 800ea86:	aa06      	add	r2, sp, #24
+ 800ea88:	441a      	add	r2, r3
+ 800ea8a:	f802 1c10 	strb.w	r1, [r2, #-16]
+			for(int i=0;i<8;i++)
+ 800ea8e:	3301      	adds	r3, #1
+ 800ea90:	2b07      	cmp	r3, #7
+ 800ea92:	ddf4      	ble.n	800ea7e <thread_rulechoose+0x8a>
+			    rt_mq_send(mq,recvData,sizeof(recvData));
+ 800ea94:	4b07      	ldr	r3, [pc, #28]	; (800eab4 <thread_rulechoose+0xc0>)
+ 800ea96:	681b      	ldr	r3, [r3, #0]
+ 800ea98:	f8d3 30e8 	ldr.w	r3, [r3, #232]	; 0xe8
+ 800ea9c:	2209      	movs	r2, #9
+ 800ea9e:	a902      	add	r1, sp, #8
+ 800eaa0:	480a      	ldr	r0, [pc, #40]	; (800eacc <thread_rulechoose+0xd8>)
+ 800eaa2:	6800      	ldr	r0, [r0, #0]
+ 800eaa4:	4798      	blx	r3
+ 800eaa6:	e7bc      	b.n	800ea22 <thread_rulechoose+0x2e>
+			for(int i=0;i<8;i++)
+ 800eaa8:	2300      	movs	r3, #0
+ 800eaaa:	e7f1      	b.n	800ea90 <thread_rulechoose+0x9c>
+ 800eaac:	0800fb84 	.word	0x0800fb84
+ 800eab0:	2000304c 	.word	0x2000304c
+ 800eab4:	2000385c 	.word	0x2000385c
+ 800eab8:	20003054 	.word	0x20003054
+ 800eabc:	2000305c 	.word	0x2000305c
+ 800eac0:	0800fb54 	.word	0x0800fb54
+ 800eac4:	0800fb74 	.word	0x0800fb74
+ 800eac8:	0800fbb0 	.word	0x0800fbb0
+ 800eacc:	20003050 	.word	0x20003050
 
-0800ea98 <Vectors_Init>:
+0800ead0 <Vectors_Init>:
 //参数说明：无
 //功能概要：User对BIOS中断向量表的部分继承,构件库函数指针初始化
 //修改信息：WYH，20200805，规范
 //======================================================================
 void  Vectors_Init()
 {
- 800ea98:	b500      	push	{lr}
- 800ea9a:	f6ad 0d04 	subw	sp, sp, #2052	; 0x804
+ 800ead0:	b500      	push	{lr}
+ 800ead2:	f6ad 0d04 	subw	sp, sp, #2052	; 0x804
     //有用户程序，编译本段代码
     #if (GEC_USER_SECTOR_START!=0)   
     //（1）若Flash倒数1扇区的前24字节为空，则写入设备序列号及软件版本号初值
     if(flash_isempty(MCU_SECTOR_NUM-1,24))
- 800ea9e:	2118      	movs	r1, #24
- 800eaa0:	207f      	movs	r0, #127	; 0x7f
- 800eaa2:	f7ff fe4c 	bl	800e73e <flash_isempty>
- 800eaa6:	2800      	cmp	r0, #0
- 800eaa8:	d12d      	bne.n	800eb06 <Vectors_Init+0x6e>
+ 800ead6:	2118      	movs	r1, #24
+ 800ead8:	207f      	movs	r0, #127	; 0x7f
+ 800eada:	f7ff fe30 	bl	800e73e <flash_isempty>
+ 800eade:	2800      	cmp	r0, #0
+ 800eae0:	d12d      	bne.n	800eb3e <Vectors_Init+0x6e>
     }
     //（2）继承BIOS的串口中断
     void ** bios=(void *)MCU_FLASH_ADDR_START;   //向量表起始地址
     uint32_t user[MCU_SECTORSIZE/4];     //向量表变量数组
     //读取USER中断向量表各中断处理程序地址赋给user数组
     flash_read_physical((uint8_t *)user,GEC_USER_SECTOR_START*
- 800eaaa:	f44f 6200 	mov.w	r2, #2048	; 0x800
- 800eaae:	4919      	ldr	r1, [pc, #100]	; (800eb14 <Vectors_Init+0x7c>)
- 800eab0:	4668      	mov	r0, sp
- 800eab2:	f7ff fe40 	bl	800e736 <flash_read_physical>
+ 800eae2:	f44f 6200 	mov.w	r2, #2048	; 0x800
+ 800eae6:	4919      	ldr	r1, [pc, #100]	; (800eb4c <Vectors_Init+0x7c>)
+ 800eae8:	4668      	mov	r0, sp
+ 800eaea:	f7ff fe24 	bl	800e736 <flash_read_physical>
     MCU_SECTORSIZE+MCU_FLASH_ADDR_START,MCU_SECTORSIZE);
     //判断USER中串口更新中断是否为BIOS对应中断地址。若是，则不作操作；否则修改
     //为BIOS对应中断地址
     if(user[BIOS_UART_UPDATE_IRQn] != (uint32_t)bios[BIOS_UART_UPDATE_IRQn])
- 800eab6:	9a37      	ldr	r2, [sp, #220]	; 0xdc
- 800eab8:	4b17      	ldr	r3, [pc, #92]	; (800eb18 <Vectors_Init+0x80>)
- 800eaba:	681b      	ldr	r3, [r3, #0]
- 800eabc:	429a      	cmp	r2, r3
- 800eabe:	d014      	beq.n	800eaea <Vectors_Init+0x52>
+ 800eaee:	9a37      	ldr	r2, [sp, #220]	; 0xdc
+ 800eaf0:	4b17      	ldr	r3, [pc, #92]	; (800eb50 <Vectors_Init+0x80>)
+ 800eaf2:	681b      	ldr	r3, [r3, #0]
+ 800eaf4:	429a      	cmp	r2, r3
+ 800eaf6:	d014      	beq.n	800eb22 <Vectors_Init+0x52>
     {
         //改变User中断向量表中BIOS_UART中断向量
         flash_erase(GEC_USER_SECTOR_START);
- 800eac0:	201a      	movs	r0, #26
- 800eac2:	f7ff fe03 	bl	800e6cc <flash_erase>
+ 800eaf8:	201a      	movs	r0, #26
+ 800eafa:	f7ff fde7 	bl	800e6cc <flash_erase>
         //改USER中断向量表的BIOS程序写入串口的中断处理程序地址
         user[BIOS_UART_UPDATE_IRQn]=(uint32_t)bios[BIOS_UART_UPDATE_IRQn];
- 800eac6:	4b14      	ldr	r3, [pc, #80]	; (800eb18 <Vectors_Init+0x80>)
- 800eac8:	681b      	ldr	r3, [r3, #0]
- 800eaca:	9337      	str	r3, [sp, #220]	; 0xdc
+ 800eafe:	4b14      	ldr	r3, [pc, #80]	; (800eb50 <Vectors_Init+0x80>)
+ 800eb00:	681b      	ldr	r3, [r3, #0]
+ 800eb02:	9337      	str	r3, [sp, #220]	; 0xdc
         
     #if (RTThread_Start!=1)       
         user[BIOS_SVC_IRQn]=(uint32_t)bios[BIOS_SVC_IRQn];
- 800eacc:	4b13      	ldr	r3, [pc, #76]	; (800eb1c <Vectors_Init+0x84>)
- 800eace:	681b      	ldr	r3, [r3, #0]
- 800ead0:	930b      	str	r3, [sp, #44]	; 0x2c
+ 800eb04:	4b13      	ldr	r3, [pc, #76]	; (800eb54 <Vectors_Init+0x84>)
+ 800eb06:	681b      	ldr	r3, [r3, #0]
+ 800eb08:	930b      	str	r3, [sp, #44]	; 0x2c
 		user[BIOS_PendSV_Handler]=(uint32_t)bios[BIOS_PendSV_Handler];
- 800ead2:	4b13      	ldr	r3, [pc, #76]	; (800eb20 <Vectors_Init+0x88>)
- 800ead4:	681b      	ldr	r3, [r3, #0]
- 800ead6:	930e      	str	r3, [sp, #56]	; 0x38
+ 800eb0a:	4b13      	ldr	r3, [pc, #76]	; (800eb58 <Vectors_Init+0x88>)
+ 800eb0c:	681b      	ldr	r3, [r3, #0]
+ 800eb0e:	930e      	str	r3, [sp, #56]	; 0x38
 		user[BIOS_SysTick_Handler]=(uint32_t)bios[BIOS_SysTick_Handler];
- 800ead8:	4b12      	ldr	r3, [pc, #72]	; (800eb24 <Vectors_Init+0x8c>)
- 800eada:	681b      	ldr	r3, [r3, #0]
- 800eadc:	930f      	str	r3, [sp, #60]	; 0x3c
+ 800eb10:	4b12      	ldr	r3, [pc, #72]	; (800eb5c <Vectors_Init+0x8c>)
+ 800eb12:	681b      	ldr	r3, [r3, #0]
+ 800eb14:	930f      	str	r3, [sp, #60]	; 0x3c
     #endif
 		
         flash_write_physical(GEC_USER_SECTOR_START*MCU_SECTORSIZE+
- 800eade:	466a      	mov	r2, sp
- 800eae0:	f44f 6100 	mov.w	r1, #2048	; 0x800
- 800eae4:	480b      	ldr	r0, [pc, #44]	; (800eb14 <Vectors_Init+0x7c>)
- 800eae6:	f7ff fee9 	bl	800e8bc <flash_write_physical>
+ 800eb16:	466a      	mov	r2, sp
+ 800eb18:	f44f 6100 	mov.w	r1, #2048	; 0x800
+ 800eb1c:	480b      	ldr	r0, [pc, #44]	; (800eb4c <Vectors_Init+0x7c>)
+ 800eb1e:	f7ff fecd 	bl	800e8bc <flash_write_physical>
         MCU_FLASH_ADDR_START,MCU_SECTORSIZE,(uint8_t *)user);
     }
     
     //（3）中断向量表指针重定向到USER程序的中断向量表
     SCB->VTOR = (uint32_t)(GEC_USER_SECTOR_START*MCU_SECTORSIZE+
- 800eaea:	4b0f      	ldr	r3, [pc, #60]	; (800eb28 <Vectors_Init+0x90>)
- 800eaec:	4a09      	ldr	r2, [pc, #36]	; (800eb14 <Vectors_Init+0x7c>)
- 800eaee:	609a      	str	r2, [r3, #8]
+ 800eb22:	4b0f      	ldr	r3, [pc, #60]	; (800eb60 <Vectors_Init+0x90>)
+ 800eb24:	4a09      	ldr	r2, [pc, #36]	; (800eb4c <Vectors_Init+0x7c>)
+ 800eb26:	609a      	str	r2, [r3, #8]
     MCU_FLASH_ADDR_START);  
     //（4）给component_fun赋值，SYSTEM_FUNCTION函数用
     component_fun=(void **)(MCU_FLASH_ADDR_START+
- 800eaf0:	4b0e      	ldr	r3, [pc, #56]	; (800eb2c <Vectors_Init+0x94>)
- 800eaf2:	f5a2 5260 	sub.w	r2, r2, #14336	; 0x3800
- 800eaf6:	601a      	str	r2, [r3, #0]
+ 800eb28:	4b0e      	ldr	r3, [pc, #56]	; (800eb64 <Vectors_Init+0x94>)
+ 800eb2a:	f5a2 5260 	sub.w	r2, r2, #14336	; 0x3800
+ 800eb2e:	601a      	str	r2, [r3, #0]
                    GEC_COMPONENT_LST_START*MCU_SECTORSIZE); 
     //（5）printf提示
     printf("  【User提示】：将进入User的main()执行...\r\n");
- 800eaf8:	480d      	ldr	r0, [pc, #52]	; (800eb30 <Vectors_Init+0x98>)
- 800eafa:	f000 fe93 	bl	800f824 <myprintf>
+ 800eb30:	480d      	ldr	r0, [pc, #52]	; (800eb68 <Vectors_Init+0x98>)
+ 800eb32:	f000 ff1f 	bl	800f974 <myprintf>
     
     #endif
 }
- 800eafe:	f60d 0d04 	addw	sp, sp, #2052	; 0x804
- 800eb02:	f85d fb04 	ldr.w	pc, [sp], #4
+ 800eb36:	f60d 0d04 	addw	sp, sp, #2052	; 0x804
+ 800eb3a:	f85d fb04 	ldr.w	pc, [sp], #4
         flash_write_physical((MCU_SECTOR_NUM-1)*MCU_SECTORSIZE+
- 800eb06:	4a0b      	ldr	r2, [pc, #44]	; (800eb34 <Vectors_Init+0x9c>)
- 800eb08:	2118      	movs	r1, #24
- 800eb0a:	480b      	ldr	r0, [pc, #44]	; (800eb38 <Vectors_Init+0xa0>)
- 800eb0c:	f7ff fed6 	bl	800e8bc <flash_write_physical>
- 800eb10:	e7cb      	b.n	800eaaa <Vectors_Init+0x12>
- 800eb12:	bf00      	nop
- 800eb14:	0800d000 	.word	0x0800d000
- 800eb18:	080000dc 	.word	0x080000dc
- 800eb1c:	0800002c 	.word	0x0800002c
- 800eb20:	08000038 	.word	0x08000038
- 800eb24:	0800003c 	.word	0x0800003c
- 800eb28:	e000ed00 	.word	0xe000ed00
- 800eb2c:	20003858 	.word	0x20003858
- 800eb30:	0800faa8 	.word	0x0800faa8
- 800eb34:	0800fa8c 	.word	0x0800fa8c
- 800eb38:	0803f800 	.word	0x0803f800
+ 800eb3e:	4a0b      	ldr	r2, [pc, #44]	; (800eb6c <Vectors_Init+0x9c>)
+ 800eb40:	2118      	movs	r1, #24
+ 800eb42:	480b      	ldr	r0, [pc, #44]	; (800eb70 <Vectors_Init+0xa0>)
+ 800eb44:	f7ff feba 	bl	800e8bc <flash_write_physical>
+ 800eb48:	e7cb      	b.n	800eae2 <Vectors_Init+0x12>
+ 800eb4a:	bf00      	nop
+ 800eb4c:	0800d000 	.word	0x0800d000
+ 800eb50:	080000dc 	.word	0x080000dc
+ 800eb54:	0800002c 	.word	0x0800002c
+ 800eb58:	08000038 	.word	0x08000038
+ 800eb5c:	0800003c 	.word	0x0800003c
+ 800eb60:	e000ed00 	.word	0xe000ed00
+ 800eb64:	2000385c 	.word	0x2000385c
+ 800eb68:	0800fbf8 	.word	0x0800fbf8
+ 800eb6c:	0800fbdc 	.word	0x0800fbdc
+ 800eb70:	0803f800 	.word	0x0803f800
 
-0800eb3c <uart_is_uartNo>:
+0800eb74 <uart_is_uartNo>:
 //参数说明：串口号uartNo  :UART_1、UART_2、UART_3
 //功能概要：为程序健壮性而判断uartNo是否在串口数字范围内
 //=====================================================================
 uint8_t uart_is_uartNo(uint8_t uartNo)
 {
     if(uartNo < UART_1 || uartNo > UART_3)
- 800eb3c:	3801      	subs	r0, #1
- 800eb3e:	b2c0      	uxtb	r0, r0
- 800eb40:	2802      	cmp	r0, #2
- 800eb42:	d801      	bhi.n	800eb48 <uart_is_uartNo+0xc>
+ 800eb74:	3801      	subs	r0, #1
+ 800eb76:	b2c0      	uxtb	r0, r0
+ 800eb78:	2802      	cmp	r0, #2
+ 800eb7a:	d801      	bhi.n	800eb80 <uart_is_uartNo+0xc>
         return 0;
     else
         return 1;
- 800eb44:	2001      	movs	r0, #1
+ 800eb7c:	2001      	movs	r0, #1
 }
- 800eb46:	4770      	bx	lr
+ 800eb7e:	4770      	bx	lr
         return 0;
- 800eb48:	2000      	movs	r0, #0
- 800eb4a:	4770      	bx	lr
+ 800eb80:	2000      	movs	r0, #0
+ 800eb82:	4770      	bx	lr
 
-0800eb4c <uart_init>:
+0800eb84 <uart_init>:
 {
- 800eb4c:	b538      	push	{r3, r4, r5, lr}
- 800eb4e:	4604      	mov	r4, r0
- 800eb50:	460d      	mov	r5, r1
+ 800eb84:	b538      	push	{r3, r4, r5, lr}
+ 800eb86:	4604      	mov	r4, r0
+ 800eb88:	460d      	mov	r5, r1
 	if(!uart_is_uartNo(uartNo))
- 800eb52:	f7ff fff3 	bl	800eb3c <uart_is_uartNo>
- 800eb56:	2800      	cmp	r0, #0
- 800eb58:	d03c      	beq.n	800ebd4 <uart_init+0x88>
+ 800eb8a:	f7ff fff3 	bl	800eb74 <uart_is_uartNo>
+ 800eb8e:	2800      	cmp	r0, #0
+ 800eb90:	d03c      	beq.n	800ec0c <uart_init+0x88>
 	switch(uartNo)
- 800eb5a:	2c02      	cmp	r4, #2
- 800eb5c:	d057      	beq.n	800ec0e <uart_init+0xc2>
- 800eb5e:	2c03      	cmp	r4, #3
- 800eb60:	d071      	beq.n	800ec46 <uart_init+0xfa>
- 800eb62:	2c01      	cmp	r4, #1
- 800eb64:	d037      	beq.n	800ebd6 <uart_init+0x8a>
+ 800eb92:	2c02      	cmp	r4, #2
+ 800eb94:	d057      	beq.n	800ec46 <uart_init+0xc2>
+ 800eb96:	2c03      	cmp	r4, #3
+ 800eb98:	d071      	beq.n	800ec7e <uart_init+0xfa>
+ 800eb9a:	2c01      	cmp	r4, #1
+ 800eb9c:	d037      	beq.n	800ec0e <uart_init+0x8a>
 	USART_ARR[uartNo-1]->CR1 &= ~USART_CR1_UE;
- 800eb66:	1e60      	subs	r0, r4, #1
- 800eb68:	4b47      	ldr	r3, [pc, #284]	; (800ec88 <uart_init+0x13c>)
- 800eb6a:	f853 1020 	ldr.w	r1, [r3, r0, lsl #2]
- 800eb6e:	680a      	ldr	r2, [r1, #0]
- 800eb70:	f022 0201 	bic.w	r2, r2, #1
- 800eb74:	600a      	str	r2, [r1, #0]
+ 800eb9e:	1e60      	subs	r0, r4, #1
+ 800eba0:	4b47      	ldr	r3, [pc, #284]	; (800ecc0 <uart_init+0x13c>)
+ 800eba2:	f853 1020 	ldr.w	r1, [r3, r0, lsl #2]
+ 800eba6:	680a      	ldr	r2, [r1, #0]
+ 800eba8:	f022 0201 	bic.w	r2, r2, #1
+ 800ebac:	600a      	str	r2, [r1, #0]
 	USART_ARR[uartNo-1]->CR1 &= ~(USART_CR1_TE_Msk|USART_CR1_RE_Msk);
- 800eb76:	f853 1020 	ldr.w	r1, [r3, r0, lsl #2]
- 800eb7a:	680a      	ldr	r2, [r1, #0]
- 800eb7c:	f022 020c 	bic.w	r2, r2, #12
- 800eb80:	600a      	str	r2, [r1, #0]
+ 800ebae:	f853 1020 	ldr.w	r1, [r3, r0, lsl #2]
+ 800ebb2:	680a      	ldr	r2, [r1, #0]
+ 800ebb4:	f022 020c 	bic.w	r2, r2, #12
+ 800ebb8:	600a      	str	r2, [r1, #0]
 	if((USART_ARR[uartNo-1]->CR1 & USART_CR1_OVER8_Msk) == USART_CR1_OVER8_Msk)
- 800eb82:	f853 3020 	ldr.w	r3, [r3, r0, lsl #2]
- 800eb86:	681a      	ldr	r2, [r3, #0]
- 800eb88:	f412 4f00 	tst.w	r2, #32768	; 0x8000
- 800eb8c:	d076      	beq.n	800ec7c <uart_init+0x130>
+ 800ebba:	f853 3020 	ldr.w	r3, [r3, r0, lsl #2]
+ 800ebbe:	681a      	ldr	r2, [r3, #0]
+ 800ebc0:	f412 4f00 	tst.w	r2, #32768	; 0x8000
+ 800ebc4:	d076      	beq.n	800ecb4 <uart_init+0x130>
 	    usartdiv = (uint16_t)((SystemCoreClock/baud_rate)*2);
- 800eb8e:	4a3f      	ldr	r2, [pc, #252]	; (800ec8c <uart_init+0x140>)
- 800eb90:	6811      	ldr	r1, [r2, #0]
- 800eb92:	fbb1 f1f5 	udiv	r1, r1, r5
- 800eb96:	b289      	uxth	r1, r1
- 800eb98:	0049      	lsls	r1, r1, #1
- 800eb9a:	b289      	uxth	r1, r1
+ 800ebc6:	4a3f      	ldr	r2, [pc, #252]	; (800ecc4 <uart_init+0x140>)
+ 800ebc8:	6811      	ldr	r1, [r2, #0]
+ 800ebca:	fbb1 f1f5 	udiv	r1, r1, r5
+ 800ebce:	b289      	uxth	r1, r1
+ 800ebd0:	0049      	lsls	r1, r1, #1
+ 800ebd2:	b289      	uxth	r1, r1
 	USART_ARR[uartNo-1]->BRR = usartdiv;
- 800eb9c:	60d9      	str	r1, [r3, #12]
+ 800ebd4:	60d9      	str	r1, [r3, #12]
 	USART_ARR[uartNo-1]->ISR = 0;
- 800eb9e:	4b3a      	ldr	r3, [pc, #232]	; (800ec88 <uart_init+0x13c>)
- 800eba0:	f853 2020 	ldr.w	r2, [r3, r0, lsl #2]
- 800eba4:	2100      	movs	r1, #0
- 800eba6:	61d1      	str	r1, [r2, #28]
+ 800ebd6:	4b3a      	ldr	r3, [pc, #232]	; (800ecc0 <uart_init+0x13c>)
+ 800ebd8:	f853 2020 	ldr.w	r2, [r3, r0, lsl #2]
+ 800ebdc:	2100      	movs	r1, #0
+ 800ebde:	61d1      	str	r1, [r2, #28]
 	USART_ARR[uartNo-1]->CR2 &= ~(USART_CR2_LINEN | USART_CR2_CLKEN);
- 800eba8:	6851      	ldr	r1, [r2, #4]
- 800ebaa:	f421 4190 	bic.w	r1, r1, #18432	; 0x4800
- 800ebae:	6051      	str	r1, [r2, #4]
+ 800ebe0:	6851      	ldr	r1, [r2, #4]
+ 800ebe2:	f421 4190 	bic.w	r1, r1, #18432	; 0x4800
+ 800ebe6:	6051      	str	r1, [r2, #4]
 	USART_ARR[uartNo-1]->CR3 &= ~(USART_CR3_SCEN | USART_CR3_HDSEL | USART_CR3_IREN);
- 800ebb0:	f853 1020 	ldr.w	r1, [r3, r0, lsl #2]
- 800ebb4:	688a      	ldr	r2, [r1, #8]
- 800ebb6:	f022 022a 	bic.w	r2, r2, #42	; 0x2a
- 800ebba:	608a      	str	r2, [r1, #8]
+ 800ebe8:	f853 1020 	ldr.w	r1, [r3, r0, lsl #2]
+ 800ebec:	688a      	ldr	r2, [r1, #8]
+ 800ebee:	f022 022a 	bic.w	r2, r2, #42	; 0x2a
+ 800ebf2:	608a      	str	r2, [r1, #8]
 	USART_ARR[uartNo-1]->CR1 |= (USART_CR1_TE|USART_CR1_RE);
- 800ebbc:	f853 1020 	ldr.w	r1, [r3, r0, lsl #2]
- 800ebc0:	680a      	ldr	r2, [r1, #0]
- 800ebc2:	f042 020c 	orr.w	r2, r2, #12
- 800ebc6:	600a      	str	r2, [r1, #0]
+ 800ebf4:	f853 1020 	ldr.w	r1, [r3, r0, lsl #2]
+ 800ebf8:	680a      	ldr	r2, [r1, #0]
+ 800ebfa:	f042 020c 	orr.w	r2, r2, #12
+ 800ebfe:	600a      	str	r2, [r1, #0]
 	USART_ARR[uartNo-1]->CR1 |= USART_CR1_UE;
- 800ebc8:	f853 2020 	ldr.w	r2, [r3, r0, lsl #2]
- 800ebcc:	6813      	ldr	r3, [r2, #0]
- 800ebce:	f043 0301 	orr.w	r3, r3, #1
- 800ebd2:	6013      	str	r3, [r2, #0]
+ 800ec00:	f853 2020 	ldr.w	r2, [r3, r0, lsl #2]
+ 800ec04:	6813      	ldr	r3, [r2, #0]
+ 800ec06:	f043 0301 	orr.w	r3, r3, #1
+ 800ec0a:	6013      	str	r3, [r2, #0]
 }
- 800ebd4:	bd38      	pop	{r3, r4, r5, pc}
+ 800ec0c:	bd38      	pop	{r3, r4, r5, pc}
 			RCC->APB2ENR |= RCC_APB2ENR_USART1EN;
- 800ebd6:	4b2e      	ldr	r3, [pc, #184]	; (800ec90 <uart_init+0x144>)
- 800ebd8:	6e1a      	ldr	r2, [r3, #96]	; 0x60
- 800ebda:	f442 4280 	orr.w	r2, r2, #16384	; 0x4000
- 800ebde:	661a      	str	r2, [r3, #96]	; 0x60
-			RCC->AHB2ENR |= RCC_AHB2ENR_GPIOAEN;
- 800ebe0:	6cda      	ldr	r2, [r3, #76]	; 0x4c
- 800ebe2:	f042 0201 	orr.w	r2, r2, #1
- 800ebe6:	64da      	str	r2, [r3, #76]	; 0x4c
-			GPIOA->MODER &= ~(GPIO_MODER_MODE9|GPIO_MODER_MODE10);
- 800ebe8:	f04f 4390 	mov.w	r3, #1207959552	; 0x48000000
- 800ebec:	681a      	ldr	r2, [r3, #0]
- 800ebee:	f422 1270 	bic.w	r2, r2, #3932160	; 0x3c0000
- 800ebf2:	601a      	str	r2, [r3, #0]
-			GPIOA->MODER |= (GPIO_MODER_MODE9_1|GPIO_MODER_MODE10_1);
- 800ebf4:	681a      	ldr	r2, [r3, #0]
- 800ebf6:	f442 1220 	orr.w	r2, r2, #2621440	; 0x280000
- 800ebfa:	601a      	str	r2, [r3, #0]
-			GPIOA->AFR[1] &= ~(GPIO_AFRH_AFSEL9|GPIO_AFRH_AFSEL10);
- 800ebfc:	6a5a      	ldr	r2, [r3, #36]	; 0x24
- 800ebfe:	f422 627f 	bic.w	r2, r2, #4080	; 0xff0
- 800ec02:	625a      	str	r2, [r3, #36]	; 0x24
-			GPIOA->AFR[1] |= ((GPIO_AFRH_AFSEL9_0 | GPIO_AFRH_AFSEL9_1 | GPIO_AFRH_AFSEL9_2)
- 800ec04:	6a5a      	ldr	r2, [r3, #36]	; 0x24
- 800ec06:	f442 62ee 	orr.w	r2, r2, #1904	; 0x770
- 800ec0a:	625a      	str	r2, [r3, #36]	; 0x24
-		break;
- 800ec0c:	e7ab      	b.n	800eb66 <uart_init+0x1a>
-			RCC->APB1ENR1 |= RCC_APB1ENR1_USART2EN;
- 800ec0e:	4b20      	ldr	r3, [pc, #128]	; (800ec90 <uart_init+0x144>)
- 800ec10:	6d9a      	ldr	r2, [r3, #88]	; 0x58
- 800ec12:	f442 3200 	orr.w	r2, r2, #131072	; 0x20000
- 800ec16:	659a      	str	r2, [r3, #88]	; 0x58
+ 800ec0e:	4b2e      	ldr	r3, [pc, #184]	; (800ecc8 <uart_init+0x144>)
+ 800ec10:	6e1a      	ldr	r2, [r3, #96]	; 0x60
+ 800ec12:	f442 4280 	orr.w	r2, r2, #16384	; 0x4000
+ 800ec16:	661a      	str	r2, [r3, #96]	; 0x60
 			RCC->AHB2ENR |= RCC_AHB2ENR_GPIOAEN;
  800ec18:	6cda      	ldr	r2, [r3, #76]	; 0x4c
  800ec1a:	f042 0201 	orr.w	r2, r2, #1
  800ec1e:	64da      	str	r2, [r3, #76]	; 0x4c
-			GPIOA->MODER &= ~(GPIO_MODER_MODE2|GPIO_MODER_MODE3);
+			GPIOA->MODER &= ~(GPIO_MODER_MODE9|GPIO_MODER_MODE10);
  800ec20:	f04f 4390 	mov.w	r3, #1207959552	; 0x48000000
  800ec24:	681a      	ldr	r2, [r3, #0]
- 800ec26:	f022 02f0 	bic.w	r2, r2, #240	; 0xf0
+ 800ec26:	f422 1270 	bic.w	r2, r2, #3932160	; 0x3c0000
  800ec2a:	601a      	str	r2, [r3, #0]
-			GPIOA->MODER |= (GPIO_MODER_MODE2_1|GPIO_MODER_MODE3_1);
+			GPIOA->MODER |= (GPIO_MODER_MODE9_1|GPIO_MODER_MODE10_1);
  800ec2c:	681a      	ldr	r2, [r3, #0]
- 800ec2e:	f042 02a0 	orr.w	r2, r2, #160	; 0xa0
+ 800ec2e:	f442 1220 	orr.w	r2, r2, #2621440	; 0x280000
  800ec32:	601a      	str	r2, [r3, #0]
-			GPIOA->AFR[0] &= ~(GPIO_AFRL_AFSEL2|GPIO_AFRL_AFSEL3);
- 800ec34:	6a1a      	ldr	r2, [r3, #32]
- 800ec36:	f422 427f 	bic.w	r2, r2, #65280	; 0xff00
- 800ec3a:	621a      	str	r2, [r3, #32]
-			GPIOA->AFR[0] |= ((GPIO_AFRL_AFSEL2_0 | GPIO_AFRL_AFSEL2_1 | GPIO_AFRL_AFSEL2_2)
- 800ec3c:	6a1a      	ldr	r2, [r3, #32]
- 800ec3e:	f442 42ee 	orr.w	r2, r2, #30464	; 0x7700
- 800ec42:	621a      	str	r2, [r3, #32]
+			GPIOA->AFR[1] &= ~(GPIO_AFRH_AFSEL9|GPIO_AFRH_AFSEL10);
+ 800ec34:	6a5a      	ldr	r2, [r3, #36]	; 0x24
+ 800ec36:	f422 627f 	bic.w	r2, r2, #4080	; 0xff0
+ 800ec3a:	625a      	str	r2, [r3, #36]	; 0x24
+			GPIOA->AFR[1] |= ((GPIO_AFRH_AFSEL9_0 | GPIO_AFRH_AFSEL9_1 | GPIO_AFRH_AFSEL9_2)
+ 800ec3c:	6a5a      	ldr	r2, [r3, #36]	; 0x24
+ 800ec3e:	f442 62ee 	orr.w	r2, r2, #1904	; 0x770
+ 800ec42:	625a      	str	r2, [r3, #36]	; 0x24
 		break;
- 800ec44:	e78f      	b.n	800eb66 <uart_init+0x1a>
-			RCC->APB1ENR1 |= RCC_APB1ENR1_USART3EN;
- 800ec46:	4b12      	ldr	r3, [pc, #72]	; (800ec90 <uart_init+0x144>)
+ 800ec44:	e7ab      	b.n	800eb9e <uart_init+0x1a>
+			RCC->APB1ENR1 |= RCC_APB1ENR1_USART2EN;
+ 800ec46:	4b20      	ldr	r3, [pc, #128]	; (800ecc8 <uart_init+0x144>)
  800ec48:	6d9a      	ldr	r2, [r3, #88]	; 0x58
- 800ec4a:	f442 2280 	orr.w	r2, r2, #262144	; 0x40000
+ 800ec4a:	f442 3200 	orr.w	r2, r2, #131072	; 0x20000
  800ec4e:	659a      	str	r2, [r3, #88]	; 0x58
-			RCC->AHB2ENR |= RCC_AHB2ENR_GPIOCEN;
+			RCC->AHB2ENR |= RCC_AHB2ENR_GPIOAEN;
  800ec50:	6cda      	ldr	r2, [r3, #76]	; 0x4c
- 800ec52:	f042 0204 	orr.w	r2, r2, #4
+ 800ec52:	f042 0201 	orr.w	r2, r2, #1
  800ec56:	64da      	str	r2, [r3, #76]	; 0x4c
-			GPIOC->MODER &= ~(GPIO_MODER_MODE10|GPIO_MODER_MODE11);
- 800ec58:	4b0e      	ldr	r3, [pc, #56]	; (800ec94 <uart_init+0x148>)
- 800ec5a:	681a      	ldr	r2, [r3, #0]
- 800ec5c:	f422 0270 	bic.w	r2, r2, #15728640	; 0xf00000
- 800ec60:	601a      	str	r2, [r3, #0]
-			GPIOC->MODER |= (GPIO_MODER_MODE10_1|GPIO_MODER_MODE11_1);
- 800ec62:	681a      	ldr	r2, [r3, #0]
- 800ec64:	f442 0220 	orr.w	r2, r2, #10485760	; 0xa00000
- 800ec68:	601a      	str	r2, [r3, #0]
-			GPIOC->AFR[1] &= ~(GPIO_AFRH_AFSEL10|GPIO_AFRH_AFSEL11);
- 800ec6a:	6a5a      	ldr	r2, [r3, #36]	; 0x24
- 800ec6c:	f422 427f 	bic.w	r2, r2, #65280	; 0xff00
- 800ec70:	625a      	str	r2, [r3, #36]	; 0x24
-			GPIOC->AFR[1] |= ((GPIO_AFRH_AFSEL10_0 | GPIO_AFRH_AFSEL10_1 | GPIO_AFRH_AFSEL10_2)
- 800ec72:	6a5a      	ldr	r2, [r3, #36]	; 0x24
- 800ec74:	f442 42ee 	orr.w	r2, r2, #30464	; 0x7700
- 800ec78:	625a      	str	r2, [r3, #36]	; 0x24
+			GPIOA->MODER &= ~(GPIO_MODER_MODE2|GPIO_MODER_MODE3);
+ 800ec58:	f04f 4390 	mov.w	r3, #1207959552	; 0x48000000
+ 800ec5c:	681a      	ldr	r2, [r3, #0]
+ 800ec5e:	f022 02f0 	bic.w	r2, r2, #240	; 0xf0
+ 800ec62:	601a      	str	r2, [r3, #0]
+			GPIOA->MODER |= (GPIO_MODER_MODE2_1|GPIO_MODER_MODE3_1);
+ 800ec64:	681a      	ldr	r2, [r3, #0]
+ 800ec66:	f042 02a0 	orr.w	r2, r2, #160	; 0xa0
+ 800ec6a:	601a      	str	r2, [r3, #0]
+			GPIOA->AFR[0] &= ~(GPIO_AFRL_AFSEL2|GPIO_AFRL_AFSEL3);
+ 800ec6c:	6a1a      	ldr	r2, [r3, #32]
+ 800ec6e:	f422 427f 	bic.w	r2, r2, #65280	; 0xff00
+ 800ec72:	621a      	str	r2, [r3, #32]
+			GPIOA->AFR[0] |= ((GPIO_AFRL_AFSEL2_0 | GPIO_AFRL_AFSEL2_1 | GPIO_AFRL_AFSEL2_2)
+ 800ec74:	6a1a      	ldr	r2, [r3, #32]
+ 800ec76:	f442 42ee 	orr.w	r2, r2, #30464	; 0x7700
+ 800ec7a:	621a      	str	r2, [r3, #32]
 		break;
- 800ec7a:	e774      	b.n	800eb66 <uart_init+0x1a>
+ 800ec7c:	e78f      	b.n	800eb9e <uart_init+0x1a>
+			RCC->APB1ENR1 |= RCC_APB1ENR1_USART3EN;
+ 800ec7e:	4b12      	ldr	r3, [pc, #72]	; (800ecc8 <uart_init+0x144>)
+ 800ec80:	6d9a      	ldr	r2, [r3, #88]	; 0x58
+ 800ec82:	f442 2280 	orr.w	r2, r2, #262144	; 0x40000
+ 800ec86:	659a      	str	r2, [r3, #88]	; 0x58
+			RCC->AHB2ENR |= RCC_AHB2ENR_GPIOCEN;
+ 800ec88:	6cda      	ldr	r2, [r3, #76]	; 0x4c
+ 800ec8a:	f042 0204 	orr.w	r2, r2, #4
+ 800ec8e:	64da      	str	r2, [r3, #76]	; 0x4c
+			GPIOC->MODER &= ~(GPIO_MODER_MODE10|GPIO_MODER_MODE11);
+ 800ec90:	4b0e      	ldr	r3, [pc, #56]	; (800eccc <uart_init+0x148>)
+ 800ec92:	681a      	ldr	r2, [r3, #0]
+ 800ec94:	f422 0270 	bic.w	r2, r2, #15728640	; 0xf00000
+ 800ec98:	601a      	str	r2, [r3, #0]
+			GPIOC->MODER |= (GPIO_MODER_MODE10_1|GPIO_MODER_MODE11_1);
+ 800ec9a:	681a      	ldr	r2, [r3, #0]
+ 800ec9c:	f442 0220 	orr.w	r2, r2, #10485760	; 0xa00000
+ 800eca0:	601a      	str	r2, [r3, #0]
+			GPIOC->AFR[1] &= ~(GPIO_AFRH_AFSEL10|GPIO_AFRH_AFSEL11);
+ 800eca2:	6a5a      	ldr	r2, [r3, #36]	; 0x24
+ 800eca4:	f422 427f 	bic.w	r2, r2, #65280	; 0xff00
+ 800eca8:	625a      	str	r2, [r3, #36]	; 0x24
+			GPIOC->AFR[1] |= ((GPIO_AFRH_AFSEL10_0 | GPIO_AFRH_AFSEL10_1 | GPIO_AFRH_AFSEL10_2)
+ 800ecaa:	6a5a      	ldr	r2, [r3, #36]	; 0x24
+ 800ecac:	f442 42ee 	orr.w	r2, r2, #30464	; 0x7700
+ 800ecb0:	625a      	str	r2, [r3, #36]	; 0x24
+		break;
+ 800ecb2:	e774      	b.n	800eb9e <uart_init+0x1a>
 	    usartdiv = (uint16_t)(SystemCoreClock/baud_rate);
- 800ec7c:	4a03      	ldr	r2, [pc, #12]	; (800ec8c <uart_init+0x140>)
- 800ec7e:	6811      	ldr	r1, [r2, #0]
- 800ec80:	fbb1 f1f5 	udiv	r1, r1, r5
- 800ec84:	b289      	uxth	r1, r1
- 800ec86:	e789      	b.n	800eb9c <uart_init+0x50>
- 800ec88:	2000301c 	.word	0x2000301c
- 800ec8c:	20003000 	.word	0x20003000
- 800ec90:	40021000 	.word	0x40021000
- 800ec94:	48000800 	.word	0x48000800
+ 800ecb4:	4a03      	ldr	r2, [pc, #12]	; (800ecc4 <uart_init+0x140>)
+ 800ecb6:	6811      	ldr	r1, [r2, #0]
+ 800ecb8:	fbb1 f1f5 	udiv	r1, r1, r5
+ 800ecbc:	b289      	uxth	r1, r1
+ 800ecbe:	e789      	b.n	800ebd4 <uart_init+0x50>
+ 800ecc0:	2000301c 	.word	0x2000301c
+ 800ecc4:	20003000 	.word	0x20003000
+ 800ecc8:	40021000 	.word	0x40021000
+ 800eccc:	48000800 	.word	0x48000800
 
-0800ec98 <uart_send1>:
+0800ecd0 <uart_send1>:
 {
- 800ec98:	b538      	push	{r3, r4, r5, lr}
- 800ec9a:	4604      	mov	r4, r0
- 800ec9c:	460d      	mov	r5, r1
+ 800ecd0:	b538      	push	{r3, r4, r5, lr}
+ 800ecd2:	4604      	mov	r4, r0
+ 800ecd4:	460d      	mov	r5, r1
 	if(!uart_is_uartNo(uartNo))
- 800ec9e:	f7ff ff4d 	bl	800eb3c <uart_is_uartNo>
- 800eca2:	4603      	mov	r3, r0
- 800eca4:	b1a8      	cbz	r0, 800ecd2 <uart_send1+0x3a>
+ 800ecd6:	f7ff ff4d 	bl	800eb74 <uart_is_uartNo>
+ 800ecda:	4603      	mov	r3, r0
+ 800ecdc:	b1a8      	cbz	r0, 800ed0a <uart_send1+0x3a>
 	for (t = 0; t < 0xFBBB; t++)//查询指定次数
- 800eca6:	2200      	movs	r2, #0
- 800eca8:	f64f 33ba 	movw	r3, #64442	; 0xfbba
- 800ecac:	429a      	cmp	r2, r3
- 800ecae:	d80b      	bhi.n	800ecc8 <uart_send1+0x30>
+ 800ecde:	2200      	movs	r2, #0
+ 800ece0:	f64f 33ba 	movw	r3, #64442	; 0xfbba
+ 800ece4:	429a      	cmp	r2, r3
+ 800ece6:	d80b      	bhi.n	800ed00 <uart_send1+0x30>
 		if ( USART_ARR[uartNo-1]->ISR & USART_ISR_TXE_Msk )
- 800ecb0:	1e63      	subs	r3, r4, #1
- 800ecb2:	490a      	ldr	r1, [pc, #40]	; (800ecdc <uart_send1+0x44>)
- 800ecb4:	f851 3023 	ldr.w	r3, [r1, r3, lsl #2]
- 800ecb8:	69d9      	ldr	r1, [r3, #28]
- 800ecba:	f011 0f80 	tst.w	r1, #128	; 0x80
- 800ecbe:	d101      	bne.n	800ecc4 <uart_send1+0x2c>
+ 800ece8:	1e63      	subs	r3, r4, #1
+ 800ecea:	490a      	ldr	r1, [pc, #40]	; (800ed14 <uart_send1+0x44>)
+ 800ecec:	f851 3023 	ldr.w	r3, [r1, r3, lsl #2]
+ 800ecf0:	69d9      	ldr	r1, [r3, #28]
+ 800ecf2:	f011 0f80 	tst.w	r1, #128	; 0x80
+ 800ecf6:	d101      	bne.n	800ecfc <uart_send1+0x2c>
 	for (t = 0; t < 0xFBBB; t++)//查询指定次数
- 800ecc0:	3201      	adds	r2, #1
- 800ecc2:	e7f1      	b.n	800eca8 <uart_send1+0x10>
+ 800ecf8:	3201      	adds	r2, #1
+ 800ecfa:	e7f1      	b.n	800ece0 <uart_send1+0x10>
 			USART_ARR[uartNo-1]->TDR = ch;
- 800ecc4:	b2ad      	uxth	r5, r5
- 800ecc6:	851d      	strh	r5, [r3, #40]	; 0x28
+ 800ecfc:	b2ad      	uxth	r5, r5
+ 800ecfe:	851d      	strh	r5, [r3, #40]	; 0x28
 	if (t >= 0xFBBB)
- 800ecc8:	f64f 33ba 	movw	r3, #64442	; 0xfbba
- 800eccc:	429a      	cmp	r2, r3
- 800ecce:	d802      	bhi.n	800ecd6 <uart_send1+0x3e>
+ 800ed00:	f64f 33ba 	movw	r3, #64442	; 0xfbba
+ 800ed04:	429a      	cmp	r2, r3
+ 800ed06:	d802      	bhi.n	800ed0e <uart_send1+0x3e>
 		return 1; //成功发送
- 800ecd0:	2301      	movs	r3, #1
+ 800ed08:	2301      	movs	r3, #1
 }
- 800ecd2:	4618      	mov	r0, r3
- 800ecd4:	bd38      	pop	{r3, r4, r5, pc}
+ 800ed0a:	4618      	mov	r0, r3
+ 800ed0c:	bd38      	pop	{r3, r4, r5, pc}
 		return 0; //发送超时，发送失败
- 800ecd6:	2300      	movs	r3, #0
- 800ecd8:	e7fb      	b.n	800ecd2 <uart_send1+0x3a>
- 800ecda:	bf00      	nop
- 800ecdc:	2000301c 	.word	0x2000301c
+ 800ed0e:	2300      	movs	r3, #0
+ 800ed10:	e7fb      	b.n	800ed0a <uart_send1+0x3a>
+ 800ed12:	bf00      	nop
+ 800ed14:	2000301c 	.word	0x2000301c
 
-0800ece0 <uart_send_string>:
+0800ed18 <uart_sendN>:
 {
- 800ece0:	b570      	push	{r4, r5, r6, lr}
- 800ece2:	4606      	mov	r6, r0
- 800ece4:	460d      	mov	r5, r1
+ 800ed18:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 800ed1a:	4606      	mov	r6, r0
+ 800ed1c:	460d      	mov	r5, r1
+ 800ed1e:	4617      	mov	r7, r2
     if(!uart_is_uartNo(uartNo))
- 800ece6:	f7ff ff29 	bl	800eb3c <uart_is_uartNo>
- 800ecea:	4603      	mov	r3, r0
- 800ecec:	b158      	cbz	r0, 800ed06 <uart_send_string+0x26>
-    for(i = 0; buff_ptr[i] != '\0'; i++)   //遍历字符串里的字符
- 800ecee:	2400      	movs	r4, #0
- 800ecf0:	5d29      	ldrb	r1, [r5, r4]
- 800ecf2:	b139      	cbz	r1, 800ed04 <uart_send_string+0x24>
-        if (!uart_send1(uartNo,buff_ptr[i]))//发送指针对应的字符
- 800ecf4:	4630      	mov	r0, r6
- 800ecf6:	f7ff ffcf 	bl	800ec98 <uart_send1>
- 800ecfa:	4603      	mov	r3, r0
- 800ecfc:	b118      	cbz	r0, 800ed06 <uart_send_string+0x26>
-    for(i = 0; buff_ptr[i] != '\0'; i++)   //遍历字符串里的字符
- 800ecfe:	3401      	adds	r4, #1
- 800ed00:	b2a4      	uxth	r4, r4
- 800ed02:	e7f5      	b.n	800ecf0 <uart_send_string+0x10>
-    return 1;          //发送成功
- 800ed04:	2301      	movs	r3, #1
+ 800ed20:	f7ff ff28 	bl	800eb74 <uart_is_uartNo>
+ 800ed24:	4603      	mov	r3, r0
+ 800ed26:	b168      	cbz	r0, 800ed44 <uart_sendN+0x2c>
+    for (i = 0; i < len; i++)
+ 800ed28:	2400      	movs	r4, #0
+ 800ed2a:	42ac      	cmp	r4, r5
+ 800ed2c:	d207      	bcs.n	800ed3e <uart_sendN+0x26>
+        if (!uart_send1(uartNo, buff[i])) //发送一个字节数据，失败则跳出循环
+ 800ed2e:	5d39      	ldrb	r1, [r7, r4]
+ 800ed30:	4630      	mov	r0, r6
+ 800ed32:	f7ff ffcd 	bl	800ecd0 <uart_send1>
+ 800ed36:	b110      	cbz	r0, 800ed3e <uart_sendN+0x26>
+    for (i = 0; i < len; i++)
+ 800ed38:	3401      	adds	r4, #1
+ 800ed3a:	b2a4      	uxth	r4, r4
+ 800ed3c:	e7f5      	b.n	800ed2a <uart_sendN+0x12>
+    if(i<len)
+ 800ed3e:	42ac      	cmp	r4, r5
+ 800ed40:	d302      	bcc.n	800ed48 <uart_sendN+0x30>
+        return 1;    //发送出错
+ 800ed42:	2301      	movs	r3, #1
 }
- 800ed06:	4618      	mov	r0, r3
- 800ed08:	bd70      	pop	{r4, r5, r6, pc}
+ 800ed44:	4618      	mov	r0, r3
+ 800ed46:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
+        return 0;    //发送出错
+ 800ed48:	2300      	movs	r3, #0
+ 800ed4a:	e7fb      	b.n	800ed44 <uart_sendN+0x2c>
+
+0800ed4c <uart_send_string>:
+{
+ 800ed4c:	b570      	push	{r4, r5, r6, lr}
+ 800ed4e:	4606      	mov	r6, r0
+ 800ed50:	460d      	mov	r5, r1
+    if(!uart_is_uartNo(uartNo))
+ 800ed52:	f7ff ff0f 	bl	800eb74 <uart_is_uartNo>
+ 800ed56:	4603      	mov	r3, r0
+ 800ed58:	b158      	cbz	r0, 800ed72 <uart_send_string+0x26>
+    for(i = 0; buff_ptr[i] != '\0'; i++)   //遍历字符串里的字符
+ 800ed5a:	2400      	movs	r4, #0
+ 800ed5c:	5d29      	ldrb	r1, [r5, r4]
+ 800ed5e:	b139      	cbz	r1, 800ed70 <uart_send_string+0x24>
+        if (!uart_send1(uartNo,buff_ptr[i]))//发送指针对应的字符
+ 800ed60:	4630      	mov	r0, r6
+ 800ed62:	f7ff ffb5 	bl	800ecd0 <uart_send1>
+ 800ed66:	4603      	mov	r3, r0
+ 800ed68:	b118      	cbz	r0, 800ed72 <uart_send_string+0x26>
+    for(i = 0; buff_ptr[i] != '\0'; i++)   //遍历字符串里的字符
+ 800ed6a:	3401      	adds	r4, #1
+ 800ed6c:	b2a4      	uxth	r4, r4
+ 800ed6e:	e7f5      	b.n	800ed5c <uart_send_string+0x10>
+    return 1;          //发送成功
+ 800ed70:	2301      	movs	r3, #1
+}
+ 800ed72:	4618      	mov	r0, r3
+ 800ed74:	bd70      	pop	{r4, r5, r6, pc}
 	...
 
-0800ed0c <uart_re1>:
+0800ed78 <uart_re1>:
 {
- 800ed0c:	b570      	push	{r4, r5, r6, lr}
- 800ed0e:	4604      	mov	r4, r0
- 800ed10:	460d      	mov	r5, r1
+ 800ed78:	b570      	push	{r4, r5, r6, lr}
+ 800ed7a:	4604      	mov	r4, r0
+ 800ed7c:	460d      	mov	r5, r1
 	if(!uart_is_uartNo(uartNo))
- 800ed12:	f7ff ff13 	bl	800eb3c <uart_is_uartNo>
- 800ed16:	4606      	mov	r6, r0
- 800ed18:	b170      	cbz	r0, 800ed38 <uart_re1+0x2c>
+ 800ed7e:	f7ff fef9 	bl	800eb74 <uart_is_uartNo>
+ 800ed82:	4606      	mov	r6, r0
+ 800ed84:	b170      	cbz	r0, 800eda4 <uart_re1+0x2c>
 	for (t = 0; t < 0xFBBB; t++)//查询指定次数
- 800ed1a:	2200      	movs	r2, #0
- 800ed1c:	f64f 33ba 	movw	r3, #64442	; 0xfbba
- 800ed20:	429a      	cmp	r2, r3
- 800ed22:	d811      	bhi.n	800ed48 <uart_re1+0x3c>
+ 800ed86:	2200      	movs	r2, #0
+ 800ed88:	f64f 33ba 	movw	r3, #64442	; 0xfbba
+ 800ed8c:	429a      	cmp	r2, r3
+ 800ed8e:	d811      	bhi.n	800edb4 <uart_re1+0x3c>
 		if (USART_ARR[uartNo-1]->ISR & USART_ISR_RXNE_Msk)
- 800ed24:	1e63      	subs	r3, r4, #1
- 800ed26:	490c      	ldr	r1, [pc, #48]	; (800ed58 <uart_re1+0x4c>)
- 800ed28:	f851 3023 	ldr.w	r3, [r1, r3, lsl #2]
- 800ed2c:	69d9      	ldr	r1, [r3, #28]
- 800ed2e:	f011 0f20 	tst.w	r1, #32
- 800ed32:	d105      	bne.n	800ed40 <uart_re1+0x34>
+ 800ed90:	1e63      	subs	r3, r4, #1
+ 800ed92:	490c      	ldr	r1, [pc, #48]	; (800edc4 <uart_re1+0x4c>)
+ 800ed94:	f851 3023 	ldr.w	r3, [r1, r3, lsl #2]
+ 800ed98:	69d9      	ldr	r1, [r3, #28]
+ 800ed9a:	f011 0f20 	tst.w	r1, #32
+ 800ed9e:	d105      	bne.n	800edac <uart_re1+0x34>
 	for (t = 0; t < 0xFBBB; t++)//查询指定次数
- 800ed34:	3201      	adds	r2, #1
- 800ed36:	e7f1      	b.n	800ed1c <uart_re1+0x10>
+ 800eda0:	3201      	adds	r2, #1
+ 800eda2:	e7f1      	b.n	800ed88 <uart_re1+0x10>
 		*fp=0;
- 800ed38:	2300      	movs	r3, #0
- 800ed3a:	702b      	strb	r3, [r5, #0]
+ 800eda4:	2300      	movs	r3, #0
+ 800eda6:	702b      	strb	r3, [r5, #0]
 }
- 800ed3c:	4630      	mov	r0, r6
- 800ed3e:	bd70      	pop	{r4, r5, r6, pc}
+ 800eda8:	4630      	mov	r0, r6
+ 800edaa:	bd70      	pop	{r4, r5, r6, pc}
 			dat=USART_ARR[uartNo-1]->RDR;    //获取数据,清接收中断位
- 800ed40:	8c9e      	ldrh	r6, [r3, #36]	; 0x24
- 800ed42:	b2f6      	uxtb	r6, r6
+ 800edac:	8c9e      	ldrh	r6, [r3, #36]	; 0x24
+ 800edae:	b2f6      	uxtb	r6, r6
 			*fp = 1;  //接收成功
- 800ed44:	2301      	movs	r3, #1
- 800ed46:	702b      	strb	r3, [r5, #0]
+ 800edb0:	2301      	movs	r3, #1
+ 800edb2:	702b      	strb	r3, [r5, #0]
 	if(t >= 0xFBBB)
- 800ed48:	f64f 33ba 	movw	r3, #64442	; 0xfbba
- 800ed4c:	429a      	cmp	r2, r3
- 800ed4e:	d9f5      	bls.n	800ed3c <uart_re1+0x30>
+ 800edb4:	f64f 33ba 	movw	r3, #64442	; 0xfbba
+ 800edb8:	429a      	cmp	r2, r3
+ 800edba:	d9f5      	bls.n	800eda8 <uart_re1+0x30>
 		*fp = 0;    //未收到数据
- 800ed50:	2300      	movs	r3, #0
- 800ed52:	702b      	strb	r3, [r5, #0]
+ 800edbc:	2300      	movs	r3, #0
+ 800edbe:	702b      	strb	r3, [r5, #0]
 		dat = 0xFF;
- 800ed54:	26ff      	movs	r6, #255	; 0xff
- 800ed56:	e7f1      	b.n	800ed3c <uart_re1+0x30>
- 800ed58:	2000301c 	.word	0x2000301c
+ 800edc0:	26ff      	movs	r6, #255	; 0xff
+ 800edc2:	e7f1      	b.n	800eda8 <uart_re1+0x30>
+ 800edc4:	2000301c 	.word	0x2000301c
 
-0800ed5c <uart_enable_re_int>:
+0800edc8 <uart_enable_re_int>:
 {
- 800ed5c:	b510      	push	{r4, lr}
- 800ed5e:	4604      	mov	r4, r0
+ 800edc8:	b510      	push	{r4, lr}
+ 800edca:	4604      	mov	r4, r0
 	if(!uart_is_uartNo(uartNo))
- 800ed60:	f7ff feec 	bl	800eb3c <uart_is_uartNo>
- 800ed64:	b198      	cbz	r0, 800ed8e <uart_enable_re_int+0x32>
+ 800edcc:	f7ff fed2 	bl	800eb74 <uart_is_uartNo>
+ 800edd0:	b198      	cbz	r0, 800edfa <uart_enable_re_int+0x32>
 	USART_ARR[uartNo-1]->CR1 |= USART_CR1_RXNEIE_Msk;    //开放UART接收中断
- 800ed66:	1e60      	subs	r0, r4, #1
- 800ed68:	4b09      	ldr	r3, [pc, #36]	; (800ed90 <uart_enable_re_int+0x34>)
- 800ed6a:	f853 2020 	ldr.w	r2, [r3, r0, lsl #2]
- 800ed6e:	6813      	ldr	r3, [r2, #0]
- 800ed70:	f043 0320 	orr.w	r3, r3, #32
- 800ed74:	6013      	str	r3, [r2, #0]
+ 800edd2:	1e60      	subs	r0, r4, #1
+ 800edd4:	4b09      	ldr	r3, [pc, #36]	; (800edfc <uart_enable_re_int+0x34>)
+ 800edd6:	f853 2020 	ldr.w	r2, [r3, r0, lsl #2]
+ 800edda:	6813      	ldr	r3, [r2, #0]
+ 800eddc:	f043 0320 	orr.w	r3, r3, #32
+ 800ede0:	6013      	str	r3, [r2, #0]
 	NVIC_EnableIRQ(table_irq_uart[uartNo-1]);    //开中断控制器IRQ中断
- 800ed76:	4b07      	ldr	r3, [pc, #28]	; (800ed94 <uart_enable_re_int+0x38>)
- 800ed78:	561b      	ldrsb	r3, [r3, r0]
+ 800ede2:	4b07      	ldr	r3, [pc, #28]	; (800ee00 <uart_enable_re_int+0x38>)
+ 800ede4:	561b      	ldrsb	r3, [r3, r0]
   \param [in]      IRQn  Device specific interrupt number.
   \note    IRQn must not be negative.
  */
 __STATIC_INLINE void __NVIC_EnableIRQ(IRQn_Type IRQn)
 {
   if ((int32_t)(IRQn) >= 0)
- 800ed7a:	2b00      	cmp	r3, #0
- 800ed7c:	db07      	blt.n	800ed8e <uart_enable_re_int+0x32>
+ 800ede6:	2b00      	cmp	r3, #0
+ 800ede8:	db07      	blt.n	800edfa <uart_enable_re_int+0x32>
   {
     NVIC->ISER[(((uint32_t)IRQn) >> 5UL)] = (uint32_t)(1UL << (((uint32_t)IRQn) & 0x1FUL));
- 800ed7e:	f003 011f 	and.w	r1, r3, #31
- 800ed82:	095b      	lsrs	r3, r3, #5
- 800ed84:	2201      	movs	r2, #1
- 800ed86:	408a      	lsls	r2, r1
- 800ed88:	4903      	ldr	r1, [pc, #12]	; (800ed98 <uart_enable_re_int+0x3c>)
- 800ed8a:	f841 2023 	str.w	r2, [r1, r3, lsl #2]
+ 800edea:	f003 011f 	and.w	r1, r3, #31
+ 800edee:	095b      	lsrs	r3, r3, #5
+ 800edf0:	2201      	movs	r2, #1
+ 800edf2:	408a      	lsls	r2, r1
+ 800edf4:	4903      	ldr	r1, [pc, #12]	; (800ee04 <uart_enable_re_int+0x3c>)
+ 800edf6:	f841 2023 	str.w	r2, [r1, r3, lsl #2]
 }
- 800ed8e:	bd10      	pop	{r4, pc}
- 800ed90:	2000301c 	.word	0x2000301c
- 800ed94:	20003028 	.word	0x20003028
- 800ed98:	e000e100 	.word	0xe000e100
+ 800edfa:	bd10      	pop	{r4, pc}
+ 800edfc:	2000301c 	.word	0x2000301c
+ 800ee00:	20003028 	.word	0x20003028
+ 800ee04:	e000e100 	.word	0xe000e100
 
-0800ed9c <uart_get_re_int>:
+0800ee08 <uart_get_re_int>:
 {
- 800ed9c:	b510      	push	{r4, lr}
- 800ed9e:	4604      	mov	r4, r0
+ 800ee08:	b510      	push	{r4, lr}
+ 800ee0a:	4604      	mov	r4, r0
 	if(!uart_is_uartNo(uartNo))
- 800eda0:	f7ff fecc 	bl	800eb3c <uart_is_uartNo>
- 800eda4:	4603      	mov	r3, r0
- 800eda6:	b170      	cbz	r0, 800edc6 <uart_get_re_int+0x2a>
+ 800ee0c:	f7ff feb2 	bl	800eb74 <uart_is_uartNo>
+ 800ee10:	4603      	mov	r3, r0
+ 800ee12:	b170      	cbz	r0, 800ee32 <uart_get_re_int+0x2a>
 	if(((USART_ARR[uartNo-1]->ISR & USART_ISR_RXNE_Msk) == USART_ISR_RXNE_Msk)
- 800eda8:	3c01      	subs	r4, #1
- 800edaa:	4b09      	ldr	r3, [pc, #36]	; (800edd0 <uart_get_re_int+0x34>)
- 800edac:	f853 3024 	ldr.w	r3, [r3, r4, lsl #2]
- 800edb0:	69da      	ldr	r2, [r3, #28]
- 800edb2:	f012 0f20 	tst.w	r2, #32
- 800edb6:	d005      	beq.n	800edc4 <uart_get_re_int+0x28>
+ 800ee14:	3c01      	subs	r4, #1
+ 800ee16:	4b09      	ldr	r3, [pc, #36]	; (800ee3c <uart_get_re_int+0x34>)
+ 800ee18:	f853 3024 	ldr.w	r3, [r3, r4, lsl #2]
+ 800ee1c:	69da      	ldr	r2, [r3, #28]
+ 800ee1e:	f012 0f20 	tst.w	r2, #32
+ 800ee22:	d005      	beq.n	800ee30 <uart_get_re_int+0x28>
 			&& ((USART_ARR[uartNo-1]->CR1 & USART_CR1_RXNEIE_Msk) == USART_CR1_RXNEIE_Msk))
- 800edb8:	681b      	ldr	r3, [r3, #0]
- 800edba:	f013 0f20 	tst.w	r3, #32
- 800edbe:	d104      	bne.n	800edca <uart_get_re_int+0x2e>
+ 800ee24:	681b      	ldr	r3, [r3, #0]
+ 800ee26:	f013 0f20 	tst.w	r3, #32
+ 800ee2a:	d104      	bne.n	800ee36 <uart_get_re_int+0x2e>
 		return 0;
- 800edc0:	2300      	movs	r3, #0
- 800edc2:	e000      	b.n	800edc6 <uart_get_re_int+0x2a>
- 800edc4:	2300      	movs	r3, #0
+ 800ee2c:	2300      	movs	r3, #0
+ 800ee2e:	e000      	b.n	800ee32 <uart_get_re_int+0x2a>
+ 800ee30:	2300      	movs	r3, #0
 }
- 800edc6:	4618      	mov	r0, r3
- 800edc8:	bd10      	pop	{r4, pc}
+ 800ee32:	4618      	mov	r0, r3
+ 800ee34:	bd10      	pop	{r4, pc}
 		return 1;
- 800edca:	2301      	movs	r3, #1
- 800edcc:	e7fb      	b.n	800edc6 <uart_get_re_int+0x2a>
- 800edce:	bf00      	nop
- 800edd0:	2000301c 	.word	0x2000301c
+ 800ee36:	2301      	movs	r3, #1
+ 800ee38:	e7fb      	b.n	800ee32 <uart_get_re_int+0x2a>
+ 800ee3a:	bf00      	nop
+ 800ee3c:	2000301c 	.word	0x2000301c
 
-0800edd4 <app_init>:
+0800ee40 <app_init>:
 //参数说明：无
 //功能概要：主线程，要完成全局变量初始化、外设初始化、创建其他用户线程、启动用户线程等工作
 //内部调用：无
 //======================================================================
 void app_init(void)
 {
- 800edd4:	e92d 41f0 	stmdb	sp!, {r4, r5, r6, r7, r8, lr}
- 800edd8:	b082      	sub	sp, #8
-	rt_thread_t thd_greenlight;
+ 800ee40:	e92d 43f0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, lr}
+ 800ee44:	b083      	sub	sp, #12
 	rt_thread_t thd_bluelight;
+	rt_thread_t thd_messagerecv;
 	
 	//（1.2）【不变】BIOS中API接口表首地址、用户中断处理程序名初始化
 	//（1.3）【不变】关总中断
 	DISABLE_INTERRUPTS;
- 800edda:	b672      	cpsid	i
+ 800ee46:	b672      	cpsid	i
 
 	//（1.4）给主函数使用的局部变量赋初值
 
 	//（1.5）给全局变量赋初值
 	grt_flag=1;
- 800eddc:	2501      	movs	r5, #1
- 800edde:	4b36      	ldr	r3, [pc, #216]	; (800eeb8 <app_init+0xe4>)
- 800ede0:	801d      	strh	r5, [r3, #0]
+ 800ee48:	2501      	movs	r5, #1
+ 800ee4a:	4b43      	ldr	r3, [pc, #268]	; (800ef58 <app_init+0x118>)
+ 800ee4c:	801d      	strh	r5, [r3, #0]
 
 	//（1.6）用户外设模块初始化
 	printf("  调用gpio_init函数，分别初始化红灯、绿灯、蓝灯\r\n");
- 800ede2:	4836      	ldr	r0, [pc, #216]	; (800eebc <app_init+0xe8>)
- 800ede4:	f000 fd1e 	bl	800f824 <myprintf>
+ 800ee4e:	4843      	ldr	r0, [pc, #268]	; (800ef5c <app_init+0x11c>)
+ 800ee50:	f000 fd90 	bl	800f974 <myprintf>
 	gpio_init(LIGHT_GREEN,GPIO_OUTPUT,LIGHT_OFF);
- 800ede8:	462a      	mov	r2, r5
- 800edea:	4629      	mov	r1, r5
- 800edec:	f44f 7084 	mov.w	r0, #264	; 0x108
- 800edf0:	f7ff fda4 	bl	800e93c <gpio_init>
+ 800ee54:	462a      	mov	r2, r5
+ 800ee56:	4629      	mov	r1, r5
+ 800ee58:	f44f 7084 	mov.w	r0, #264	; 0x108
+ 800ee5c:	f7ff fd6e 	bl	800e93c <gpio_init>
 	gpio_init(LIGHT_BLUE,GPIO_OUTPUT,LIGHT_OFF);
- 800edf4:	462a      	mov	r2, r5
- 800edf6:	4629      	mov	r1, r5
- 800edf8:	f240 1009 	movw	r0, #265	; 0x109
- 800edfc:	f7ff fd9e 	bl	800e93c <gpio_init>
+ 800ee60:	462a      	mov	r2, r5
+ 800ee62:	4629      	mov	r1, r5
+ 800ee64:	f240 1009 	movw	r0, #265	; 0x109
+ 800ee68:	f7ff fd68 	bl	800e93c <gpio_init>
 	uart_init(UART_User,115200); 
- 800ee00:	f44f 31e1 	mov.w	r1, #115200	; 0x1c200
- 800ee04:	2002      	movs	r0, #2
- 800ee06:	f7ff fea1 	bl	800eb4c <uart_init>
+ 800ee6c:	f44f 31e1 	mov.w	r1, #115200	; 0x1c200
+ 800ee70:	2002      	movs	r0, #2
+ 800ee72:	f7ff fe87 	bl	800eb84 <uart_init>
 	//（1.7）使能模块中断
 	uart_enable_re_int(UART_User);
- 800ee0a:	2002      	movs	r0, #2
- 800ee0c:	f7ff ffa6 	bl	800ed5c <uart_enable_re_int>
+ 800ee76:	2002      	movs	r0, #2
+ 800ee78:	f7ff ffa6 	bl	800edc8 <uart_enable_re_int>
 	//（1.8）【不变】开总中断
 	ENABLE_INTERRUPTS;
- 800ee10:	b662      	cpsie	i
+ 800ee7c:	b662      	cpsie	i
 	printf("【金葫芦提示】本程序为带RT-Thread的STM32用户程序\r\n");
- 800ee12:	482b      	ldr	r0, [pc, #172]	; (800eec0 <app_init+0xec>)
- 800ee14:	f000 fd06 	bl	800f824 <myprintf>
+ 800ee7e:	4838      	ldr	r0, [pc, #224]	; (800ef60 <app_init+0x120>)
+ 800ee80:	f000 fd78 	bl	800f974 <myprintf>
 	printf("【基本功能】①在 RT-Thread启动后创建了红灯、绿灯和蓝灯三个用户线程\r\n");
- 800ee18:	482a      	ldr	r0, [pc, #168]	; (800eec4 <app_init+0xf0>)
- 800ee1a:	f000 fd03 	bl	800f824 <myprintf>
+ 800ee84:	4837      	ldr	r0, [pc, #220]	; (800ef64 <app_init+0x124>)
+ 800ee86:	f000 fd75 	bl	800f974 <myprintf>
 	printf("	        ②实现蓝灯每10秒闪烁一次,并设置事件字\r\n");
- 800ee1e:	482a      	ldr	r0, [pc, #168]	; (800eec8 <app_init+0xf4>)
- 800ee20:	f000 fd00 	bl	800f824 <myprintf>
+ 800ee8a:	4837      	ldr	r0, [pc, #220]	; (800ef68 <app_init+0x128>)
+ 800ee8c:	f000 fd72 	bl	800f974 <myprintf>
 	printf("	        ③绿灯线程等待到事件字，转换绿灯状态\r\n");
- 800ee24:	4829      	ldr	r0, [pc, #164]	; (800eecc <app_init+0xf8>)
- 800ee26:	f000 fcfd 	bl	800f824 <myprintf>
+ 800ee90:	4836      	ldr	r0, [pc, #216]	; (800ef6c <app_init+0x12c>)
+ 800ee92:	f000 fd6f 	bl	800f974 <myprintf>
 	printf("【操作方法】连接串口User，选择波特率为115200，打开串口，查看输出结果...\r\r\n\n");
- 800ee2a:	4829      	ldr	r0, [pc, #164]	; (800eed0 <app_init+0xfc>)
- 800ee2c:	f000 fcfa 	bl	800f824 <myprintf>
+ 800ee96:	4836      	ldr	r0, [pc, #216]	; (800ef70 <app_init+0x130>)
+ 800ee98:	f000 fd6c 	bl	800f974 <myprintf>
 	printf("0-1.MCU启动\n");
- 800ee30:	4828      	ldr	r0, [pc, #160]	; (800eed4 <app_init+0x100>)
- 800ee32:	f000 fcf7 	bl	800f824 <myprintf>
+ 800ee9c:	4835      	ldr	r0, [pc, #212]	; (800ef74 <app_init+0x134>)
+ 800ee9e:	f000 fd69 	bl	800f974 <myprintf>
 	
 	//创建事件字
 	EventWord=rt_event_create("EventWord",RT_IPC_FLAG_PRIO);
- 800ee36:	4c28      	ldr	r4, [pc, #160]	; (800eed8 <app_init+0x104>)
- 800ee38:	6823      	ldr	r3, [r4, #0]
- 800ee3a:	f8d3 30a4 	ldr.w	r3, [r3, #164]	; 0xa4
- 800ee3e:	4629      	mov	r1, r5
- 800ee40:	4826      	ldr	r0, [pc, #152]	; (800eedc <app_init+0x108>)
- 800ee42:	4798      	blx	r3
- 800ee44:	4b26      	ldr	r3, [pc, #152]	; (800eee0 <app_init+0x10c>)
- 800ee46:	6018      	str	r0, [r3, #0]
+ 800eea2:	4c35      	ldr	r4, [pc, #212]	; (800ef78 <app_init+0x138>)
+ 800eea4:	6823      	ldr	r3, [r4, #0]
+ 800eea6:	f8d3 30a4 	ldr.w	r3, [r3, #164]	; 0xa4
+ 800eeaa:	4629      	mov	r1, r5
+ 800eeac:	4833      	ldr	r0, [pc, #204]	; (800ef7c <app_init+0x13c>)
+ 800eeae:	4798      	blx	r3
+ 800eeb0:	4b33      	ldr	r3, [pc, #204]	; (800ef80 <app_init+0x140>)
+ 800eeb2:	6018      	str	r0, [r3, #0]
+	//创建消息队列
+	mq=rt_mq_create("mq",9,4,RT_IPC_FLAG_FIFO);
+ 800eeb4:	6823      	ldr	r3, [r4, #0]
+ 800eeb6:	f8d3 50e4 	ldr.w	r5, [r3, #228]	; 0xe4
+ 800eeba:	2300      	movs	r3, #0
+ 800eebc:	2204      	movs	r2, #4
+ 800eebe:	2109      	movs	r1, #9
+ 800eec0:	4830      	ldr	r0, [pc, #192]	; (800ef84 <app_init+0x144>)
+ 800eec2:	47a8      	blx	r5
+ 800eec4:	4b30      	ldr	r3, [pc, #192]	; (800ef88 <app_init+0x148>)
+ 800eec6:	6018      	str	r0, [r3, #0]
 	//创建命令选择线程
 	thd_rulechoose=rt_thread_create("rulechoose", (void *)thread_rulechoose, 0, 512, 10, 10);
- 800ee48:	6823      	ldr	r3, [r4, #0]
- 800ee4a:	f8d3 608c 	ldr.w	r6, [r3, #140]	; 0x8c
- 800ee4e:	250a      	movs	r5, #10
- 800ee50:	9501      	str	r5, [sp, #4]
- 800ee52:	9500      	str	r5, [sp, #0]
- 800ee54:	f44f 7300 	mov.w	r3, #512	; 0x200
- 800ee58:	2200      	movs	r2, #0
- 800ee5a:	4922      	ldr	r1, [pc, #136]	; (800eee4 <app_init+0x110>)
- 800ee5c:	4822      	ldr	r0, [pc, #136]	; (800eee8 <app_init+0x114>)
- 800ee5e:	47b0      	blx	r6
- 800ee60:	4680      	mov	r8, r0
+ 800eec8:	6823      	ldr	r3, [r4, #0]
+ 800eeca:	f8d3 608c 	ldr.w	r6, [r3, #140]	; 0x8c
+ 800eece:	250a      	movs	r5, #10
+ 800eed0:	9501      	str	r5, [sp, #4]
+ 800eed2:	9500      	str	r5, [sp, #0]
+ 800eed4:	f44f 7300 	mov.w	r3, #512	; 0x200
+ 800eed8:	2200      	movs	r2, #0
+ 800eeda:	492c      	ldr	r1, [pc, #176]	; (800ef8c <app_init+0x14c>)
+ 800eedc:	482c      	ldr	r0, [pc, #176]	; (800ef90 <app_init+0x150>)
+ 800eede:	47b0      	blx	r6
+ 800eee0:	4681      	mov	r9, r0
 
 	//创建三色灯线程
 	thd_greenlight = rt_thread_create("greenlight", (void *)thread_greenlight, 0, 512, 10, 10);
- 800ee62:	6823      	ldr	r3, [r4, #0]
- 800ee64:	f8d3 708c 	ldr.w	r7, [r3, #140]	; 0x8c
- 800ee68:	9501      	str	r5, [sp, #4]
- 800ee6a:	9500      	str	r5, [sp, #0]
- 800ee6c:	f44f 7300 	mov.w	r3, #512	; 0x200
- 800ee70:	2200      	movs	r2, #0
- 800ee72:	491e      	ldr	r1, [pc, #120]	; (800eeec <app_init+0x118>)
- 800ee74:	481e      	ldr	r0, [pc, #120]	; (800eef0 <app_init+0x11c>)
- 800ee76:	47b8      	blx	r7
- 800ee78:	4607      	mov	r7, r0
+ 800eee2:	6823      	ldr	r3, [r4, #0]
+ 800eee4:	f8d3 708c 	ldr.w	r7, [r3, #140]	; 0x8c
+ 800eee8:	9501      	str	r5, [sp, #4]
+ 800eeea:	9500      	str	r5, [sp, #0]
+ 800eeec:	f44f 7300 	mov.w	r3, #512	; 0x200
+ 800eef0:	2200      	movs	r2, #0
+ 800eef2:	4928      	ldr	r1, [pc, #160]	; (800ef94 <app_init+0x154>)
+ 800eef4:	4828      	ldr	r0, [pc, #160]	; (800ef98 <app_init+0x158>)
+ 800eef6:	47b8      	blx	r7
+ 800eef8:	4680      	mov	r8, r0
 	thd_bluelight = rt_thread_create("bluelight", (void *)thread_bluelight, 0, 512, 10, 10);
- 800ee7a:	6823      	ldr	r3, [r4, #0]
- 800ee7c:	f8d3 608c 	ldr.w	r6, [r3, #140]	; 0x8c
- 800ee80:	9501      	str	r5, [sp, #4]
- 800ee82:	9500      	str	r5, [sp, #0]
- 800ee84:	f44f 7300 	mov.w	r3, #512	; 0x200
- 800ee88:	2200      	movs	r2, #0
- 800ee8a:	491a      	ldr	r1, [pc, #104]	; (800eef4 <app_init+0x120>)
- 800ee8c:	481a      	ldr	r0, [pc, #104]	; (800eef8 <app_init+0x124>)
- 800ee8e:	47b0      	blx	r6
- 800ee90:	4605      	mov	r5, r0
+ 800eefa:	6823      	ldr	r3, [r4, #0]
+ 800eefc:	f8d3 708c 	ldr.w	r7, [r3, #140]	; 0x8c
+ 800ef00:	9501      	str	r5, [sp, #4]
+ 800ef02:	9500      	str	r5, [sp, #0]
+ 800ef04:	f44f 7300 	mov.w	r3, #512	; 0x200
+ 800ef08:	2200      	movs	r2, #0
+ 800ef0a:	4924      	ldr	r1, [pc, #144]	; (800ef9c <app_init+0x15c>)
+ 800ef0c:	4824      	ldr	r0, [pc, #144]	; (800efa0 <app_init+0x160>)
+ 800ef0e:	47b8      	blx	r7
+ 800ef10:	4607      	mov	r7, r0
+	//创建消息队列线程
+	thd_messagerecv = rt_thread_create("messagerecv", (void *)thread_messagerecv, 0, 512, 10, 10);
+ 800ef12:	6823      	ldr	r3, [r4, #0]
+ 800ef14:	f8d3 608c 	ldr.w	r6, [r3, #140]	; 0x8c
+ 800ef18:	9501      	str	r5, [sp, #4]
+ 800ef1a:	9500      	str	r5, [sp, #0]
+ 800ef1c:	f44f 7300 	mov.w	r3, #512	; 0x200
+ 800ef20:	2200      	movs	r2, #0
+ 800ef22:	4920      	ldr	r1, [pc, #128]	; (800efa4 <app_init+0x164>)
+ 800ef24:	4820      	ldr	r0, [pc, #128]	; (800efa8 <app_init+0x168>)
+ 800ef26:	47b0      	blx	r6
+ 800ef28:	4605      	mov	r5, r0
+
 	   
 	rt_thread_startup(thd_greenlight);//启动绿灯线程
- 800ee92:	6823      	ldr	r3, [r4, #0]
- 800ee94:	f8d3 3090 	ldr.w	r3, [r3, #144]	; 0x90
- 800ee98:	4638      	mov	r0, r7
- 800ee9a:	4798      	blx	r3
+ 800ef2a:	6823      	ldr	r3, [r4, #0]
+ 800ef2c:	f8d3 3090 	ldr.w	r3, [r3, #144]	; 0x90
+ 800ef30:	4640      	mov	r0, r8
+ 800ef32:	4798      	blx	r3
 	rt_thread_startup(thd_bluelight);//启动蓝灯线程
- 800ee9c:	6823      	ldr	r3, [r4, #0]
- 800ee9e:	f8d3 3090 	ldr.w	r3, [r3, #144]	; 0x90
- 800eea2:	4628      	mov	r0, r5
- 800eea4:	4798      	blx	r3
+ 800ef34:	6823      	ldr	r3, [r4, #0]
+ 800ef36:	f8d3 3090 	ldr.w	r3, [r3, #144]	; 0x90
+ 800ef3a:	4638      	mov	r0, r7
+ 800ef3c:	4798      	blx	r3
+	rt_thread_startup(thd_messagerecv);
+ 800ef3e:	6823      	ldr	r3, [r4, #0]
+ 800ef40:	f8d3 3090 	ldr.w	r3, [r3, #144]	; 0x90
+ 800ef44:	4628      	mov	r0, r5
+ 800ef46:	4798      	blx	r3
 
     rt_thread_startup(thd_rulechoose);//启动命令选择线程
- 800eea6:	6823      	ldr	r3, [r4, #0]
- 800eea8:	f8d3 3090 	ldr.w	r3, [r3, #144]	; 0x90
- 800eeac:	4640      	mov	r0, r8
- 800eeae:	4798      	blx	r3
+ 800ef48:	6823      	ldr	r3, [r4, #0]
+ 800ef4a:	f8d3 3090 	ldr.w	r3, [r3, #144]	; 0x90
+ 800ef4e:	4648      	mov	r0, r9
+ 800ef50:	4798      	blx	r3
 }
- 800eeb0:	b002      	add	sp, #8
- 800eeb2:	e8bd 81f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, pc}
- 800eeb6:	bf00      	nop
- 800eeb8:	2000304c 	.word	0x2000304c
- 800eebc:	0800fad4 	.word	0x0800fad4
- 800eec0:	0800fb08 	.word	0x0800fb08
- 800eec4:	0800fb3c 	.word	0x0800fb3c
- 800eec8:	0800fb84 	.word	0x0800fb84
- 800eecc:	0800fbb8 	.word	0x0800fbb8
- 800eed0:	0800fbe8 	.word	0x0800fbe8
- 800eed4:	0800fc34 	.word	0x0800fc34
- 800eed8:	20003858 	.word	0x20003858
- 800eedc:	0800fc44 	.word	0x0800fc44
- 800eee0:	20003050 	.word	0x20003050
- 800eee4:	0800e9f5 	.word	0x0800e9f5
- 800eee8:	0800fc50 	.word	0x0800fc50
- 800eeec:	0800e481 	.word	0x0800e481
- 800eef0:	0800fc5c 	.word	0x0800fc5c
- 800eef4:	0800e5f1 	.word	0x0800e5f1
- 800eef8:	0800fc68 	.word	0x0800fc68
+ 800ef52:	b003      	add	sp, #12
+ 800ef54:	e8bd 83f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, pc}
+ 800ef58:	2000304c 	.word	0x2000304c
+ 800ef5c:	0800fc24 	.word	0x0800fc24
+ 800ef60:	0800fc58 	.word	0x0800fc58
+ 800ef64:	0800fc8c 	.word	0x0800fc8c
+ 800ef68:	0800fcd4 	.word	0x0800fcd4
+ 800ef6c:	0800fd08 	.word	0x0800fd08
+ 800ef70:	0800fd38 	.word	0x0800fd38
+ 800ef74:	0800fd84 	.word	0x0800fd84
+ 800ef78:	2000385c 	.word	0x2000385c
+ 800ef7c:	0800fd94 	.word	0x0800fd94
+ 800ef80:	20003054 	.word	0x20003054
+ 800ef84:	0800fda0 	.word	0x0800fda0
+ 800ef88:	20003050 	.word	0x20003050
+ 800ef8c:	0800e9f5 	.word	0x0800e9f5
+ 800ef90:	0800fda4 	.word	0x0800fda4
+ 800ef94:	0800e481 	.word	0x0800e481
+ 800ef98:	0800fdb0 	.word	0x0800fdb0
+ 800ef9c:	0800e5f1 	.word	0x0800e5f1
+ 800efa0:	0800fdbc 	.word	0x0800fdbc
+ 800efa4:	0800f079 	.word	0x0800f079
+ 800efa8:	0800fdc8 	.word	0x0800fdc8
 
-0800eefc <useremuart_frame>:
+0800efac <useremuart_frame>:
 	static uint16_t length = 1;
 	uint16_t ret_val;
 	
 	
 	//（1）若未接收到数据或者未遇到帧头，则退出并返回0  帧头长度为两个字节
 	if(((index-1) == 0 && ch != emuartFrameHead[0]) ||
- 800eefc:	4b17      	ldr	r3, [pc, #92]	; (800ef5c <useremuart_frame+0x60>)
- 800eefe:	881b      	ldrh	r3, [r3, #0]
- 800ef00:	2b01      	cmp	r3, #1
- 800ef02:	d012      	beq.n	800ef2a <useremuart_frame+0x2e>
- 800ef04:	2b02      	cmp	r3, #2
- 800ef06:	d019      	beq.n	800ef3c <useremuart_frame+0x40>
+ 800efac:	4b17      	ldr	r3, [pc, #92]	; (800f00c <useremuart_frame+0x60>)
+ 800efae:	881b      	ldrh	r3, [r3, #0]
+ 800efb0:	2b01      	cmp	r3, #1
+ 800efb2:	d012      	beq.n	800efda <useremuart_frame+0x2e>
+ 800efb4:	2b02      	cmp	r3, #2
+ 800efb6:	d019      	beq.n	800efec <useremuart_frame+0x40>
 {
- 800ef08:	b410      	push	{r4}
+ 800efb8:	b410      	push	{r4}
 		length = 1;
 		ret_val = 0;     //接收数据错误
 		goto uecom_recv_exit;
 	}
 	//（2）正确接收到了帧头，继续执行，将数据存入data数组
 	data[(index++)-1] = ch;
- 800ef0a:	1c5a      	adds	r2, r3, #1
- 800ef0c:	b292      	uxth	r2, r2
- 800ef0e:	4c13      	ldr	r4, [pc, #76]	; (800ef5c <useremuart_frame+0x60>)
- 800ef10:	8022      	strh	r2, [r4, #0]
- 800ef12:	3b01      	subs	r3, #1
- 800ef14:	54c8      	strb	r0, [r1, r3]
+ 800efba:	1c5a      	adds	r2, r3, #1
+ 800efbc:	b292      	uxth	r2, r2
+ 800efbe:	4c13      	ldr	r4, [pc, #76]	; (800f00c <useremuart_frame+0x60>)
+ 800efc0:	8022      	strh	r2, [r4, #0]
+ 800efc2:	3b01      	subs	r3, #1
+ 800efc4:	54c8      	strb	r0, [r1, r3]
 	//printf("%d",index);
 	//（3）当获取到第四个数据时，求出有效数据长度
 
 
 	if((index-1) == 3)
- 800ef16:	2a04      	cmp	r2, #4
- 800ef18:	d013      	beq.n	800ef42 <useremuart_frame+0x46>
+ 800efc6:	2a04      	cmp	r2, #4
+ 800efc8:	d013      	beq.n	800eff2 <useremuart_frame+0x46>
 	{
 		//printf("长度正确赋予\n");
 		length = data[2];
 	}
 	//判断数据是否接收完毕，接收完毕退出组帧
 	if(index==data[2]+4)
- 800ef1a:	788b      	ldrb	r3, [r1, #2]
- 800ef1c:	3304      	adds	r3, #4
- 800ef1e:	429a      	cmp	r2, r3
- 800ef20:	d013      	beq.n	800ef4a <useremuart_frame+0x4e>
+ 800efca:	788b      	ldrb	r3, [r1, #2]
+ 800efcc:	3304      	adds	r3, #4
+ 800efce:	429a      	cmp	r2, r3
+ 800efd0:	d013      	beq.n	800effa <useremuart_frame+0x4e>
 		ret_val = (length+3); //返回有效数据长度
 		length=1;
 		//data[(length-1)] = 0; //令数组长度为0
 		goto uecom_recv_exit;
 	}
 	ret_val = 0;
- 800ef22:	2000      	movs	r0, #0
+ 800efd2:	2000      	movs	r0, #0
 	goto uecom_recv_exit;
 uecom_recv_exit:
     return ret_val;
- 800ef24:	f85d 4b04 	ldr.w	r4, [sp], #4
- 800ef28:	4770      	bx	lr
+ 800efd4:	f85d 4b04 	ldr.w	r4, [sp], #4
+ 800efd8:	4770      	bx	lr
 	if(((index-1) == 0 && ch != emuartFrameHead[0]) ||
- 800ef2a:	28a5      	cmp	r0, #165	; 0xa5
- 800ef2c:	d0ea      	beq.n	800ef04 <useremuart_frame+0x8>
+ 800efda:	28a5      	cmp	r0, #165	; 0xa5
+ 800efdc:	d0ea      	beq.n	800efb4 <useremuart_frame+0x8>
 		index = 1;
- 800ef2e:	2301      	movs	r3, #1
- 800ef30:	4a0a      	ldr	r2, [pc, #40]	; (800ef5c <useremuart_frame+0x60>)
- 800ef32:	8013      	strh	r3, [r2, #0]
+ 800efde:	2301      	movs	r3, #1
+ 800efe0:	4a0a      	ldr	r2, [pc, #40]	; (800f00c <useremuart_frame+0x60>)
+ 800efe2:	8013      	strh	r3, [r2, #0]
 		length = 1;
- 800ef34:	4a0a      	ldr	r2, [pc, #40]	; (800ef60 <useremuart_frame+0x64>)
- 800ef36:	8013      	strh	r3, [r2, #0]
+ 800efe4:	4a0a      	ldr	r2, [pc, #40]	; (800f010 <useremuart_frame+0x64>)
+ 800efe6:	8013      	strh	r3, [r2, #0]
 		ret_val = 0;     //接收数据错误
- 800ef38:	2000      	movs	r0, #0
- 800ef3a:	4770      	bx	lr
+ 800efe8:	2000      	movs	r0, #0
+ 800efea:	4770      	bx	lr
 			((index-1) == 1 && ch != emuartFrameHead[1]))
- 800ef3c:	285a      	cmp	r0, #90	; 0x5a
- 800ef3e:	d1f6      	bne.n	800ef2e <useremuart_frame+0x32>
- 800ef40:	e7e2      	b.n	800ef08 <useremuart_frame+0xc>
+ 800efec:	285a      	cmp	r0, #90	; 0x5a
+ 800efee:	d1f6      	bne.n	800efde <useremuart_frame+0x32>
+ 800eff0:	e7e2      	b.n	800efb8 <useremuart_frame+0xc>
 		length = data[2];
- 800ef42:	7888      	ldrb	r0, [r1, #2]
- 800ef44:	4b06      	ldr	r3, [pc, #24]	; (800ef60 <useremuart_frame+0x64>)
- 800ef46:	8018      	strh	r0, [r3, #0]
- 800ef48:	e7e7      	b.n	800ef1a <useremuart_frame+0x1e>
+ 800eff2:	7888      	ldrb	r0, [r1, #2]
+ 800eff4:	4b06      	ldr	r3, [pc, #24]	; (800f010 <useremuart_frame+0x64>)
+ 800eff6:	8018      	strh	r0, [r3, #0]
+ 800eff8:	e7e7      	b.n	800efca <useremuart_frame+0x1e>
 		index = 1;
- 800ef4a:	2201      	movs	r2, #1
- 800ef4c:	4b03      	ldr	r3, [pc, #12]	; (800ef5c <useremuart_frame+0x60>)
- 800ef4e:	801a      	strh	r2, [r3, #0]
+ 800effa:	2201      	movs	r2, #1
+ 800effc:	4b03      	ldr	r3, [pc, #12]	; (800f00c <useremuart_frame+0x60>)
+ 800effe:	801a      	strh	r2, [r3, #0]
 		ret_val = (length+3); //返回有效数据长度
- 800ef50:	4b03      	ldr	r3, [pc, #12]	; (800ef60 <useremuart_frame+0x64>)
- 800ef52:	8818      	ldrh	r0, [r3, #0]
- 800ef54:	3003      	adds	r0, #3
- 800ef56:	b280      	uxth	r0, r0
+ 800f000:	4b03      	ldr	r3, [pc, #12]	; (800f010 <useremuart_frame+0x64>)
+ 800f002:	8818      	ldrh	r0, [r3, #0]
+ 800f004:	3003      	adds	r0, #3
+ 800f006:	b280      	uxth	r0, r0
 		length=1;
- 800ef58:	801a      	strh	r2, [r3, #0]
+ 800f008:	801a      	strh	r2, [r3, #0]
 		goto uecom_recv_exit;
- 800ef5a:	e7e3      	b.n	800ef24 <useremuart_frame+0x28>
- 800ef5c:	2000302c 	.word	0x2000302c
- 800ef60:	2000302e 	.word	0x2000302e
+ 800f00a:	e7e3      	b.n	800efd4 <useremuart_frame+0x28>
+ 800f00c:	2000302c 	.word	0x2000302c
+ 800f010:	2000302e 	.word	0x2000302e
 
-0800ef64 <USART2_IRQHandler>:
+0800f014 <USART2_IRQHandler>:
 {
- 800ef64:	b500      	push	{lr}
- 800ef66:	b083      	sub	sp, #12
+ 800f014:	b500      	push	{lr}
+ 800f016:	b083      	sub	sp, #12
     DISABLE_INTERRUPTS;      //关总中断
- 800ef68:	b672      	cpsid	i
+ 800f018:	b672      	cpsid	i
     if(!uart_get_re_int(UART_User)) goto UART_User_Handler_EXIT;
- 800ef6a:	2002      	movs	r0, #2
- 800ef6c:	f7ff ff16 	bl	800ed9c <uart_get_re_int>
- 800ef70:	b918      	cbnz	r0, 800ef7a <USART2_IRQHandler+0x16>
+ 800f01a:	2002      	movs	r0, #2
+ 800f01c:	f7ff fef4 	bl	800ee08 <uart_get_re_int>
+ 800f020:	b918      	cbnz	r0, 800f02a <USART2_IRQHandler+0x16>
     ENABLE_INTERRUPTS;
- 800ef72:	b662      	cpsie	i
+ 800f022:	b662      	cpsie	i
 }
- 800ef74:	b003      	add	sp, #12
- 800ef76:	f85d fb04 	ldr.w	pc, [sp], #4
+ 800f024:	b003      	add	sp, #12
+ 800f026:	f85d fb04 	ldr.w	pc, [sp], #4
     ch = uart_re1(UART_User,&flag);        //调用接收一个字节的函数
- 800ef7a:	f10d 0107 	add.w	r1, sp, #7
- 800ef7e:	2002      	movs	r0, #2
- 800ef80:	f7ff fec4 	bl	800ed0c <uart_re1>
+ 800f02a:	f10d 0107 	add.w	r1, sp, #7
+ 800f02e:	2002      	movs	r0, #2
+ 800f030:	f7ff fea2 	bl	800ed78 <uart_re1>
     if(!flag) goto UART_User_Handler_EXIT; //实际未收到数据，退出
- 800ef84:	f89d 3007 	ldrb.w	r3, [sp, #7]
- 800ef88:	2b00      	cmp	r3, #0
- 800ef8a:	d0f2      	beq.n	800ef72 <USART2_IRQHandler+0xe>
+ 800f034:	f89d 3007 	ldrb.w	r3, [sp, #7]
+ 800f038:	2b00      	cmp	r3, #0
+ 800f03a:	d0f2      	beq.n	800f022 <USART2_IRQHandler+0xe>
        gcRecvLen =useremuart_frame(ch,(uint8_t*)gcRecvBuf);//对接收数据组帧，返回0组帧未成功，返回长度组帧成功。
- 800ef8c:	490a      	ldr	r1, [pc, #40]	; (800efb8 <USART2_IRQHandler+0x54>)
- 800ef8e:	f7ff ffb5 	bl	800eefc <useremuart_frame>
- 800ef92:	4b0a      	ldr	r3, [pc, #40]	; (800efbc <USART2_IRQHandler+0x58>)
- 800ef94:	8018      	strh	r0, [r3, #0]
+ 800f03c:	490a      	ldr	r1, [pc, #40]	; (800f068 <USART2_IRQHandler+0x54>)
+ 800f03e:	f7ff ffb5 	bl	800efac <useremuart_frame>
+ 800f042:	4b0a      	ldr	r3, [pc, #40]	; (800f06c <USART2_IRQHandler+0x58>)
+ 800f044:	8018      	strh	r0, [r3, #0]
        if (gcRecvLen == 0) goto UART_User_Handler_EXIT; 
- 800ef96:	881b      	ldrh	r3, [r3, #0]
- 800ef98:	b29b      	uxth	r3, r3
- 800ef9a:	2b00      	cmp	r3, #0
- 800ef9c:	d0e9      	beq.n	800ef72 <USART2_IRQHandler+0xe>
+ 800f046:	881b      	ldrh	r3, [r3, #0]
+ 800f048:	b29b      	uxth	r3, r3
+ 800f04a:	2b00      	cmp	r3, #0
+ 800f04c:	d0e9      	beq.n	800f022 <USART2_IRQHandler+0xe>
        rt_event_send(EventWord,RULE_CHOOSE_EVENT);//数据接收完成，对命令选择事件置位
- 800ef9e:	4b08      	ldr	r3, [pc, #32]	; (800efc0 <USART2_IRQHandler+0x5c>)
- 800efa0:	681b      	ldr	r3, [r3, #0]
- 800efa2:	f8d3 30ac 	ldr.w	r3, [r3, #172]	; 0xac
- 800efa6:	2102      	movs	r1, #2
- 800efa8:	4a06      	ldr	r2, [pc, #24]	; (800efc4 <USART2_IRQHandler+0x60>)
- 800efaa:	6810      	ldr	r0, [r2, #0]
- 800efac:	4798      	blx	r3
+ 800f04e:	4b08      	ldr	r3, [pc, #32]	; (800f070 <USART2_IRQHandler+0x5c>)
+ 800f050:	681b      	ldr	r3, [r3, #0]
+ 800f052:	f8d3 30ac 	ldr.w	r3, [r3, #172]	; 0xac
+ 800f056:	2102      	movs	r1, #2
+ 800f058:	4a06      	ldr	r2, [pc, #24]	; (800f074 <USART2_IRQHandler+0x60>)
+ 800f05a:	6810      	ldr	r0, [r2, #0]
+ 800f05c:	4798      	blx	r3
         gcRecvLen = 0;   //帧已经使用完毕，下次若收到一个字节，可以继续组帧
- 800efae:	4b03      	ldr	r3, [pc, #12]	; (800efbc <USART2_IRQHandler+0x58>)
- 800efb0:	2200      	movs	r2, #0
- 800efb2:	801a      	strh	r2, [r3, #0]
- 800efb4:	e7dd      	b.n	800ef72 <USART2_IRQHandler+0xe>
- 800efb6:	bf00      	nop
- 800efb8:	20003058 	.word	0x20003058
- 800efbc:	20003054 	.word	0x20003054
- 800efc0:	20003858 	.word	0x20003858
- 800efc4:	20003050 	.word	0x20003050
+ 800f05e:	4b03      	ldr	r3, [pc, #12]	; (800f06c <USART2_IRQHandler+0x58>)
+ 800f060:	2200      	movs	r2, #0
+ 800f062:	801a      	strh	r2, [r3, #0]
+ 800f064:	e7dd      	b.n	800f022 <USART2_IRQHandler+0xe>
+ 800f066:	bf00      	nop
+ 800f068:	2000305c 	.word	0x2000305c
+ 800f06c:	20003058 	.word	0x20003058
+ 800f070:	2000385c 	.word	0x2000385c
+ 800f074:	20003054 	.word	0x20003054
 
-0800efc8 <printk_putc>:
+0800f078 <thread_messagerecv>:
+//参数说明：无
+//功能概要：如果队列中有消息，则打印出相关的相应的消息，并此时消息队列中消息的个数
+//内部调用：无
+//======================================================================
+void thread_messagerecv()
+{
+ 800f078:	b530      	push	{r4, r5, lr}
+ 800f07a:	b083      	sub	sp, #12
+	//（1）======申明局部变量==========================================
+    uint8_t temp[8];
+	char *cnt;
+	uint8_t recvState;
+	printf("第一次进入消息接收线程!\r\n");
+ 800f07c:	4820      	ldr	r0, [pc, #128]	; (800f100 <thread_messagerecv+0x88>)
+ 800f07e:	f000 fc79 	bl	800f974 <myprintf>
+	 //（2）======主循环（开始）==========================================
+    while (1)
+    {
+	    //等待消息
+		recvState=mq_recv(mq,&temp,sizeof(temp),RT_WAITING_FOREVER);
+ 800f082:	4b20      	ldr	r3, [pc, #128]	; (800f104 <thread_messagerecv+0x8c>)
+ 800f084:	681b      	ldr	r3, [r3, #0]
+ 800f086:	f8d3 40ec 	ldr.w	r4, [r3, #236]	; 0xec
+ 800f08a:	f04f 33ff 	mov.w	r3, #4294967295
+ 800f08e:	2208      	movs	r2, #8
+ 800f090:	4669      	mov	r1, sp
+ 800f092:	481d      	ldr	r0, [pc, #116]	; (800f108 <thread_messagerecv+0x90>)
+ 800f094:	6800      	ldr	r0, [r0, #0]
+ 800f096:	47a0      	blx	r4
+ 800f098:	b2c0      	uxtb	r0, r0
+
+		if(recvState==0)  //若获得消息
+ 800f09a:	2800      	cmp	r0, #0
+ 800f09c:	d1f1      	bne.n	800f082 <thread_messagerecv+0xa>
+       	{
+			cnt = rt_malloc(1);  
+ 800f09e:	4c19      	ldr	r4, [pc, #100]	; (800f104 <thread_messagerecv+0x8c>)
+ 800f0a0:	6823      	ldr	r3, [r4, #0]
+ 800f0a2:	f8d3 30f0 	ldr.w	r3, [r3, #240]	; 0xf0
+ 800f0a6:	2001      	movs	r0, #1
+ 800f0a8:	4798      	blx	r3
+ 800f0aa:	4605      	mov	r5, r0
+    	   	rt_sprintf(cnt,"%d",mq->entry);
+ 800f0ac:	6823      	ldr	r3, [r4, #0]
+ 800f0ae:	f8d3 30f4 	ldr.w	r3, [r3, #244]	; 0xf4
+ 800f0b2:	4a15      	ldr	r2, [pc, #84]	; (800f108 <thread_messagerecv+0x90>)
+ 800f0b4:	6812      	ldr	r2, [r2, #0]
+ 800f0b6:	8c92      	ldrh	r2, [r2, #36]	; 0x24
+ 800f0b8:	4914      	ldr	r1, [pc, #80]	; (800f10c <thread_messagerecv+0x94>)
+ 800f0ba:	4798      	blx	r3
+    	   	uart_send_string(UART_User,(void*)"消息队列中消息数=");
+ 800f0bc:	4914      	ldr	r1, [pc, #80]	; (800f110 <thread_messagerecv+0x98>)
+ 800f0be:	2002      	movs	r0, #2
+ 800f0c0:	f7ff fe44 	bl	800ed4c <uart_send_string>
+    	   	uart_send_string(UART_User,(uint8_t *)cnt);
+ 800f0c4:	4629      	mov	r1, r5
+ 800f0c6:	2002      	movs	r0, #2
+ 800f0c8:	f7ff fe40 	bl	800ed4c <uart_send_string>
+    	   	uart_send_string(UART_User,(void *) "\r\n");
+ 800f0cc:	4d11      	ldr	r5, [pc, #68]	; (800f114 <thread_messagerecv+0x9c>)
+ 800f0ce:	4629      	mov	r1, r5
+ 800f0d0:	2002      	movs	r0, #2
+ 800f0d2:	f7ff fe3b 	bl	800ed4c <uart_send_string>
+    	   	uart_send_string(UART_User,(void*) "当前取出的消息=");
+ 800f0d6:	4910      	ldr	r1, [pc, #64]	; (800f118 <thread_messagerecv+0xa0>)
+ 800f0d8:	2002      	movs	r0, #2
+ 800f0da:	f7ff fe37 	bl	800ed4c <uart_send_string>
+    	   	uart_sendN(UART_User,8,temp);
+ 800f0de:	466a      	mov	r2, sp
+ 800f0e0:	2108      	movs	r1, #8
+ 800f0e2:	2002      	movs	r0, #2
+ 800f0e4:	f7ff fe18 	bl	800ed18 <uart_sendN>
+    	   	uart_send_string(UART_User,(void *) "\r\n");
+ 800f0e8:	4629      	mov	r1, r5
+ 800f0ea:	2002      	movs	r0, #2
+ 800f0ec:	f7ff fe2e 	bl	800ed4c <uart_send_string>
+    	   	delay_ms(1000);                //延迟，为了演示消息堆积的情况
+ 800f0f0:	6823      	ldr	r3, [r4, #0]
+ 800f0f2:	f8d3 3094 	ldr.w	r3, [r3, #148]	; 0x94
+ 800f0f6:	f44f 707a 	mov.w	r0, #1000	; 0x3e8
+ 800f0fa:	4798      	blx	r3
+ 800f0fc:	e7c1      	b.n	800f082 <thread_messagerecv+0xa>
+ 800f0fe:	bf00      	nop
+ 800f100:	0800fdd4 	.word	0x0800fdd4
+ 800f104:	2000385c 	.word	0x2000385c
+ 800f108:	20003050 	.word	0x20003050
+ 800f10c:	0800fdf0 	.word	0x0800fdf0
+ 800f110:	0800fdf4 	.word	0x0800fdf4
+ 800f114:	0800fb50 	.word	0x0800fb50
+ 800f118:	0800fe08 	.word	0x0800fe08
+
+0800f11c <printk_putc>:
 //功能概要：通过串口打出一个字符
 //参数说明：data:数据：通过串口发送的一字节数据
 //函数返回：无
 //======================================================================
 static void printk_putc(int c, int *count, PRINTK_INFO *info)
 {
- 800efc8:	b510      	push	{r4, lr}
- 800efca:	460c      	mov	r4, r1
+ 800f11c:	b510      	push	{r4, lr}
+ 800f11e:	460c      	mov	r4, r1
 	switch (info->dest) {
- 800efcc:	6813      	ldr	r3, [r2, #0]
- 800efce:	2b01      	cmp	r3, #1
- 800efd0:	d005      	beq.n	800efde <printk_putc+0x16>
- 800efd2:	2b02      	cmp	r3, #2
- 800efd4:	d007      	beq.n	800efe6 <printk_putc+0x1e>
+ 800f120:	6813      	ldr	r3, [r2, #0]
+ 800f122:	2b01      	cmp	r3, #1
+ 800f124:	d005      	beq.n	800f132 <printk_putc+0x16>
+ 800f126:	2b02      	cmp	r3, #2
+ 800f128:	d007      	beq.n	800f13a <printk_putc+0x1e>
 		++(info->loc);
 		break;
 	default:
 		break;
 	}
 	*count += 1;
- 800efd6:	6823      	ldr	r3, [r4, #0]
- 800efd8:	3301      	adds	r3, #1
- 800efda:	6023      	str	r3, [r4, #0]
+ 800f12a:	6823      	ldr	r3, [r4, #0]
+ 800f12c:	3301      	adds	r3, #1
+ 800f12e:	6023      	str	r3, [r4, #0]
 }
- 800efdc:	bd10      	pop	{r4, pc}
+ 800f130:	bd10      	pop	{r4, pc}
 		info->func((char) c);
- 800efde:	6853      	ldr	r3, [r2, #4]
- 800efe0:	b2c0      	uxtb	r0, r0
- 800efe2:	4798      	blx	r3
+ 800f132:	6853      	ldr	r3, [r2, #4]
+ 800f134:	b2c0      	uxtb	r0, r0
+ 800f136:	4798      	blx	r3
 		break;
- 800efe4:	e7f7      	b.n	800efd6 <printk_putc+0xe>
+ 800f138:	e7f7      	b.n	800f12a <printk_putc+0xe>
 		*(info->loc) = (unsigned char) c;
- 800efe6:	6893      	ldr	r3, [r2, #8]
- 800efe8:	7018      	strb	r0, [r3, #0]
+ 800f13a:	6893      	ldr	r3, [r2, #8]
+ 800f13c:	7018      	strb	r0, [r3, #0]
 		++(info->loc);
- 800efea:	6893      	ldr	r3, [r2, #8]
- 800efec:	3301      	adds	r3, #1
- 800efee:	6093      	str	r3, [r2, #8]
+ 800f13e:	6893      	ldr	r3, [r2, #8]
+ 800f140:	3301      	adds	r3, #1
+ 800f142:	6093      	str	r3, [r2, #8]
 		break;
- 800eff0:	e7f1      	b.n	800efd6 <printk_putc+0xe>
+ 800f144:	e7f1      	b.n	800f12a <printk_putc+0xe>
 
-0800eff2 <printk_mknumstr>:
+0800f146 <printk_mknumstr>:
 //       neg:有无符号:判断数据时有符号还是无符号整形
 //       radix:格式选择:确定输出格式例如：十进制或十六进制...
 //函数返回：无
 //======================================================================
 static int printk_mknumstr(char *numstr, void *nump, int neg, int radix)
 {
- 800eff2:	b430      	push	{r4, r5}
+ 800f146:	b430      	push	{r4, r5}
 	int nlen;
 	char *nstrp;
 
 	nlen = 0;
 	nstrp = numstr;
 	*nstrp++ = '\0';
- 800eff4:	1c44      	adds	r4, r0, #1
- 800eff6:	2500      	movs	r5, #0
- 800eff8:	7005      	strb	r5, [r0, #0]
+ 800f148:	1c44      	adds	r4, r0, #1
+ 800f14a:	2500      	movs	r5, #0
+ 800f14c:	7005      	strb	r5, [r0, #0]
 
 	if (neg) {
- 800effa:	b1b2      	cbz	r2, 800f02a <printk_mknumstr+0x38>
+ 800f14e:	b1b2      	cbz	r2, 800f17e <printk_mknumstr+0x38>
 		a = *(int *) nump;
- 800effc:	6809      	ldr	r1, [r1, #0]
+ 800f150:	6809      	ldr	r1, [r1, #0]
 		if (a == 0) {
- 800effe:	b109      	cbz	r1, 800f004 <printk_mknumstr+0x12>
+ 800f152:	b109      	cbz	r1, 800f158 <printk_mknumstr+0x12>
 	nlen = 0;
- 800f000:	2000      	movs	r0, #0
- 800f002:	e009      	b.n	800f018 <printk_mknumstr+0x26>
+ 800f154:	2000      	movs	r0, #0
+ 800f156:	e009      	b.n	800f16c <printk_mknumstr+0x26>
 			*nstrp = '0';
- 800f004:	2330      	movs	r3, #48	; 0x30
- 800f006:	7043      	strb	r3, [r0, #1]
+ 800f158:	2330      	movs	r3, #48	; 0x30
+ 800f15a:	7043      	strb	r3, [r0, #1]
 			++nlen;
- 800f008:	2001      	movs	r0, #1
+ 800f15c:	2001      	movs	r0, #1
 			goto done;
- 800f00a:	e024      	b.n	800f056 <printk_mknumstr+0x64>
+ 800f15e:	e024      	b.n	800f1aa <printk_mknumstr+0x64>
 		}
 		while (a != 0) {
 			b = (int) a / (int) radix;
 			c = (int) a - ((int) b * (int) radix);
 			if (c < 0) {
 				c = ~c + 1 + '0';
- 800f00c:	f1c1 0130 	rsb	r1, r1, #48	; 0x30
+ 800f160:	f1c1 0130 	rsb	r1, r1, #48	; 0x30
 			} else {
 				c = c + '0';
 			}
 			a = b;
 			*nstrp++ = (char) c;
- 800f010:	7021      	strb	r1, [r4, #0]
+ 800f164:	7021      	strb	r1, [r4, #0]
 			++nlen;
- 800f012:	3001      	adds	r0, #1
+ 800f166:	3001      	adds	r0, #1
 			*nstrp++ = (char) c;
- 800f014:	3401      	adds	r4, #1
+ 800f168:	3401      	adds	r4, #1
 			a = b;
- 800f016:	4611      	mov	r1, r2
+ 800f16a:	4611      	mov	r1, r2
 		while (a != 0) {
- 800f018:	b1e9      	cbz	r1, 800f056 <printk_mknumstr+0x64>
+ 800f16c:	b1e9      	cbz	r1, 800f1aa <printk_mknumstr+0x64>
 			b = (int) a / (int) radix;
- 800f01a:	fb91 f2f3 	sdiv	r2, r1, r3
- 800f01e:	fb03 1112 	mls	r1, r3, r2, r1
+ 800f16e:	fb91 f2f3 	sdiv	r2, r1, r3
+ 800f172:	fb03 1112 	mls	r1, r3, r2, r1
 			if (c < 0) {
- 800f022:	2900      	cmp	r1, #0
- 800f024:	dbf2      	blt.n	800f00c <printk_mknumstr+0x1a>
+ 800f176:	2900      	cmp	r1, #0
+ 800f178:	dbf2      	blt.n	800f160 <printk_mknumstr+0x1a>
 				c = c + '0';
- 800f026:	3130      	adds	r1, #48	; 0x30
- 800f028:	e7f2      	b.n	800f010 <printk_mknumstr+0x1e>
- 800f02a:	4615      	mov	r5, r2
+ 800f17a:	3130      	adds	r1, #48	; 0x30
+ 800f17c:	e7f2      	b.n	800f164 <printk_mknumstr+0x1e>
+ 800f17e:	4615      	mov	r5, r2
 		}
 	} else {
 		ua = *(unsigned int *) nump;
- 800f02c:	680a      	ldr	r2, [r1, #0]
+ 800f180:	680a      	ldr	r2, [r1, #0]
 		if (ua == 0) {
- 800f02e:	b942      	cbnz	r2, 800f042 <printk_mknumstr+0x50>
+ 800f182:	b942      	cbnz	r2, 800f196 <printk_mknumstr+0x50>
 			*nstrp = '0';
- 800f030:	2330      	movs	r3, #48	; 0x30
- 800f032:	7043      	strb	r3, [r0, #1]
+ 800f184:	2330      	movs	r3, #48	; 0x30
+ 800f186:	7043      	strb	r3, [r0, #1]
 			++nlen;
- 800f034:	2001      	movs	r0, #1
+ 800f188:	2001      	movs	r0, #1
 			goto done;
- 800f036:	e00e      	b.n	800f056 <printk_mknumstr+0x64>
+ 800f18a:	e00e      	b.n	800f1aa <printk_mknumstr+0x64>
 			ub = (unsigned int) ua / (unsigned int) radix;
 			uc = (unsigned int) ua - ((unsigned int) ub * (unsigned int) radix);
 			if (uc < 10) {
 				uc = uc + '0';
 			} else {
 				uc = uc - 10 + 'A';
- 800f038:	3237      	adds	r2, #55	; 0x37
+ 800f18c:	3237      	adds	r2, #55	; 0x37
 			}
 			ua = ub;
 			*nstrp++ = (char) uc;
- 800f03a:	7022      	strb	r2, [r4, #0]
+ 800f18e:	7022      	strb	r2, [r4, #0]
 			++nlen;
- 800f03c:	3501      	adds	r5, #1
+ 800f190:	3501      	adds	r5, #1
 			*nstrp++ = (char) uc;
- 800f03e:	3401      	adds	r4, #1
+ 800f192:	3401      	adds	r4, #1
 			ua = ub;
- 800f040:	460a      	mov	r2, r1
+ 800f194:	460a      	mov	r2, r1
 		while (ua != 0) {
- 800f042:	b13a      	cbz	r2, 800f054 <printk_mknumstr+0x62>
+ 800f196:	b13a      	cbz	r2, 800f1a8 <printk_mknumstr+0x62>
 			ub = (unsigned int) ua / (unsigned int) radix;
- 800f044:	fbb2 f1f3 	udiv	r1, r2, r3
+ 800f198:	fbb2 f1f3 	udiv	r1, r2, r3
 			uc = (unsigned int) ua - ((unsigned int) ub * (unsigned int) radix);
- 800f048:	fb01 2213 	mls	r2, r1, r3, r2
+ 800f19c:	fb01 2213 	mls	r2, r1, r3, r2
 			if (uc < 10) {
- 800f04c:	2a09      	cmp	r2, #9
- 800f04e:	d8f3      	bhi.n	800f038 <printk_mknumstr+0x46>
+ 800f1a0:	2a09      	cmp	r2, #9
+ 800f1a2:	d8f3      	bhi.n	800f18c <printk_mknumstr+0x46>
 				uc = uc + '0';
- 800f050:	3230      	adds	r2, #48	; 0x30
- 800f052:	e7f2      	b.n	800f03a <printk_mknumstr+0x48>
+ 800f1a4:	3230      	adds	r2, #48	; 0x30
+ 800f1a6:	e7f2      	b.n	800f18e <printk_mknumstr+0x48>
 		}
 	}
 	done: return nlen;
- 800f054:	4628      	mov	r0, r5
+ 800f1a8:	4628      	mov	r0, r5
 }
- 800f056:	bc30      	pop	{r4, r5}
- 800f058:	4770      	bx	lr
+ 800f1aa:	bc30      	pop	{r4, r5}
+ 800f1ac:	4770      	bx	lr
 
-0800f05a <printk_pad_zero>:
+0800f1ae <printk_pad_zero>:
 /********************************************************************/
 static void printk_pad_zero(int curlen, int field_width, int *count,
 		PRINTK_INFO *info) {
- 800f05a:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
- 800f05c:	4604      	mov	r4, r0
- 800f05e:	460d      	mov	r5, r1
- 800f060:	4617      	mov	r7, r2
- 800f062:	461e      	mov	r6, r3
+ 800f1ae:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 800f1b0:	4604      	mov	r4, r0
+ 800f1b2:	460d      	mov	r5, r1
+ 800f1b4:	4617      	mov	r7, r2
+ 800f1b6:	461e      	mov	r6, r3
 	int i;
 
 	for (i = curlen; i < field_width; i++) {
- 800f064:	e005      	b.n	800f072 <printk_pad_zero+0x18>
+ 800f1b8:	e005      	b.n	800f1c6 <printk_pad_zero+0x18>
 		printk_putc('0', count, info);
- 800f066:	4632      	mov	r2, r6
- 800f068:	4639      	mov	r1, r7
- 800f06a:	2030      	movs	r0, #48	; 0x30
- 800f06c:	f7ff ffac 	bl	800efc8 <printk_putc>
+ 800f1ba:	4632      	mov	r2, r6
+ 800f1bc:	4639      	mov	r1, r7
+ 800f1be:	2030      	movs	r0, #48	; 0x30
+ 800f1c0:	f7ff ffac 	bl	800f11c <printk_putc>
 	for (i = curlen; i < field_width; i++) {
- 800f070:	3401      	adds	r4, #1
- 800f072:	42ac      	cmp	r4, r5
- 800f074:	dbf7      	blt.n	800f066 <printk_pad_zero+0xc>
+ 800f1c4:	3401      	adds	r4, #1
+ 800f1c6:	42ac      	cmp	r4, r5
+ 800f1c8:	dbf7      	blt.n	800f1ba <printk_pad_zero+0xc>
 	}
 }
- 800f076:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
+ 800f1ca:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
 
-0800f078 <printk_pad_space>:
+0800f1cc <printk_pad_space>:
 
 /********************************************************************/
 static void printk_pad_space(int curlen, int field_width, int *count,
 		PRINTK_INFO *info) {
- 800f078:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
- 800f07a:	4604      	mov	r4, r0
- 800f07c:	460d      	mov	r5, r1
- 800f07e:	4617      	mov	r7, r2
- 800f080:	461e      	mov	r6, r3
+ 800f1cc:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 800f1ce:	4604      	mov	r4, r0
+ 800f1d0:	460d      	mov	r5, r1
+ 800f1d2:	4617      	mov	r7, r2
+ 800f1d4:	461e      	mov	r6, r3
 	int i;
 
 	for (i = curlen; i < field_width; i++) {
- 800f082:	e005      	b.n	800f090 <printk_pad_space+0x18>
+ 800f1d6:	e005      	b.n	800f1e4 <printk_pad_space+0x18>
 		printk_putc(' ', count, info);
- 800f084:	4632      	mov	r2, r6
- 800f086:	4639      	mov	r1, r7
- 800f088:	2020      	movs	r0, #32
- 800f08a:	f7ff ff9d 	bl	800efc8 <printk_putc>
+ 800f1d8:	4632      	mov	r2, r6
+ 800f1da:	4639      	mov	r1, r7
+ 800f1dc:	2020      	movs	r0, #32
+ 800f1de:	f7ff ff9d 	bl	800f11c <printk_putc>
 	for (i = curlen; i < field_width; i++) {
- 800f08e:	3401      	adds	r4, #1
- 800f090:	42ac      	cmp	r4, r5
- 800f092:	dbf7      	blt.n	800f084 <printk_pad_space+0xc>
+ 800f1e2:	3401      	adds	r4, #1
+ 800f1e4:	42ac      	cmp	r4, r5
+ 800f1e6:	dbf7      	blt.n	800f1d8 <printk_pad_space+0xc>
 	}
 }
- 800f094:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
+ 800f1e8:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
 
-0800f096 <out_char>:
+0800f1ea <out_char>:
 void out_char(char data) {
- 800f096:	b508      	push	{r3, lr}
+ 800f1ea:	b508      	push	{r3, lr}
 	uart_send1(UART_printf, data);
- 800f098:	4601      	mov	r1, r0
- 800f09a:	2003      	movs	r0, #3
- 800f09c:	f7ff fdfc 	bl	800ec98 <uart_send1>
+ 800f1ec:	4601      	mov	r1, r0
+ 800f1ee:	2003      	movs	r0, #3
+ 800f1f0:	f7ff fd6e 	bl	800ecd0 <uart_send1>
 }
- 800f0a0:	bd08      	pop	{r3, pc}
- 800f0a2:	0000      	movs	r0, r0
- 800f0a4:	0000      	movs	r0, r0
+ 800f1f4:	bd08      	pop	{r3, pc}
 	...
 
-0800f0a8 <printk_mkfloatstr>:
+0800f1f8 <printk_mkfloatstr>:
 {
- 800f0a8:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
- 800f0ac:	b099      	sub	sp, #100	; 0x64
- 800f0ae:	4604      	mov	r4, r0
- 800f0b0:	4689      	mov	r9, r1
- 800f0b2:	4692      	mov	sl, r2
+ 800f1f8:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+ 800f1fc:	b099      	sub	sp, #100	; 0x64
+ 800f1fe:	4604      	mov	r4, r0
+ 800f200:	4689      	mov	r9, r1
+ 800f202:	4692      	mov	sl, r2
 	uint32_t p,i,j,k,a[5]={0},b[19]={0};
- 800f0b4:	2100      	movs	r1, #0
- 800f0b6:	9113      	str	r1, [sp, #76]	; 0x4c
- 800f0b8:	9114      	str	r1, [sp, #80]	; 0x50
- 800f0ba:	9115      	str	r1, [sp, #84]	; 0x54
- 800f0bc:	9116      	str	r1, [sp, #88]	; 0x58
- 800f0be:	9117      	str	r1, [sp, #92]	; 0x5c
- 800f0c0:	224c      	movs	r2, #76	; 0x4c
- 800f0c2:	4668      	mov	r0, sp
- 800f0c4:	f000 fc1f 	bl	800f906 <memset>
+ 800f204:	2100      	movs	r1, #0
+ 800f206:	9113      	str	r1, [sp, #76]	; 0x4c
+ 800f208:	9114      	str	r1, [sp, #80]	; 0x50
+ 800f20a:	9115      	str	r1, [sp, #84]	; 0x54
+ 800f20c:	9116      	str	r1, [sp, #88]	; 0x58
+ 800f20e:	9117      	str	r1, [sp, #92]	; 0x5c
+ 800f210:	224c      	movs	r2, #76	; 0x4c
+ 800f212:	4668      	mov	r0, sp
+ 800f214:	f000 fc1f 	bl	800fa56 <memset>
 	p=(uint32_t)*f;//整数部分
- 800f0c8:	e9d4 4500 	ldrd	r4, r5, [r4]
- 800f0cc:	4620      	mov	r0, r4
- 800f0ce:	4629      	mov	r1, r5
- 800f0d0:	f7ff f814 	bl	800e0fc <__aeabi_d2uiz>
- 800f0d4:	4680      	mov	r8, r0
+ 800f218:	e9d4 4500 	ldrd	r4, r5, [r4]
+ 800f21c:	4620      	mov	r0, r4
+ 800f21e:	4629      	mov	r1, r5
+ 800f220:	f7fe ff6c 	bl	800e0fc <__aeabi_d2uiz>
+ 800f224:	4680      	mov	r8, r0
 	tempf=(*f-p);
- 800f0d6:	f7fe fcfd 	bl	800dad4 <__aeabi_ui2d>
- 800f0da:	4602      	mov	r2, r0
- 800f0dc:	460b      	mov	r3, r1
- 800f0de:	4620      	mov	r0, r4
- 800f0e0:	4629      	mov	r1, r5
- 800f0e2:	f7fe fbb9 	bl	800d858 <__aeabi_dsub>
- 800f0e6:	4604      	mov	r4, r0
- 800f0e8:	460d      	mov	r5, r1
+ 800f226:	f7fe fc55 	bl	800dad4 <__aeabi_ui2d>
+ 800f22a:	4602      	mov	r2, r0
+ 800f22c:	460b      	mov	r3, r1
+ 800f22e:	4620      	mov	r0, r4
+ 800f230:	4629      	mov	r1, r5
+ 800f232:	f7fe fb11 	bl	800d858 <__aeabi_dsub>
+ 800f236:	4604      	mov	r4, r0
+ 800f238:	460d      	mov	r5, r1
 	if(precision_width==0)
- 800f0ea:	f1ba 0f00 	cmp.w	sl, #0
- 800f0ee:	d118      	bne.n	800f122 <printk_mkfloatstr+0x7a>
+ 800f23a:	f1ba 0f00 	cmp.w	sl, #0
+ 800f23e:	d118      	bne.n	800f272 <printk_mkfloatstr+0x7a>
 	   q=(*f-p)*100000000000000000;    //小数部分
- 800f0f0:	a35c      	add	r3, pc, #368	; (adr r3, 800f264 <printk_mkfloatstr+0x1bc>)
- 800f0f2:	e9d3 2300 	ldrd	r2, r3, [r3]
- 800f0f6:	f7fe fd67 	bl	800dbc8 <__aeabi_dmul>
- 800f0fa:	f7ff f837 	bl	800e16c <__aeabi_d2ulz>
- 800f0fe:	4606      	mov	r6, r0
- 800f100:	460f      	mov	r7, r1
+ 800f240:	a35c      	add	r3, pc, #368	; (adr r3, 800f3b4 <printk_mkfloatstr+0x1bc>)
+ 800f242:	e9d3 2300 	ldrd	r2, r3, [r3]
+ 800f246:	f7fe fcbf 	bl	800dbc8 <__aeabi_dmul>
+ 800f24a:	f7fe ff8f 	bl	800e16c <__aeabi_d2ulz>
+ 800f24e:	4606      	mov	r6, r0
+ 800f250:	460f      	mov	r7, r1
 	k=0;
- 800f102:	f04f 0b00 	mov.w	fp, #0
+ 800f252:	f04f 0b00 	mov.w	fp, #0
 	while(m<1&&m!=0)    //【20201119】-2/3   原为while(m<1)
- 800f106:	e018      	b.n	800f13a <printk_mkfloatstr+0x92>
+ 800f256:	e018      	b.n	800f28a <printk_mkfloatstr+0x92>
 		tempf*=10;
- 800f108:	2200      	movs	r2, #0
- 800f10a:	4b53      	ldr	r3, [pc, #332]	; (800f258 <printk_mkfloatstr+0x1b0>)
- 800f10c:	f7fe fd5c 	bl	800dbc8 <__aeabi_dmul>
+ 800f258:	2200      	movs	r2, #0
+ 800f25a:	4b53      	ldr	r3, [pc, #332]	; (800f3a8 <printk_mkfloatstr+0x1b0>)
+ 800f25c:	f7fe fcb4 	bl	800dbc8 <__aeabi_dmul>
 		while(precision_width--)    
- 800f110:	4633      	mov	r3, r6
- 800f112:	1e5e      	subs	r6, r3, #1
- 800f114:	2b00      	cmp	r3, #0
- 800f116:	d1f7      	bne.n	800f108 <printk_mkfloatstr+0x60>
+ 800f260:	4633      	mov	r3, r6
+ 800f262:	1e5e      	subs	r6, r3, #1
+ 800f264:	2b00      	cmp	r3, #0
+ 800f266:	d1f7      	bne.n	800f258 <printk_mkfloatstr+0x60>
 		q=tempf;
- 800f118:	f7ff f828 	bl	800e16c <__aeabi_d2ulz>
- 800f11c:	4606      	mov	r6, r0
- 800f11e:	460f      	mov	r7, r1
- 800f120:	e7ef      	b.n	800f102 <printk_mkfloatstr+0x5a>
- 800f122:	4653      	mov	r3, sl
- 800f124:	e7f5      	b.n	800f112 <printk_mkfloatstr+0x6a>
+ 800f268:	f7fe ff80 	bl	800e16c <__aeabi_d2ulz>
+ 800f26c:	4606      	mov	r6, r0
+ 800f26e:	460f      	mov	r7, r1
+ 800f270:	e7ef      	b.n	800f252 <printk_mkfloatstr+0x5a>
+ 800f272:	4653      	mov	r3, sl
+ 800f274:	e7f5      	b.n	800f262 <printk_mkfloatstr+0x6a>
 		m=m*10;
- 800f126:	2200      	movs	r2, #0
- 800f128:	4b4b      	ldr	r3, [pc, #300]	; (800f258 <printk_mkfloatstr+0x1b0>)
- 800f12a:	4620      	mov	r0, r4
- 800f12c:	4629      	mov	r1, r5
- 800f12e:	f7fe fd4b 	bl	800dbc8 <__aeabi_dmul>
- 800f132:	4604      	mov	r4, r0
- 800f134:	460d      	mov	r5, r1
+ 800f276:	2200      	movs	r2, #0
+ 800f278:	4b4b      	ldr	r3, [pc, #300]	; (800f3a8 <printk_mkfloatstr+0x1b0>)
+ 800f27a:	4620      	mov	r0, r4
+ 800f27c:	4629      	mov	r1, r5
+ 800f27e:	f7fe fca3 	bl	800dbc8 <__aeabi_dmul>
+ 800f282:	4604      	mov	r4, r0
+ 800f284:	460d      	mov	r5, r1
 		k++;
- 800f136:	f10b 0b01 	add.w	fp, fp, #1
+ 800f286:	f10b 0b01 	add.w	fp, fp, #1
 	while(m<1&&m!=0)    //【20201119】-2/3   原为while(m<1)
- 800f13a:	2200      	movs	r2, #0
- 800f13c:	4b47      	ldr	r3, [pc, #284]	; (800f25c <printk_mkfloatstr+0x1b4>)
- 800f13e:	4620      	mov	r0, r4
- 800f140:	4629      	mov	r1, r5
- 800f142:	f7fe ffb3 	bl	800e0ac <__aeabi_dcmplt>
- 800f146:	b138      	cbz	r0, 800f158 <printk_mkfloatstr+0xb0>
- 800f148:	2200      	movs	r2, #0
- 800f14a:	2300      	movs	r3, #0
- 800f14c:	4620      	mov	r0, r4
- 800f14e:	4629      	mov	r1, r5
- 800f150:	f7fe ffa2 	bl	800e098 <__aeabi_dcmpeq>
- 800f154:	2800      	cmp	r0, #0
- 800f156:	d0e6      	beq.n	800f126 <printk_mkfloatstr+0x7e>
+ 800f28a:	2200      	movs	r2, #0
+ 800f28c:	4b47      	ldr	r3, [pc, #284]	; (800f3ac <printk_mkfloatstr+0x1b4>)
+ 800f28e:	4620      	mov	r0, r4
+ 800f290:	4629      	mov	r1, r5
+ 800f292:	f7fe ff0b 	bl	800e0ac <__aeabi_dcmplt>
+ 800f296:	b138      	cbz	r0, 800f2a8 <printk_mkfloatstr+0xb0>
+ 800f298:	2200      	movs	r2, #0
+ 800f29a:	2300      	movs	r3, #0
+ 800f29c:	4620      	mov	r0, r4
+ 800f29e:	4629      	mov	r1, r5
+ 800f2a0:	f7fe fefa 	bl	800e098 <__aeabi_dcmpeq>
+ 800f2a4:	2800      	cmp	r0, #0
+ 800f2a6:	d0e6      	beq.n	800f276 <printk_mkfloatstr+0x7e>
 	k--;          //记录小数点后到第一位不为零的小数之前 有多少个0.
- 800f158:	f10b 35ff 	add.w	r5, fp, #4294967295
+ 800f2a8:	f10b 35ff 	add.w	r5, fp, #4294967295
 	if(0==p)//整数部分为0
- 800f15c:	f1b8 0f00 	cmp.w	r8, #0
- 800f160:	d123      	bne.n	800f1aa <printk_mkfloatstr+0x102>
+ 800f2ac:	f1b8 0f00 	cmp.w	r8, #0
+ 800f2b0:	d123      	bne.n	800f2fa <printk_mkfloatstr+0x102>
 		c[i++]='0';
- 800f162:	2330      	movs	r3, #48	; 0x30
- 800f164:	f889 3000 	strb.w	r3, [r9]
- 800f168:	f04f 0801 	mov.w	r8, #1
+ 800f2b2:	2330      	movs	r3, #48	; 0x30
+ 800f2b4:	f889 3000 	strb.w	r3, [r9]
+ 800f2b8:	f04f 0801 	mov.w	r8, #1
 	c[i++]='.';   //小数点
- 800f16c:	f108 0b01 	add.w	fp, r8, #1
- 800f170:	232e      	movs	r3, #46	; 0x2e
- 800f172:	f809 3008 	strb.w	r3, [r9, r8]
+ 800f2bc:	f108 0b01 	add.w	fp, r8, #1
+ 800f2c0:	232e      	movs	r3, #46	; 0x2e
+ 800f2c2:	f809 3008 	strb.w	r3, [r9, r8]
 	if(0==q)     //小数部分为0
- 800f176:	ea56 0307 	orrs.w	r3, r6, r7
- 800f17a:	d02c      	beq.n	800f1d6 <printk_mkfloatstr+0x12e>
+ 800f2c6:	ea56 0307 	orrs.w	r3, r6, r7
+ 800f2ca:	d02c      	beq.n	800f326 <printk_mkfloatstr+0x12e>
 		j=0;
- 800f17c:	2400      	movs	r4, #0
- 800f17e:	e04c      	b.n	800f21a <printk_mkfloatstr+0x172>
+ 800f2cc:	2400      	movs	r4, #0
+ 800f2ce:	e04c      	b.n	800f36a <printk_mkfloatstr+0x172>
 			a[j++]=p%10;
- 800f180:	4b37      	ldr	r3, [pc, #220]	; (800f260 <printk_mkfloatstr+0x1b8>)
- 800f182:	fba3 1308 	umull	r1, r3, r3, r8
- 800f186:	08db      	lsrs	r3, r3, #3
- 800f188:	4618      	mov	r0, r3
- 800f18a:	eb03 0383 	add.w	r3, r3, r3, lsl #2
- 800f18e:	0059      	lsls	r1, r3, #1
- 800f190:	eba8 0301 	sub.w	r3, r8, r1
- 800f194:	a918      	add	r1, sp, #96	; 0x60
- 800f196:	eb01 0182 	add.w	r1, r1, r2, lsl #2
- 800f19a:	f841 3c14 	str.w	r3, [r1, #-20]
+ 800f2d0:	4b37      	ldr	r3, [pc, #220]	; (800f3b0 <printk_mkfloatstr+0x1b8>)
+ 800f2d2:	fba3 1308 	umull	r1, r3, r3, r8
+ 800f2d6:	08db      	lsrs	r3, r3, #3
+ 800f2d8:	4618      	mov	r0, r3
+ 800f2da:	eb03 0383 	add.w	r3, r3, r3, lsl #2
+ 800f2de:	0059      	lsls	r1, r3, #1
+ 800f2e0:	eba8 0301 	sub.w	r3, r8, r1
+ 800f2e4:	a918      	add	r1, sp, #96	; 0x60
+ 800f2e6:	eb01 0182 	add.w	r1, r1, r2, lsl #2
+ 800f2ea:	f841 3c14 	str.w	r3, [r1, #-20]
 			p/=10;
- 800f19e:	4680      	mov	r8, r0
+ 800f2ee:	4680      	mov	r8, r0
 			a[j++]=p%10;
- 800f1a0:	3201      	adds	r2, #1
+ 800f2f0:	3201      	adds	r2, #1
 		while(p!=0)//倒序的数字
- 800f1a2:	f1b8 0f00 	cmp.w	r8, #0
- 800f1a6:	d1eb      	bne.n	800f180 <printk_mkfloatstr+0xd8>
- 800f1a8:	e00c      	b.n	800f1c4 <printk_mkfloatstr+0x11c>
+ 800f2f2:	f1b8 0f00 	cmp.w	r8, #0
+ 800f2f6:	d1eb      	bne.n	800f2d0 <printk_mkfloatstr+0xd8>
+ 800f2f8:	e00c      	b.n	800f314 <printk_mkfloatstr+0x11c>
 		j=0;
- 800f1aa:	2200      	movs	r2, #0
- 800f1ac:	e7f9      	b.n	800f1a2 <printk_mkfloatstr+0xfa>
+ 800f2fa:	2200      	movs	r2, #0
+ 800f2fc:	e7f9      	b.n	800f2f2 <printk_mkfloatstr+0xfa>
 			c[i++]=a[j-1]+'0';
- 800f1ae:	3a01      	subs	r2, #1
- 800f1b0:	ab18      	add	r3, sp, #96	; 0x60
- 800f1b2:	eb03 0382 	add.w	r3, r3, r2, lsl #2
- 800f1b6:	f853 3c14 	ldr.w	r3, [r3, #-20]
- 800f1ba:	3330      	adds	r3, #48	; 0x30
- 800f1bc:	f809 3008 	strb.w	r3, [r9, r8]
- 800f1c0:	f108 0801 	add.w	r8, r8, #1
+ 800f2fe:	3a01      	subs	r2, #1
+ 800f300:	ab18      	add	r3, sp, #96	; 0x60
+ 800f302:	eb03 0382 	add.w	r3, r3, r2, lsl #2
+ 800f306:	f853 3c14 	ldr.w	r3, [r3, #-20]
+ 800f30a:	3330      	adds	r3, #48	; 0x30
+ 800f30c:	f809 3008 	strb.w	r3, [r9, r8]
+ 800f310:	f108 0801 	add.w	r8, r8, #1
 		while(j>0)//将倒序数字转为正序，并转换为对应的字符形式
- 800f1c4:	2a00      	cmp	r2, #0
- 800f1c6:	d1f2      	bne.n	800f1ae <printk_mkfloatstr+0x106>
- 800f1c8:	e7d0      	b.n	800f16c <printk_mkfloatstr+0xc4>
+ 800f314:	2a00      	cmp	r2, #0
+ 800f316:	d1f2      	bne.n	800f2fe <printk_mkfloatstr+0x106>
+ 800f318:	e7d0      	b.n	800f2bc <printk_mkfloatstr+0xc4>
 		while(zeroNum--) c[i++]='0';     //【20201119】-3/3   原为 c[i++]='0';
- 800f1ca:	2230      	movs	r2, #48	; 0x30
- 800f1cc:	f809 200b 	strb.w	r2, [r9, fp]
- 800f1d0:	469a      	mov	sl, r3
- 800f1d2:	f10b 0b01 	add.w	fp, fp, #1
- 800f1d6:	f10a 33ff 	add.w	r3, sl, #4294967295
- 800f1da:	f1ba 0f00 	cmp.w	sl, #0
- 800f1de:	d1f4      	bne.n	800f1ca <printk_mkfloatstr+0x122>
+ 800f31a:	2230      	movs	r2, #48	; 0x30
+ 800f31c:	f809 200b 	strb.w	r2, [r9, fp]
+ 800f320:	469a      	mov	sl, r3
+ 800f322:	f10b 0b01 	add.w	fp, fp, #1
+ 800f326:	f10a 33ff 	add.w	r3, sl, #4294967295
+ 800f32a:	f1ba 0f00 	cmp.w	sl, #0
+ 800f32e:	d1f4      	bne.n	800f31a <printk_mkfloatstr+0x122>
 	c[i]='\0';
- 800f1e0:	2300      	movs	r3, #0
- 800f1e2:	f809 300b 	strb.w	r3, [r9, fp]
+ 800f330:	2300      	movs	r3, #0
+ 800f332:	f809 300b 	strb.w	r3, [r9, fp]
 }
- 800f1e6:	4658      	mov	r0, fp
- 800f1e8:	b019      	add	sp, #100	; 0x64
- 800f1ea:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
+ 800f336:	4658      	mov	r0, fp
+ 800f338:	b019      	add	sp, #100	; 0x64
+ 800f33a:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
 			b[j++]=q%10;
- 800f1ee:	220a      	movs	r2, #10
- 800f1f0:	2300      	movs	r3, #0
- 800f1f2:	4630      	mov	r0, r6
- 800f1f4:	4639      	mov	r1, r7
- 800f1f6:	f7fe ffa1 	bl	800e13c <__aeabi_uldivmod>
- 800f1fa:	f104 0801 	add.w	r8, r4, #1
- 800f1fe:	ab18      	add	r3, sp, #96	; 0x60
- 800f200:	eb03 0484 	add.w	r4, r3, r4, lsl #2
- 800f204:	f844 2c60 	str.w	r2, [r4, #-96]
+ 800f33e:	220a      	movs	r2, #10
+ 800f340:	2300      	movs	r3, #0
+ 800f342:	4630      	mov	r0, r6
+ 800f344:	4639      	mov	r1, r7
+ 800f346:	f7fe fef9 	bl	800e13c <__aeabi_uldivmod>
+ 800f34a:	f104 0801 	add.w	r8, r4, #1
+ 800f34e:	ab18      	add	r3, sp, #96	; 0x60
+ 800f350:	eb03 0484 	add.w	r4, r3, r4, lsl #2
+ 800f354:	f844 2c60 	str.w	r2, [r4, #-96]
 			q/=10;
- 800f208:	220a      	movs	r2, #10
- 800f20a:	2300      	movs	r3, #0
- 800f20c:	4630      	mov	r0, r6
- 800f20e:	4639      	mov	r1, r7
- 800f210:	f7fe ff94 	bl	800e13c <__aeabi_uldivmod>
- 800f214:	4606      	mov	r6, r0
- 800f216:	460f      	mov	r7, r1
+ 800f358:	220a      	movs	r2, #10
+ 800f35a:	2300      	movs	r3, #0
+ 800f35c:	4630      	mov	r0, r6
+ 800f35e:	4639      	mov	r1, r7
+ 800f360:	f7fe feec 	bl	800e13c <__aeabi_uldivmod>
+ 800f364:	4606      	mov	r6, r0
+ 800f366:	460f      	mov	r7, r1
 			b[j++]=q%10;
- 800f218:	4644      	mov	r4, r8
+ 800f368:	4644      	mov	r4, r8
 		while(q!=0)//倒序的数字
- 800f21a:	ea56 0307 	orrs.w	r3, r6, r7
- 800f21e:	d1e6      	bne.n	800f1ee <printk_mkfloatstr+0x146>
- 800f220:	e007      	b.n	800f232 <printk_mkfloatstr+0x18a>
+ 800f36a:	ea56 0307 	orrs.w	r3, r6, r7
+ 800f36e:	d1e6      	bne.n	800f33e <printk_mkfloatstr+0x146>
+ 800f370:	e007      	b.n	800f382 <printk_mkfloatstr+0x18a>
 			b[j++]=0;
- 800f222:	ab18      	add	r3, sp, #96	; 0x60
- 800f224:	eb03 0384 	add.w	r3, r3, r4, lsl #2
- 800f228:	2200      	movs	r2, #0
- 800f22a:	f843 2c60 	str.w	r2, [r3, #-96]
+ 800f372:	ab18      	add	r3, sp, #96	; 0x60
+ 800f374:	eb03 0384 	add.w	r3, r3, r4, lsl #2
+ 800f378:	2200      	movs	r2, #0
+ 800f37a:	f843 2c60 	str.w	r2, [r3, #-96]
 			k--;
- 800f22e:	3d01      	subs	r5, #1
+ 800f37e:	3d01      	subs	r5, #1
 			b[j++]=0;
- 800f230:	3401      	adds	r4, #1
+ 800f380:	3401      	adds	r4, #1
 		while(k!=0)
- 800f232:	2d00      	cmp	r5, #0
- 800f234:	d1f5      	bne.n	800f222 <printk_mkfloatstr+0x17a>
- 800f236:	e00a      	b.n	800f24e <printk_mkfloatstr+0x1a6>
+ 800f382:	2d00      	cmp	r5, #0
+ 800f384:	d1f5      	bne.n	800f372 <printk_mkfloatstr+0x17a>
+ 800f386:	e00a      	b.n	800f39e <printk_mkfloatstr+0x1a6>
 			c[i++]=b[j-1]+'0';
- 800f238:	3c01      	subs	r4, #1
- 800f23a:	ab18      	add	r3, sp, #96	; 0x60
- 800f23c:	eb03 0384 	add.w	r3, r3, r4, lsl #2
- 800f240:	f853 3c60 	ldr.w	r3, [r3, #-96]
- 800f244:	3330      	adds	r3, #48	; 0x30
- 800f246:	f809 300b 	strb.w	r3, [r9, fp]
- 800f24a:	f10b 0b01 	add.w	fp, fp, #1
+ 800f388:	3c01      	subs	r4, #1
+ 800f38a:	ab18      	add	r3, sp, #96	; 0x60
+ 800f38c:	eb03 0384 	add.w	r3, r3, r4, lsl #2
+ 800f390:	f853 3c60 	ldr.w	r3, [r3, #-96]
+ 800f394:	3330      	adds	r3, #48	; 0x30
+ 800f396:	f809 300b 	strb.w	r3, [r9, fp]
+ 800f39a:	f10b 0b01 	add.w	fp, fp, #1
 		while(j>0)//将倒序数字转为正序，并转换为对应的字符形式
- 800f24e:	2c00      	cmp	r4, #0
- 800f250:	d1f2      	bne.n	800f238 <printk_mkfloatstr+0x190>
- 800f252:	e7c5      	b.n	800f1e0 <printk_mkfloatstr+0x138>
- 800f254:	f3af 8000 	nop.w
- 800f258:	40240000 	.word	0x40240000
- 800f25c:	3ff00000 	.word	0x3ff00000
- 800f260:	cccccccd 	.word	0xcccccccd
- 800f264:	85d8a000 	.word	0x85d8a000
- 800f268:	43763457 	.word	0x43763457
+ 800f39e:	2c00      	cmp	r4, #0
+ 800f3a0:	d1f2      	bne.n	800f388 <printk_mkfloatstr+0x190>
+ 800f3a2:	e7c5      	b.n	800f330 <printk_mkfloatstr+0x138>
+ 800f3a4:	f3af 8000 	nop.w
+ 800f3a8:	40240000 	.word	0x40240000
+ 800f3ac:	3ff00000 	.word	0x3ff00000
+ 800f3b0:	cccccccd 	.word	0xcccccccd
+ 800f3b4:	85d8a000 	.word	0x85d8a000
+ 800f3b8:	43763457 	.word	0x43763457
 
-0800f26c <printk>:
+0800f3bc <printk>:
 //       fmt:输出格式信息
 //       ap:va_list指针指向格式信息输出
 //函数返回：无
 //======================================================================
 int printk(PRINTK_INFO *info, const char *fmt, char * ap)
 {
- 800f26c:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
- 800f270:	b097      	sub	sp, #92	; 0x5c
- 800f272:	9001      	str	r0, [sp, #4]
- 800f274:	460c      	mov	r4, r1
- 800f276:	4691      	mov	r9, r2
+ 800f3bc:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+ 800f3c0:	b097      	sub	sp, #92	; 0x5c
+ 800f3c2:	9001      	str	r0, [sp, #4]
+ 800f3c4:	460c      	mov	r4, r1
+ 800f3c6:	4691      	mov	r9, r2
 
 	}un1;*/
 	char *p;
 	int c;
 	//char temp1;
 	char vstr[33]={'0'};
- 800f278:	2221      	movs	r2, #33	; 0x21
- 800f27a:	2100      	movs	r1, #0
- 800f27c:	a80d      	add	r0, sp, #52	; 0x34
- 800f27e:	f000 fb42 	bl	800f906 <memset>
- 800f282:	2330      	movs	r3, #48	; 0x30
- 800f284:	f88d 3034 	strb.w	r3, [sp, #52]	; 0x34
+ 800f3c8:	2221      	movs	r2, #33	; 0x21
+ 800f3ca:	2100      	movs	r1, #0
+ 800f3cc:	a80d      	add	r0, sp, #52	; 0x34
+ 800f3ce:	f000 fb42 	bl	800fa56 <memset>
+ 800f3d2:	2330      	movs	r3, #48	; 0x30
+ 800f3d4:	f88d 3034 	strb.w	r3, [sp, #52]	; 0x34
 	int *ivalp;
 	char *sval;
 	int cval;
 	unsigned int uval;
 
 	count = 0;
- 800f288:	2300      	movs	r3, #0
- 800f28a:	930c      	str	r3, [sp, #48]	; 0x30
+ 800f3d8:	2300      	movs	r3, #0
+ 800f3da:	930c      	str	r3, [sp, #48]	; 0x30
 	length_modifier=0;
 	precision_used=TRUE;
- 800f28c:	2201      	movs	r2, #1
- 800f28e:	9202      	str	r2, [sp, #8]
+ 800f3dc:	2201      	movs	r2, #1
+ 800f3de:	9202      	str	r2, [sp, #8]
 	length_modifier=0;
- 800f290:	469b      	mov	fp, r3
+ 800f3e0:	469b      	mov	fp, r3
 	//从格式字符串第一个字符开始格式化输出数据
 	for (p = (char *) fmt; (c = *p) != 0; p++)
- 800f292:	e00b      	b.n	800f2ac <printk+0x40>
+ 800f3e2:	e00b      	b.n	800f3fc <printk+0x40>
 			if (c != '\n') {
 				printk_putc(c, &count, info);
 			}
 			//输出换行符
 			else {
 				printk_putc(0x0D /* CR */, &count, info);
- 800f294:	9d01      	ldr	r5, [sp, #4]
- 800f296:	462a      	mov	r2, r5
- 800f298:	a90c      	add	r1, sp, #48	; 0x30
- 800f29a:	200d      	movs	r0, #13
- 800f29c:	f7ff fe94 	bl	800efc8 <printk_putc>
+ 800f3e4:	9d01      	ldr	r5, [sp, #4]
+ 800f3e6:	462a      	mov	r2, r5
+ 800f3e8:	a90c      	add	r1, sp, #48	; 0x30
+ 800f3ea:	200d      	movs	r0, #13
+ 800f3ec:	f7ff fe96 	bl	800f11c <printk_putc>
 				printk_putc(0x0A /* LF */, &count, info);
- 800f2a0:	462a      	mov	r2, r5
- 800f2a2:	a90c      	add	r1, sp, #48	; 0x30
- 800f2a4:	200a      	movs	r0, #10
- 800f2a6:	f7ff fe8f 	bl	800efc8 <printk_putc>
+ 800f3f0:	462a      	mov	r2, r5
+ 800f3f2:	a90c      	add	r1, sp, #48	; 0x30
+ 800f3f4:	200a      	movs	r0, #10
+ 800f3f6:	f7ff fe91 	bl	800f11c <printk_putc>
 	for (p = (char *) fmt; (c = *p) != 0; p++)
- 800f2aa:	3401      	adds	r4, #1
- 800f2ac:	7820      	ldrb	r0, [r4, #0]
- 800f2ae:	2800      	cmp	r0, #0
- 800f2b0:	f000 82b4 	beq.w	800f81c <printk+0x5b0>
+ 800f3fa:	3401      	adds	r4, #1
+ 800f3fc:	7820      	ldrb	r0, [r4, #0]
+ 800f3fe:	2800      	cmp	r0, #0
+ 800f400:	f000 82b4 	beq.w	800f96c <printk+0x5b0>
 		if (c != '%')
- 800f2b4:	2825      	cmp	r0, #37	; 0x25
- 800f2b6:	d041      	beq.n	800f33c <printk+0xd0>
+ 800f404:	2825      	cmp	r0, #37	; 0x25
+ 800f406:	d041      	beq.n	800f48c <printk+0xd0>
 			if (c != '\n') {
- 800f2b8:	280a      	cmp	r0, #10
- 800f2ba:	d0eb      	beq.n	800f294 <printk+0x28>
+ 800f408:	280a      	cmp	r0, #10
+ 800f40a:	d0eb      	beq.n	800f3e4 <printk+0x28>
 				printk_putc(c, &count, info);
- 800f2bc:	9a01      	ldr	r2, [sp, #4]
- 800f2be:	a90c      	add	r1, sp, #48	; 0x30
- 800f2c0:	f7ff fe82 	bl	800efc8 <printk_putc>
- 800f2c4:	e7f1      	b.n	800f2aa <printk+0x3e>
+ 800f40c:	9a01      	ldr	r2, [sp, #4]
+ 800f40e:	a90c      	add	r1, sp, #48	; 0x30
+ 800f410:	f7ff fe84 	bl	800f11c <printk_putc>
+ 800f414:	e7f1      	b.n	800f3fa <printk+0x3e>
 		flags_used = 0;
 		done = FALSE;
 		while (!done) {
 			switch (/* c = */*++p) {
 			case '-':
 				flags_used |= FLAGS_MINUS;
- 800f2c6:	f046 0601 	orr.w	r6, r6, #1
+ 800f416:	f046 0601 	orr.w	r6, r6, #1
 {
- 800f2ca:	4614      	mov	r4, r2
+ 800f41a:	4614      	mov	r4, r2
 		while (!done) {
- 800f2cc:	2900      	cmp	r1, #0
- 800f2ce:	d13a      	bne.n	800f346 <printk+0xda>
+ 800f41c:	2900      	cmp	r1, #0
+ 800f41e:	d13a      	bne.n	800f496 <printk+0xda>
 			switch (/* c = */*++p) {
- 800f2d0:	1c62      	adds	r2, r4, #1
- 800f2d2:	7863      	ldrb	r3, [r4, #1]
- 800f2d4:	3b20      	subs	r3, #32
- 800f2d6:	2b10      	cmp	r3, #16
- 800f2d8:	d833      	bhi.n	800f342 <printk+0xd6>
- 800f2da:	a001      	add	r0, pc, #4	; (adr r0, 800f2e0 <printk+0x74>)
- 800f2dc:	f850 f023 	ldr.w	pc, [r0, r3, lsl #2]
- 800f2e0:	0800f32b 	.word	0x0800f32b
- 800f2e4:	0800f343 	.word	0x0800f343
- 800f2e8:	0800f343 	.word	0x0800f343
- 800f2ec:	0800f337 	.word	0x0800f337
- 800f2f0:	0800f343 	.word	0x0800f343
- 800f2f4:	0800f343 	.word	0x0800f343
- 800f2f8:	0800f343 	.word	0x0800f343
- 800f2fc:	0800f343 	.word	0x0800f343
- 800f300:	0800f343 	.word	0x0800f343
- 800f304:	0800f343 	.word	0x0800f343
- 800f308:	0800f343 	.word	0x0800f343
- 800f30c:	0800f325 	.word	0x0800f325
- 800f310:	0800f343 	.word	0x0800f343
- 800f314:	0800f2c7 	.word	0x0800f2c7
- 800f318:	0800f343 	.word	0x0800f343
- 800f31c:	0800f343 	.word	0x0800f343
- 800f320:	0800f331 	.word	0x0800f331
+ 800f420:	1c62      	adds	r2, r4, #1
+ 800f422:	7863      	ldrb	r3, [r4, #1]
+ 800f424:	3b20      	subs	r3, #32
+ 800f426:	2b10      	cmp	r3, #16
+ 800f428:	d833      	bhi.n	800f492 <printk+0xd6>
+ 800f42a:	a001      	add	r0, pc, #4	; (adr r0, 800f430 <printk+0x74>)
+ 800f42c:	f850 f023 	ldr.w	pc, [r0, r3, lsl #2]
+ 800f430:	0800f47b 	.word	0x0800f47b
+ 800f434:	0800f493 	.word	0x0800f493
+ 800f438:	0800f493 	.word	0x0800f493
+ 800f43c:	0800f487 	.word	0x0800f487
+ 800f440:	0800f493 	.word	0x0800f493
+ 800f444:	0800f493 	.word	0x0800f493
+ 800f448:	0800f493 	.word	0x0800f493
+ 800f44c:	0800f493 	.word	0x0800f493
+ 800f450:	0800f493 	.word	0x0800f493
+ 800f454:	0800f493 	.word	0x0800f493
+ 800f458:	0800f493 	.word	0x0800f493
+ 800f45c:	0800f475 	.word	0x0800f475
+ 800f460:	0800f493 	.word	0x0800f493
+ 800f464:	0800f417 	.word	0x0800f417
+ 800f468:	0800f493 	.word	0x0800f493
+ 800f46c:	0800f493 	.word	0x0800f493
+ 800f470:	0800f481 	.word	0x0800f481
 				break;
 			case '+':
 				flags_used |= FLAGS_PLUS;
- 800f324:	f046 0602 	orr.w	r6, r6, #2
+ 800f474:	f046 0602 	orr.w	r6, r6, #2
 				break;
- 800f328:	e7cf      	b.n	800f2ca <printk+0x5e>
+ 800f478:	e7cf      	b.n	800f41a <printk+0x5e>
 			case ' ':
 				flags_used |= FLAGS_SPACE;
- 800f32a:	f046 0604 	orr.w	r6, r6, #4
+ 800f47a:	f046 0604 	orr.w	r6, r6, #4
 				break;
- 800f32e:	e7cc      	b.n	800f2ca <printk+0x5e>
+ 800f47e:	e7cc      	b.n	800f41a <printk+0x5e>
 			case '0':
 				flags_used |= FLAGS_ZERO;
- 800f330:	f046 0608 	orr.w	r6, r6, #8
+ 800f480:	f046 0608 	orr.w	r6, r6, #8
 				break;
- 800f334:	e7c9      	b.n	800f2ca <printk+0x5e>
+ 800f484:	e7c9      	b.n	800f41a <printk+0x5e>
 			case '#':
 				flags_used |= FLAGS_POUND;
- 800f336:	f046 0610 	orr.w	r6, r6, #16
+ 800f486:	f046 0610 	orr.w	r6, r6, #16
 				break;
- 800f33a:	e7c6      	b.n	800f2ca <printk+0x5e>
+ 800f48a:	e7c6      	b.n	800f41a <printk+0x5e>
 		flags_used = 0;
- 800f33c:	2600      	movs	r6, #0
+ 800f48c:	2600      	movs	r6, #0
 		done = FALSE;
- 800f33e:	4631      	mov	r1, r6
- 800f340:	e7c4      	b.n	800f2cc <printk+0x60>
+ 800f48e:	4631      	mov	r1, r6
+ 800f490:	e7c4      	b.n	800f41c <printk+0x60>
 			default:
 				/* we've gone one char too far */
 				--p;
 				done = TRUE;
- 800f342:	2101      	movs	r1, #1
- 800f344:	e7c2      	b.n	800f2cc <printk+0x60>
+ 800f492:	2101      	movs	r1, #1
+ 800f494:	e7c2      	b.n	800f41c <printk+0x60>
 			}
 		}
 
 
 		//检查%后再下一个字符 确定输出长度
 		field_width = 0;
- 800f346:	2500      	movs	r5, #0
+ 800f496:	2500      	movs	r5, #0
 		done = FALSE;
- 800f348:	462f      	mov	r7, r5
- 800f34a:	e000      	b.n	800f34e <printk+0xe2>
+ 800f498:	462f      	mov	r7, r5
+ 800f49a:	e000      	b.n	800f49e <printk+0xe2>
 				field_width = (field_width * 10) + (c - '0');
 				break;
 			default:
 				/* we've gone one char too far */
 				--p;
 				done = TRUE;
- 800f34c:	460f      	mov	r7, r1
+ 800f49c:	460f      	mov	r7, r1
 		while (!done) {
- 800f34e:	b967      	cbnz	r7, 800f36a <printk+0xfe>
+ 800f49e:	b967      	cbnz	r7, 800f4ba <printk+0xfe>
 			switch (c = *++p) {
- 800f350:	1c60      	adds	r0, r4, #1
- 800f352:	7863      	ldrb	r3, [r4, #1]
- 800f354:	f1a3 0230 	sub.w	r2, r3, #48	; 0x30
- 800f358:	2a09      	cmp	r2, #9
- 800f35a:	d8f7      	bhi.n	800f34c <printk+0xe0>
+ 800f4a0:	1c60      	adds	r0, r4, #1
+ 800f4a2:	7863      	ldrb	r3, [r4, #1]
+ 800f4a4:	f1a3 0230 	sub.w	r2, r3, #48	; 0x30
+ 800f4a8:	2a09      	cmp	r2, #9
+ 800f4aa:	d8f7      	bhi.n	800f49c <printk+0xe0>
 				field_width = (field_width * 10) + (c - '0');
- 800f35c:	eb05 0585 	add.w	r5, r5, r5, lsl #2
- 800f360:	006a      	lsls	r2, r5, #1
- 800f362:	3b30      	subs	r3, #48	; 0x30
- 800f364:	18d5      	adds	r5, r2, r3
+ 800f4ac:	eb05 0585 	add.w	r5, r5, r5, lsl #2
+ 800f4b0:	006a      	lsls	r2, r5, #1
+ 800f4b2:	3b30      	subs	r3, #48	; 0x30
+ 800f4b4:	18d5      	adds	r5, r2, r3
 			switch (c = *++p) {
- 800f366:	4604      	mov	r4, r0
+ 800f4b6:	4604      	mov	r4, r0
 				break;
- 800f368:	e7f1      	b.n	800f34e <printk+0xe2>
+ 800f4b8:	e7f1      	b.n	800f49e <printk+0xe2>
 				break;
 			}
 		}
 		//此时字符为%看是否有.输入
 		if (/* (c = *++p) */*++p == '.') {
- 800f36a:	1c62      	adds	r2, r4, #1
- 800f36c:	7863      	ldrb	r3, [r4, #1]
- 800f36e:	2b2e      	cmp	r3, #46	; 0x2e
- 800f370:	d036      	beq.n	800f3e0 <printk+0x174>
+ 800f4ba:	1c62      	adds	r2, r4, #1
+ 800f4bc:	7863      	ldrb	r3, [r4, #1]
+ 800f4be:	2b2e      	cmp	r3, #46	; 0x2e
+ 800f4c0:	d036      	beq.n	800f530 <printk+0x174>
 		} else {
 			/* we've gone one char too far */
 			--p;
 #if 1
 			precision_used = FALSE;
 			precision_width = 0;
- 800f372:	f04f 0800 	mov.w	r8, #0
+ 800f4c2:	f04f 0800 	mov.w	r8, #0
 			precision_used = FALSE;
- 800f376:	f8cd 8008 	str.w	r8, [sp, #8]
+ 800f4c6:	f8cd 8008 	str.w	r8, [sp, #8]
 #endif
 		}
 		//判断 输出的是否有lf、LF等
 		switch (/* c = */*++p) {
- 800f37a:	1c63      	adds	r3, r4, #1
- 800f37c:	7862      	ldrb	r2, [r4, #1]
- 800f37e:	2a68      	cmp	r2, #104	; 0x68
- 800f380:	d004      	beq.n	800f38c <printk+0x120>
- 800f382:	2a6c      	cmp	r2, #108	; 0x6c
- 800f384:	d042      	beq.n	800f40c <printk+0x1a0>
- 800f386:	2a4c      	cmp	r2, #76	; 0x4c
- 800f388:	d043      	beq.n	800f412 <printk+0x1a6>
+ 800f4ca:	1c63      	adds	r3, r4, #1
+ 800f4cc:	7862      	ldrb	r2, [r4, #1]
+ 800f4ce:	2a68      	cmp	r2, #104	; 0x68
+ 800f4d0:	d004      	beq.n	800f4dc <printk+0x120>
+ 800f4d2:	2a6c      	cmp	r2, #108	; 0x6c
+ 800f4d4:	d042      	beq.n	800f55c <printk+0x1a0>
+ 800f4d6:	2a4c      	cmp	r2, #76	; 0x4c
+ 800f4d8:	d043      	beq.n	800f562 <printk+0x1a6>
 		case 'L':
 			 length_modifier |= LENMOD_L;
 			break;
 		default:
 			/* we've gone one char too far */
 			--p;
- 800f38a:	4623      	mov	r3, r4
+ 800f4da:	4623      	mov	r3, r4
 			break;
 		}
 
 		//p为格式字符串的首地址
 		switch (c = *++p) {
- 800f38c:	1c5c      	adds	r4, r3, #1
- 800f38e:	7858      	ldrb	r0, [r3, #1]
- 800f390:	f1a0 0358 	sub.w	r3, r0, #88	; 0x58
- 800f394:	2b20      	cmp	r3, #32
- 800f396:	f200 823a 	bhi.w	800f80e <printk+0x5a2>
- 800f39a:	e8df f013 	tbh	[pc, r3, lsl #1]
- 800f39e:	011f      	.short	0x011f
- 800f3a0:	02380238 	.word	0x02380238
- 800f3a4:	02380238 	.word	0x02380238
- 800f3a8:	02380238 	.word	0x02380238
- 800f3ac:	02380238 	.word	0x02380238
- 800f3b0:	01a20238 	.word	0x01a20238
- 800f3b4:	003d01ef 	.word	0x003d01ef
- 800f3b8:	009a0238 	.word	0x009a0238
- 800f3bc:	02380238 	.word	0x02380238
- 800f3c0:	0238003d 	.word	0x0238003d
- 800f3c4:	02380238 	.word	0x02380238
- 800f3c8:	02310238 	.word	0x02310238
- 800f3cc:	01b10184 	.word	0x01b10184
- 800f3d0:	02380238 	.word	0x02380238
- 800f3d4:	023801f9 	.word	0x023801f9
- 800f3d8:	023801c0 	.word	0x023801c0
- 800f3dc:	011f0238 	.word	0x011f0238
+ 800f4dc:	1c5c      	adds	r4, r3, #1
+ 800f4de:	7858      	ldrb	r0, [r3, #1]
+ 800f4e0:	f1a0 0358 	sub.w	r3, r0, #88	; 0x58
+ 800f4e4:	2b20      	cmp	r3, #32
+ 800f4e6:	f200 823a 	bhi.w	800f95e <printk+0x5a2>
+ 800f4ea:	e8df f013 	tbh	[pc, r3, lsl #1]
+ 800f4ee:	011f      	.short	0x011f
+ 800f4f0:	02380238 	.word	0x02380238
+ 800f4f4:	02380238 	.word	0x02380238
+ 800f4f8:	02380238 	.word	0x02380238
+ 800f4fc:	02380238 	.word	0x02380238
+ 800f500:	01a20238 	.word	0x01a20238
+ 800f504:	003d01ef 	.word	0x003d01ef
+ 800f508:	009a0238 	.word	0x009a0238
+ 800f50c:	02380238 	.word	0x02380238
+ 800f510:	0238003d 	.word	0x0238003d
+ 800f514:	02380238 	.word	0x02380238
+ 800f518:	02310238 	.word	0x02310238
+ 800f51c:	01b10184 	.word	0x01b10184
+ 800f520:	02380238 	.word	0x02380238
+ 800f524:	023801f9 	.word	0x023801f9
+ 800f528:	023801c0 	.word	0x023801c0
+ 800f52c:	011f0238 	.word	0x011f0238
 			precision_width = 0;
- 800f3e0:	f04f 0800 	mov.w	r8, #0
+ 800f530:	f04f 0800 	mov.w	r8, #0
 			done = FALSE;
- 800f3e4:	4640      	mov	r0, r8
- 800f3e6:	e000      	b.n	800f3ea <printk+0x17e>
+ 800f534:	4640      	mov	r0, r8
+ 800f536:	e000      	b.n	800f53a <printk+0x17e>
 					done = TRUE;
- 800f3e8:	4638      	mov	r0, r7
+ 800f538:	4638      	mov	r0, r7
 			while (!done) {
- 800f3ea:	b968      	cbnz	r0, 800f408 <printk+0x19c>
+ 800f53a:	b968      	cbnz	r0, 800f558 <printk+0x19c>
 				switch ( c = *++p) {
- 800f3ec:	1c54      	adds	r4, r2, #1
- 800f3ee:	7853      	ldrb	r3, [r2, #1]
- 800f3f0:	f1a3 0130 	sub.w	r1, r3, #48	; 0x30
- 800f3f4:	2909      	cmp	r1, #9
- 800f3f6:	d8f7      	bhi.n	800f3e8 <printk+0x17c>
+ 800f53c:	1c54      	adds	r4, r2, #1
+ 800f53e:	7853      	ldrb	r3, [r2, #1]
+ 800f540:	f1a3 0130 	sub.w	r1, r3, #48	; 0x30
+ 800f544:	2909      	cmp	r1, #9
+ 800f546:	d8f7      	bhi.n	800f538 <printk+0x17c>
 				precision_width = (precision_width * 10) +	(c - '0');
- 800f3f8:	eb08 0888 	add.w	r8, r8, r8, lsl #2
- 800f3fc:	ea4f 0248 	mov.w	r2, r8, lsl #1
- 800f400:	eb02 0801 	add.w	r8, r2, r1
+ 800f548:	eb08 0888 	add.w	r8, r8, r8, lsl #2
+ 800f54c:	ea4f 0248 	mov.w	r2, r8, lsl #1
+ 800f550:	eb02 0801 	add.w	r8, r2, r1
 				switch ( c = *++p) {
- 800f404:	4622      	mov	r2, r4
+ 800f554:	4622      	mov	r2, r4
 					break;
- 800f406:	e7f0      	b.n	800f3ea <printk+0x17e>
- 800f408:	4614      	mov	r4, r2
- 800f40a:	e7b6      	b.n	800f37a <printk+0x10e>
+ 800f556:	e7f0      	b.n	800f53a <printk+0x17e>
+ 800f558:	4614      	mov	r4, r2
+ 800f55a:	e7b6      	b.n	800f4ca <printk+0x10e>
 			 length_modifier |= LENMOD_l;
- 800f40c:	f04b 0b01 	orr.w	fp, fp, #1
+ 800f55c:	f04b 0b01 	orr.w	fp, fp, #1
 			break;
- 800f410:	e7bc      	b.n	800f38c <printk+0x120>
+ 800f560:	e7bc      	b.n	800f4dc <printk+0x120>
 			 length_modifier |= LENMOD_L;
- 800f412:	f04b 0b02 	orr.w	fp, fp, #2
+ 800f562:	f04b 0b02 	orr.w	fp, fp, #2
 			break;
- 800f416:	e7b9      	b.n	800f38c <printk+0x120>
+ 800f566:	e7b9      	b.n	800f4dc <printk+0x120>
 		case 'd':
 		case 'i':
 			 //此时ap为指向可变参数列表的第一个参数
 			ival = (int) va_arg(ap, int);  //返回当前参数，并将ap指向下一个参数
- 800f418:	f109 0704 	add.w	r7, r9, #4
- 800f41c:	f8d9 3000 	ldr.w	r3, [r9]
- 800f420:	a916      	add	r1, sp, #88	; 0x58
- 800f422:	f841 3d2c 	str.w	r3, [r1, #-44]!
+ 800f568:	f109 0704 	add.w	r7, r9, #4
+ 800f56c:	f8d9 3000 	ldr.w	r3, [r9]
+ 800f570:	a916      	add	r1, sp, #88	; 0x58
+ 800f572:	f841 3d2c 	str.w	r3, [r1, #-44]!
 			vlen = printk_mknumstr(vstr, &ival, TRUE, 10);//将整型转换成字符型保存在vstr中，返回字符数vlen
- 800f426:	230a      	movs	r3, #10
- 800f428:	2201      	movs	r2, #1
- 800f42a:	a80d      	add	r0, sp, #52	; 0x34
- 800f42c:	f7ff fde1 	bl	800eff2 <printk_mknumstr>
- 800f430:	4682      	mov	sl, r0
+ 800f576:	230a      	movs	r3, #10
+ 800f578:	2201      	movs	r2, #1
+ 800f57a:	a80d      	add	r0, sp, #52	; 0x34
+ 800f57c:	f7ff fde3 	bl	800f146 <printk_mknumstr>
+ 800f580:	4682      	mov	sl, r0
 			vstrp = &vstr[vlen];  //指向转换后的最后一个字符
- 800f432:	ab0d      	add	r3, sp, #52	; 0x34
- 800f434:	eb03 0800 	add.w	r8, r3, r0
+ 800f582:	ab0d      	add	r3, sp, #52	; 0x34
+ 800f584:	eb03 0800 	add.w	r8, r3, r0
 
 			//若参数小于0，添加'-'号，并将字符长度加1
 			if (ival < 0) {
- 800f438:	9b0b      	ldr	r3, [sp, #44]	; 0x2c
- 800f43a:	2b00      	cmp	r3, #0
- 800f43c:	db07      	blt.n	800f44e <printk+0x1e2>
+ 800f588:	9b0b      	ldr	r3, [sp, #44]	; 0x2c
+ 800f58a:	2b00      	cmp	r3, #0
+ 800f58c:	db07      	blt.n	800f59e <printk+0x1e2>
 				schar = '-';
 				++vlen;
 			}
 			//若参数不小于0，添加‘+’号或者‘ ’或者为0，并将字符长度加1
 			else {
 				if (IS_FLAG_PLUS(flags_used)) {
- 800f43e:	f016 0f02 	tst.w	r6, #2
- 800f442:	d017      	beq.n	800f474 <printk+0x208>
+ 800f58e:	f016 0f02 	tst.w	r6, #2
+ 800f592:	d017      	beq.n	800f5c4 <printk+0x208>
 					schar = '+';
 					++vlen;
- 800f444:	f100 0a01 	add.w	sl, r0, #1
+ 800f594:	f100 0a01 	add.w	sl, r0, #1
 					schar = '+';
- 800f448:	f04f 092b 	mov.w	r9, #43	; 0x2b
- 800f44c:	e003      	b.n	800f456 <printk+0x1ea>
+ 800f598:	f04f 092b 	mov.w	r9, #43	; 0x2b
+ 800f59c:	e003      	b.n	800f5a6 <printk+0x1ea>
 				++vlen;
- 800f44e:	f100 0a01 	add.w	sl, r0, #1
+ 800f59e:	f100 0a01 	add.w	sl, r0, #1
 				schar = '-';
- 800f452:	f04f 092d 	mov.w	r9, #45	; 0x2d
+ 800f5a2:	f04f 092d 	mov.w	r9, #45	; 0x2d
 			dschar = FALSE;
 
 			/*
 			 * do the ZERO pad.
 			 */
 			if (IS_FLAG_ZERO(flags_used)) {
- 800f456:	f016 0f08 	tst.w	r6, #8
- 800f45a:	d019      	beq.n	800f490 <printk+0x224>
+ 800f5a6:	f016 0f08 	tst.w	r6, #8
+ 800f5aa:	d019      	beq.n	800f5e0 <printk+0x224>
 				if (schar)
- 800f45c:	f1b9 0f00 	cmp.w	r9, #0
- 800f460:	d110      	bne.n	800f484 <printk+0x218>
+ 800f5ac:	f1b9 0f00 	cmp.w	r9, #0
+ 800f5b0:	d110      	bne.n	800f5d4 <printk+0x218>
 					printk_putc(schar, &count, info);  //输出符号
 				dschar = TRUE;
 				printk_pad_zero(vlen, field_width, &count, info);
- 800f462:	9b01      	ldr	r3, [sp, #4]
- 800f464:	aa0c      	add	r2, sp, #48	; 0x30
- 800f466:	4629      	mov	r1, r5
- 800f468:	4650      	mov	r0, sl
- 800f46a:	f7ff fdf6 	bl	800f05a <printk_pad_zero>
+ 800f5b2:	9b01      	ldr	r3, [sp, #4]
+ 800f5b4:	aa0c      	add	r2, sp, #48	; 0x30
+ 800f5b6:	4629      	mov	r1, r5
+ 800f5b8:	4650      	mov	r0, sl
+ 800f5ba:	f7ff fdf8 	bl	800f1ae <printk_pad_zero>
 				vlen = field_width;
- 800f46e:	46aa      	mov	sl, r5
+ 800f5be:	46aa      	mov	sl, r5
 			ival = (int) va_arg(ap, int);  //返回当前参数，并将ap指向下一个参数
- 800f470:	46b9      	mov	r9, r7
- 800f472:	e171      	b.n	800f758 <printk+0x4ec>
+ 800f5c0:	46b9      	mov	r9, r7
+ 800f5c2:	e171      	b.n	800f8a8 <printk+0x4ec>
 					if (IS_FLAG_SPACE(flags_used)) {
- 800f474:	f016 0904 	ands.w	r9, r6, #4
- 800f478:	d0ed      	beq.n	800f456 <printk+0x1ea>
+ 800f5c4:	f016 0904 	ands.w	r9, r6, #4
+ 800f5c8:	d0ed      	beq.n	800f5a6 <printk+0x1ea>
 						++vlen;
- 800f47a:	f100 0a01 	add.w	sl, r0, #1
+ 800f5ca:	f100 0a01 	add.w	sl, r0, #1
 						schar = ' ';
- 800f47e:	f04f 0920 	mov.w	r9, #32
- 800f482:	e7e8      	b.n	800f456 <printk+0x1ea>
+ 800f5ce:	f04f 0920 	mov.w	r9, #32
+ 800f5d2:	e7e8      	b.n	800f5a6 <printk+0x1ea>
 					printk_putc(schar, &count, info);  //输出符号
- 800f484:	9a01      	ldr	r2, [sp, #4]
- 800f486:	a90c      	add	r1, sp, #48	; 0x30
- 800f488:	4648      	mov	r0, r9
- 800f48a:	f7ff fd9d 	bl	800efc8 <printk_putc>
- 800f48e:	e7e8      	b.n	800f462 <printk+0x1f6>
+ 800f5d4:	9a01      	ldr	r2, [sp, #4]
+ 800f5d6:	a90c      	add	r1, sp, #48	; 0x30
+ 800f5d8:	4648      	mov	r0, r9
+ 800f5da:	f7ff fd9f 	bl	800f11c <printk_putc>
+ 800f5de:	e7e8      	b.n	800f5b2 <printk+0x1f6>
 			} else {
 				if (!IS_FLAG_MINUS(flags_used)) {
- 800f490:	f016 0f01 	tst.w	r6, #1
- 800f494:	d004      	beq.n	800f4a0 <printk+0x234>
+ 800f5e0:	f016 0f01 	tst.w	r6, #1
+ 800f5e4:	d004      	beq.n	800f5f0 <printk+0x234>
 				}
 			}
 
 			/* the string was built in reverse order, now display in */
 			/* correct order */
 			if (!dschar && schar) {
- 800f496:	f1b9 0f00 	cmp.w	r9, #0
- 800f49a:	d113      	bne.n	800f4c4 <printk+0x258>
+ 800f5e6:	f1b9 0f00 	cmp.w	r9, #0
+ 800f5ea:	d113      	bne.n	800f614 <printk+0x258>
 			ival = (int) va_arg(ap, int);  //返回当前参数，并将ap指向下一个参数
- 800f49c:	46b9      	mov	r9, r7
- 800f49e:	e15b      	b.n	800f758 <printk+0x4ec>
+ 800f5ec:	46b9      	mov	r9, r7
+ 800f5ee:	e15b      	b.n	800f8a8 <printk+0x4ec>
 					printk_pad_space(vlen, field_width, &count, info);  //输出空格
- 800f4a0:	9b01      	ldr	r3, [sp, #4]
- 800f4a2:	aa0c      	add	r2, sp, #48	; 0x30
- 800f4a4:	4629      	mov	r1, r5
- 800f4a6:	4650      	mov	r0, sl
- 800f4a8:	f7ff fde6 	bl	800f078 <printk_pad_space>
+ 800f5f0:	9b01      	ldr	r3, [sp, #4]
+ 800f5f2:	aa0c      	add	r2, sp, #48	; 0x30
+ 800f5f4:	4629      	mov	r1, r5
+ 800f5f6:	4650      	mov	r0, sl
+ 800f5f8:	f7ff fde8 	bl	800f1cc <printk_pad_space>
 					if (schar)
- 800f4ac:	f1b9 0f00 	cmp.w	r9, #0
- 800f4b0:	d101      	bne.n	800f4b6 <printk+0x24a>
+ 800f5fc:	f1b9 0f00 	cmp.w	r9, #0
+ 800f600:	d101      	bne.n	800f606 <printk+0x24a>
 			ival = (int) va_arg(ap, int);  //返回当前参数，并将ap指向下一个参数
- 800f4b2:	46b9      	mov	r9, r7
- 800f4b4:	e150      	b.n	800f758 <printk+0x4ec>
+ 800f602:	46b9      	mov	r9, r7
+ 800f604:	e150      	b.n	800f8a8 <printk+0x4ec>
 						printk_putc(schar, &count, info);
- 800f4b6:	9a01      	ldr	r2, [sp, #4]
- 800f4b8:	a90c      	add	r1, sp, #48	; 0x30
- 800f4ba:	4648      	mov	r0, r9
- 800f4bc:	f7ff fd84 	bl	800efc8 <printk_putc>
+ 800f606:	9a01      	ldr	r2, [sp, #4]
+ 800f608:	a90c      	add	r1, sp, #48	; 0x30
+ 800f60a:	4648      	mov	r0, r9
+ 800f60c:	f7ff fd86 	bl	800f11c <printk_putc>
 			ival = (int) va_arg(ap, int);  //返回当前参数，并将ap指向下一个参数
- 800f4c0:	46b9      	mov	r9, r7
- 800f4c2:	e149      	b.n	800f758 <printk+0x4ec>
+ 800f610:	46b9      	mov	r9, r7
+ 800f612:	e149      	b.n	800f8a8 <printk+0x4ec>
 				printk_putc(schar, &count, info);
- 800f4c4:	9a01      	ldr	r2, [sp, #4]
- 800f4c6:	a90c      	add	r1, sp, #48	; 0x30
- 800f4c8:	4648      	mov	r0, r9
- 800f4ca:	f7ff fd7d 	bl	800efc8 <printk_putc>
+ 800f614:	9a01      	ldr	r2, [sp, #4]
+ 800f616:	a90c      	add	r1, sp, #48	; 0x30
+ 800f618:	4648      	mov	r0, r9
+ 800f61a:	f7ff fd7f 	bl	800f11c <printk_putc>
 			ival = (int) va_arg(ap, int);  //返回当前参数，并将ap指向下一个参数
- 800f4ce:	46b9      	mov	r9, r7
- 800f4d0:	e142      	b.n	800f758 <printk+0x4ec>
+ 800f61e:	46b9      	mov	r9, r7
+ 800f620:	e142      	b.n	800f8a8 <printk+0x4ec>
 			//实际传入变参数 函数后 浮点数变为:0x6000000040091EB8 实际是将其转化为double型数据
 			//但是顺序反了，我们要做的是将后四字节提前，然后把0x60移到紧接着前四个字节后的位置。
 			
 			//【20200816】  XSX，解决浮点数不优化问题
 			ap=ap+4;
 			fval= (double)va_arg(ap,double);
- 800f4d2:	f109 070c 	add.w	r7, r9, #12
- 800f4d6:	e9d9 9a01 	ldrd	r9, sl, [r9, #4]
- 800f4da:	e9cd 9a08 	strd	r9, sl, [sp, #32]
+ 800f622:	f109 070c 	add.w	r7, r9, #12
+ 800f626:	e9d9 9a01 	ldrd	r9, sl, [r9, #4]
+ 800f62a:	e9cd 9a08 	strd	r9, sl, [sp, #32]
 			
 			//【20200816】  XSX，解决负数的浮点数输出问题
 			//若参数小于0，添加'-'号，并将字符长度加1
 			if (fval < 0) {
- 800f4de:	2200      	movs	r2, #0
- 800f4e0:	2300      	movs	r3, #0
- 800f4e2:	4648      	mov	r0, r9
- 800f4e4:	4651      	mov	r1, sl
- 800f4e6:	f7fe fde1 	bl	800e0ac <__aeabi_dcmplt>
- 800f4ea:	b940      	cbnz	r0, 800f4fe <printk+0x292>
+ 800f62e:	2200      	movs	r2, #0
+ 800f630:	2300      	movs	r3, #0
+ 800f632:	4648      	mov	r0, r9
+ 800f634:	4651      	mov	r1, sl
+ 800f636:	f7fe fd39 	bl	800e0ac <__aeabi_dcmplt>
+ 800f63a:	b940      	cbnz	r0, 800f64e <printk+0x292>
 				fval = -fval;				//负数取它的正数
 				++vlen;
 			}
 			//若参数不小于0，添加‘+’号或者‘ ’或者为0，并将字符长度加1
 			else {
 				if (IS_FLAG_PLUS(flags_used)) {
- 800f4ec:	f016 0f02 	tst.w	r6, #2
- 800f4f0:	d12b      	bne.n	800f54a <printk+0x2de>
+ 800f63c:	f016 0f02 	tst.w	r6, #2
+ 800f640:	d12b      	bne.n	800f69a <printk+0x2de>
 					schar = '+';
 					++vlen;
 				} else {
 					if (IS_FLAG_SPACE(flags_used)) {
- 800f4f2:	f016 0904 	ands.w	r9, r6, #4
- 800f4f6:	d00d      	beq.n	800f514 <printk+0x2a8>
+ 800f642:	f016 0904 	ands.w	r9, r6, #4
+ 800f646:	d00d      	beq.n	800f664 <printk+0x2a8>
 						schar = ' ';
- 800f4f8:	f04f 0920 	mov.w	r9, #32
- 800f4fc:	e00a      	b.n	800f514 <printk+0x2a8>
+ 800f648:	f04f 0920 	mov.w	r9, #32
+ 800f64c:	e00a      	b.n	800f664 <printk+0x2a8>
 				fval = -fval;				//负数取它的正数
- 800f4fe:	f8cd 9010 	str.w	r9, [sp, #16]
- 800f502:	f10a 4300 	add.w	r3, sl, #2147483648	; 0x80000000
- 800f506:	9305      	str	r3, [sp, #20]
- 800f508:	ed9d 7b04 	vldr	d7, [sp, #16]
- 800f50c:	ed8d 7b08 	vstr	d7, [sp, #32]
+ 800f64e:	f8cd 9010 	str.w	r9, [sp, #16]
+ 800f652:	f10a 4300 	add.w	r3, sl, #2147483648	; 0x80000000
+ 800f656:	9305      	str	r3, [sp, #20]
+ 800f658:	ed9d 7b04 	vldr	d7, [sp, #16]
+ 800f65c:	ed8d 7b08 	vstr	d7, [sp, #32]
 				schar = '-';
- 800f510:	f04f 092d 	mov.w	r9, #45	; 0x2d
+ 800f660:	f04f 092d 	mov.w	r9, #45	; 0x2d
 				}
 			}
 			dschar = FALSE;
 			
 			//确定是否使用小数点精度数值
 			if(precision_used)
- 800f514:	9b02      	ldr	r3, [sp, #8]
- 800f516:	b9db      	cbnz	r3, 800f550 <printk+0x2e4>
+ 800f664:	9b02      	ldr	r3, [sp, #8]
+ 800f666:	b9db      	cbnz	r3, 800f6a0 <printk+0x2e4>
 				vlen = printk_mkfloatstr(&fval,vstr,precision_width);//将整型转换成字符型保存在vstr中，返回字符数vlen
 				vstrp = &vstr[0];  //指向转换后的第一个字符
 			}
 			else
 			{
 				if(length_modifier==0)   //浮点型精度到小数点后8位
- 800f518:	f1bb 0f00 	cmp.w	fp, #0
- 800f51c:	d11f      	bne.n	800f55e <printk+0x2f2>
+ 800f668:	f1bb 0f00 	cmp.w	fp, #0
+ 800f66c:	d11f      	bne.n	800f6ae <printk+0x2f2>
 				{
 					vlen = printk_mkfloatstr(&fval,vstr,6);//将整型转换成字符型保存在vstr中，返回字符数vlen
- 800f51e:	2206      	movs	r2, #6
- 800f520:	a90d      	add	r1, sp, #52	; 0x34
- 800f522:	a808      	add	r0, sp, #32
- 800f524:	f7ff fdc0 	bl	800f0a8 <printk_mkfloatstr>
- 800f528:	4680      	mov	r8, r0
+ 800f66e:	2206      	movs	r2, #6
+ 800f670:	a90d      	add	r1, sp, #52	; 0x34
+ 800f672:	a808      	add	r0, sp, #32
+ 800f674:	f7ff fdc0 	bl	800f1f8 <printk_mkfloatstr>
+ 800f678:	4680      	mov	r8, r0
 			
 
 			/*
 			 * do the ZERO pad.
 			 */
 			if (IS_FLAG_ZERO(flags_used)) {
- 800f52a:	f016 0f08 	tst.w	r6, #8
- 800f52e:	d023      	beq.n	800f578 <printk+0x30c>
+ 800f67a:	f016 0f08 	tst.w	r6, #8
+ 800f67e:	d023      	beq.n	800f6c8 <printk+0x30c>
 				if (schar)
- 800f530:	f1b9 0f00 	cmp.w	r9, #0
- 800f534:	d11a      	bne.n	800f56c <printk+0x300>
+ 800f680:	f1b9 0f00 	cmp.w	r9, #0
+ 800f684:	d11a      	bne.n	800f6bc <printk+0x300>
 					printk_putc(schar, &count, info);  //输出符号
 				dschar = TRUE;
 				printk_pad_zero(vlen, field_width, &count, info);
- 800f536:	9b01      	ldr	r3, [sp, #4]
- 800f538:	aa0c      	add	r2, sp, #48	; 0x30
- 800f53a:	4629      	mov	r1, r5
- 800f53c:	4640      	mov	r0, r8
- 800f53e:	f7ff fd8c 	bl	800f05a <printk_pad_zero>
+ 800f686:	9b01      	ldr	r3, [sp, #4]
+ 800f688:	aa0c      	add	r2, sp, #48	; 0x30
+ 800f68a:	4629      	mov	r1, r5
+ 800f68c:	4640      	mov	r0, r8
+ 800f68e:	f7ff fd8e 	bl	800f1ae <printk_pad_zero>
 				vlen = field_width;
- 800f542:	46a8      	mov	r8, r5
- 800f544:	f10d 0934 	add.w	r9, sp, #52	; 0x34
- 800f548:	e037      	b.n	800f5ba <printk+0x34e>
+ 800f692:	46a8      	mov	r8, r5
+ 800f694:	f10d 0934 	add.w	r9, sp, #52	; 0x34
+ 800f698:	e037      	b.n	800f70a <printk+0x34e>
 					schar = '+';
- 800f54a:	f04f 092b 	mov.w	r9, #43	; 0x2b
- 800f54e:	e7e1      	b.n	800f514 <printk+0x2a8>
+ 800f69a:	f04f 092b 	mov.w	r9, #43	; 0x2b
+ 800f69e:	e7e1      	b.n	800f664 <printk+0x2a8>
 				vlen = printk_mkfloatstr(&fval,vstr,precision_width);//将整型转换成字符型保存在vstr中，返回字符数vlen
- 800f550:	4642      	mov	r2, r8
- 800f552:	a90d      	add	r1, sp, #52	; 0x34
- 800f554:	a808      	add	r0, sp, #32
- 800f556:	f7ff fda7 	bl	800f0a8 <printk_mkfloatstr>
- 800f55a:	4680      	mov	r8, r0
- 800f55c:	e7e5      	b.n	800f52a <printk+0x2be>
+ 800f6a0:	4642      	mov	r2, r8
+ 800f6a2:	a90d      	add	r1, sp, #52	; 0x34
+ 800f6a4:	a808      	add	r0, sp, #32
+ 800f6a6:	f7ff fda7 	bl	800f1f8 <printk_mkfloatstr>
+ 800f6aa:	4680      	mov	r8, r0
+ 800f6ac:	e7e5      	b.n	800f67a <printk+0x2be>
 					vlen = printk_mkfloatstr(&fval,vstr,6);//将整型转换成字符型保存在vstr中，返回字符数vlen
- 800f55e:	2206      	movs	r2, #6
- 800f560:	a90d      	add	r1, sp, #52	; 0x34
- 800f562:	a808      	add	r0, sp, #32
- 800f564:	f7ff fda0 	bl	800f0a8 <printk_mkfloatstr>
- 800f568:	4680      	mov	r8, r0
- 800f56a:	e7de      	b.n	800f52a <printk+0x2be>
+ 800f6ae:	2206      	movs	r2, #6
+ 800f6b0:	a90d      	add	r1, sp, #52	; 0x34
+ 800f6b2:	a808      	add	r0, sp, #32
+ 800f6b4:	f7ff fda0 	bl	800f1f8 <printk_mkfloatstr>
+ 800f6b8:	4680      	mov	r8, r0
+ 800f6ba:	e7de      	b.n	800f67a <printk+0x2be>
 					printk_putc(schar, &count, info);  //输出符号
- 800f56c:	9a01      	ldr	r2, [sp, #4]
- 800f56e:	a90c      	add	r1, sp, #48	; 0x30
- 800f570:	4648      	mov	r0, r9
- 800f572:	f7ff fd29 	bl	800efc8 <printk_putc>
- 800f576:	e7de      	b.n	800f536 <printk+0x2ca>
+ 800f6bc:	9a01      	ldr	r2, [sp, #4]
+ 800f6be:	a90c      	add	r1, sp, #48	; 0x30
+ 800f6c0:	4648      	mov	r0, r9
+ 800f6c2:	f7ff fd2b 	bl	800f11c <printk_putc>
+ 800f6c6:	e7de      	b.n	800f686 <printk+0x2ca>
 			} else {
 				if (!IS_FLAG_MINUS(flags_used)) {
- 800f578:	f016 0f01 	tst.w	r6, #1
- 800f57c:	d008      	beq.n	800f590 <printk+0x324>
+ 800f6c8:	f016 0f01 	tst.w	r6, #1
+ 800f6cc:	d008      	beq.n	800f6e0 <printk+0x324>
 				}
 			}
 
 			/* the string was built in reverse order, now display in */
 			/* correct order */
 			if (!dschar && schar) {
- 800f57e:	f1b9 0f00 	cmp.w	r9, #0
- 800f582:	d0df      	beq.n	800f544 <printk+0x2d8>
+ 800f6ce:	f1b9 0f00 	cmp.w	r9, #0
+ 800f6d2:	d0df      	beq.n	800f694 <printk+0x2d8>
 				printk_putc(schar, &count, info);
- 800f584:	9a01      	ldr	r2, [sp, #4]
- 800f586:	a90c      	add	r1, sp, #48	; 0x30
- 800f588:	4648      	mov	r0, r9
- 800f58a:	f7ff fd1d 	bl	800efc8 <printk_putc>
- 800f58e:	e7d9      	b.n	800f544 <printk+0x2d8>
+ 800f6d4:	9a01      	ldr	r2, [sp, #4]
+ 800f6d6:	a90c      	add	r1, sp, #48	; 0x30
+ 800f6d8:	4648      	mov	r0, r9
+ 800f6da:	f7ff fd1f 	bl	800f11c <printk_putc>
+ 800f6de:	e7d9      	b.n	800f694 <printk+0x2d8>
 					printk_pad_space(vlen, field_width, &count, info);  //输出空格
- 800f590:	9b01      	ldr	r3, [sp, #4]
- 800f592:	aa0c      	add	r2, sp, #48	; 0x30
- 800f594:	4629      	mov	r1, r5
- 800f596:	4640      	mov	r0, r8
- 800f598:	f7ff fd6e 	bl	800f078 <printk_pad_space>
+ 800f6e0:	9b01      	ldr	r3, [sp, #4]
+ 800f6e2:	aa0c      	add	r2, sp, #48	; 0x30
+ 800f6e4:	4629      	mov	r1, r5
+ 800f6e6:	4640      	mov	r0, r8
+ 800f6e8:	f7ff fd70 	bl	800f1cc <printk_pad_space>
 					if (schar)
- 800f59c:	f1b9 0f00 	cmp.w	r9, #0
- 800f5a0:	d0d0      	beq.n	800f544 <printk+0x2d8>
+ 800f6ec:	f1b9 0f00 	cmp.w	r9, #0
+ 800f6f0:	d0d0      	beq.n	800f694 <printk+0x2d8>
 						printk_putc(schar, &count, info);
- 800f5a2:	9a01      	ldr	r2, [sp, #4]
- 800f5a4:	a90c      	add	r1, sp, #48	; 0x30
- 800f5a6:	4648      	mov	r0, r9
- 800f5a8:	f7ff fd0e 	bl	800efc8 <printk_putc>
- 800f5ac:	e7ca      	b.n	800f544 <printk+0x2d8>
+ 800f6f2:	9a01      	ldr	r2, [sp, #4]
+ 800f6f4:	a90c      	add	r1, sp, #48	; 0x30
+ 800f6f6:	4648      	mov	r0, r9
+ 800f6f8:	f7ff fd10 	bl	800f11c <printk_putc>
+ 800f6fc:	e7ca      	b.n	800f694 <printk+0x2d8>
 			}
 			while (*vstrp)
 				printk_putc(*vstrp++, &count, info);
- 800f5ae:	f109 0901 	add.w	r9, r9, #1
- 800f5b2:	9a01      	ldr	r2, [sp, #4]
- 800f5b4:	a90c      	add	r1, sp, #48	; 0x30
- 800f5b6:	f7ff fd07 	bl	800efc8 <printk_putc>
+ 800f6fe:	f109 0901 	add.w	r9, r9, #1
+ 800f702:	9a01      	ldr	r2, [sp, #4]
+ 800f704:	a90c      	add	r1, sp, #48	; 0x30
+ 800f706:	f7ff fd09 	bl	800f11c <printk_putc>
 			while (*vstrp)
- 800f5ba:	f899 0000 	ldrb.w	r0, [r9]
- 800f5be:	2800      	cmp	r0, #0
- 800f5c0:	d1f5      	bne.n	800f5ae <printk+0x342>
+ 800f70a:	f899 0000 	ldrb.w	r0, [r9]
+ 800f70e:	2800      	cmp	r0, #0
+ 800f710:	d1f5      	bne.n	800f6fe <printk+0x342>
 			if (IS_FLAG_MINUS(flags_used)) {
- 800f5c2:	f016 0f01 	tst.w	r6, #1
- 800f5c6:	d101      	bne.n	800f5cc <printk+0x360>
+ 800f712:	f016 0f01 	tst.w	r6, #1
+ 800f716:	d101      	bne.n	800f71c <printk+0x360>
 			fval= (double)va_arg(ap,double);
- 800f5c8:	46b9      	mov	r9, r7
- 800f5ca:	e66e      	b.n	800f2aa <printk+0x3e>
+ 800f718:	46b9      	mov	r9, r7
+ 800f71a:	e66e      	b.n	800f3fa <printk+0x3e>
 				printk_pad_space(vlen, field_width, &count, info);
- 800f5cc:	9b01      	ldr	r3, [sp, #4]
- 800f5ce:	aa0c      	add	r2, sp, #48	; 0x30
- 800f5d0:	4629      	mov	r1, r5
- 800f5d2:	4640      	mov	r0, r8
- 800f5d4:	f7ff fd50 	bl	800f078 <printk_pad_space>
+ 800f71c:	9b01      	ldr	r3, [sp, #4]
+ 800f71e:	aa0c      	add	r2, sp, #48	; 0x30
+ 800f720:	4629      	mov	r1, r5
+ 800f722:	4640      	mov	r0, r8
+ 800f724:	f7ff fd52 	bl	800f1cc <printk_pad_space>
 			fval= (double)va_arg(ap,double);
- 800f5d8:	46b9      	mov	r9, r7
- 800f5da:	e666      	b.n	800f2aa <printk+0x3e>
+ 800f728:	46b9      	mov	r9, r7
+ 800f72a:	e666      	b.n	800f3fa <printk+0x3e>
 			}
             break;
         //以下是16进制整形输出
 		case 'x':
 		case 'X':
 			uval = (unsigned int) va_arg(ap, unsigned int);
- 800f5dc:	f109 0304 	add.w	r3, r9, #4
- 800f5e0:	9303      	str	r3, [sp, #12]
- 800f5e2:	f8d9 3000 	ldr.w	r3, [r9]
- 800f5e6:	a916      	add	r1, sp, #88	; 0x58
- 800f5e8:	f841 3d3c 	str.w	r3, [r1, #-60]!
+ 800f72c:	f109 0304 	add.w	r3, r9, #4
+ 800f730:	9303      	str	r3, [sp, #12]
+ 800f732:	f8d9 3000 	ldr.w	r3, [r9]
+ 800f736:	a916      	add	r1, sp, #88	; 0x58
+ 800f738:	f841 3d3c 	str.w	r3, [r1, #-60]!
 			vlen = printk_mknumstr(vstr, &uval, FALSE, 16);
- 800f5ec:	2310      	movs	r3, #16
- 800f5ee:	2200      	movs	r2, #0
- 800f5f0:	a80d      	add	r0, sp, #52	; 0x34
- 800f5f2:	f7ff fcfe 	bl	800eff2 <printk_mknumstr>
- 800f5f6:	4682      	mov	sl, r0
+ 800f73c:	2310      	movs	r3, #16
+ 800f73e:	2200      	movs	r2, #0
+ 800f740:	a80d      	add	r0, sp, #52	; 0x34
+ 800f742:	f7ff fd00 	bl	800f146 <printk_mknumstr>
+ 800f746:	4682      	mov	sl, r0
 			vstrp = &vstr[vlen];
- 800f5f8:	ab0d      	add	r3, sp, #52	; 0x34
- 800f5fa:	eb03 0800 	add.w	r8, r3, r0
+ 800f748:	ab0d      	add	r3, sp, #52	; 0x34
+ 800f74a:	eb03 0800 	add.w	r8, r3, r0
 
 			dschar = FALSE;
 			if (IS_FLAG_ZERO(flags_used)) {
- 800f5fe:	f016 0908 	ands.w	r9, r6, #8
- 800f602:	d021      	beq.n	800f648 <printk+0x3dc>
+ 800f74e:	f016 0908 	ands.w	r9, r6, #8
+ 800f752:	d021      	beq.n	800f798 <printk+0x3dc>
 				if (IS_FLAG_POUND(flags_used)) {
- 800f604:	f016 0910 	ands.w	r9, r6, #16
- 800f608:	d110      	bne.n	800f62c <printk+0x3c0>
+ 800f754:	f016 0910 	ands.w	r9, r6, #16
+ 800f758:	d110      	bne.n	800f77c <printk+0x3c0>
 					printk_putc('0', &count, info);
 					printk_putc('x', &count, info);
 					/*vlen += 2;*/
 					dschar = TRUE;
 				}
 				printk_pad_zero(vlen, field_width, &count, info);
- 800f60a:	9b01      	ldr	r3, [sp, #4]
- 800f60c:	aa0c      	add	r2, sp, #48	; 0x30
- 800f60e:	4629      	mov	r1, r5
- 800f610:	4650      	mov	r0, sl
- 800f612:	f7ff fd22 	bl	800f05a <printk_pad_zero>
+ 800f75a:	9b01      	ldr	r3, [sp, #4]
+ 800f75c:	aa0c      	add	r2, sp, #48	; 0x30
+ 800f75e:	4629      	mov	r1, r5
+ 800f760:	4650      	mov	r0, sl
+ 800f762:	f7ff fd24 	bl	800f1ae <printk_pad_zero>
 				vlen = field_width;
- 800f616:	46aa      	mov	sl, r5
+ 800f766:	46aa      	mov	sl, r5
 						dschar = TRUE;
 					}
 				}
 			}
 
 			if ((IS_FLAG_POUND(flags_used)) && !dschar) {
- 800f618:	f016 0f10 	tst.w	r6, #16
- 800f61c:	f000 80ab 	beq.w	800f776 <printk+0x50a>
- 800f620:	f1b9 0f00 	cmp.w	r9, #0
- 800f624:	d02f      	beq.n	800f686 <printk+0x41a>
+ 800f768:	f016 0f10 	tst.w	r6, #16
+ 800f76c:	f000 80ab 	beq.w	800f8c6 <printk+0x50a>
+ 800f770:	f1b9 0f00 	cmp.w	r9, #0
+ 800f774:	d02f      	beq.n	800f7d6 <printk+0x41a>
 			uval = (unsigned int) va_arg(ap, unsigned int);
- 800f626:	f8dd 900c 	ldr.w	r9, [sp, #12]
- 800f62a:	e095      	b.n	800f758 <printk+0x4ec>
+ 800f776:	f8dd 900c 	ldr.w	r9, [sp, #12]
+ 800f77a:	e095      	b.n	800f8a8 <printk+0x4ec>
 					printk_putc('0', &count, info);
- 800f62c:	f8dd 9004 	ldr.w	r9, [sp, #4]
- 800f630:	464a      	mov	r2, r9
- 800f632:	a90c      	add	r1, sp, #48	; 0x30
- 800f634:	2030      	movs	r0, #48	; 0x30
- 800f636:	f7ff fcc7 	bl	800efc8 <printk_putc>
+ 800f77c:	f8dd 9004 	ldr.w	r9, [sp, #4]
+ 800f780:	464a      	mov	r2, r9
+ 800f782:	a90c      	add	r1, sp, #48	; 0x30
+ 800f784:	2030      	movs	r0, #48	; 0x30
+ 800f786:	f7ff fcc9 	bl	800f11c <printk_putc>
 					printk_putc('x', &count, info);
- 800f63a:	464a      	mov	r2, r9
- 800f63c:	a90c      	add	r1, sp, #48	; 0x30
- 800f63e:	2078      	movs	r0, #120	; 0x78
- 800f640:	f7ff fcc2 	bl	800efc8 <printk_putc>
+ 800f78a:	464a      	mov	r2, r9
+ 800f78c:	a90c      	add	r1, sp, #48	; 0x30
+ 800f78e:	2078      	movs	r0, #120	; 0x78
+ 800f790:	f7ff fcc4 	bl	800f11c <printk_putc>
 					dschar = TRUE;
- 800f644:	46b9      	mov	r9, r7
- 800f646:	e7e0      	b.n	800f60a <printk+0x39e>
+ 800f794:	46b9      	mov	r9, r7
+ 800f796:	e7e0      	b.n	800f75a <printk+0x39e>
 				if (!IS_FLAG_MINUS(flags_used)) {
- 800f648:	f016 0f01 	tst.w	r6, #1
- 800f64c:	d1e4      	bne.n	800f618 <printk+0x3ac>
+ 800f798:	f016 0f01 	tst.w	r6, #1
+ 800f79c:	d1e4      	bne.n	800f768 <printk+0x3ac>
 					if (IS_FLAG_POUND(flags_used)) {
- 800f64e:	f016 0910 	ands.w	r9, r6, #16
- 800f652:	d001      	beq.n	800f658 <printk+0x3ec>
+ 800f79e:	f016 0910 	ands.w	r9, r6, #16
+ 800f7a2:	d001      	beq.n	800f7a8 <printk+0x3ec>
 						vlen += 2;
- 800f654:	f100 0a02 	add.w	sl, r0, #2
+ 800f7a4:	f100 0a02 	add.w	sl, r0, #2
 					printk_pad_space(vlen, field_width, &count, info);
- 800f658:	9b01      	ldr	r3, [sp, #4]
- 800f65a:	aa0c      	add	r2, sp, #48	; 0x30
- 800f65c:	4629      	mov	r1, r5
- 800f65e:	4650      	mov	r0, sl
- 800f660:	f7ff fd0a 	bl	800f078 <printk_pad_space>
+ 800f7a8:	9b01      	ldr	r3, [sp, #4]
+ 800f7aa:	aa0c      	add	r2, sp, #48	; 0x30
+ 800f7ac:	4629      	mov	r1, r5
+ 800f7ae:	4650      	mov	r0, sl
+ 800f7b0:	f7ff fd0c 	bl	800f1cc <printk_pad_space>
 					if (IS_FLAG_POUND(flags_used)) {
- 800f664:	f1b9 0f00 	cmp.w	r9, #0
- 800f668:	d0d6      	beq.n	800f618 <printk+0x3ac>
+ 800f7b4:	f1b9 0f00 	cmp.w	r9, #0
+ 800f7b8:	d0d6      	beq.n	800f768 <printk+0x3ac>
 						printk_putc('0', &count, info);
- 800f66a:	f8dd 9004 	ldr.w	r9, [sp, #4]
- 800f66e:	464a      	mov	r2, r9
- 800f670:	a90c      	add	r1, sp, #48	; 0x30
- 800f672:	2030      	movs	r0, #48	; 0x30
- 800f674:	f7ff fca8 	bl	800efc8 <printk_putc>
+ 800f7ba:	f8dd 9004 	ldr.w	r9, [sp, #4]
+ 800f7be:	464a      	mov	r2, r9
+ 800f7c0:	a90c      	add	r1, sp, #48	; 0x30
+ 800f7c2:	2030      	movs	r0, #48	; 0x30
+ 800f7c4:	f7ff fcaa 	bl	800f11c <printk_putc>
 						printk_putc('x', &count, info);
- 800f678:	464a      	mov	r2, r9
- 800f67a:	a90c      	add	r1, sp, #48	; 0x30
- 800f67c:	2078      	movs	r0, #120	; 0x78
- 800f67e:	f7ff fca3 	bl	800efc8 <printk_putc>
+ 800f7c8:	464a      	mov	r2, r9
+ 800f7ca:	a90c      	add	r1, sp, #48	; 0x30
+ 800f7cc:	2078      	movs	r0, #120	; 0x78
+ 800f7ce:	f7ff fca5 	bl	800f11c <printk_putc>
 						dschar = TRUE;
- 800f682:	46b9      	mov	r9, r7
- 800f684:	e7c8      	b.n	800f618 <printk+0x3ac>
+ 800f7d2:	46b9      	mov	r9, r7
+ 800f7d4:	e7c8      	b.n	800f768 <printk+0x3ac>
 				printk_putc('0', &count, info);
- 800f686:	9f01      	ldr	r7, [sp, #4]
- 800f688:	463a      	mov	r2, r7
- 800f68a:	a90c      	add	r1, sp, #48	; 0x30
- 800f68c:	2030      	movs	r0, #48	; 0x30
- 800f68e:	f7ff fc9b 	bl	800efc8 <printk_putc>
+ 800f7d6:	9f01      	ldr	r7, [sp, #4]
+ 800f7d8:	463a      	mov	r2, r7
+ 800f7da:	a90c      	add	r1, sp, #48	; 0x30
+ 800f7dc:	2030      	movs	r0, #48	; 0x30
+ 800f7de:	f7ff fc9d 	bl	800f11c <printk_putc>
 				printk_putc('x', &count, info);
- 800f692:	463a      	mov	r2, r7
- 800f694:	a90c      	add	r1, sp, #48	; 0x30
- 800f696:	2078      	movs	r0, #120	; 0x78
- 800f698:	f7ff fc96 	bl	800efc8 <printk_putc>
+ 800f7e2:	463a      	mov	r2, r7
+ 800f7e4:	a90c      	add	r1, sp, #48	; 0x30
+ 800f7e6:	2078      	movs	r0, #120	; 0x78
+ 800f7e8:	f7ff fc98 	bl	800f11c <printk_putc>
 				vlen += 2;
- 800f69c:	f10a 0a02 	add.w	sl, sl, #2
+ 800f7ec:	f10a 0a02 	add.w	sl, sl, #2
 			uval = (unsigned int) va_arg(ap, unsigned int);
- 800f6a0:	f8dd 900c 	ldr.w	r9, [sp, #12]
- 800f6a4:	e058      	b.n	800f758 <printk+0x4ec>
+ 800f7f0:	f8dd 900c 	ldr.w	r9, [sp, #12]
+ 800f7f4:	e058      	b.n	800f8a8 <printk+0x4ec>
 			}
 			goto cont_xd;
 		//无符号以八进制表示的整数输出
 		case 'o':
 			uval = (unsigned int) va_arg(ap, unsigned int);
- 800f6a6:	f109 0704 	add.w	r7, r9, #4
- 800f6aa:	f8d9 3000 	ldr.w	r3, [r9]
- 800f6ae:	a916      	add	r1, sp, #88	; 0x58
- 800f6b0:	f841 3d3c 	str.w	r3, [r1, #-60]!
+ 800f7f6:	f109 0704 	add.w	r7, r9, #4
+ 800f7fa:	f8d9 3000 	ldr.w	r3, [r9]
+ 800f7fe:	a916      	add	r1, sp, #88	; 0x58
+ 800f800:	f841 3d3c 	str.w	r3, [r1, #-60]!
 			vlen = printk_mknumstr(vstr, &uval, FALSE, 8);
- 800f6b4:	2308      	movs	r3, #8
- 800f6b6:	2200      	movs	r2, #0
- 800f6b8:	a80d      	add	r0, sp, #52	; 0x34
- 800f6ba:	f7ff fc9a 	bl	800eff2 <printk_mknumstr>
- 800f6be:	4682      	mov	sl, r0
+ 800f804:	2308      	movs	r3, #8
+ 800f806:	2200      	movs	r2, #0
+ 800f808:	a80d      	add	r0, sp, #52	; 0x34
+ 800f80a:	f7ff fc9c 	bl	800f146 <printk_mknumstr>
+ 800f80e:	4682      	mov	sl, r0
 			uval = (unsigned int) va_arg(ap, unsigned int);
- 800f6c0:	46b9      	mov	r9, r7
+ 800f810:	46b9      	mov	r9, r7
 			goto cont_u;
 		case 'u':
 			uval = (unsigned int) va_arg(ap, unsigned int);
 			vlen = printk_mknumstr(vstr, &uval, FALSE, 10);
 
 			cont_u: vstrp = &vstr[vlen];
- 800f6c2:	ab0d      	add	r3, sp, #52	; 0x34
- 800f6c4:	eb03 080a 	add.w	r8, r3, sl
+ 800f812:	ab0d      	add	r3, sp, #52	; 0x34
+ 800f814:	eb03 080a 	add.w	r8, r3, sl
 
 			if (IS_FLAG_ZERO(flags_used)) {
- 800f6c8:	f016 0f08 	tst.w	r6, #8
- 800f6cc:	d136      	bne.n	800f73c <printk+0x4d0>
+ 800f818:	f016 0f08 	tst.w	r6, #8
+ 800f81c:	d136      	bne.n	800f88c <printk+0x4d0>
 				printk_pad_zero(vlen, field_width, &count, info);
 				vlen = field_width;
 			} else {
 				if (!IS_FLAG_MINUS(flags_used)) {
- 800f6ce:	f016 0f01 	tst.w	r6, #1
- 800f6d2:	d141      	bne.n	800f758 <printk+0x4ec>
+ 800f81e:	f016 0f01 	tst.w	r6, #1
+ 800f822:	d141      	bne.n	800f8a8 <printk+0x4ec>
 					printk_pad_space(vlen, field_width, &count, info);
- 800f6d4:	9b01      	ldr	r3, [sp, #4]
- 800f6d6:	aa0c      	add	r2, sp, #48	; 0x30
- 800f6d8:	4629      	mov	r1, r5
- 800f6da:	4650      	mov	r0, sl
- 800f6dc:	f7ff fccc 	bl	800f078 <printk_pad_space>
- 800f6e0:	e03a      	b.n	800f758 <printk+0x4ec>
+ 800f824:	9b01      	ldr	r3, [sp, #4]
+ 800f826:	aa0c      	add	r2, sp, #48	; 0x30
+ 800f828:	4629      	mov	r1, r5
+ 800f82a:	4650      	mov	r0, sl
+ 800f82c:	f7ff fcce 	bl	800f1cc <printk_pad_space>
+ 800f830:	e03a      	b.n	800f8a8 <printk+0x4ec>
 			uval = (unsigned int) va_arg(ap, unsigned int);
- 800f6e2:	f109 0704 	add.w	r7, r9, #4
- 800f6e6:	f8d9 3000 	ldr.w	r3, [r9]
- 800f6ea:	a916      	add	r1, sp, #88	; 0x58
- 800f6ec:	f841 3d3c 	str.w	r3, [r1, #-60]!
+ 800f832:	f109 0704 	add.w	r7, r9, #4
+ 800f836:	f8d9 3000 	ldr.w	r3, [r9]
+ 800f83a:	a916      	add	r1, sp, #88	; 0x58
+ 800f83c:	f841 3d3c 	str.w	r3, [r1, #-60]!
 			vlen = printk_mknumstr(vstr, &uval, FALSE, 2);
- 800f6f0:	2302      	movs	r3, #2
- 800f6f2:	2200      	movs	r2, #0
- 800f6f4:	a80d      	add	r0, sp, #52	; 0x34
- 800f6f6:	f7ff fc7c 	bl	800eff2 <printk_mknumstr>
- 800f6fa:	4682      	mov	sl, r0
+ 800f840:	2302      	movs	r3, #2
+ 800f842:	2200      	movs	r2, #0
+ 800f844:	a80d      	add	r0, sp, #52	; 0x34
+ 800f846:	f7ff fc7e 	bl	800f146 <printk_mknumstr>
+ 800f84a:	4682      	mov	sl, r0
 			uval = (unsigned int) va_arg(ap, unsigned int);
- 800f6fc:	46b9      	mov	r9, r7
+ 800f84c:	46b9      	mov	r9, r7
 			goto cont_u;
- 800f6fe:	e7e0      	b.n	800f6c2 <printk+0x456>
+ 800f84e:	e7e0      	b.n	800f812 <printk+0x456>
 			uval = (unsigned int) va_arg(ap, void *);
- 800f700:	f109 0704 	add.w	r7, r9, #4
- 800f704:	f8d9 3000 	ldr.w	r3, [r9]
- 800f708:	a916      	add	r1, sp, #88	; 0x58
- 800f70a:	f841 3d3c 	str.w	r3, [r1, #-60]!
+ 800f850:	f109 0704 	add.w	r7, r9, #4
+ 800f854:	f8d9 3000 	ldr.w	r3, [r9]
+ 800f858:	a916      	add	r1, sp, #88	; 0x58
+ 800f85a:	f841 3d3c 	str.w	r3, [r1, #-60]!
 			vlen = printk_mknumstr(vstr, &uval, FALSE, 16);
- 800f70e:	2310      	movs	r3, #16
- 800f710:	2200      	movs	r2, #0
- 800f712:	a80d      	add	r0, sp, #52	; 0x34
- 800f714:	f7ff fc6d 	bl	800eff2 <printk_mknumstr>
- 800f718:	4682      	mov	sl, r0
+ 800f85e:	2310      	movs	r3, #16
+ 800f860:	2200      	movs	r2, #0
+ 800f862:	a80d      	add	r0, sp, #52	; 0x34
+ 800f864:	f7ff fc6f 	bl	800f146 <printk_mknumstr>
+ 800f868:	4682      	mov	sl, r0
 			uval = (unsigned int) va_arg(ap, void *);
- 800f71a:	46b9      	mov	r9, r7
+ 800f86a:	46b9      	mov	r9, r7
 			goto cont_u;
- 800f71c:	e7d1      	b.n	800f6c2 <printk+0x456>
+ 800f86c:	e7d1      	b.n	800f812 <printk+0x456>
 			uval = (unsigned int) va_arg(ap, unsigned int);
- 800f71e:	f109 0704 	add.w	r7, r9, #4
- 800f722:	f8d9 3000 	ldr.w	r3, [r9]
- 800f726:	a916      	add	r1, sp, #88	; 0x58
- 800f728:	f841 3d3c 	str.w	r3, [r1, #-60]!
+ 800f86e:	f109 0704 	add.w	r7, r9, #4
+ 800f872:	f8d9 3000 	ldr.w	r3, [r9]
+ 800f876:	a916      	add	r1, sp, #88	; 0x58
+ 800f878:	f841 3d3c 	str.w	r3, [r1, #-60]!
 			vlen = printk_mknumstr(vstr, &uval, FALSE, 10);
- 800f72c:	230a      	movs	r3, #10
- 800f72e:	2200      	movs	r2, #0
- 800f730:	a80d      	add	r0, sp, #52	; 0x34
- 800f732:	f7ff fc5e 	bl	800eff2 <printk_mknumstr>
- 800f736:	4682      	mov	sl, r0
+ 800f87c:	230a      	movs	r3, #10
+ 800f87e:	2200      	movs	r2, #0
+ 800f880:	a80d      	add	r0, sp, #52	; 0x34
+ 800f882:	f7ff fc60 	bl	800f146 <printk_mknumstr>
+ 800f886:	4682      	mov	sl, r0
 			uval = (unsigned int) va_arg(ap, unsigned int);
- 800f738:	46b9      	mov	r9, r7
- 800f73a:	e7c2      	b.n	800f6c2 <printk+0x456>
+ 800f888:	46b9      	mov	r9, r7
+ 800f88a:	e7c2      	b.n	800f812 <printk+0x456>
 				printk_pad_zero(vlen, field_width, &count, info);
- 800f73c:	9b01      	ldr	r3, [sp, #4]
- 800f73e:	aa0c      	add	r2, sp, #48	; 0x30
- 800f740:	4629      	mov	r1, r5
- 800f742:	4650      	mov	r0, sl
- 800f744:	f7ff fc89 	bl	800f05a <printk_pad_zero>
+ 800f88c:	9b01      	ldr	r3, [sp, #4]
+ 800f88e:	aa0c      	add	r2, sp, #48	; 0x30
+ 800f890:	4629      	mov	r1, r5
+ 800f892:	4650      	mov	r0, sl
+ 800f894:	f7ff fc8b 	bl	800f1ae <printk_pad_zero>
 				vlen = field_width;
- 800f748:	46aa      	mov	sl, r5
- 800f74a:	e005      	b.n	800f758 <printk+0x4ec>
+ 800f898:	46aa      	mov	sl, r5
+ 800f89a:	e005      	b.n	800f8a8 <printk+0x4ec>
 				}
 			}
 
 			cont_xd: while (*vstrp)
 				printk_putc(*vstrp--, &count, info);
- 800f74c:	f108 38ff 	add.w	r8, r8, #4294967295
- 800f750:	9a01      	ldr	r2, [sp, #4]
- 800f752:	a90c      	add	r1, sp, #48	; 0x30
- 800f754:	f7ff fc38 	bl	800efc8 <printk_putc>
+ 800f89c:	f108 38ff 	add.w	r8, r8, #4294967295
+ 800f8a0:	9a01      	ldr	r2, [sp, #4]
+ 800f8a2:	a90c      	add	r1, sp, #48	; 0x30
+ 800f8a4:	f7ff fc3a 	bl	800f11c <printk_putc>
 			cont_xd: while (*vstrp)
- 800f758:	f898 0000 	ldrb.w	r0, [r8]
- 800f75c:	2800      	cmp	r0, #0
- 800f75e:	d1f5      	bne.n	800f74c <printk+0x4e0>
+ 800f8a8:	f898 0000 	ldrb.w	r0, [r8]
+ 800f8ac:	2800      	cmp	r0, #0
+ 800f8ae:	d1f5      	bne.n	800f89c <printk+0x4e0>
 
 			if (IS_FLAG_MINUS(flags_used)) {
- 800f760:	f016 0f01 	tst.w	r6, #1
- 800f764:	f43f ada1 	beq.w	800f2aa <printk+0x3e>
+ 800f8b0:	f016 0f01 	tst.w	r6, #1
+ 800f8b4:	f43f ada1 	beq.w	800f3fa <printk+0x3e>
 				printk_pad_space(vlen, field_width, &count, info);
- 800f768:	9b01      	ldr	r3, [sp, #4]
- 800f76a:	aa0c      	add	r2, sp, #48	; 0x30
- 800f76c:	4629      	mov	r1, r5
- 800f76e:	4650      	mov	r0, sl
- 800f770:	f7ff fc82 	bl	800f078 <printk_pad_space>
- 800f774:	e599      	b.n	800f2aa <printk+0x3e>
+ 800f8b8:	9b01      	ldr	r3, [sp, #4]
+ 800f8ba:	aa0c      	add	r2, sp, #48	; 0x30
+ 800f8bc:	4629      	mov	r1, r5
+ 800f8be:	4650      	mov	r0, sl
+ 800f8c0:	f7ff fc84 	bl	800f1cc <printk_pad_space>
+ 800f8c4:	e599      	b.n	800f3fa <printk+0x3e>
 			uval = (unsigned int) va_arg(ap, unsigned int);
- 800f776:	f8dd 900c 	ldr.w	r9, [sp, #12]
- 800f77a:	e7ed      	b.n	800f758 <printk+0x4ec>
+ 800f8c6:	f8dd 900c 	ldr.w	r9, [sp, #12]
+ 800f8ca:	e7ed      	b.n	800f8a8 <printk+0x4ec>
 			}
 
 			break;
         //字符型输出
 		case 'c':
 			cval = (char) va_arg(ap, unsigned int);
- 800f77c:	f109 0504 	add.w	r5, r9, #4
+ 800f8cc:	f109 0504 	add.w	r5, r9, #4
 			printk_putc(cval, &count, info);
- 800f780:	9a01      	ldr	r2, [sp, #4]
- 800f782:	a90c      	add	r1, sp, #48	; 0x30
- 800f784:	f899 0000 	ldrb.w	r0, [r9]
- 800f788:	f7ff fc1e 	bl	800efc8 <printk_putc>
+ 800f8d0:	9a01      	ldr	r2, [sp, #4]
+ 800f8d2:	a90c      	add	r1, sp, #48	; 0x30
+ 800f8d4:	f899 0000 	ldrb.w	r0, [r9]
+ 800f8d8:	f7ff fc20 	bl	800f11c <printk_putc>
 			cval = (char) va_arg(ap, unsigned int);
- 800f78c:	46a9      	mov	r9, r5
+ 800f8dc:	46a9      	mov	r9, r5
 			break;
- 800f78e:	e58c      	b.n	800f2aa <printk+0x3e>
+ 800f8de:	e58c      	b.n	800f3fa <printk+0x3e>
 		case 's':
 			sval = (char *) va_arg(ap, char *);
- 800f790:	f109 0a04 	add.w	sl, r9, #4
- 800f794:	f8d9 7000 	ldr.w	r7, [r9]
+ 800f8e0:	f109 0a04 	add.w	sl, r9, #4
+ 800f8e4:	f8d9 7000 	ldr.w	r7, [r9]
 			if (sval) {
- 800f798:	2f00      	cmp	r7, #0
- 800f79a:	d03d      	beq.n	800f818 <printk+0x5ac>
+ 800f8e8:	2f00      	cmp	r7, #0
+ 800f8ea:	d03d      	beq.n	800f968 <printk+0x5ac>
 				vlen = strlen(sval);
- 800f79c:	4638      	mov	r0, r7
- 800f79e:	f7fe f84f 	bl	800d840 <strlen>
- 800f7a2:	4681      	mov	r9, r0
+ 800f8ec:	4638      	mov	r0, r7
+ 800f8ee:	f7fd ffa7 	bl	800d840 <strlen>
+ 800f8f2:	4681      	mov	r9, r0
 				if (!IS_FLAG_MINUS(flags_used)) {
- 800f7a4:	f016 0601 	ands.w	r6, r6, #1
- 800f7a8:	d003      	beq.n	800f7b2 <printk+0x546>
+ 800f8f4:	f016 0601 	ands.w	r6, r6, #1
+ 800f8f8:	d003      	beq.n	800f902 <printk+0x546>
 					printk_pad_space(vlen, field_width, &count, info);
 				}
 				if(precision_width!=0)
- 800f7aa:	f1b8 0f00 	cmp.w	r8, #0
- 800f7ae:	d10d      	bne.n	800f7cc <printk+0x560>
- 800f7b0:	e018      	b.n	800f7e4 <printk+0x578>
+ 800f8fa:	f1b8 0f00 	cmp.w	r8, #0
+ 800f8fe:	d10d      	bne.n	800f91c <printk+0x560>
+ 800f900:	e018      	b.n	800f934 <printk+0x578>
 					printk_pad_space(vlen, field_width, &count, info);
- 800f7b2:	9b01      	ldr	r3, [sp, #4]
- 800f7b4:	aa0c      	add	r2, sp, #48	; 0x30
- 800f7b6:	4629      	mov	r1, r5
- 800f7b8:	f7ff fc5e 	bl	800f078 <printk_pad_space>
- 800f7bc:	e7f5      	b.n	800f7aa <printk+0x53e>
+ 800f902:	9b01      	ldr	r3, [sp, #4]
+ 800f904:	aa0c      	add	r2, sp, #48	; 0x30
+ 800f906:	4629      	mov	r1, r5
+ 800f908:	f7ff fc60 	bl	800f1cc <printk_pad_space>
+ 800f90c:	e7f5      	b.n	800f8fa <printk+0x53e>
 				{
                //【20210407】CL，解决 例如%6.9s字符串打印 陷入死循环的问题
 					while (precision_width>=1&&*sval)
 					{					
 							precision_width--;
- 800f7be:	f108 38ff 	add.w	r8, r8, #4294967295
+ 800f90e:	f108 38ff 	add.w	r8, r8, #4294967295
 							printk_putc(*sval++, &count, info);					
- 800f7c2:	3701      	adds	r7, #1
- 800f7c4:	9a01      	ldr	r2, [sp, #4]
- 800f7c6:	a90c      	add	r1, sp, #48	; 0x30
- 800f7c8:	f7ff fbfe 	bl	800efc8 <printk_putc>
+ 800f912:	3701      	adds	r7, #1
+ 800f914:	9a01      	ldr	r2, [sp, #4]
+ 800f916:	a90c      	add	r1, sp, #48	; 0x30
+ 800f918:	f7ff fc00 	bl	800f11c <printk_putc>
 					while (precision_width>=1&&*sval)
- 800f7cc:	f1b8 0f00 	cmp.w	r8, #0
- 800f7d0:	dd0b      	ble.n	800f7ea <printk+0x57e>
- 800f7d2:	7838      	ldrb	r0, [r7, #0]
- 800f7d4:	2800      	cmp	r0, #0
- 800f7d6:	d1f2      	bne.n	800f7be <printk+0x552>
- 800f7d8:	e007      	b.n	800f7ea <printk+0x57e>
+ 800f91c:	f1b8 0f00 	cmp.w	r8, #0
+ 800f920:	dd0b      	ble.n	800f93a <printk+0x57e>
+ 800f922:	7838      	ldrb	r0, [r7, #0]
+ 800f924:	2800      	cmp	r0, #0
+ 800f926:	d1f2      	bne.n	800f90e <printk+0x552>
+ 800f928:	e007      	b.n	800f93a <printk+0x57e>
 					}
 				}
 				else    //precision_width=0情况
 				{
 					while (*sval)
 					   printk_putc(*sval++, &count, info);
- 800f7da:	3701      	adds	r7, #1
- 800f7dc:	9a01      	ldr	r2, [sp, #4]
- 800f7de:	a90c      	add	r1, sp, #48	; 0x30
- 800f7e0:	f7ff fbf2 	bl	800efc8 <printk_putc>
+ 800f92a:	3701      	adds	r7, #1
+ 800f92c:	9a01      	ldr	r2, [sp, #4]
+ 800f92e:	a90c      	add	r1, sp, #48	; 0x30
+ 800f930:	f7ff fbf4 	bl	800f11c <printk_putc>
 					while (*sval)
- 800f7e4:	7838      	ldrb	r0, [r7, #0]
- 800f7e6:	2800      	cmp	r0, #0
- 800f7e8:	d1f7      	bne.n	800f7da <printk+0x56e>
+ 800f934:	7838      	ldrb	r0, [r7, #0]
+ 800f936:	2800      	cmp	r0, #0
+ 800f938:	d1f7      	bne.n	800f92a <printk+0x56e>
 				}
 				if (IS_FLAG_MINUS(flags_used)) {
- 800f7ea:	b90e      	cbnz	r6, 800f7f0 <printk+0x584>
+ 800f93a:	b90e      	cbnz	r6, 800f940 <printk+0x584>
 			sval = (char *) va_arg(ap, char *);
- 800f7ec:	46d1      	mov	r9, sl
- 800f7ee:	e55c      	b.n	800f2aa <printk+0x3e>
+ 800f93c:	46d1      	mov	r9, sl
+ 800f93e:	e55c      	b.n	800f3fa <printk+0x3e>
 					printk_pad_space(vlen, field_width, &count, info);
- 800f7f0:	9b01      	ldr	r3, [sp, #4]
- 800f7f2:	aa0c      	add	r2, sp, #48	; 0x30
- 800f7f4:	4629      	mov	r1, r5
- 800f7f6:	4648      	mov	r0, r9
- 800f7f8:	f7ff fc3e 	bl	800f078 <printk_pad_space>
+ 800f940:	9b01      	ldr	r3, [sp, #4]
+ 800f942:	aa0c      	add	r2, sp, #48	; 0x30
+ 800f944:	4629      	mov	r1, r5
+ 800f946:	4648      	mov	r0, r9
+ 800f948:	f7ff fc40 	bl	800f1cc <printk_pad_space>
 			sval = (char *) va_arg(ap, char *);
- 800f7fc:	46d1      	mov	r9, sl
- 800f7fe:	e554      	b.n	800f2aa <printk+0x3e>
+ 800f94c:	46d1      	mov	r9, sl
+ 800f94e:	e554      	b.n	800f3fa <printk+0x3e>
 				}
 			}
 			break;
 		case 'n':
 			ivalp = (int *) va_arg(ap, int *);
- 800f800:	f8d9 3000 	ldr.w	r3, [r9]
+ 800f950:	f8d9 3000 	ldr.w	r3, [r9]
 			*ivalp = count;
- 800f804:	9a0c      	ldr	r2, [sp, #48]	; 0x30
- 800f806:	601a      	str	r2, [r3, #0]
+ 800f954:	9a0c      	ldr	r2, [sp, #48]	; 0x30
+ 800f956:	601a      	str	r2, [r3, #0]
 			ivalp = (int *) va_arg(ap, int *);
- 800f808:	f109 0904 	add.w	r9, r9, #4
+ 800f958:	f109 0904 	add.w	r9, r9, #4
 			break;
- 800f80c:	e54d      	b.n	800f2aa <printk+0x3e>
+ 800f95c:	e54d      	b.n	800f3fa <printk+0x3e>
 
 		default:
 			printk_putc(c, &count, info);
- 800f80e:	9a01      	ldr	r2, [sp, #4]
- 800f810:	a90c      	add	r1, sp, #48	; 0x30
- 800f812:	f7ff fbd9 	bl	800efc8 <printk_putc>
+ 800f95e:	9a01      	ldr	r2, [sp, #4]
+ 800f960:	a90c      	add	r1, sp, #48	; 0x30
+ 800f962:	f7ff fbdb 	bl	800f11c <printk_putc>
 			break;
- 800f816:	e548      	b.n	800f2aa <printk+0x3e>
+ 800f966:	e548      	b.n	800f3fa <printk+0x3e>
 			sval = (char *) va_arg(ap, char *);
- 800f818:	46d1      	mov	r9, sl
- 800f81a:	e546      	b.n	800f2aa <printk+0x3e>
+ 800f968:	46d1      	mov	r9, sl
+ 800f96a:	e546      	b.n	800f3fa <printk+0x3e>
 		}
 	}
 	return count;
 }
- 800f81c:	980c      	ldr	r0, [sp, #48]	; 0x30
- 800f81e:	b017      	add	sp, #92	; 0x5c
- 800f820:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
+ 800f96c:	980c      	ldr	r0, [sp, #48]	; 0x30
+ 800f96e:	b017      	add	sp, #92	; 0x5c
+ 800f970:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
 
-0800f824 <myprintf>:
+0800f974 <myprintf>:
 //参数说明：const char *:打印参数字符串：对输入的字符串进行解析并按格式输出
 //       例如： printf("c=%c\n",c); 将c按char型进行输出
 //函数返回：字符串长度
 //======================================================================
 int myprintf(const char *fmt, ...)
 {
- 800f824:	b40f      	push	{r0, r1, r2, r3}
- 800f826:	b500      	push	{lr}
- 800f828:	b085      	sub	sp, #20
+ 800f974:	b40f      	push	{r0, r1, r2, r3}
+ 800f976:	b500      	push	{lr}
+ 800f978:	b085      	sub	sp, #20
 	char * ap;
 	int rvalue;
 	PRINTK_INFO info;
 	info.dest = DEST_CONSOLE;  //宏定义为1
- 800f82a:	2301      	movs	r3, #1
- 800f82c:	9301      	str	r3, [sp, #4]
+ 800f97a:	2301      	movs	r3, #1
+ 800f97c:	9301      	str	r3, [sp, #4]
 	info.func = &out_char;     //调用的串口输出函数
- 800f82e:	4b06      	ldr	r3, [pc, #24]	; (800f848 <myprintf+0x24>)
- 800f830:	9302      	str	r3, [sp, #8]
+ 800f97e:	4b06      	ldr	r3, [pc, #24]	; (800f998 <myprintf+0x24>)
+ 800f980:	9302      	str	r3, [sp, #8]
 	va_start(ap, fmt);  //对ap 进行初始化，让它指向可变参数表里面的第一个参数
 	rvalue = printk(&info, fmt, ap);
- 800f832:	aa06      	add	r2, sp, #24
- 800f834:	f852 1b04 	ldr.w	r1, [r2], #4
- 800f838:	a801      	add	r0, sp, #4
- 800f83a:	f7ff fd17 	bl	800f26c <printk>
+ 800f982:	aa06      	add	r2, sp, #24
+ 800f984:	f852 1b04 	ldr.w	r1, [r2], #4
+ 800f988:	a801      	add	r0, sp, #4
+ 800f98a:	f7ff fd17 	bl	800f3bc <printk>
 
 	va_end(ap);
 
 	return rvalue;
 }
- 800f83e:	b005      	add	sp, #20
- 800f840:	f85d eb04 	ldr.w	lr, [sp], #4
- 800f844:	b004      	add	sp, #16
- 800f846:	4770      	bx	lr
- 800f848:	0800f097 	.word	0x0800f097
+ 800f98e:	b005      	add	sp, #20
+ 800f990:	f85d eb04 	ldr.w	lr, [sp], #4
+ 800f994:	b004      	add	sp, #16
+ 800f996:	4770      	bx	lr
+ 800f998:	0800f1eb 	.word	0x0800f1eb
 
-0800f84c <Reset_Handler>:
+0800f99c <Reset_Handler>:
 
     .section	.text.Reset_Handler
 	.weak	Reset_Handler
 	.type	Reset_Handler, %function
 Reset_Handler:
   ldr   sp, =_estack    /* Atollic update: set stack pointer */
- 800f84c:	f8df d038 	ldr.w	sp, [pc, #56]	; 800f888 <LoopForever+0x2>
+ 800f99c:	f8df d038 	ldr.w	sp, [pc, #56]	; 800f9d8 <LoopForever+0x2>
 
 /* Copy the data segment initializers from flash to SRAM */
   movs	r1, #0
- 800f850:	2100      	movs	r1, #0
+ 800f9a0:	2100      	movs	r1, #0
   b	LoopCopyDataInit
- 800f852:	e003      	b.n	800f85c <LoopCopyDataInit>
+ 800f9a2:	e003      	b.n	800f9ac <LoopCopyDataInit>
 
-0800f854 <CopyDataInit>:
+0800f9a4 <CopyDataInit>:
 
 CopyDataInit:
 	ldr	r3, =_sidata
- 800f854:	4b0d      	ldr	r3, [pc, #52]	; (800f88c <LoopForever+0x6>)
+ 800f9a4:	4b0d      	ldr	r3, [pc, #52]	; (800f9dc <LoopForever+0x6>)
 	ldr	r3, [r3, r1]
- 800f856:	585b      	ldr	r3, [r3, r1]
+ 800f9a6:	585b      	ldr	r3, [r3, r1]
 	str	r3, [r0, r1]
- 800f858:	5043      	str	r3, [r0, r1]
+ 800f9a8:	5043      	str	r3, [r0, r1]
 	adds	r1, r1, #4
- 800f85a:	3104      	adds	r1, #4
+ 800f9aa:	3104      	adds	r1, #4
 
-0800f85c <LoopCopyDataInit>:
+0800f9ac <LoopCopyDataInit>:
 
 LoopCopyDataInit:
 	ldr	r0, =_sdata
- 800f85c:	480c      	ldr	r0, [pc, #48]	; (800f890 <LoopForever+0xa>)
+ 800f9ac:	480c      	ldr	r0, [pc, #48]	; (800f9e0 <LoopForever+0xa>)
 	ldr	r3, =_edata
- 800f85e:	4b0d      	ldr	r3, [pc, #52]	; (800f894 <LoopForever+0xe>)
+ 800f9ae:	4b0d      	ldr	r3, [pc, #52]	; (800f9e4 <LoopForever+0xe>)
 	adds	r2, r0, r1
- 800f860:	1842      	adds	r2, r0, r1
+ 800f9b0:	1842      	adds	r2, r0, r1
 	cmp	r2, r3
- 800f862:	429a      	cmp	r2, r3
+ 800f9b2:	429a      	cmp	r2, r3
 	bcc	CopyDataInit
- 800f864:	d3f6      	bcc.n	800f854 <CopyDataInit>
+ 800f9b4:	d3f6      	bcc.n	800f9a4 <CopyDataInit>
 	ldr	r2, =_sbss
- 800f866:	4a0c      	ldr	r2, [pc, #48]	; (800f898 <LoopForever+0x12>)
+ 800f9b6:	4a0c      	ldr	r2, [pc, #48]	; (800f9e8 <LoopForever+0x12>)
 	b	LoopFillZerobss
- 800f868:	e002      	b.n	800f870 <LoopFillZerobss>
+ 800f9b8:	e002      	b.n	800f9c0 <LoopFillZerobss>
 
-0800f86a <FillZerobss>:
+0800f9ba <FillZerobss>:
 /* Zero fill the bss segment. */
 FillZerobss:
 	movs	r3, #0
- 800f86a:	2300      	movs	r3, #0
+ 800f9ba:	2300      	movs	r3, #0
 	str	r3, [r2], #4
- 800f86c:	f842 3b04 	str.w	r3, [r2], #4
+ 800f9bc:	f842 3b04 	str.w	r3, [r2], #4
 
-0800f870 <LoopFillZerobss>:
+0800f9c0 <LoopFillZerobss>:
 
 LoopFillZerobss:
 	ldr	r3, = _ebss
- 800f870:	4b0a      	ldr	r3, [pc, #40]	; (800f89c <LoopForever+0x16>)
+ 800f9c0:	4b0a      	ldr	r3, [pc, #40]	; (800f9ec <LoopForever+0x16>)
 	cmp	r2, r3
- 800f872:	429a      	cmp	r2, r3
+ 800f9c2:	429a      	cmp	r2, r3
 	bcc	FillZerobss
- 800f874:	d3f9      	bcc.n	800f86a <FillZerobss>
+ 800f9c4:	d3f9      	bcc.n	800f9ba <FillZerobss>
 	
 	//* Call the clock system intitialization function.*/
     bl  SystemInit
- 800f876:	f7fe fe93 	bl	800e5a0 <SystemInit>
+ 800f9c6:	f7fe fdeb 	bl	800e5a0 <SystemInit>
 //  【CC_User 2.1】调用BIOS_API_Init函数
     bl  Vectors_Init    /*【固定】中断继承，.s文件仅修改此处*/
- 800f87a:	f7ff f90d 	bl	800ea98 <Vectors_Init>
+ 800f9ca:	f7ff f881 	bl	800ead0 <Vectors_Init>
 /* Call static constructors */
 //  【CC_User 2.2】1.需调用__libc_init_array，若不执行则C++类构造函数不会执行
 //                2.__libc_init_array函数须在BIOS_API_Init之后执行
 //                3.__libc_init_array函数的具体功能待进一步了解
     bl __libc_init_array
- 800f87e:	f000 f813 	bl	800f8a8 <__libc_init_array>
+ 800f9ce:	f000 f813 	bl	800f9f8 <__libc_init_array>
 /* Call the application's entry point.*/
 	bl	main
- 800f882:	f7fe ff15 	bl	800e6b0 <main>
+ 800f9d2:	f7fe fe6d 	bl	800e6b0 <main>
 
-0800f886 <LoopForever>:
+0800f9d6 <LoopForever>:
 	
 
 
 LoopForever:
     b LoopForever
- 800f886:	e7fe      	b.n	800f886 <LoopForever>
+ 800f9d6:	e7fe      	b.n	800f9d6 <LoopForever>
   ldr   sp, =_estack    /* Atollic update: set stack pointer */
- 800f888:	2000ffff 	.word	0x2000ffff
+ 800f9d8:	2000ffff 	.word	0x2000ffff
 	ldr	r3, =_sidata
- 800f88c:	0800fc90 	.word	0x0800fc90
+ 800f9dc:	0800fe30 	.word	0x0800fe30
 	ldr	r0, =_sdata
- 800f890:	20003000 	.word	0x20003000
+ 800f9e0:	20003000 	.word	0x20003000
 	ldr	r3, =_edata
- 800f894:	20003030 	.word	0x20003030
+ 800f9e4:	20003030 	.word	0x20003030
 	ldr	r2, =_sbss
- 800f898:	20003030 	.word	0x20003030
+ 800f9e8:	20003030 	.word	0x20003030
 	ldr	r3, = _ebss
- 800f89c:	2000385c 	.word	0x2000385c
+ 800f9ec:	20003860 	.word	0x20003860
 
-0800f8a0 <ADC1_IRQHandler>:
+0800f9f0 <ADC1_IRQHandler>:
 */
     .section	.text.Default_Handler,"ax",%progbits
 Default_Handler:
     //Infinite_Loop:
 	//b	Infinite_Loop
 	push  {lr}        //【20200812】修改.s文件，缺省中断，直接返回
- 800f8a0:	b500      	push	{lr}
+ 800f9f0:	b500      	push	{lr}
     nop
- 800f8a2:	bf00      	nop
+ 800f9f2:	bf00      	nop
     pop   {pc}
- 800f8a4:	bd00      	pop	{pc}
+ 800f9f4:	bd00      	pop	{pc}
 	...
 
-0800f8a8 <__libc_init_array>:
- 800f8a8:	b570      	push	{r4, r5, r6, lr}
- 800f8aa:	4e0d      	ldr	r6, [pc, #52]	; (800f8e0 <__libc_init_array+0x38>)
- 800f8ac:	4c0d      	ldr	r4, [pc, #52]	; (800f8e4 <__libc_init_array+0x3c>)
- 800f8ae:	1ba4      	subs	r4, r4, r6
- 800f8b0:	10a4      	asrs	r4, r4, #2
- 800f8b2:	2500      	movs	r5, #0
- 800f8b4:	42a5      	cmp	r5, r4
- 800f8b6:	d109      	bne.n	800f8cc <__libc_init_array+0x24>
- 800f8b8:	4e0b      	ldr	r6, [pc, #44]	; (800f8e8 <__libc_init_array+0x40>)
- 800f8ba:	4c0c      	ldr	r4, [pc, #48]	; (800f8ec <__libc_init_array+0x44>)
- 800f8bc:	f000 f82c 	bl	800f918 <_init>
- 800f8c0:	1ba4      	subs	r4, r4, r6
- 800f8c2:	10a4      	asrs	r4, r4, #2
- 800f8c4:	2500      	movs	r5, #0
- 800f8c6:	42a5      	cmp	r5, r4
- 800f8c8:	d105      	bne.n	800f8d6 <__libc_init_array+0x2e>
- 800f8ca:	bd70      	pop	{r4, r5, r6, pc}
- 800f8cc:	f856 3025 	ldr.w	r3, [r6, r5, lsl #2]
- 800f8d0:	4798      	blx	r3
- 800f8d2:	3501      	adds	r5, #1
- 800f8d4:	e7ee      	b.n	800f8b4 <__libc_init_array+0xc>
- 800f8d6:	f856 3025 	ldr.w	r3, [r6, r5, lsl #2]
- 800f8da:	4798      	blx	r3
- 800f8dc:	3501      	adds	r5, #1
- 800f8de:	e7f2      	b.n	800f8c6 <__libc_init_array+0x1e>
- 800f8e0:	0800fc80 	.word	0x0800fc80
- 800f8e4:	0800fc80 	.word	0x0800fc80
- 800f8e8:	0800fc80 	.word	0x0800fc80
- 800f8ec:	0800fc84 	.word	0x0800fc84
+0800f9f8 <__libc_init_array>:
+ 800f9f8:	b570      	push	{r4, r5, r6, lr}
+ 800f9fa:	4e0d      	ldr	r6, [pc, #52]	; (800fa30 <__libc_init_array+0x38>)
+ 800f9fc:	4c0d      	ldr	r4, [pc, #52]	; (800fa34 <__libc_init_array+0x3c>)
+ 800f9fe:	1ba4      	subs	r4, r4, r6
+ 800fa00:	10a4      	asrs	r4, r4, #2
+ 800fa02:	2500      	movs	r5, #0
+ 800fa04:	42a5      	cmp	r5, r4
+ 800fa06:	d109      	bne.n	800fa1c <__libc_init_array+0x24>
+ 800fa08:	4e0b      	ldr	r6, [pc, #44]	; (800fa38 <__libc_init_array+0x40>)
+ 800fa0a:	4c0c      	ldr	r4, [pc, #48]	; (800fa3c <__libc_init_array+0x44>)
+ 800fa0c:	f000 f82c 	bl	800fa68 <_init>
+ 800fa10:	1ba4      	subs	r4, r4, r6
+ 800fa12:	10a4      	asrs	r4, r4, #2
+ 800fa14:	2500      	movs	r5, #0
+ 800fa16:	42a5      	cmp	r5, r4
+ 800fa18:	d105      	bne.n	800fa26 <__libc_init_array+0x2e>
+ 800fa1a:	bd70      	pop	{r4, r5, r6, pc}
+ 800fa1c:	f856 3025 	ldr.w	r3, [r6, r5, lsl #2]
+ 800fa20:	4798      	blx	r3
+ 800fa22:	3501      	adds	r5, #1
+ 800fa24:	e7ee      	b.n	800fa04 <__libc_init_array+0xc>
+ 800fa26:	f856 3025 	ldr.w	r3, [r6, r5, lsl #2]
+ 800fa2a:	4798      	blx	r3
+ 800fa2c:	3501      	adds	r5, #1
+ 800fa2e:	e7f2      	b.n	800fa16 <__libc_init_array+0x1e>
+ 800fa30:	0800fe20 	.word	0x0800fe20
+ 800fa34:	0800fe20 	.word	0x0800fe20
+ 800fa38:	0800fe20 	.word	0x0800fe20
+ 800fa3c:	0800fe24 	.word	0x0800fe24
 
-0800f8f0 <memcpy>:
- 800f8f0:	b510      	push	{r4, lr}
- 800f8f2:	1e43      	subs	r3, r0, #1
- 800f8f4:	440a      	add	r2, r1
- 800f8f6:	4291      	cmp	r1, r2
- 800f8f8:	d100      	bne.n	800f8fc <memcpy+0xc>
- 800f8fa:	bd10      	pop	{r4, pc}
- 800f8fc:	f811 4b01 	ldrb.w	r4, [r1], #1
- 800f900:	f803 4f01 	strb.w	r4, [r3, #1]!
- 800f904:	e7f7      	b.n	800f8f6 <memcpy+0x6>
+0800fa40 <memcpy>:
+ 800fa40:	b510      	push	{r4, lr}
+ 800fa42:	1e43      	subs	r3, r0, #1
+ 800fa44:	440a      	add	r2, r1
+ 800fa46:	4291      	cmp	r1, r2
+ 800fa48:	d100      	bne.n	800fa4c <memcpy+0xc>
+ 800fa4a:	bd10      	pop	{r4, pc}
+ 800fa4c:	f811 4b01 	ldrb.w	r4, [r1], #1
+ 800fa50:	f803 4f01 	strb.w	r4, [r3, #1]!
+ 800fa54:	e7f7      	b.n	800fa46 <memcpy+0x6>
 
-0800f906 <memset>:
- 800f906:	4402      	add	r2, r0
- 800f908:	4603      	mov	r3, r0
- 800f90a:	4293      	cmp	r3, r2
- 800f90c:	d100      	bne.n	800f910 <memset+0xa>
- 800f90e:	4770      	bx	lr
- 800f910:	f803 1b01 	strb.w	r1, [r3], #1
- 800f914:	e7f9      	b.n	800f90a <memset+0x4>
+0800fa56 <memset>:
+ 800fa56:	4402      	add	r2, r0
+ 800fa58:	4603      	mov	r3, r0
+ 800fa5a:	4293      	cmp	r3, r2
+ 800fa5c:	d100      	bne.n	800fa60 <memset+0xa>
+ 800fa5e:	4770      	bx	lr
+ 800fa60:	f803 1b01 	strb.w	r1, [r3], #1
+ 800fa64:	e7f9      	b.n	800fa5a <memset+0x4>
 	...
 
-0800f918 <_init>:
- 800f918:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
- 800f91a:	bf00      	nop
- 800f91c:	bcf8      	pop	{r3, r4, r5, r6, r7}
- 800f91e:	bc08      	pop	{r3}
- 800f920:	469e      	mov	lr, r3
- 800f922:	4770      	bx	lr
+0800fa68 <_init>:
+ 800fa68:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 800fa6a:	bf00      	nop
+ 800fa6c:	bcf8      	pop	{r3, r4, r5, r6, r7}
+ 800fa6e:	bc08      	pop	{r3}
+ 800fa70:	469e      	mov	lr, r3
+ 800fa72:	4770      	bx	lr
 
-0800f924 <_fini>:
- 800f924:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
- 800f926:	bf00      	nop
- 800f928:	bcf8      	pop	{r3, r4, r5, r6, r7}
- 800f92a:	bc08      	pop	{r3}
- 800f92c:	469e      	mov	lr, r3
- 800f92e:	4770      	bx	lr
+0800fa74 <_fini>:
+ 800fa74:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 800fa76:	bf00      	nop
+ 800fa78:	bcf8      	pop	{r3, r4, r5, r6, r7}
+ 800fa7a:	bc08      	pop	{r3}
+ 800fa7c:	469e      	mov	lr, r3
+ 800fa7e:	4770      	bx	lr

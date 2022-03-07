@@ -19,7 +19,7 @@ void thread_rulechoose()
         printf("接收到事件信号\n");
         if(recvedstate==RULE_CHOOSE_EVENT)  //如果接收完成且正确
     	{
-    		if(gcRecvBuf[7]==0x90) //命令字为90，代表“事件功能”
+    		if(gcRecvBuf[7]==EVENT_CODE) //命令字为90，代表“事件功能”
             {
                 if(gcRecvBuf[8]==0x01)//命令参数为01，代表启动该功能，传递事件信号把小灯线程从阻塞队列移到就绪队列
                 {
@@ -37,23 +37,23 @@ void thread_rulechoose()
 
             }
 
-            if(gcRecvBuf[7]==0x91) //命令字为91，代表“消息队列功能”
+            if(gcRecvBuf[7]==MESSAGE_CODE) //命令字为91，代表“消息队列功能”
             {
                 //取出收到的数据作为一个消息
-			for(int i=0;i<9;i++)
-				recvData[i] = gcRecvBuf[i];
-		     //将该消息存放到消息队列
+			    for(int i=0;i<8;i++)
+				recvData[i] = gcRecvBuf[i+9];
+		        //将该消息存放到消息队列
 			    rt_mq_send(mq,recvData,sizeof(recvData));
 		    }
 
             
 
-            if(gcRecvBuf[7]==0x92) //命令字为90，代表“信号量功能”
+            if(gcRecvBuf[7]==SEM_CODE) //命令字为90，代表“信号量功能”
             {
 
             }
 
-            if(gcRecvBuf[7]==0x93) //命令字为90，代表“互斥量功能”
+            if(gcRecvBuf[7]==MUTEX_CODE) //命令字为90，代表“互斥量功能”
             {
 
             }

@@ -21,10 +21,11 @@ void thread_greenlight()
         rt_event_recv(EventWord,GREEN_LIGHT_EVENT,RT_EVENT_FLAG_OR|RT_EVENT_FLAG_CLEAR,RT_WAITING_FOREVER,&recvedstate);
     	if(recvedstate==GREEN_LIGHT_EVENT)  //如果接收完成且正确
     	{
-    		uart_send_string(UART_User,(void *)"在绿灯线程中，收到绿灯事件，绿灯反转\r\n");
-            gpio_reverse(LIGHT_GREEN);     //转换绿灯状态
+
 			if(grt_flag==1)
 			{
+				uart_send_string(UART_User,(void *)"在绿灯线程中，收到绿灯事件，绿灯反转\r\n");
+                gpio_reverse(LIGHT_GREEN);     //转换绿灯状态
 				rt_event_send(EventWord,BLUE_LIGHT_EVENT);
 			}
     	}

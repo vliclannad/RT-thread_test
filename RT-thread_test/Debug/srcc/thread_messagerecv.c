@@ -22,8 +22,8 @@ void thread_messagerecv()
 
 		if(recvState==0)  //若获得消息
        	{
-			cnt = rt_malloc(1);//申请内存  
-    	   	rt_sprintf(cnt,"%d",mq->entry);//entry队列中的消息索引
+			cnt = rt_malloc(1);  
+    	   	rt_sprintf(cnt,"%d",mq->entry);
     	   	uart_send_string(UART_User,(void*)"消息队列中消息数=");
     	   	uart_send_string(UART_User,(uint8_t *)cnt);
     	   	uart_send_string(UART_User,(void *) "\r\n");
