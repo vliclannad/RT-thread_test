@@ -38,6 +38,7 @@ d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none
 Allocating common symbols
 Common symbol       size              file
 
+SP                  0x4               ./obj/main.o
 grt_flag            0x2               ./obj/main.o
 component_fun       0x4               ./obj/gec.o
 mq                  0x4               ./obj/main.o
@@ -276,6 +277,87 @@ Discarded input sections
  .debug_macro   0x00000000     0x1018 ./obj/system_stm32l4xx.o
  .debug_macro   0x00000000    0x150d6 ./obj/system_stm32l4xx.o
  .debug_macro   0x00000000       0x43 ./obj/system_stm32l4xx.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .group         0x00000000        0xc ./obj/thread_SPThread2.o
+ .text          0x00000000        0x0 ./obj/thread_SPThread2.o
+ .data          0x00000000        0x0 ./obj/thread_SPThread2.o
+ .bss           0x00000000        0x0 ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000      0xa5a ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000       0x2e ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000       0x28 ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000       0x22 ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000       0x87 ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000       0x51 ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000       0xef ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000       0x6a ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000      0x1df ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000       0x1c ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000       0x22 ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000       0xd8 ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000     0x1018 ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000    0x150d6 ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000       0x43 ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000       0x34 ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000       0x3a ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000       0x46 ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000       0x17 ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000       0x3c ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000       0x9c ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000      0x174 ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000       0x52 ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000       0x1f ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000       0x43 ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000       0x20 ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000      0x1a3 ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000      0x32a ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000       0x10 ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000       0x35 ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000       0x28 ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000       0x9a ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000       0x70 ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000       0x3a ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000       0x34 ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000      0x104 ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000      0x15a ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000       0x4c ./obj/thread_SPThread2.o
+ .debug_macro   0x00000000       0x22 ./obj/thread_SPThread2.o
  .group         0x00000000        0xc ./obj/thread_bluelight.o
  .group         0x00000000        0xc ./obj/thread_bluelight.o
  .group         0x00000000        0xc ./obj/thread_bluelight.o
@@ -353,9 +435,9 @@ Discarded input sections
  .debug_macro   0x00000000       0x70 ./obj/thread_bluelight.o
  .debug_macro   0x00000000       0x3a ./obj/thread_bluelight.o
  .debug_macro   0x00000000       0x34 ./obj/thread_bluelight.o
- .debug_macro   0x00000000      0x102 ./obj/thread_bluelight.o
+ .debug_macro   0x00000000      0x104 ./obj/thread_bluelight.o
  .debug_macro   0x00000000      0x15a ./obj/thread_bluelight.o
- .debug_macro   0x00000000       0x34 ./obj/thread_bluelight.o
+ .debug_macro   0x00000000       0x4c ./obj/thread_bluelight.o
  .debug_macro   0x00000000       0x22 ./obj/thread_bluelight.o
  .group         0x00000000        0xc ./obj/main.o
  .group         0x00000000        0xc ./obj/main.o
@@ -434,9 +516,90 @@ Discarded input sections
  .debug_macro   0x00000000       0x70 ./obj/main.o
  .debug_macro   0x00000000       0x3a ./obj/main.o
  .debug_macro   0x00000000       0x34 ./obj/main.o
- .debug_macro   0x00000000      0x102 ./obj/main.o
+ .debug_macro   0x00000000      0x104 ./obj/main.o
  .debug_macro   0x00000000      0x15a ./obj/main.o
- .debug_macro   0x00000000       0x34 ./obj/main.o
+ .debug_macro   0x00000000       0x4c ./obj/main.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .group         0x00000000        0xc ./obj/thread_SPThread3.o
+ .text          0x00000000        0x0 ./obj/thread_SPThread3.o
+ .data          0x00000000        0x0 ./obj/thread_SPThread3.o
+ .bss           0x00000000        0x0 ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000      0xa5a ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000       0x2e ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000       0x28 ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000       0x22 ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000       0x87 ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000       0x51 ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000       0xef ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000       0x6a ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000      0x1df ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000       0x1c ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000       0x22 ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000       0xd8 ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000     0x1018 ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000    0x150d6 ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000       0x43 ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000       0x34 ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000       0x3a ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000       0x46 ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000       0x17 ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000       0x3c ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000       0x9c ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000      0x174 ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000       0x52 ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000       0x1f ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000       0x43 ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000       0x20 ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000      0x1a3 ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000      0x32a ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000       0x10 ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000       0x35 ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000       0x28 ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000       0x9a ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000       0x70 ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000       0x3a ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000       0x34 ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000      0x104 ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000      0x15a ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000       0x4c ./obj/thread_SPThread3.o
+ .debug_macro   0x00000000       0x22 ./obj/thread_SPThread3.o
  .group         0x00000000        0xc ./obj/flash.o
  .group         0x00000000        0xc ./obj/flash.o
  .group         0x00000000        0xc ./obj/flash.o
@@ -668,9 +831,9 @@ Discarded input sections
  .debug_macro   0x00000000       0x70 ./obj/thread_rulechoose.o
  .debug_macro   0x00000000       0x3a ./obj/thread_rulechoose.o
  .debug_macro   0x00000000       0x34 ./obj/thread_rulechoose.o
- .debug_macro   0x00000000      0x102 ./obj/thread_rulechoose.o
+ .debug_macro   0x00000000      0x104 ./obj/thread_rulechoose.o
  .debug_macro   0x00000000      0x15a ./obj/thread_rulechoose.o
- .debug_macro   0x00000000       0x34 ./obj/thread_rulechoose.o
+ .debug_macro   0x00000000       0x4c ./obj/thread_rulechoose.o
  .debug_macro   0x00000000       0x22 ./obj/thread_rulechoose.o
  .group         0x00000000        0xc ./obj/NumToStr.o
  .group         0x00000000        0xc ./obj/NumToStr.o
@@ -766,6 +929,87 @@ Discarded input sections
  .ARM.attributes
                 0x00000000       0x39 ./obj/NumToStr.o
  COMMON         0x00000000       0xc8 ./obj/NumToStr.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .group         0x00000000        0xc ./obj/thread_SPThread1.o
+ .text          0x00000000        0x0 ./obj/thread_SPThread1.o
+ .data          0x00000000        0x0 ./obj/thread_SPThread1.o
+ .bss           0x00000000        0x0 ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000      0xa5a ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000       0x2e ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000       0x28 ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000       0x22 ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000       0x87 ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000       0x51 ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000       0xef ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000       0x6a ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000      0x1df ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000       0x1c ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000       0x22 ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000       0xd8 ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000     0x1018 ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000    0x150d6 ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000       0x43 ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000       0x34 ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000       0x3a ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000       0x46 ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000       0x17 ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000       0x3c ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000       0x9c ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000      0x174 ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000       0x52 ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000       0x1f ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000       0x43 ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000       0x20 ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000      0x1a3 ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000      0x32a ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000       0x10 ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000       0x35 ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000       0x28 ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000       0x9a ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000       0x70 ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000       0x3a ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000       0x34 ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000      0x104 ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000      0x15a ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000       0x4c ./obj/thread_SPThread1.o
+ .debug_macro   0x00000000       0x22 ./obj/thread_SPThread1.o
  .group         0x00000000        0xc ./obj/gec.o
  .group         0x00000000        0xc ./obj/gec.o
  .group         0x00000000        0xc ./obj/gec.o
@@ -847,9 +1091,9 @@ Discarded input sections
  .debug_macro   0x00000000       0x9a ./obj/gec.o
  .debug_macro   0x00000000       0x70 ./obj/gec.o
  .debug_macro   0x00000000       0x3a ./obj/gec.o
- .debug_macro   0x00000000      0x102 ./obj/gec.o
+ .debug_macro   0x00000000      0x104 ./obj/gec.o
  .debug_macro   0x00000000      0x15a ./obj/gec.o
- .debug_macro   0x00000000       0x34 ./obj/gec.o
+ .debug_macro   0x00000000       0x4c ./obj/gec.o
  .debug_macro   0x00000000       0x22 ./obj/gec.o
  .debug_macro   0x00000000       0x34 ./obj/gec.o
  .group         0x00000000        0xc ./obj/uart.o
@@ -1000,9 +1244,9 @@ Discarded input sections
  .debug_macro   0x00000000       0x70 ./obj/threadauto_appinit.o
  .debug_macro   0x00000000       0x3a ./obj/threadauto_appinit.o
  .debug_macro   0x00000000       0x34 ./obj/threadauto_appinit.o
- .debug_macro   0x00000000      0x102 ./obj/threadauto_appinit.o
+ .debug_macro   0x00000000      0x104 ./obj/threadauto_appinit.o
  .debug_macro   0x00000000      0x15a ./obj/threadauto_appinit.o
- .debug_macro   0x00000000       0x34 ./obj/threadauto_appinit.o
+ .debug_macro   0x00000000       0x4c ./obj/threadauto_appinit.o
  .debug_macro   0x00000000       0x22 ./obj/threadauto_appinit.o
  .group         0x00000000        0xc ./obj/isr.o
  .group         0x00000000        0xc ./obj/isr.o
@@ -1081,9 +1325,9 @@ Discarded input sections
  .debug_macro   0x00000000       0x70 ./obj/isr.o
  .debug_macro   0x00000000       0x3a ./obj/isr.o
  .debug_macro   0x00000000       0x34 ./obj/isr.o
- .debug_macro   0x00000000      0x102 ./obj/isr.o
+ .debug_macro   0x00000000      0x104 ./obj/isr.o
  .debug_macro   0x00000000      0x15a ./obj/isr.o
- .debug_macro   0x00000000       0x34 ./obj/isr.o
+ .debug_macro   0x00000000       0x4c ./obj/isr.o
  .debug_macro   0x00000000       0x22 ./obj/isr.o
  .group         0x00000000        0xc ./obj/thread_messagerecv.o
  .group         0x00000000        0xc ./obj/thread_messagerecv.o
@@ -1162,9 +1406,9 @@ Discarded input sections
  .debug_macro   0x00000000       0x70 ./obj/thread_messagerecv.o
  .debug_macro   0x00000000       0x3a ./obj/thread_messagerecv.o
  .debug_macro   0x00000000       0x34 ./obj/thread_messagerecv.o
- .debug_macro   0x00000000      0x102 ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000      0x104 ./obj/thread_messagerecv.o
  .debug_macro   0x00000000      0x15a ./obj/thread_messagerecv.o
- .debug_macro   0x00000000       0x34 ./obj/thread_messagerecv.o
+ .debug_macro   0x00000000       0x4c ./obj/thread_messagerecv.o
  .debug_macro   0x00000000       0x22 ./obj/thread_messagerecv.o
  .group         0x00000000        0xc ./obj/printf.o
  .group         0x00000000        0xc ./obj/printf.o
@@ -1328,12 +1572,15 @@ LOAD d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm
 LOAD ./obj/emuart.o
 LOAD ./obj/thread_greenlight.o
 LOAD ./obj/system_stm32l4xx.o
+LOAD ./obj/thread_SPThread2.o
 LOAD ./obj/thread_bluelight.o
 LOAD ./obj/main.o
+LOAD ./obj/thread_SPThread3.o
 LOAD ./obj/flash.o
 LOAD ./obj/gpio.o
 LOAD ./obj/thread_rulechoose.o
 LOAD ./obj/NumToStr.o
+LOAD ./obj/thread_SPThread1.o
 LOAD ./obj/gec.o
 LOAD ./obj/uart.o
 LOAD ./obj/threadauto_appinit.o
@@ -1382,7 +1629,7 @@ LOAD d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv
                 0x0800d190                . = ALIGN (0x8)
  *fill*         0x0800d18c        0x4 
 
-.text           0x0800d800     0x2280
+.text           0x0800d800     0x2548
                 0x0800d800                . = ALIGN (0x8)
  *(.text)
  .text          0x0800d800       0x40 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
@@ -1448,290 +1695,309 @@ LOAD d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv
  .text.SystemInit
                 0x0800e5a0       0x50 ./obj/system_stm32l4xx.o
                 0x0800e5a0                SystemInit
+ .text.thread_SPThread2
+                0x0800e5f0       0x90 ./obj/thread_SPThread2.o
+                0x0800e5f0                thread_SPThread2
  .text.thread_bluelight
-                0x0800e5f0       0xc0 ./obj/thread_bluelight.o
-                0x0800e5f0                thread_bluelight
- .text.main     0x0800e6b0       0x1c ./obj/main.o
-                0x0800e6b0                main
+                0x0800e680       0xc0 ./obj/thread_bluelight.o
+                0x0800e680                thread_bluelight
+ .text.main     0x0800e740       0x1c ./obj/main.o
+                0x0800e740                main
+ .text.thread_SPThread3
+                0x0800e75c       0xbc ./obj/thread_SPThread3.o
+                0x0800e75c                thread_SPThread3
  .text.flash_erase
-                0x0800e6cc       0x58 ./obj/flash.o
-                0x0800e6cc                flash_erase
+                0x0800e818       0x58 ./obj/flash.o
+                0x0800e818                flash_erase
  .text.flash_read_logic
-                0x0800e724       0x12 ./obj/flash.o
-                0x0800e724                flash_read_logic
+                0x0800e870       0x12 ./obj/flash.o
+                0x0800e870                flash_read_logic
  .text.flash_read_physical
-                0x0800e736        0x8 ./obj/flash.o
-                0x0800e736                flash_read_physical
+                0x0800e882        0x8 ./obj/flash.o
+                0x0800e882                flash_read_physical
  .text.flash_isempty
-                0x0800e73e       0x3e ./obj/flash.o
-                0x0800e73e                flash_isempty
+                0x0800e88a       0x3e ./obj/flash.o
+                0x0800e88a                flash_isempty
  .text.flash_write_DoubleWord
-                0x0800e77c       0x38 ./obj/flash.o
-                0x0800e77c                flash_write_DoubleWord
+                0x0800e8c8       0x38 ./obj/flash.o
+                0x0800e8c8                flash_write_DoubleWord
  .text.flash_Best
-                0x0800e7b4       0x6c ./obj/flash.o
-                0x0800e7b4                flash_Best
+                0x0800e900       0x6c ./obj/flash.o
+                0x0800e900                flash_Best
  .text.flash_write
-                0x0800e820       0x9c ./obj/flash.o
-                0x0800e820                flash_write
+                0x0800e96c       0x9c ./obj/flash.o
+                0x0800e96c                flash_write
  .text.flash_write_physical
-                0x0800e8bc       0x2c ./obj/flash.o
-                0x0800e8bc                flash_write_physical
+                0x0800ea08       0x2c ./obj/flash.o
+                0x0800ea08                flash_write_physical
  .text.gpio_get_port_pin
-                0x0800e8e8        0x8 ./obj/gpio.o
-                0x0800e8e8                gpio_get_port_pin
+                0x0800ea34        0x8 ./obj/gpio.o
+                0x0800ea34                gpio_get_port_pin
  .text.gpio_set
-                0x0800e8f0       0x4c ./obj/gpio.o
-                0x0800e8f0                gpio_set
+                0x0800ea3c       0x4c ./obj/gpio.o
+                0x0800ea3c                gpio_set
  .text.gpio_init
-                0x0800e93c       0x70 ./obj/gpio.o
-                0x0800e93c                gpio_init
+                0x0800ea88       0x70 ./obj/gpio.o
+                0x0800ea88                gpio_init
  .text.gpio_reverse
-                0x0800e9ac       0x48 ./obj/gpio.o
-                0x0800e9ac                gpio_reverse
+                0x0800eaf8       0x48 ./obj/gpio.o
+                0x0800eaf8                gpio_reverse
  .text.thread_rulechoose
-                0x0800e9f4       0xdc ./obj/thread_rulechoose.o
-                0x0800e9f4                thread_rulechoose
+                0x0800eb40      0x11c ./obj/thread_rulechoose.o
+                0x0800eb40                thread_rulechoose
+ .text.thread_SPThread1
+                0x0800ec5c       0x90 ./obj/thread_SPThread1.o
+                0x0800ec5c                thread_SPThread1
  .text.Vectors_Init
-                0x0800ead0       0xa4 ./obj/gec.o
-                0x0800ead0                Vectors_Init
+                0x0800ecec       0xa4 ./obj/gec.o
+                0x0800ecec                Vectors_Init
  .text.uart_is_uartNo
-                0x0800eb74       0x10 ./obj/uart.o
-                0x0800eb74                uart_is_uartNo
+                0x0800ed90       0x10 ./obj/uart.o
+                0x0800ed90                uart_is_uartNo
  .text.uart_init
-                0x0800eb84      0x14c ./obj/uart.o
-                0x0800eb84                uart_init
+                0x0800eda0      0x14c ./obj/uart.o
+                0x0800eda0                uart_init
  .text.uart_send1
-                0x0800ecd0       0x48 ./obj/uart.o
-                0x0800ecd0                uart_send1
+                0x0800eeec       0x48 ./obj/uart.o
+                0x0800eeec                uart_send1
  .text.uart_sendN
-                0x0800ed18       0x34 ./obj/uart.o
-                0x0800ed18                uart_sendN
+                0x0800ef34       0x34 ./obj/uart.o
+                0x0800ef34                uart_sendN
  .text.uart_send_string
-                0x0800ed4c       0x2a ./obj/uart.o
-                0x0800ed4c                uart_send_string
- *fill*         0x0800ed76        0x2 
+                0x0800ef68       0x2a ./obj/uart.o
+                0x0800ef68                uart_send_string
+ *fill*         0x0800ef92        0x2 
  .text.uart_re1
-                0x0800ed78       0x50 ./obj/uart.o
-                0x0800ed78                uart_re1
+                0x0800ef94       0x50 ./obj/uart.o
+                0x0800ef94                uart_re1
  .text.uart_enable_re_int
-                0x0800edc8       0x40 ./obj/uart.o
-                0x0800edc8                uart_enable_re_int
+                0x0800efe4       0x40 ./obj/uart.o
+                0x0800efe4                uart_enable_re_int
  .text.uart_get_re_int
-                0x0800ee08       0x38 ./obj/uart.o
-                0x0800ee08                uart_get_re_int
+                0x0800f024       0x38 ./obj/uart.o
+                0x0800f024                uart_get_re_int
  .text.app_init
-                0x0800ee40      0x16c ./obj/threadauto_appinit.o
-                0x0800ee40                app_init
+                0x0800f05c      0x214 ./obj/threadauto_appinit.o
+                0x0800f05c                app_init
  .text.useremuart_frame
-                0x0800efac       0x68 ./obj/isr.o
-                0x0800efac                useremuart_frame
+                0x0800f270       0x68 ./obj/isr.o
+                0x0800f270                useremuart_frame
  .text.USART2_IRQHandler
-                0x0800f014       0x64 ./obj/isr.o
-                0x0800f014                USART2_IRQHandler
+                0x0800f2d8       0x64 ./obj/isr.o
+                0x0800f2d8                USART2_IRQHandler
  .text.thread_messagerecv
-                0x0800f078       0xa4 ./obj/thread_messagerecv.o
-                0x0800f078                thread_messagerecv
+                0x0800f33c       0xa4 ./obj/thread_messagerecv.o
+                0x0800f33c                thread_messagerecv
  .text.printk_putc
-                0x0800f11c       0x2a ./obj/printf.o
+                0x0800f3e0       0x2a ./obj/printf.o
  .text.printk_mknumstr
-                0x0800f146       0x68 ./obj/printf.o
+                0x0800f40a       0x68 ./obj/printf.o
  .text.printk_pad_zero
-                0x0800f1ae       0x1e ./obj/printf.o
+                0x0800f472       0x1e ./obj/printf.o
  .text.printk_pad_space
-                0x0800f1cc       0x1e ./obj/printf.o
+                0x0800f490       0x1e ./obj/printf.o
  .text.out_char
-                0x0800f1ea        0xc ./obj/printf.o
-                0x0800f1ea                out_char
- *fill*         0x0800f1f6        0x2 
+                0x0800f4ae        0xc ./obj/printf.o
+                0x0800f4ae                out_char
+ *fill*         0x0800f4ba        0x6 
  .text.printk_mkfloatstr
-                0x0800f1f8      0x1c4 ./obj/printf.o
-                0x0800f1f8                printk_mkfloatstr
- .text.printk   0x0800f3bc      0x5b8 ./obj/printf.o
-                0x0800f3bc                printk
+                0x0800f4c0      0x1c4 ./obj/printf.o
+                0x0800f4c0                printk_mkfloatstr
+ .text.printk   0x0800f684      0x5b8 ./obj/printf.o
+                0x0800f684                printk
  .text.myprintf
-                0x0800f974       0x28 ./obj/printf.o
-                0x0800f974                myprintf
+                0x0800fc3c       0x28 ./obj/printf.o
+                0x0800fc3c                myprintf
  .text.Reset_Handler
-                0x0800f99c       0x54 ./obj/startup_stm32l431rctx.o
-                0x0800f99c                Reset_Handler
+                0x0800fc64       0x54 ./obj/startup_stm32l431rctx.o
+                0x0800fc64                Reset_Handler
  .text.Default_Handler
-                0x0800f9f0        0x6 ./obj/startup_stm32l431rctx.o
-                0x0800f9f0                RTC_Alarm_IRQHandler
-                0x0800f9f0                EXTI2_IRQHandler
-                0x0800f9f0                DebugMon_Handler
-                0x0800f9f0                TIM1_CC_IRQHandler
-                0x0800f9f0                TSC_IRQHandler
-                0x0800f9f0                HardFault_Handler
-                0x0800f9f0                SysTick_Handler
-                0x0800f9f0                TAMP_STAMP_IRQHandler
-                0x0800f9f0                PendSV_Handler
-                0x0800f9f0                NMI_Handler
-                0x0800f9f0                EXTI3_IRQHandler
-                0x0800f9f0                LPTIM2_IRQHandler
-                0x0800f9f0                I2C3_ER_IRQHandler
-                0x0800f9f0                EXTI0_IRQHandler
-                0x0800f9f0                I2C2_EV_IRQHandler
-                0x0800f9f0                CAN1_RX0_IRQHandler
-                0x0800f9f0                FPU_IRQHandler
-                0x0800f9f0                TIM1_UP_TIM16_IRQHandler
-                0x0800f9f0                UsageFault_Handler
-                0x0800f9f0                SPI1_IRQHandler
-                0x0800f9f0                TIM6_DAC_IRQHandler
-                0x0800f9f0                DMA2_Channel2_IRQHandler
-                0x0800f9f0                DMA1_Channel4_IRQHandler
-                0x0800f9f0                ADC1_IRQHandler
-                0x0800f9f0                USART3_IRQHandler
-                0x0800f9f0                DMA1_Channel7_IRQHandler
-                0x0800f9f0                CAN1_RX1_IRQHandler
-                0x0800f9f0                DMA2_Channel1_IRQHandler
-                0x0800f9f0                QUADSPI_IRQHandler
-                0x0800f9f0                I2C1_EV_IRQHandler
-                0x0800f9f0                DMA1_Channel6_IRQHandler
-                0x0800f9f0                DMA2_Channel4_IRQHandler
-                0x0800f9f0                RCC_IRQHandler
-                0x0800f9f0                TIM1_TRG_COM_IRQHandler
-                0x0800f9f0                DMA1_Channel1_IRQHandler
-                0x0800f9f0                Default_Handler
-                0x0800f9f0                DMA2_Channel7_IRQHandler
-                0x0800f9f0                EXTI15_10_IRQHandler
-                0x0800f9f0                TIM7_IRQHandler
-                0x0800f9f0                SDMMC1_IRQHandler
-                0x0800f9f0                I2C3_EV_IRQHandler
-                0x0800f9f0                EXTI9_5_IRQHandler
-                0x0800f9f0                RTC_WKUP_IRQHandler
-                0x0800f9f0                PVD_PVM_IRQHandler
-                0x0800f9f0                SPI2_IRQHandler
-                0x0800f9f0                MemManage_Handler
-                0x0800f9f0                CAN1_TX_IRQHandler
-                0x0800f9f0                SVC_Handler
-                0x0800f9f0                DMA2_Channel5_IRQHandler
-                0x0800f9f0                CRS_IRQHandler
-                0x0800f9f0                DMA1_Channel5_IRQHandler
-                0x0800f9f0                EXTI4_IRQHandler
-                0x0800f9f0                RNG_IRQHandler
-                0x0800f9f0                DMA1_Channel3_IRQHandler
-                0x0800f9f0                COMP_IRQHandler
-                0x0800f9f0                WWDG_IRQHandler
-                0x0800f9f0                LPUART1_IRQHandler
-                0x0800f9f0                DMA2_Channel6_IRQHandler
-                0x0800f9f0                TIM2_IRQHandler
-                0x0800f9f0                EXTI1_IRQHandler
-                0x0800f9f0                I2C2_ER_IRQHandler
-                0x0800f9f0                DMA1_Channel2_IRQHandler
-                0x0800f9f0                CAN1_SCE_IRQHandler
-                0x0800f9f0                FLASH_IRQHandler
-                0x0800f9f0                BusFault_Handler
-                0x0800f9f0                USART1_IRQHandler
-                0x0800f9f0                SPI3_IRQHandler
-                0x0800f9f0                I2C1_ER_IRQHandler
-                0x0800f9f0                SWPMI1_IRQHandler
-                0x0800f9f0                LPTIM1_IRQHandler
-                0x0800f9f0                SAI1_IRQHandler
-                0x0800f9f0                DMA2_Channel3_IRQHandler
-                0x0800f9f0                TIM1_BRK_TIM15_IRQHandler
- *fill*         0x0800f9f6        0x2 
+                0x0800fcb8        0x6 ./obj/startup_stm32l431rctx.o
+                0x0800fcb8                RTC_Alarm_IRQHandler
+                0x0800fcb8                EXTI2_IRQHandler
+                0x0800fcb8                DebugMon_Handler
+                0x0800fcb8                TIM1_CC_IRQHandler
+                0x0800fcb8                TSC_IRQHandler
+                0x0800fcb8                HardFault_Handler
+                0x0800fcb8                SysTick_Handler
+                0x0800fcb8                TAMP_STAMP_IRQHandler
+                0x0800fcb8                PendSV_Handler
+                0x0800fcb8                NMI_Handler
+                0x0800fcb8                EXTI3_IRQHandler
+                0x0800fcb8                LPTIM2_IRQHandler
+                0x0800fcb8                I2C3_ER_IRQHandler
+                0x0800fcb8                EXTI0_IRQHandler
+                0x0800fcb8                I2C2_EV_IRQHandler
+                0x0800fcb8                CAN1_RX0_IRQHandler
+                0x0800fcb8                FPU_IRQHandler
+                0x0800fcb8                TIM1_UP_TIM16_IRQHandler
+                0x0800fcb8                UsageFault_Handler
+                0x0800fcb8                SPI1_IRQHandler
+                0x0800fcb8                TIM6_DAC_IRQHandler
+                0x0800fcb8                DMA2_Channel2_IRQHandler
+                0x0800fcb8                DMA1_Channel4_IRQHandler
+                0x0800fcb8                ADC1_IRQHandler
+                0x0800fcb8                USART3_IRQHandler
+                0x0800fcb8                DMA1_Channel7_IRQHandler
+                0x0800fcb8                CAN1_RX1_IRQHandler
+                0x0800fcb8                DMA2_Channel1_IRQHandler
+                0x0800fcb8                QUADSPI_IRQHandler
+                0x0800fcb8                I2C1_EV_IRQHandler
+                0x0800fcb8                DMA1_Channel6_IRQHandler
+                0x0800fcb8                DMA2_Channel4_IRQHandler
+                0x0800fcb8                RCC_IRQHandler
+                0x0800fcb8                TIM1_TRG_COM_IRQHandler
+                0x0800fcb8                DMA1_Channel1_IRQHandler
+                0x0800fcb8                Default_Handler
+                0x0800fcb8                DMA2_Channel7_IRQHandler
+                0x0800fcb8                EXTI15_10_IRQHandler
+                0x0800fcb8                TIM7_IRQHandler
+                0x0800fcb8                SDMMC1_IRQHandler
+                0x0800fcb8                I2C3_EV_IRQHandler
+                0x0800fcb8                EXTI9_5_IRQHandler
+                0x0800fcb8                RTC_WKUP_IRQHandler
+                0x0800fcb8                PVD_PVM_IRQHandler
+                0x0800fcb8                SPI2_IRQHandler
+                0x0800fcb8                MemManage_Handler
+                0x0800fcb8                CAN1_TX_IRQHandler
+                0x0800fcb8                SVC_Handler
+                0x0800fcb8                DMA2_Channel5_IRQHandler
+                0x0800fcb8                CRS_IRQHandler
+                0x0800fcb8                DMA1_Channel5_IRQHandler
+                0x0800fcb8                EXTI4_IRQHandler
+                0x0800fcb8                RNG_IRQHandler
+                0x0800fcb8                DMA1_Channel3_IRQHandler
+                0x0800fcb8                COMP_IRQHandler
+                0x0800fcb8                WWDG_IRQHandler
+                0x0800fcb8                LPUART1_IRQHandler
+                0x0800fcb8                DMA2_Channel6_IRQHandler
+                0x0800fcb8                TIM2_IRQHandler
+                0x0800fcb8                EXTI1_IRQHandler
+                0x0800fcb8                I2C2_ER_IRQHandler
+                0x0800fcb8                DMA1_Channel2_IRQHandler
+                0x0800fcb8                CAN1_SCE_IRQHandler
+                0x0800fcb8                FLASH_IRQHandler
+                0x0800fcb8                BusFault_Handler
+                0x0800fcb8                USART1_IRQHandler
+                0x0800fcb8                SPI3_IRQHandler
+                0x0800fcb8                I2C1_ER_IRQHandler
+                0x0800fcb8                SWPMI1_IRQHandler
+                0x0800fcb8                LPTIM1_IRQHandler
+                0x0800fcb8                SAI1_IRQHandler
+                0x0800fcb8                DMA2_Channel3_IRQHandler
+                0x0800fcb8                TIM1_BRK_TIM15_IRQHandler
+ *fill*         0x0800fcbe        0x2 
  .text.__libc_init_array
-                0x0800f9f8       0x48 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-init.o)
-                0x0800f9f8                __libc_init_array
- .text.memcpy   0x0800fa40       0x16 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memcpy-stub.o)
-                0x0800fa40                memcpy
- .text.memset   0x0800fa56       0x10 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memset.o)
-                0x0800fa56                memset
+                0x0800fcc0       0x48 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-init.o)
+                0x0800fcc0                __libc_init_array
+ .text.memcpy   0x0800fd08       0x16 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memcpy-stub.o)
+                0x0800fd08                memcpy
+ .text.memset   0x0800fd1e       0x10 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memset.o)
+                0x0800fd1e                memset
  *(.glue_7)
- .glue_7        0x0800fa66        0x0 linker stubs
+ .glue_7        0x0800fd2e        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0800fa66        0x0 linker stubs
+ .glue_7t       0x0800fd2e        0x0 linker stubs
  *(.eh_frame)
- *fill*         0x0800fa66        0x2 
- .eh_frame      0x0800fa68        0x0 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+ *fill*         0x0800fd2e        0x2 
+ .eh_frame      0x0800fd30        0x0 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
  *(.init)
- .init          0x0800fa68        0x4 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crti.o
-                0x0800fa68                _init
- .init          0x0800fa6c        0x8 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+ .init          0x0800fd30        0x4 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+                0x0800fd30                _init
+ .init          0x0800fd34        0x8 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
  *(.fini)
- .fini          0x0800fa74        0x4 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crti.o
-                0x0800fa74                _fini
- .fini          0x0800fa78        0x8 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
-                0x0800fa80                . = ALIGN (0x8)
-                0x0800fa80                _etext = .
+ .fini          0x0800fd3c        0x4 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+                0x0800fd3c                _fini
+ .fini          0x0800fd40        0x8 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+                0x0800fd48                . = ALIGN (0x8)
+                0x0800fd48                _etext = .
 
-.vfp11_veneer   0x0800fa80        0x0
- .vfp11_veneer  0x0800fa80        0x0 linker stubs
+.vfp11_veneer   0x0800fd48        0x0
+ .vfp11_veneer  0x0800fd48        0x0 linker stubs
 
-.v4_bx          0x0800fa80        0x0
- .v4_bx         0x0800fa80        0x0 linker stubs
+.v4_bx          0x0800fd48        0x0
+ .v4_bx         0x0800fd48        0x0 linker stubs
 
-.iplt           0x0800fa80        0x0
- .iplt          0x0800fa80        0x0 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+.iplt           0x0800fd48        0x0
+ .iplt          0x0800fd48        0x0 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
 
-.rodata         0x0800fa80      0x398
-                0x0800fa80                . = ALIGN (0x8)
+.rodata         0x0800fd48      0x590
+                0x0800fd48                . = ALIGN (0x8)
  *(.rodata)
  *(.rodata*)
  .rodata.thread_greenlight.str1.4
-                0x0800fa80       0x63 ./obj/thread_greenlight.o
- *fill*         0x0800fae3        0x1 
+                0x0800fd48       0x63 ./obj/thread_greenlight.o
+ *fill*         0x0800fdab        0x1 
+ .rodata.thread_SPThread2.str1.4
+                0x0800fdac       0x78 ./obj/thread_SPThread2.o
  .rodata.thread_bluelight.str1.4
-                0x0800fae4       0x6f ./obj/thread_bluelight.o
- *fill*         0x0800fb53        0x1 
+                0x0800fe24       0x6f ./obj/thread_bluelight.o
+ *fill*         0x0800fe93        0x1 
+ .rodata.thread_SPThread3.str1.4
+                0x0800fe94       0x8c ./obj/thread_SPThread3.o
  .rodata.thread_rulechoose.str1.4
-                0x0800fb54       0x85 ./obj/thread_rulechoose.o
- *fill*         0x0800fbd9        0x3 
+                0x0800ff20       0xe5 ./obj/thread_rulechoose.o
+ *fill*         0x08010005        0x3 
+ .rodata.thread_SPThread1.str1.4
+                0x08010008       0x68 ./obj/thread_SPThread1.o
+                                 0x74 (size before relaxing)
  .rodata.Vectors_Init.str1.4
-                0x0800fbdc       0x48 ./obj/gec.o
+                0x08010070       0x48 ./obj/gec.o
  .rodata.app_init.str1.4
-                0x0800fc24      0x1b0 ./obj/threadauto_appinit.o
+                0x080100b8      0x1d6 ./obj/threadauto_appinit.o
+                                0x1e2 (size before relaxing)
+ *fill*         0x0801028e        0x2 
  .rodata.thread_messagerecv.str1.4
-                0x0800fdd4       0x44 ./obj/thread_messagerecv.o
+                0x08010290       0x44 ./obj/thread_messagerecv.o
                                  0x48 (size before relaxing)
-                0x0800fe18                . = ALIGN (0x8)
+                0x080102d8                . = ALIGN (0x8)
+ *fill*         0x080102d4        0x4 
 
-.ARM.extab      0x0800fe18        0x0
-                0x0800fe18                . = ALIGN (0x8)
+.ARM.extab      0x080102d8        0x0
+                0x080102d8                . = ALIGN (0x8)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0800fe18                . = ALIGN (0x8)
+                0x080102d8                . = ALIGN (0x8)
 
-.ARM            0x0800fe18        0x8
-                0x0800fe18                . = ALIGN (0x8)
-                0x0800fe18                __exidx_start = .
+.ARM            0x080102d8        0x8
+                0x080102d8                . = ALIGN (0x8)
+                0x080102d8                __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x0800fe18        0x8 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_udivmoddi4.o)
-                0x0800fe20                __exidx_end = .
-                0x0800fe20                . = ALIGN (0x8)
+ .ARM.exidx     0x080102d8        0x8 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_udivmoddi4.o)
+                0x080102e0                __exidx_end = .
+                0x080102e0                . = ALIGN (0x8)
 
-.rel.dyn        0x0800fe20        0x0
- .rel.iplt      0x0800fe20        0x0 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+.rel.dyn        0x080102e0        0x0
+ .rel.iplt      0x080102e0        0x0 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
 
-.preinit_array  0x0800fe20        0x0
-                0x0800fe20                . = ALIGN (0x8)
-                0x0800fe20                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x080102e0        0x0
+                0x080102e0                . = ALIGN (0x8)
+                0x080102e0                PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
-                0x0800fe20                PROVIDE (__preinit_array_end, .)
-                0x0800fe20                . = ALIGN (0x8)
+                0x080102e0                PROVIDE (__preinit_array_end, .)
+                0x080102e0                . = ALIGN (0x8)
 
-.init_array     0x0800fe20        0x8
-                0x0800fe20                . = ALIGN (0x8)
-                0x0800fe20                PROVIDE (__init_array_start, .)
+.init_array     0x080102e0        0x8
+                0x080102e0                . = ALIGN (0x8)
+                0x080102e0                PROVIDE (__init_array_start, .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x0800fe20        0x4 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
-                0x0800fe24                PROVIDE (__init_array_end, .)
-                0x0800fe28                . = ALIGN (0x8)
- *fill*         0x0800fe24        0x4 
+ .init_array    0x080102e0        0x4 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+                0x080102e4                PROVIDE (__init_array_end, .)
+                0x080102e8                . = ALIGN (0x8)
+ *fill*         0x080102e4        0x4 
 
-.fini_array     0x0800fe28        0x8
-                0x0800fe28                . = ALIGN (0x8)
+.fini_array     0x080102e8        0x8
+                0x080102e8                . = ALIGN (0x8)
                 [!provide]                PROVIDE (__fini_array_start, .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0800fe28        0x4 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+ .fini_array    0x080102e8        0x4 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
                 [!provide]                PROVIDE (__fini_array_end, .)
-                0x0800fe30                . = ALIGN (0x8)
- *fill*         0x0800fe2c        0x4 
-                0x0800fe30                _sidata = LOADADDR (.data)
+                0x080102f0                . = ALIGN (0x8)
+ *fill*         0x080102ec        0x4 
+                0x080102f0                _sidata = LOADADDR (.data)
 
-.data           0x20003000       0x30 load address 0x0800fe30
+.data           0x20003000       0x30 load address 0x080102f0
                 0x20003000                . = ALIGN (0x4)
                 0x20003000                _sdata = .
  *(.data)
@@ -1749,36 +2015,37 @@ LOAD d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv
                 0x20003028        0x3 ./obj/uart.o
                 0x20003028                table_irq_uart
  *fill*         0x2000302b        0x1 
- .data.index.7474
+ .data.index.7480
                 0x2000302c        0x2 ./obj/isr.o
- .data.length.7475
+ .data.length.7481
                 0x2000302e        0x2 ./obj/isr.o
                 0x20003030                . = ALIGN (0x4)
                 0x20003030                _edata = .
 
-.igot.plt       0x20003030        0x0 load address 0x0800fe60
+.igot.plt       0x20003030        0x0 load address 0x08010320
  .igot.plt      0x20003030        0x0 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
                 0x20003030                . = ALIGN (0x4)
 
-.bss            0x20003030      0x830 load address 0x0800fe60
+.bss            0x20003030      0x834 load address 0x08010320
                 0x20003030                _sbss = .
                 0x20003030                __bss_start__ = _sbss
  *(.bss)
  .bss           0x20003030       0x1c d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
  *(.bss*)
  *(COMMON)
- COMMON         0x2000304c      0x810 ./obj/main.o
-                0x2000304c                grt_flag
-                0x20003050                mq
-                0x20003054                EventWord
-                0x20003058                gcRecvLen
-                0x2000305a                gcRecvDCLen
-                0x2000305c                gcRecvBuf
- COMMON         0x2000385c        0x4 ./obj/gec.o
-                0x2000385c                component_fun
-                0x20003860                . = ALIGN (0x4)
-                0x20003860                _ebss = .
-                0x20003860                __bss_end__ = _ebss
+ COMMON         0x2000304c      0x814 ./obj/main.o
+                0x2000304c                SP
+                0x20003050                grt_flag
+                0x20003054                mq
+                0x20003058                EventWord
+                0x2000305c                gcRecvLen
+                0x2000305e                gcRecvDCLen
+                0x20003060                gcRecvBuf
+ COMMON         0x20003860        0x4 ./obj/gec.o
+                0x20003860                component_fun
+                0x20003864                . = ALIGN (0x4)
+                0x20003864                _ebss = .
+                0x20003864                __bss_end__ = _ebss
 
 /DISCARD/
  libc.a(*)
@@ -1797,136 +2064,157 @@ LOAD d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv
  .ARM.attributes
                 0x0000008f       0x39 ./obj/system_stm32l4xx.o
  .ARM.attributes
-                0x000000c8       0x39 ./obj/thread_bluelight.o
+                0x000000c8       0x39 ./obj/thread_SPThread2.o
  .ARM.attributes
-                0x00000101       0x39 ./obj/main.o
+                0x00000101       0x39 ./obj/thread_bluelight.o
  .ARM.attributes
-                0x0000013a       0x39 ./obj/flash.o
+                0x0000013a       0x39 ./obj/main.o
  .ARM.attributes
-                0x00000173       0x39 ./obj/gpio.o
+                0x00000173       0x39 ./obj/thread_SPThread3.o
  .ARM.attributes
-                0x000001ac       0x39 ./obj/thread_rulechoose.o
+                0x000001ac       0x39 ./obj/flash.o
  .ARM.attributes
-                0x000001e5       0x39 ./obj/gec.o
+                0x000001e5       0x39 ./obj/gpio.o
  .ARM.attributes
-                0x0000021e       0x39 ./obj/uart.o
+                0x0000021e       0x39 ./obj/thread_rulechoose.o
  .ARM.attributes
-                0x00000257       0x39 ./obj/threadauto_appinit.o
+                0x00000257       0x39 ./obj/thread_SPThread1.o
  .ARM.attributes
-                0x00000290       0x39 ./obj/isr.o
+                0x00000290       0x39 ./obj/gec.o
  .ARM.attributes
-                0x000002c9       0x39 ./obj/thread_messagerecv.o
+                0x000002c9       0x39 ./obj/uart.o
  .ARM.attributes
-                0x00000302       0x39 ./obj/printf.o
+                0x00000302       0x39 ./obj/threadauto_appinit.o
  .ARM.attributes
-                0x0000033b       0x21 ./obj/startup_stm32l431rctx.o
+                0x0000033b       0x39 ./obj/isr.o
  .ARM.attributes
-                0x0000035c       0x34 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-init.o)
+                0x00000374       0x39 ./obj/thread_messagerecv.o
  .ARM.attributes
-                0x00000390       0x34 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memcpy-stub.o)
+                0x000003ad       0x39 ./obj/printf.o
  .ARM.attributes
-                0x000003c4       0x34 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memset.o)
+                0x000003e6       0x21 ./obj/startup_stm32l431rctx.o
  .ARM.attributes
-                0x000003f8       0x1b d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-strlen.o)
+                0x00000407       0x34 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-init.o)
  .ARM.attributes
-                0x00000413       0x22 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_addsubdf3.o)
+                0x0000043b       0x34 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memcpy-stub.o)
  .ARM.attributes
-                0x00000435       0x22 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_muldivdf3.o)
+                0x0000046f       0x34 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memset.o)
  .ARM.attributes
-                0x00000457       0x22 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_cmpdf2.o)
+                0x000004a3       0x1b d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-strlen.o)
  .ARM.attributes
-                0x00000479       0x22 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_fixunsdfsi.o)
+                0x000004be       0x22 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_addsubdf3.o)
  .ARM.attributes
-                0x0000049b       0x22 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_aeabi_uldivmod.o)
+                0x000004e0       0x22 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_muldivdf3.o)
  .ARM.attributes
-                0x000004bd       0x34 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_fixunsdfdi.o)
+                0x00000502       0x22 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_cmpdf2.o)
  .ARM.attributes
-                0x000004f1       0x34 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_udivmoddi4.o)
+                0x00000524       0x22 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_fixunsdfsi.o)
  .ARM.attributes
-                0x00000525       0x22 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_dvmd_tls.o)
+                0x00000546       0x22 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_aeabi_uldivmod.o)
  .ARM.attributes
-                0x00000547       0x22 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+                0x00000568       0x34 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_fixunsdfdi.o)
+ .ARM.attributes
+                0x0000059c       0x34 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_udivmoddi4.o)
+ .ARM.attributes
+                0x000005d0       0x22 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x000005f2       0x22 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
 OUTPUT(RT-thread_test.elf elf32-littlearm)
 
-.debug_info     0x00000000     0xc446
- .debug_info    0x00000000      0xc83 ./obj/thread_greenlight.o
- .debug_info    0x00000c83      0x847 ./obj/system_stm32l4xx.o
- .debug_info    0x000014ca      0xcee ./obj/thread_bluelight.o
- .debug_info    0x000021b8      0xba4 ./obj/main.o
- .debug_info    0x00002d5c      0xf66 ./obj/flash.o
- .debug_info    0x00003cc2     0x16fa ./obj/gpio.o
- .debug_info    0x000053bc      0xc85 ./obj/thread_rulechoose.o
- .debug_info    0x00006041     0x106e ./obj/gec.o
- .debug_info    0x000070af     0x1485 ./obj/uart.o
- .debug_info    0x00008534     0x100c ./obj/threadauto_appinit.o
- .debug_info    0x00009540      0xca6 ./obj/isr.o
- .debug_info    0x0000a1e6      0xd0a ./obj/thread_messagerecv.o
- .debug_info    0x0000aef0     0x1534 ./obj/printf.o
- .debug_info    0x0000c424       0x22 ./obj/startup_stm32l431rctx.o
+.debug_info     0x00000000     0xeefd
+ .debug_info    0x00000000      0xcd5 ./obj/thread_greenlight.o
+ .debug_info    0x00000cd5      0x847 ./obj/system_stm32l4xx.o
+ .debug_info    0x0000151c      0xcc1 ./obj/thread_SPThread2.o
+ .debug_info    0x000021dd      0xd40 ./obj/thread_bluelight.o
+ .debug_info    0x00002f1d      0xbfc ./obj/main.o
+ .debug_info    0x00003b19      0xd41 ./obj/thread_SPThread3.o
+ .debug_info    0x0000485a      0xf66 ./obj/flash.o
+ .debug_info    0x000057c0     0x16fa ./obj/gpio.o
+ .debug_info    0x00006eba      0xd05 ./obj/thread_rulechoose.o
+ .debug_info    0x00007bbf      0xcc1 ./obj/thread_SPThread1.o
+ .debug_info    0x00008880     0x10c0 ./obj/gec.o
+ .debug_info    0x00009940     0x1485 ./obj/uart.o
+ .debug_info    0x0000adc5     0x118e ./obj/threadauto_appinit.o
+ .debug_info    0x0000bf53      0xcf8 ./obj/isr.o
+ .debug_info    0x0000cc4b      0xd5c ./obj/thread_messagerecv.o
+ .debug_info    0x0000d9a7     0x1534 ./obj/printf.o
+ .debug_info    0x0000eedb       0x22 ./obj/startup_stm32l431rctx.o
 
-.debug_abbrev   0x00000000     0x1e9d
+.debug_abbrev   0x00000000     0x244b
  .debug_abbrev  0x00000000      0x1e5 ./obj/thread_greenlight.o
  .debug_abbrev  0x000001e5      0x18e ./obj/system_stm32l4xx.o
- .debug_abbrev  0x00000373      0x1f2 ./obj/thread_bluelight.o
- .debug_abbrev  0x00000565      0x1a8 ./obj/main.o
- .debug_abbrev  0x0000070d      0x2eb ./obj/flash.o
- .debug_abbrev  0x000009f8      0x38c ./obj/gpio.o
- .debug_abbrev  0x00000d84      0x208 ./obj/thread_rulechoose.o
- .debug_abbrev  0x00000f8c      0x286 ./obj/gec.o
- .debug_abbrev  0x00001212      0x336 ./obj/uart.o
- .debug_abbrev  0x00001548      0x1f2 ./obj/threadauto_appinit.o
- .debug_abbrev  0x0000173a      0x256 ./obj/isr.o
- .debug_abbrev  0x00001990      0x20e ./obj/thread_messagerecv.o
- .debug_abbrev  0x00001b9e      0x2ed ./obj/printf.o
- .debug_abbrev  0x00001e8b       0x12 ./obj/startup_stm32l431rctx.o
+ .debug_abbrev  0x00000373      0x1e4 ./obj/thread_SPThread2.o
+ .debug_abbrev  0x00000557      0x1f2 ./obj/thread_bluelight.o
+ .debug_abbrev  0x00000749      0x1a8 ./obj/main.o
+ .debug_abbrev  0x000008f1      0x1e4 ./obj/thread_SPThread3.o
+ .debug_abbrev  0x00000ad5      0x2eb ./obj/flash.o
+ .debug_abbrev  0x00000dc0      0x38c ./obj/gpio.o
+ .debug_abbrev  0x0000114c      0x20a ./obj/thread_rulechoose.o
+ .debug_abbrev  0x00001356      0x1e4 ./obj/thread_SPThread1.o
+ .debug_abbrev  0x0000153a      0x286 ./obj/gec.o
+ .debug_abbrev  0x000017c0      0x336 ./obj/uart.o
+ .debug_abbrev  0x00001af6      0x1f2 ./obj/threadauto_appinit.o
+ .debug_abbrev  0x00001ce8      0x256 ./obj/isr.o
+ .debug_abbrev  0x00001f3e      0x20e ./obj/thread_messagerecv.o
+ .debug_abbrev  0x0000214c      0x2ed ./obj/printf.o
+ .debug_abbrev  0x00002439       0x12 ./obj/startup_stm32l431rctx.o
 
-.debug_aranges  0x00000000      0x320
+.debug_aranges  0x00000000      0x380
  .debug_aranges
                 0x00000000       0x20 ./obj/thread_greenlight.o
  .debug_aranges
                 0x00000020       0x30 ./obj/system_stm32l4xx.o
  .debug_aranges
-                0x00000050       0x20 ./obj/thread_bluelight.o
+                0x00000050       0x20 ./obj/thread_SPThread2.o
  .debug_aranges
-                0x00000070       0x20 ./obj/main.o
+                0x00000070       0x20 ./obj/thread_bluelight.o
  .debug_aranges
-                0x00000090       0x78 ./obj/flash.o
+                0x00000090       0x20 ./obj/main.o
  .debug_aranges
-                0x00000108       0x78 ./obj/gpio.o
+                0x000000b0       0x20 ./obj/thread_SPThread3.o
  .debug_aranges
-                0x00000180       0x20 ./obj/thread_rulechoose.o
+                0x000000d0       0x78 ./obj/flash.o
  .debug_aranges
-                0x000001a0       0x28 ./obj/gec.o
+                0x00000148       0x78 ./obj/gpio.o
  .debug_aranges
-                0x000001c8       0x70 ./obj/uart.o
+                0x000001c0       0x20 ./obj/thread_rulechoose.o
  .debug_aranges
-                0x00000238       0x20 ./obj/threadauto_appinit.o
+                0x000001e0       0x20 ./obj/thread_SPThread1.o
  .debug_aranges
-                0x00000258       0x28 ./obj/isr.o
+                0x00000200       0x28 ./obj/gec.o
  .debug_aranges
-                0x00000280       0x20 ./obj/thread_messagerecv.o
+                0x00000228       0x70 ./obj/uart.o
  .debug_aranges
-                0x000002a0       0x58 ./obj/printf.o
+                0x00000298       0x20 ./obj/threadauto_appinit.o
  .debug_aranges
-                0x000002f8       0x28 ./obj/startup_stm32l431rctx.o
+                0x000002b8       0x28 ./obj/isr.o
+ .debug_aranges
+                0x000002e0       0x20 ./obj/thread_messagerecv.o
+ .debug_aranges
+                0x00000300       0x58 ./obj/printf.o
+ .debug_aranges
+                0x00000358       0x28 ./obj/startup_stm32l431rctx.o
 
-.debug_ranges   0x00000000      0x278
+.debug_ranges   0x00000000      0x2a8
  .debug_ranges  0x00000000       0x10 ./obj/thread_greenlight.o
  .debug_ranges  0x00000010       0x20 ./obj/system_stm32l4xx.o
- .debug_ranges  0x00000030       0x10 ./obj/thread_bluelight.o
- .debug_ranges  0x00000040       0x10 ./obj/main.o
- .debug_ranges  0x00000050       0x80 ./obj/flash.o
- .debug_ranges  0x000000d0       0x68 ./obj/gpio.o
- .debug_ranges  0x00000138       0x28 ./obj/thread_rulechoose.o
- .debug_ranges  0x00000160       0x18 ./obj/gec.o
- .debug_ranges  0x00000178       0x60 ./obj/uart.o
- .debug_ranges  0x000001d8       0x10 ./obj/threadauto_appinit.o
- .debug_ranges  0x000001e8       0x18 ./obj/isr.o
- .debug_ranges  0x00000200       0x10 ./obj/thread_messagerecv.o
- .debug_ranges  0x00000210       0x48 ./obj/printf.o
- .debug_ranges  0x00000258       0x20 ./obj/startup_stm32l431rctx.o
+ .debug_ranges  0x00000030       0x10 ./obj/thread_SPThread2.o
+ .debug_ranges  0x00000040       0x10 ./obj/thread_bluelight.o
+ .debug_ranges  0x00000050       0x10 ./obj/main.o
+ .debug_ranges  0x00000060       0x10 ./obj/thread_SPThread3.o
+ .debug_ranges  0x00000070       0x80 ./obj/flash.o
+ .debug_ranges  0x000000f0       0x68 ./obj/gpio.o
+ .debug_ranges  0x00000158       0x28 ./obj/thread_rulechoose.o
+ .debug_ranges  0x00000180       0x10 ./obj/thread_SPThread1.o
+ .debug_ranges  0x00000190       0x18 ./obj/gec.o
+ .debug_ranges  0x000001a8       0x60 ./obj/uart.o
+ .debug_ranges  0x00000208       0x10 ./obj/threadauto_appinit.o
+ .debug_ranges  0x00000218       0x18 ./obj/isr.o
+ .debug_ranges  0x00000230       0x10 ./obj/thread_messagerecv.o
+ .debug_ranges  0x00000240       0x48 ./obj/printf.o
+ .debug_ranges  0x00000288       0x20 ./obj/startup_stm32l431rctx.o
 
-.debug_macro    0x00000000     0x230c
+.debug_macro    0x00000000     0x29ad
  .debug_macro   0x00000000      0x22d ./obj/thread_greenlight.o
  .debug_macro   0x0000022d       0x87 ./obj/thread_greenlight.o
  .debug_macro   0x000002b4       0x51 ./obj/thread_greenlight.o
@@ -1936,81 +2224,96 @@ OUTPUT(RT-thread_test.elf elf32-littlearm)
  .debug_macro   0x0000074d       0x9a ./obj/thread_greenlight.o
  .debug_macro   0x000007e7       0x70 ./obj/thread_greenlight.o
  .debug_macro   0x00000857       0x34 ./obj/thread_greenlight.o
- .debug_macro   0x0000088b      0x102 ./obj/thread_greenlight.o
- .debug_macro   0x0000098d      0x15a ./obj/thread_greenlight.o
- .debug_macro   0x00000ae7       0x34 ./obj/thread_greenlight.o
- .debug_macro   0x00000b1b       0x22 ./obj/thread_greenlight.o
- .debug_macro   0x00000b3d       0xdb ./obj/system_stm32l4xx.o
- .debug_macro   0x00000c18      0x22d ./obj/thread_bluelight.o
- .debug_macro   0x00000e45      0x233 ./obj/main.o
- .debug_macro   0x00001078       0x22 ./obj/main.o
- .debug_macro   0x0000109a      0x1b9 ./obj/flash.o
- .debug_macro   0x00001253       0x34 ./obj/flash.o
- .debug_macro   0x00001287      0x1b9 ./obj/gpio.o
- .debug_macro   0x00001440       0x6a ./obj/gpio.o
- .debug_macro   0x000014aa      0x22d ./obj/thread_rulechoose.o
- .debug_macro   0x000016d7      0x22d ./obj/gec.o
- .debug_macro   0x00001904      0x1b9 ./obj/uart.o
- .debug_macro   0x00001abd      0x22d ./obj/threadauto_appinit.o
- .debug_macro   0x00001cea      0x22d ./obj/isr.o
- .debug_macro   0x00001f17      0x22d ./obj/thread_messagerecv.o
- .debug_macro   0x00002144      0x1c8 ./obj/printf.o
+ .debug_macro   0x0000088b      0x104 ./obj/thread_greenlight.o
+ .debug_macro   0x0000098f      0x15a ./obj/thread_greenlight.o
+ .debug_macro   0x00000ae9       0x4c ./obj/thread_greenlight.o
+ .debug_macro   0x00000b35       0x22 ./obj/thread_greenlight.o
+ .debug_macro   0x00000b57       0xdb ./obj/system_stm32l4xx.o
+ .debug_macro   0x00000c32      0x22d ./obj/thread_SPThread2.o
+ .debug_macro   0x00000e5f      0x22d ./obj/thread_bluelight.o
+ .debug_macro   0x0000108c      0x233 ./obj/main.o
+ .debug_macro   0x000012bf       0x22 ./obj/main.o
+ .debug_macro   0x000012e1      0x22d ./obj/thread_SPThread3.o
+ .debug_macro   0x0000150e      0x1b9 ./obj/flash.o
+ .debug_macro   0x000016c7       0x34 ./obj/flash.o
+ .debug_macro   0x000016fb      0x1b9 ./obj/gpio.o
+ .debug_macro   0x000018b4       0x6a ./obj/gpio.o
+ .debug_macro   0x0000191e      0x22d ./obj/thread_rulechoose.o
+ .debug_macro   0x00001b4b      0x22d ./obj/thread_SPThread1.o
+ .debug_macro   0x00001d78      0x22d ./obj/gec.o
+ .debug_macro   0x00001fa5      0x1b9 ./obj/uart.o
+ .debug_macro   0x0000215e      0x22d ./obj/threadauto_appinit.o
+ .debug_macro   0x0000238b      0x22d ./obj/isr.o
+ .debug_macro   0x000025b8      0x22d ./obj/thread_messagerecv.o
+ .debug_macro   0x000027e5      0x1c8 ./obj/printf.o
 
-.debug_line     0x00000000     0x3c68
+.debug_line     0x00000000     0x49b6
  .debug_line    0x00000000      0x460 ./obj/thread_greenlight.o
  .debug_line    0x00000460      0x2bd ./obj/system_stm32l4xx.o
- .debug_line    0x0000071d      0x468 ./obj/thread_bluelight.o
- .debug_line    0x00000b85      0x44c ./obj/main.o
- .debug_line    0x00000fd1      0x513 ./obj/flash.o
- .debug_line    0x000014e4      0x517 ./obj/gpio.o
- .debug_line    0x000019fb      0x483 ./obj/thread_rulechoose.o
- .debug_line    0x00001e7e      0x4cb ./obj/gec.o
- .debug_line    0x00002349      0x509 ./obj/uart.o
- .debug_line    0x00002852      0x473 ./obj/threadauto_appinit.o
- .debug_line    0x00002cc5      0x48f ./obj/isr.o
- .debug_line    0x00003154      0x464 ./obj/thread_messagerecv.o
- .debug_line    0x000035b8      0x633 ./obj/printf.o
- .debug_line    0x00003beb       0x7d ./obj/startup_stm32l431rctx.o
+ .debug_line    0x0000071d      0x467 ./obj/thread_SPThread2.o
+ .debug_line    0x00000b84      0x468 ./obj/thread_bluelight.o
+ .debug_line    0x00000fec      0x44c ./obj/main.o
+ .debug_line    0x00001438      0x46b ./obj/thread_SPThread3.o
+ .debug_line    0x000018a3      0x513 ./obj/flash.o
+ .debug_line    0x00001db6      0x517 ./obj/gpio.o
+ .debug_line    0x000022cd      0x490 ./obj/thread_rulechoose.o
+ .debug_line    0x0000275d      0x467 ./obj/thread_SPThread1.o
+ .debug_line    0x00002bc4      0x4cb ./obj/gec.o
+ .debug_line    0x0000308f      0x509 ./obj/uart.o
+ .debug_line    0x00003598      0x47b ./obj/threadauto_appinit.o
+ .debug_line    0x00003a13      0x48f ./obj/isr.o
+ .debug_line    0x00003ea2      0x464 ./obj/thread_messagerecv.o
+ .debug_line    0x00004306      0x633 ./obj/printf.o
+ .debug_line    0x00004939       0x7d ./obj/startup_stm32l431rctx.o
 
-.debug_str      0x00000000    0x83634
- .debug_str     0x00000000    0x82791 ./obj/thread_greenlight.o
-                              0x82a9b (size before relaxing)
- .debug_str     0x00082791      0x301 ./obj/system_stm32l4xx.o
+.debug_str      0x00000000    0x83737
+ .debug_str     0x00000000    0x827e7 ./obj/thread_greenlight.o
+                              0x82b00 (size before relaxing)
+ .debug_str     0x000827e7      0x301 ./obj/system_stm32l4xx.o
                               0x7e01c (size before relaxing)
- .debug_str     0x00082a92       0x29 ./obj/thread_bluelight.o
-                              0x82a99 (size before relaxing)
- .debug_str     0x00082abb       0x2b ./obj/main.o
-                              0x82a37 (size before relaxing)
- .debug_str     0x00082ae6      0x111 ./obj/flash.o
+ .debug_str     0x00082ae8       0x31 ./obj/thread_SPThread2.o
+                              0x82ad2 (size before relaxing)
+ .debug_str     0x00082b19       0x29 ./obj/thread_bluelight.o
+                              0x82afe (size before relaxing)
+ .debug_str     0x00082b42       0x2b ./obj/main.o
+                              0x82a9c (size before relaxing)
+ .debug_str     0x00082b6d       0x29 ./obj/thread_SPThread3.o
+                              0x82ae9 (size before relaxing)
+ .debug_str     0x00082b96      0x111 ./obj/flash.o
                               0x81604 (size before relaxing)
- .debug_str     0x00082bf7      0x580 ./obj/gpio.o
+ .debug_str     0x00082ca7      0x580 ./obj/gpio.o
                               0x81c3e (size before relaxing)
- .debug_str     0x00083177       0x34 ./obj/thread_rulechoose.o
-                              0x82a7c (size before relaxing)
- .debug_str     0x000831ab       0x47 ./obj/gec.o
-                              0x82b34 (size before relaxing)
- .debug_str     0x000831f2       0xd7 ./obj/uart.o
+ .debug_str     0x00083227       0x34 ./obj/thread_rulechoose.o
+                              0x82ae1 (size before relaxing)
+ .debug_str     0x0008325b       0x29 ./obj/thread_SPThread1.o
+                              0x82ad2 (size before relaxing)
+ .debug_str     0x00083284       0x47 ./obj/gec.o
+                              0x82b99 (size before relaxing)
+ .debug_str     0x000832cb       0xd7 ./obj/uart.o
                               0x81adc (size before relaxing)
- .debug_str     0x000832c9      0x137 ./obj/threadauto_appinit.o
-                              0x82bbf (size before relaxing)
- .debug_str     0x00083400       0x68 ./obj/isr.o
-                              0x82acb (size before relaxing)
- .debug_str     0x00083468       0x42 ./obj/thread_messagerecv.o
-                              0x82a9f (size before relaxing)
- .debug_str     0x000834aa      0x15e ./obj/printf.o
+ .debug_str     0x000833a2      0x161 ./obj/threadauto_appinit.o
+                              0x82c56 (size before relaxing)
+ .debug_str     0x00083503       0x68 ./obj/isr.o
+                              0x82b30 (size before relaxing)
+ .debug_str     0x0008356b       0x42 ./obj/thread_messagerecv.o
+                              0x82b04 (size before relaxing)
+ .debug_str     0x000835ad      0x15e ./obj/printf.o
                               0x81835 (size before relaxing)
- .debug_str     0x00083608       0x2c ./obj/startup_stm32l431rctx.o
+ .debug_str     0x0008370b       0x2c ./obj/startup_stm32l431rctx.o
                                  0x48 (size before relaxing)
 
 .comment        0x00000000       0x7e
  .comment       0x00000000       0x7e ./obj/thread_greenlight.o
                                  0x7f (size before relaxing)
  .comment       0x0000007e       0x7f ./obj/system_stm32l4xx.o
+ .comment       0x0000007e       0x7f ./obj/thread_SPThread2.o
  .comment       0x0000007e       0x7f ./obj/thread_bluelight.o
  .comment       0x0000007e       0x7f ./obj/main.o
+ .comment       0x0000007e       0x7f ./obj/thread_SPThread3.o
  .comment       0x0000007e       0x7f ./obj/flash.o
  .comment       0x0000007e       0x7f ./obj/gpio.o
  .comment       0x0000007e       0x7f ./obj/thread_rulechoose.o
+ .comment       0x0000007e       0x7f ./obj/thread_SPThread1.o
  .comment       0x0000007e       0x7f ./obj/gec.o
  .comment       0x0000007e       0x7f ./obj/uart.o
  .comment       0x0000007e       0x7f ./obj/threadauto_appinit.o
@@ -2018,39 +2321,45 @@ OUTPUT(RT-thread_test.elf elf32-littlearm)
  .comment       0x0000007e       0x7f ./obj/thread_messagerecv.o
  .comment       0x0000007e       0x7f ./obj/printf.o
 
-.debug_frame    0x00000000      0x9fc
+.debug_frame    0x00000000      0xa84
  .debug_frame   0x00000000       0x28 ./obj/thread_greenlight.o
  .debug_frame   0x00000028       0x54 ./obj/system_stm32l4xx.o
- .debug_frame   0x0000007c       0x28 ./obj/thread_bluelight.o
- .debug_frame   0x000000a4       0x28 ./obj/main.o
- .debug_frame   0x000000cc      0x130 ./obj/flash.o
- .debug_frame   0x000001fc      0x180 ./obj/gpio.o
- .debug_frame   0x0000037c       0x2c ./obj/thread_rulechoose.o
- .debug_frame   0x000003a8       0x54 ./obj/gec.o
- .debug_frame   0x000003fc      0x138 ./obj/uart.o
- .debug_frame   0x00000534       0x38 ./obj/threadauto_appinit.o
- .debug_frame   0x0000056c       0x50 ./obj/isr.o
- .debug_frame   0x000005bc       0x2c ./obj/thread_messagerecv.o
- .debug_frame   0x000005e8      0x130 ./obj/printf.o
- .debug_frame   0x00000718       0x2c d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-init.o)
- .debug_frame   0x00000744       0x28 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memcpy-stub.o)
- .debug_frame   0x0000076c       0x20 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memset.o)
- .debug_frame   0x0000078c       0xac d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_addsubdf3.o)
- .debug_frame   0x00000838       0x50 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_muldivdf3.o)
- .debug_frame   0x00000888       0xc4 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_cmpdf2.o)
- .debug_frame   0x0000094c       0x24 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_fixunsdfsi.o)
- .debug_frame   0x00000970       0x2c d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_aeabi_uldivmod.o)
- .debug_frame   0x0000099c       0x2c d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_fixunsdfdi.o)
- .debug_frame   0x000009c8       0x34 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x0000007c       0x2c ./obj/thread_SPThread2.o
+ .debug_frame   0x000000a8       0x28 ./obj/thread_bluelight.o
+ .debug_frame   0x000000d0       0x28 ./obj/main.o
+ .debug_frame   0x000000f8       0x2c ./obj/thread_SPThread3.o
+ .debug_frame   0x00000124      0x130 ./obj/flash.o
+ .debug_frame   0x00000254      0x180 ./obj/gpio.o
+ .debug_frame   0x000003d4       0x2c ./obj/thread_rulechoose.o
+ .debug_frame   0x00000400       0x2c ./obj/thread_SPThread1.o
+ .debug_frame   0x0000042c       0x54 ./obj/gec.o
+ .debug_frame   0x00000480      0x138 ./obj/uart.o
+ .debug_frame   0x000005b8       0x3c ./obj/threadauto_appinit.o
+ .debug_frame   0x000005f4       0x50 ./obj/isr.o
+ .debug_frame   0x00000644       0x2c ./obj/thread_messagerecv.o
+ .debug_frame   0x00000670      0x130 ./obj/printf.o
+ .debug_frame   0x000007a0       0x2c d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-init.o)
+ .debug_frame   0x000007cc       0x28 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x000007f4       0x20 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memset.o)
+ .debug_frame   0x00000814       0xac d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_addsubdf3.o)
+ .debug_frame   0x000008c0       0x50 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_muldivdf3.o)
+ .debug_frame   0x00000910       0xc4 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_cmpdf2.o)
+ .debug_frame   0x000009d4       0x24 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_arm_fixunsdfsi.o)
+ .debug_frame   0x000009f8       0x2c d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x00000a24       0x2c d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_fixunsdfdi.o)
+ .debug_frame   0x00000a50       0x34 d:/ahl-gec-ide(4.35)/gcc/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_udivmoddi4.o)
 
-.debug_loc      0x00000000     0x24b1
+.debug_loc      0x00000000     0x25f2
  .debug_loc     0x00000000      0x246 ./obj/system_stm32l4xx.o
- .debug_loc     0x00000246      0x66d ./obj/flash.o
- .debug_loc     0x000008b3      0x451 ./obj/gpio.o
- .debug_loc     0x00000d04       0x13 ./obj/thread_rulechoose.o
- .debug_loc     0x00000d17      0x149 ./obj/gec.o
- .debug_loc     0x00000e60      0x3c2 ./obj/uart.o
- .debug_loc     0x00001222       0x78 ./obj/threadauto_appinit.o
- .debug_loc     0x0000129a       0xaa ./obj/isr.o
- .debug_loc     0x00001344       0x31 ./obj/thread_messagerecv.o
- .debug_loc     0x00001375     0x113c ./obj/printf.o
+ .debug_loc     0x00000246       0x3c ./obj/thread_SPThread2.o
+ .debug_loc     0x00000282       0x3c ./obj/thread_SPThread3.o
+ .debug_loc     0x000002be      0x66d ./obj/flash.o
+ .debug_loc     0x0000092b      0x451 ./obj/gpio.o
+ .debug_loc     0x00000d7c       0x13 ./obj/thread_rulechoose.o
+ .debug_loc     0x00000d8f       0x3c ./obj/thread_SPThread1.o
+ .debug_loc     0x00000dcb      0x149 ./obj/gec.o
+ .debug_loc     0x00000f14      0x3c2 ./obj/uart.o
+ .debug_loc     0x000012d6      0x105 ./obj/threadauto_appinit.o
+ .debug_loc     0x000013db       0xaa ./obj/isr.o
+ .debug_loc     0x00001485       0x31 ./obj/thread_messagerecv.o
+ .debug_loc     0x000014b6     0x113c ./obj/printf.o

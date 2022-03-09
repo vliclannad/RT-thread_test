@@ -50,6 +50,23 @@ void thread_rulechoose()
 
             if(gcRecvBuf[7]==SEM_CODE) //命令字为90，代表“信号量功能”
             {
+                if(gcRecvBuf[8]==0x01)//命令参数为01，代表启动该功能
+                {
+                    printf("接收到信号量功能开启命令，信号量功能模块开启\n");
+                    SP->value=2;
+                    /*for(int i=0;i<2;i++)
+                    {
+                        rt_sem_release(SP);
+                        printf("执行完一次释放线程\n");
+                    }*/
+
+
+                }
+                if(gcRecvBuf[8]==0x00)//命令参数为00，代表关闭该功能
+                {
+                    printf("接收到信号量功能结束命令，信号量功能模块结束");
+
+                }
 
             }
 

@@ -31,6 +31,8 @@
 #endif
 //（在此增加全局变量）
 G_VAR_PREFIX vuint16_t grt_flag;
+
+
 //（系统保留）
 G_VAR_PREFIX vuint16_t gcRecvLen;
 G_VAR_PREFIX vuint16_t gcRecvDCLen;
@@ -38,12 +40,18 @@ G_VAR_PREFIX vuint8_t  gcRecvBuf[MCU_SECTORSIZE];
 //（用户增加）
 G_VAR_PREFIX rt_event_t EventWord;
 G_VAR_PREFIX rt_mq_t mq;
+G_VAR_PREFIX rt_sem_t SP;
 //线程函数声明
 void app_init(void);
 void thread_rulechoose();
 void thread_greenlight();
 void thread_bluelight();
 void thread_messagerecv();
+void thread_SPThread1();
+void thread_SPThread2();
+void thread_SPThread3();
+
+void thread_cloose(uint16_t thread_number);
 #define delay_ms(x)  rt_thread_delay(x)
 //----------------------------------------------------------------------
 

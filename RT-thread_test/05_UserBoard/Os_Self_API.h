@@ -36,6 +36,8 @@
                                                  rt_uint32_t tick))(component_fun[35]))
 #define rt_thread_startup  ((rt_err_t (*)(rt_thread_t thread))(component_fun[36]))
 #define rt_thread_delay  ((rt_err_t (*)(rt_tick_t millisec))(component_fun[37]))
+//#define rt_thread_suspend  ((rt_err_t (*)(rt_thread_t thread))(component_fun[39]))
+//#define rt_thread_resume  ((rt_err_t (*)(rt_thread_t thread))(component_fun[40]))
 //#define heap_init  ((void (*)(uint32_t userHeapBase))(component_fun[33]))
 #define rt_thread_self  ((rt_thread_t (*)(void))(component_fun[38]))
 //ÊÂ¼ş

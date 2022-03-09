@@ -6,14 +6,20 @@
 //功能概要：主线程，要完成全局变量初始化、外设初始化、创建其他用户线程、启动用户线程等工作
 //内部调用：无
 //======================================================================
+
 void app_init(void)
 {
 	//（1）======启动部分（开头）==========================================
 	//（1.1）声明main函数使用的局部变量
 	rt_thread_t thd_rulechoose;
-	rt_thread_t thd_greenlight;
-	rt_thread_t thd_bluelight;
-	rt_thread_t thd_messagerecv;
+ 	rt_thread_t thd_greenlight;
+ 	rt_thread_t thd_bluelight;
+ 	rt_thread_t thd_messagerecv;
+ 	rt_thread_t thd_SPThread1;
+ 	rt_thread_t thd_SPThread2;
+ 	rt_thread_t thd_SPThread3;
+	int SPcount;
+
 	
 	//（1.2）【不变】BIOS中API接口表首地址、用户中断处理程序名初始化
 	//（1.3）【不变】关总中断
@@ -44,19 +50,31 @@ void app_init(void)
 	EventWord=rt_event_create("EventWord",RT_IPC_FLAG_PRIO);
 	//创建消息队列
 	mq=rt_mq_create("mq",9,4,RT_IPC_FLAG_FIFO);
-	//创建命令选择线程
-	thd_rulechoose=rt_thread_create("rulechoose", (void *)thread_rulechoose, 0, 512, 10, 10);
+	//创建信号量
+	SP=rt_sem_create("SP",0,RT_IPC_FLAG_FIFO);
+	SPcount=SP->value;
+	printf("当前SP为%d\n",SPcount);
 
+
+	//创建命令选择线程
+	thd_rulechoose=rt_thread_create("rulechoose", (void *)thread_rulechoose, 0, 512, 9, 10);
 	//创建三色灯线程
 	thd_greenlight = rt_thread_create("greenlight", (void *)thread_greenlight, 0, 512, 10, 10);
 	thd_bluelight = rt_thread_create("bluelight", (void *)thread_bluelight, 0, 512, 10, 10);
 	//创建消息队列线程
 	thd_messagerecv = rt_thread_create("messagerecv", (void *)thread_messagerecv, 0, 512, 10, 10);
+	//创建三个信号量线程
+	thd_SPThread1 = rt_thread_create("SPThread1", (void *)thread_SPThread1, 0, 512, 10, 10);
+	thd_SPThread2 = rt_thread_create("SPThread2", (void *)thread_SPThread2, 0, 512, 10, 10);
+	thd_SPThread3 = rt_thread_create("SPThread3", (void *)thread_SPThread3, 0, 512, 10, 10);
 
 	   
 	rt_thread_startup(thd_greenlight);//启动绿灯线程
 	rt_thread_startup(thd_bluelight);//启动蓝灯线程
-	rt_thread_startup(thd_messagerecv);
+	rt_thread_startup(thd_messagerecv);//启动消息队列线程
+	rt_thread_startup(thd_SPThread1);//启动信号量线程1
+	rt_thread_startup(thd_SPThread2);//启动信号量线程2
+	rt_thread_startup(thd_SPThread3);//启动信号量线程3
 
     rt_thread_startup(thd_rulechoose);//启动命令选择线程
 }
