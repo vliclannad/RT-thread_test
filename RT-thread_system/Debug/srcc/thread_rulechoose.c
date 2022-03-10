@@ -28,6 +28,10 @@ void thread_rulechoose()
                     rt_thread_detach(thd_SPThread1);	
                     rt_thread_detach(thd_SPThread2);
                     rt_thread_detach(thd_SPThread3);
+                    rt_thread_detach(thd_mutexRed);
+                    rt_thread_detach(thd_mutexGreen);
+                    rt_thread_detach(thd_mutexBlue);
+
 
                     rt_thread_startup(thd_bluelight);
                     rt_thread_startup(thd_greenlight);
@@ -54,6 +58,10 @@ void thread_rulechoose()
                 rt_thread_detach(thd_SPThread1);	
                 rt_thread_detach(thd_SPThread2);
                 rt_thread_detach(thd_SPThread3);
+                rt_thread_detach(thd_mutexRed);
+                rt_thread_detach(thd_mutexGreen);
+                rt_thread_detach(thd_mutexBlue);
+
 
                 rt_thread_startup(thd_messagerecv);//启动消息队列线程
                 //取出收到的数据作为一个消息
@@ -70,9 +78,15 @@ void thread_rulechoose()
                 if(gcRecvBuf[8]==0x01)//命令参数为01，代表启动该功能
                 {
                     printf("接收到信号量功能开启命令，信号量功能模块开启\n");
-                    rt_thread_startup(thd_bluelight);
-                    rt_thread_startup(thd_greenlight);
+                    rt_thread_detach(thd_bluelight);
+                    rt_thread_detach(thd_greenlight);
                     rt_thread_detach(thd_messagerecv);
+                    rt_thread_detach(thd_mutexRed);
+                    rt_thread_detach(thd_mutexGreen);
+                    rt_thread_detach(thd_mutexBlue);
+
+
+
 	                rt_thread_startup(thd_SPThread1);//启动信号量线程1
 	                rt_thread_startup(thd_SPThread2);//启动信号量线程2
 	                rt_thread_startup(thd_SPThread3);//启动信号量线程
@@ -95,6 +109,30 @@ void thread_rulechoose()
 
             if(gcRecvBuf[7]==MUTEX_CODE) //命令字为90，代表“互斥量功能”
             {
+                if(gcRecvBuf[8]==0x01)
+                {
+                    printf("接收到互斥量功能开启命令，互斥量功能模块开启\n");
+                    rt_thread_detach(thd_bluelight);
+                    rt_thread_detach(thd_greenlight);
+                    rt_thread_detach(thd_messagerecv);
+                    rt_thread_detach(thd_SPThread1);	
+                    rt_thread_detach(thd_SPThread2);
+                    rt_thread_detach(thd_SPThread3);
+
+                    rt_thread_startup(thd_mutexRed);//启动红灯线程
+	                rt_thread_startup(thd_mutexGreen);//启动绿灯线程
+	                rt_thread_startup(thd_mutexBlue);//启动蓝灯线程
+                }
+                if(gcRecvBuf[8]==0x00)
+                {
+                    printf("接收到互斥量功能关闭命令，互斥量功能模块关闭\n");
+                    rt_thread_detach(thd_mutexRed);
+                    rt_thread_detach(thd_mutexGreen);
+                    rt_thread_detach(thd_mutexBlue);
+                    gpio_init(LIGHT_BLUE,GPIO_OUTPUT,LIGHT_OFF);
+                    gpio_init(LIGHT_GREEN,GPIO_OUTPUT,LIGHT_OFF);
+                    gpio_init(LIGHT_RED,GPIO_OUTPUT,LIGHT_OFF);
+                }
 
             }
 

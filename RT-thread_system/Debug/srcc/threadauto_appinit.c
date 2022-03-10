@@ -11,8 +11,8 @@ void app_init(void)
 {
 	//（1）======启动部分（开头）==========================================
 	//（1.1）声明main函数使用的局部变量
+	rt_thread_t thd_rulechoose;
 
-	int SPcount;
 
 	
 	//（1.2）【不变】BIOS中API接口表首地址、用户中断处理程序名初始化
@@ -27,6 +27,7 @@ void app_init(void)
 	printf("  调用gpio_init函数，分别初始化红灯、绿灯、蓝灯\r\n");
 	gpio_init(LIGHT_GREEN,GPIO_OUTPUT,LIGHT_OFF);
 	gpio_init(LIGHT_BLUE,GPIO_OUTPUT,LIGHT_OFF);
+	gpio_init(LIGHT_RED,GPIO_OUTPUT,LIGHT_OFF);
 	uart_init(UART_User,115200); 
 	//（1.7）使能模块中断
 	uart_enable_re_int(UART_User);
@@ -44,9 +45,9 @@ void app_init(void)
 	//创建消息队列
 	mq=rt_mq_create("mq",9,4,RT_IPC_FLAG_FIFO);
 	//创建信号量
-	SP=rt_sem_create("SP",5,RT_IPC_FLAG_FIFO);
-	SPcount=SP->value;
-	printf("当前SP为%d\n",SPcount);
+	SP=rt_sem_create("SP",2,RT_IPC_FLAG_FIFO);
+	//创建互斥量
+	mutex=rt_mutex_create("mutex",RT_IPC_FLAG_PRIO);
 
 
 	//创建命令选择线程
@@ -60,6 +61,12 @@ void app_init(void)
 	thd_SPThread1 = rt_thread_create("SPThread1", (void *)thread_SPThread1, 0, 512, 10, 10);
 	thd_SPThread2 = rt_thread_create("SPThread2", (void *)thread_SPThread2, 0, 512, 10, 10);
 	thd_SPThread3 = rt_thread_create("SPThread3", (void *)thread_SPThread3, 0, 512, 10, 10);
+	//创建三个互斥量线程
+	thd_mutexBlue = rt_thread_create("redlight", (void *)thread_mutexBlue, 0, 512, 10, 10);
+	thd_mutexGreen = rt_thread_create("greenlight", (void *)thread_mutexGreen, 0, 512, 10, 10);
+	thd_mutexRed = rt_thread_create("bluelight", (void *)thread_mutexRed, 0, 512, 10, 10);
+
+
 
 	   
 

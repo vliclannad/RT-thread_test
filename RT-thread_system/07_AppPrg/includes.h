@@ -42,13 +42,17 @@ G_VAR_PREFIX vuint8_t  gcRecvBuf[MCU_SECTORSIZE];
 G_VAR_PREFIX rt_event_t EventWord;
 G_VAR_PREFIX rt_mq_t mq;
 G_VAR_PREFIX rt_sem_t SP;
-G_VAR_PREFIX	rt_thread_t thd_rulechoose;
+G_VAR_PREFIX rt_mutex_t mutex;
+
 G_VAR_PREFIX	rt_thread_t thd_greenlight;
 G_VAR_PREFIX 	rt_thread_t thd_bluelight;
 G_VAR_PREFIX 	rt_thread_t thd_messagerecv;
 G_VAR_PREFIX 	rt_thread_t thd_SPThread1;
 G_VAR_PREFIX 	rt_thread_t thd_SPThread2;
 G_VAR_PREFIX 	rt_thread_t thd_SPThread3;
+G_VAR_PREFIX 	rt_thread_t thd_mutexBlue;
+G_VAR_PREFIX 	rt_thread_t thd_mutexGreen;
+G_VAR_PREFIX 	rt_thread_t thd_mutexRed;
 //线程函数声明
 void app_init(void);
 void thread_rulechoose();
@@ -58,7 +62,9 @@ void thread_messagerecv();
 void thread_SPThread1();
 void thread_SPThread2();
 void thread_SPThread3();
-
+void thread_mutexBlue();
+void thread_mutexGreen();
+void thread_mutexRed();
 void thread_cloose(uint16_t thread_number);
 #define delay_ms(x)  rt_thread_delay(x)
 //----------------------------------------------------------------------
