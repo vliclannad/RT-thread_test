@@ -40,5 +40,6 @@
 #define MESSAGE_CODE 0x91   //消息队列功能用户指令
 #define SEM_CODE 0x92       //信号量功能用户指令
 #define MUTEX_CODE 0x93     //互斥量功能用户指令
+#define CONNECT_CODE 0x66   //pc段连接mcu端命令
 
 #endif    //防止重复定义（USER_H 结尾）
