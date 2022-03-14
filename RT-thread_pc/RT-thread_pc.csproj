@@ -52,6 +52,12 @@
     <Compile Include="02_Form\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="03_Function\SelectPort.cs" />
+    <Compile Include="03_Function\EMUART.cs" />
+    <Compile Include="03_Function\PublicVar.cs" />
+    <Compile Include="03_Function\SCI.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="02_Form\Main.resx">
@@ -81,9 +87,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="01_Doc\" />
-    <Folder Include="03-Function\" />
-    <Folder Include="04-Control\" />
-    <Folder Include="05-Information\" />
+    <Folder Include="04_Control\" />
+    <Folder Include="05_Information\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

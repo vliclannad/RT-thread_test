@@ -17,7 +17,7 @@ namespace RT_thread_pc._02_Form
             InitializeComponent();
         }
 
-        private void tabPage6_Click(object sender, EventArgs e)
+        private void mcu_connect_Click(object sender, EventArgs e)
         {
 
         }
