@@ -19,6 +19,10 @@ void thread_rulechoose()
         printf("接收到事件信号\n");
         if(recvedstate==RULE_CHOOSE_EVENT)  //如果接收完成且正确
     	{
+            if(gcRecvBuf[3]==CONNECT_CODE)//命令字为66，代表Pc端正和mcu取得连接
+            {
+                uart_send_string(UART_User,(void*) "I can see you");//回发连接确认
+            }
     		if(gcRecvBuf[7]==EVENT_CODE) //命令字为90，代表“事件功能”
             {
                 if(gcRecvBuf[8]==0x01)//命令参数为01，代表启动该功能，传递事件信号把小灯线程从阻塞队列移到就绪队列

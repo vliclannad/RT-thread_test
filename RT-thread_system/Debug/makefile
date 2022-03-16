@@ -33,11 +33,11 @@ SRC_sList := $(wildcard ./srcs/*.s)
 SRC_SList := $(wildcard ./srcs/*.S)
 
 #链接文件(.ld)的存储路径
-linkFile := "E:\GIT\RT-thread_system\03_MCU\Linker_file\STM32L431RCTX_FLASH.ld"
+linkFile := "F:\GIT\RT-thread_test\RT-thread_system\03_MCU\Linker_file\STM32L431RCTX_FLASH.ld"
 #定义生成的文件名
 finalGoal := RT-thread_system
 #定义头文件所在的路径
-include := -I"E:\GIT\RT-thread_system\.settings" -I"E:\GIT\RT-thread_system\.vscode" -I"E:\GIT\RT-thread_system\01_Doc" -I"E:\GIT\RT-thread_system\02_CPU" -I"E:\GIT\RT-thread_system\03_MCU" -I"E:\GIT\RT-thread_system\04_GEC" -I"E:\GIT\RT-thread_system\05_UserBoard" -I"E:\GIT\RT-thread_system\06_SoftComponent" -I"E:\GIT\RT-thread_system\07_AppPrg" -I"E:\GIT\RT-thread_system\Debug" -I"E:\GIT\RT-thread_system\03_MCU\Linker_file" -I"E:\GIT\RT-thread_system\03_MCU\MCU_drivers" -I"E:\GIT\RT-thread_system\03_MCU\startup" -I"E:\GIT\RT-thread_system\05_UserBoard\RT-Thread_Src" -I"E:\GIT\RT-thread_system\05_UserBoard\RT-Thread_Src\components" -I"E:\GIT\RT-thread_system\05_UserBoard\RT-Thread_Src\include" -I"E:\GIT\RT-thread_system\05_UserBoard\RT-Thread_Src\src" -I"E:\GIT\RT-thread_system\05_UserBoard\RT-Thread_Src\components\finsh" -I"E:\GIT\RT-thread_system\05_UserBoard\RT-Thread_Src\include\libc" -I"E:\GIT\RT-thread_system\Debug\obj" -I"E:\GIT\RT-thread_system\Debug\srcc" -I"E:\GIT\RT-thread_system\Debug\srcs"
+include := -I"F:\GIT\RT-thread_test\RT-thread_system\.settings" -I"F:\GIT\RT-thread_test\RT-thread_system\.vscode" -I"F:\GIT\RT-thread_test\RT-thread_system\01_Doc" -I"F:\GIT\RT-thread_test\RT-thread_system\02_CPU" -I"F:\GIT\RT-thread_test\RT-thread_system\03_MCU" -I"F:\GIT\RT-thread_test\RT-thread_system\04_GEC" -I"F:\GIT\RT-thread_test\RT-thread_system\05_UserBoard" -I"F:\GIT\RT-thread_test\RT-thread_system\06_SoftComponent" -I"F:\GIT\RT-thread_test\RT-thread_system\07_AppPrg" -I"F:\GIT\RT-thread_test\RT-thread_system\Debug" -I"F:\GIT\RT-thread_test\RT-thread_system\03_MCU\Linker_file" -I"F:\GIT\RT-thread_test\RT-thread_system\03_MCU\MCU_drivers" -I"F:\GIT\RT-thread_test\RT-thread_system\03_MCU\startup" -I"F:\GIT\RT-thread_test\RT-thread_system\05_UserBoard\RT-Thread_Src" -I"F:\GIT\RT-thread_test\RT-thread_system\05_UserBoard\RT-Thread_Src\components" -I"F:\GIT\RT-thread_test\RT-thread_system\05_UserBoard\RT-Thread_Src\include" -I"F:\GIT\RT-thread_test\RT-thread_system\05_UserBoard\RT-Thread_Src\src" -I"F:\GIT\RT-thread_test\RT-thread_system\05_UserBoard\RT-Thread_Src\components\finsh" -I"F:\GIT\RT-thread_test\RT-thread_system\05_UserBoard\RT-Thread_Src\include\libc" -I"F:\GIT\RT-thread_test\RT-thread_system\Debug\obj" -I"F:\GIT\RT-thread_test\RT-thread_system\Debug\srcc" -I"F:\GIT\RT-thread_test\RT-thread_system\Debug\srcs"
 #定义优化级别。共有O0、O1、O2、Os和Og，默认使用Og
 opt := Og
 #.o文件列表

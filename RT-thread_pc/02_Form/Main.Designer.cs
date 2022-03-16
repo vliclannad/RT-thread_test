@@ -32,10 +32,12 @@ namespace RT_thread_pc._02_Form
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabMain = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label_connectstate = new System.Windows.Forms.Label();
             this.mcu_connect = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tabEvent = new System.Windows.Forms.TabPage();
+            this.textBox_event = new System.Windows.Forms.TextBox();
+            this.BtnSwitch_event = new System.Windows.Forms.Button();
             this.tabMessage = new System.Windows.Forms.TabPage();
             this.tabSP = new System.Windows.Forms.TabPage();
             this.tabMutex = new System.Windows.Forms.TabPage();
@@ -43,6 +45,7 @@ namespace RT_thread_pc._02_Form
             this.tabControl1.SuspendLayout();
             this.tabMain.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.tabEvent.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -82,7 +85,7 @@ namespace RT_thread_pc._02_Form
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label_connectstate);
             this.panel1.Controls.Add(this.mcu_connect);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 520);
@@ -90,15 +93,18 @@ namespace RT_thread_pc._02_Form
             this.panel1.Size = new System.Drawing.Size(1010, 125);
             this.panel1.TabIndex = 1;
             // 
-            // label2
+            // label_connectstate
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("微软雅黑", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(444, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(162, 39);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "设备未连接";
+            this.label_connectstate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label_connectstate.AutoSize = true;
+            this.label_connectstate.Font = new System.Drawing.Font("微软雅黑", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label_connectstate.Location = new System.Drawing.Point(444, 37);
+            this.label_connectstate.Name = "label_connectstate";
+            this.label_connectstate.Size = new System.Drawing.Size(162, 39);
+            this.label_connectstate.TabIndex = 3;
+            this.label_connectstate.Text = "设备未连接";
             // 
             // mcu_connect
             // 
@@ -126,13 +132,33 @@ namespace RT_thread_pc._02_Form
             // 
             // tabEvent
             // 
+            this.tabEvent.BackColor = System.Drawing.Color.Bisque;
+            this.tabEvent.Controls.Add(this.textBox_event);
+            this.tabEvent.Controls.Add(this.BtnSwitch_event);
             this.tabEvent.Location = new System.Drawing.Point(4, 34);
             this.tabEvent.Name = "tabEvent";
             this.tabEvent.Padding = new System.Windows.Forms.Padding(3);
             this.tabEvent.Size = new System.Drawing.Size(1002, 642);
             this.tabEvent.TabIndex = 1;
             this.tabEvent.Text = "事件功能";
-            this.tabEvent.UseVisualStyleBackColor = true;
+            // 
+            // textBox_event
+            // 
+            this.textBox_event.Location = new System.Drawing.Point(29, 161);
+            this.textBox_event.Multiline = true;
+            this.textBox_event.Name = "textBox_event";
+            this.textBox_event.Size = new System.Drawing.Size(574, 324);
+            this.textBox_event.TabIndex = 2;
+            // 
+            // BtnSwitch_event
+            // 
+            this.BtnSwitch_event.Location = new System.Drawing.Point(638, 197);
+            this.BtnSwitch_event.Name = "BtnSwitch_event";
+            this.BtnSwitch_event.Size = new System.Drawing.Size(195, 75);
+            this.BtnSwitch_event.TabIndex = 0;
+            this.BtnSwitch_event.Text = "开启功能";
+            this.BtnSwitch_event.UseVisualStyleBackColor = true;
+            this.BtnSwitch_event.Click += new System.EventHandler(this.BtnSwitch_event_Click);
             // 
             // tabMessage
             // 
@@ -186,6 +212,8 @@ namespace RT_thread_pc._02_Form
             this.tabMain.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.tabEvent.ResumeLayout(false);
+            this.tabEvent.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -201,6 +229,8 @@ namespace RT_thread_pc._02_Form
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button mcu_connect;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label_connectstate;
+        private System.Windows.Forms.Button BtnSwitch_event;
+        public System.Windows.Forms.TextBox textBox_event;
     }
 }

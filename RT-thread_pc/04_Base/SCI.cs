@@ -22,10 +22,10 @@ using System.Windows.Forms;
 /// --------------------------------------------------------------------
 
 
-namespace RT_thread_pc._03_Function
+namespace RT_thread_pc._04_Base
 {
 
-    public class SCI : System.IO.Ports.SerialPort
+    public  class SCI : System.IO.Ports.SerialPort
     {
 
         /// ----------------------------------------------------------------
@@ -63,7 +63,7 @@ namespace RT_thread_pc._03_Function
         {
             try
             {
-                this.Open();                //打开串口
+                this.Open();                //打开串口;
             }
             catch
             {
@@ -81,7 +81,7 @@ namespace RT_thread_pc._03_Function
         /// <returns>返回一个布尔值,当串口成功关闭后,返回true              
         ///          否则返回false</returns>                                
         ///-----------------------------------------------------------------
-        public bool SCIClose()
+        public  bool SCIClose()
         {
             try
             {
@@ -111,59 +111,11 @@ namespace RT_thread_pc._03_Function
         {
             if (!this.IsOpen)
             {
-                return false;
+               return false;
             }
             try
             {
                 this.Write(SendArray, 0, SendArray.Length);//通过串口发送出去
-            }
-            catch
-            {
-                return false;//产生错误,返回false
-            }
-            return true;
-        }
-
-
-        ///-----------------------------------------------------------------
-        /// <summary>                                                       
-        /// 功    能:串口发送帧格式数据                                           
-        /// 内部调用:无                                                     
-        /// </summary>                                                      
-        /// <param name="SendArray">存放要发送的数据,字节数组</param>      
-        /// <returns>返回一个布尔值,当发送成功后,返回True;                 
-        ///          否则返回False</returns>                                
-        ///-----------------------------------------------------------------
-        public bool SCISendFrameData(ref byte[] SendArray)
-        {
-            if (!this.IsOpen)
-            {
-                return false;
-            }
-            try
-            {
-                byte[] sendData = new byte[SendArray.Length + 8];
-                int index = 0;
-                //帧头
-                sendData[index++] = emuartFrameHead[0];
-                sendData[index++] = emuartFrameHead[1];
-                //数据长度
-                sendData[index++] = (byte)(SendArray.Length >> 8);
-                sendData[index++] = (byte)(SendArray.Length);
-                //数据
-                if (SendArray.Length > 0)
-                    Array.Copy(SendArray, 0, sendData, index, SendArray.Length);
-                index += SendArray.Length;
-                //CRC校验
-                UInt16 temp16 = emuart_crc16(SendArray, SendArray.Length);
-                sendData[index++] = (byte)(temp16 >> 8);
-                sendData[index++] = (byte)(temp16);
-                //发送帧尾
-                sendData[index++] = emuartFrameTail[0];
-                sendData[index++] = emuartFrameTail[1];
-
-
-                this.Write(sendData, 0, sendData.Length);//通过串口发送出去
             }
             catch
             {
@@ -239,8 +191,6 @@ namespace RT_thread_pc._03_Function
             return GetPortNames();
         }
 
-        private byte[] emuartFrameHead = new byte[2] { 0xa5, 0x06 };
-        private byte[] emuartFrameTail = new byte[2] { 0xb6, 0x07 };
 
         //=====================================================================
         //函数名称：emuart_crc16

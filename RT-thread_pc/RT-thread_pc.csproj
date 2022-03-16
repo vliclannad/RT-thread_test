@@ -52,10 +52,10 @@
     <Compile Include="02_Form\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="03_Function\SelectPort.cs" />
-    <Compile Include="03_Function\EMUART.cs" />
+    <Compile Include="03_Function\View_Show.cs" />
+    <Compile Include="03_Function\Comm_Process.cs" />
     <Compile Include="03_Function\PublicVar.cs" />
-    <Compile Include="03_Function\SCI.cs">
+    <Compile Include="04_Base\SCI.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />
@@ -87,7 +87,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="01_Doc\" />
-    <Folder Include="04_Control\" />
     <Folder Include="05_Information\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -8,3 +8,14 @@ E:\GIT\RT-thread_test\RT-thread_pc\bin\Debug\RT-thread_pc.pdb
 E:\GIT\RT-thread_test\RT-thread_pc\obj\Debug\RT-thread_pc.exe
 E:\GIT\RT-thread_test\RT-thread_pc\obj\Debug\RT-thread_pc.pdb
 E:\GIT\RT-thread_test\RT-thread_pc\obj\Debug\RT_thread_pc._02_Form.Main.resources
+F:\GIT\RT-thread_test\RT-thread_pc\bin\Debug\RT-thread_pc.exe.config
+F:\GIT\RT-thread_test\RT-thread_pc\bin\Debug\RT-thread_pc.exe
+F:\GIT\RT-thread_test\RT-thread_pc\bin\Debug\RT-thread_pc.pdb
+F:\GIT\RT-thread_test\RT-thread_pc\obj\Debug\RT-thread_pc.csproj.AssemblyReference.cache
+F:\GIT\RT-thread_test\RT-thread_pc\obj\Debug\RT-thread_pc.csproj.SuggestedBindingRedirects.cache
+F:\GIT\RT-thread_test\RT-thread_pc\obj\Debug\RT_thread_pc._02_Form.Main.resources
+F:\GIT\RT-thread_test\RT-thread_pc\obj\Debug\RT_thread_pc.Properties.Resources.resources
+F:\GIT\RT-thread_test\RT-thread_pc\obj\Debug\RT-thread_pc.csproj.GenerateResource.cache
+F:\GIT\RT-thread_test\RT-thread_pc\obj\Debug\RT-thread_pc.csproj.CoreCompileInputs.cache
+F:\GIT\RT-thread_test\RT-thread_pc\obj\Debug\RT-thread_pc.exe
+F:\GIT\RT-thread_test\RT-thread_pc\obj\Debug\RT-thread_pc.pdb
