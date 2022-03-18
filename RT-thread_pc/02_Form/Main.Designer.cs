@@ -42,10 +42,19 @@ namespace RT_thread_pc._02_Form
             this.tabSP = new System.Windows.Forms.TabPage();
             this.tabMutex = new System.Windows.Forms.TabPage();
             this.tabHelp = new System.Windows.Forms.TabPage();
+            this.BtnSwitch_message = new System.Windows.Forms.Button();
+            this.textBox_message = new System.Windows.Forms.TextBox();
+            this.textBox_sp = new System.Windows.Forms.TextBox();
+            this.BtnSwitch_sp = new System.Windows.Forms.Button();
+            this.textBox_mutex = new System.Windows.Forms.TextBox();
+            this.BtnSwitch_mutex = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabMain.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabEvent.SuspendLayout();
+            this.tabMessage.SuspendLayout();
+            this.tabSP.SuspendLayout();
+            this.tabMutex.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -147,8 +156,10 @@ namespace RT_thread_pc._02_Form
             this.textBox_event.Location = new System.Drawing.Point(29, 161);
             this.textBox_event.Multiline = true;
             this.textBox_event.Name = "textBox_event";
+            this.textBox_event.ReadOnly = true;
+            this.textBox_event.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBox_event.Size = new System.Drawing.Size(574, 324);
-            this.textBox_event.TabIndex = 2;
+            this.textBox_event.TabIndex = 16;
             // 
             // BtnSwitch_event
             // 
@@ -156,12 +167,14 @@ namespace RT_thread_pc._02_Form
             this.BtnSwitch_event.Name = "BtnSwitch_event";
             this.BtnSwitch_event.Size = new System.Drawing.Size(195, 75);
             this.BtnSwitch_event.TabIndex = 0;
-            this.BtnSwitch_event.Text = "开启功能";
+            this.BtnSwitch_event.Text = "演示开始";
             this.BtnSwitch_event.UseVisualStyleBackColor = true;
             this.BtnSwitch_event.Click += new System.EventHandler(this.BtnSwitch_event_Click);
             // 
             // tabMessage
             // 
+            this.tabMessage.Controls.Add(this.textBox_message);
+            this.tabMessage.Controls.Add(this.BtnSwitch_message);
             this.tabMessage.Location = new System.Drawing.Point(4, 34);
             this.tabMessage.Name = "tabMessage";
             this.tabMessage.Padding = new System.Windows.Forms.Padding(3);
@@ -172,6 +185,8 @@ namespace RT_thread_pc._02_Form
             // 
             // tabSP
             // 
+            this.tabSP.Controls.Add(this.textBox_sp);
+            this.tabSP.Controls.Add(this.BtnSwitch_sp);
             this.tabSP.Location = new System.Drawing.Point(4, 34);
             this.tabSP.Name = "tabSP";
             this.tabSP.Padding = new System.Windows.Forms.Padding(3);
@@ -182,6 +197,8 @@ namespace RT_thread_pc._02_Form
             // 
             // tabMutex
             // 
+            this.tabMutex.Controls.Add(this.textBox_mutex);
+            this.tabMutex.Controls.Add(this.BtnSwitch_mutex);
             this.tabMutex.Location = new System.Drawing.Point(4, 34);
             this.tabMutex.Name = "tabMutex";
             this.tabMutex.Padding = new System.Windows.Forms.Padding(3);
@@ -200,6 +217,66 @@ namespace RT_thread_pc._02_Form
             this.tabHelp.Text = "帮助";
             this.tabHelp.UseVisualStyleBackColor = true;
             // 
+            // BtnSwitch_message
+            // 
+            this.BtnSwitch_message.Location = new System.Drawing.Point(634, 218);
+            this.BtnSwitch_message.Name = "BtnSwitch_message";
+            this.BtnSwitch_message.Size = new System.Drawing.Size(246, 88);
+            this.BtnSwitch_message.TabIndex = 0;
+            this.BtnSwitch_message.Text = "演示开始";
+            this.BtnSwitch_message.UseVisualStyleBackColor = true;
+            this.BtnSwitch_message.Click += new System.EventHandler(this.BtnSwitch_message_Click);
+            // 
+            // textBox_message
+            // 
+            this.textBox_message.Location = new System.Drawing.Point(54, 182);
+            this.textBox_message.Multiline = true;
+            this.textBox_message.Name = "textBox_message";
+            this.textBox_message.ReadOnly = true;
+            this.textBox_message.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBox_message.Size = new System.Drawing.Size(574, 324);
+            this.textBox_message.TabIndex = 17;
+            // 
+            // textBox_sp
+            // 
+            this.textBox_sp.Location = new System.Drawing.Point(88, 159);
+            this.textBox_sp.Multiline = true;
+            this.textBox_sp.Name = "textBox_sp";
+            this.textBox_sp.ReadOnly = true;
+            this.textBox_sp.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBox_sp.Size = new System.Drawing.Size(574, 324);
+            this.textBox_sp.TabIndex = 19;
+            // 
+            // BtnSwitch_sp
+            // 
+            this.BtnSwitch_sp.Location = new System.Drawing.Point(668, 195);
+            this.BtnSwitch_sp.Name = "BtnSwitch_sp";
+            this.BtnSwitch_sp.Size = new System.Drawing.Size(246, 88);
+            this.BtnSwitch_sp.TabIndex = 18;
+            this.BtnSwitch_sp.Text = "演示开始";
+            this.BtnSwitch_sp.UseVisualStyleBackColor = true;
+            this.BtnSwitch_sp.Click += new System.EventHandler(this.BtnSwitch_sp_Click);
+            // 
+            // textBox_mutex
+            // 
+            this.textBox_mutex.Location = new System.Drawing.Point(88, 159);
+            this.textBox_mutex.Multiline = true;
+            this.textBox_mutex.Name = "textBox_mutex";
+            this.textBox_mutex.ReadOnly = true;
+            this.textBox_mutex.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBox_mutex.Size = new System.Drawing.Size(574, 324);
+            this.textBox_mutex.TabIndex = 19;
+            // 
+            // BtnSwitch_mutex
+            // 
+            this.BtnSwitch_mutex.Location = new System.Drawing.Point(668, 195);
+            this.BtnSwitch_mutex.Name = "BtnSwitch_mutex";
+            this.BtnSwitch_mutex.Size = new System.Drawing.Size(246, 88);
+            this.BtnSwitch_mutex.TabIndex = 18;
+            this.BtnSwitch_mutex.Text = "演示开始";
+            this.BtnSwitch_mutex.UseVisualStyleBackColor = true;
+            this.BtnSwitch_mutex.Click += new System.EventHandler(this.BtnSwitch_mutex_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -214,6 +291,12 @@ namespace RT_thread_pc._02_Form
             this.panel1.PerformLayout();
             this.tabEvent.ResumeLayout(false);
             this.tabEvent.PerformLayout();
+            this.tabMessage.ResumeLayout(false);
+            this.tabMessage.PerformLayout();
+            this.tabSP.ResumeLayout(false);
+            this.tabSP.PerformLayout();
+            this.tabMutex.ResumeLayout(false);
+            this.tabMutex.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -231,6 +314,12 @@ namespace RT_thread_pc._02_Form
         private System.Windows.Forms.Button mcu_connect;
         private System.Windows.Forms.Label label_connectstate;
         private System.Windows.Forms.Button BtnSwitch_event;
-        public System.Windows.Forms.TextBox textBox_event;
+        private System.Windows.Forms.TextBox textBox_event;
+        private System.Windows.Forms.TextBox textBox_message;
+        private System.Windows.Forms.Button BtnSwitch_message;
+        private System.Windows.Forms.TextBox textBox_sp;
+        private System.Windows.Forms.Button BtnSwitch_sp;
+        private System.Windows.Forms.TextBox textBox_mutex;
+        private System.Windows.Forms.Button BtnSwitch_mutex;
     }
 }

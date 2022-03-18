@@ -25,7 +25,7 @@ using System.Windows.Forms;
 namespace RT_thread_pc._04_Base
 {
 
-    public  class SCI : System.IO.Ports.SerialPort
+    public class SCI : System.IO.Ports.SerialPort
     {
 
         /// ----------------------------------------------------------------
@@ -37,7 +37,7 @@ namespace RT_thread_pc._04_Base
         /// <param name="Baud">波特率,整型</param>                          
             
         /// ----------------------------------------------------------------
-        public SCI(string ComNum, Int32 Baud)
+        public  SCI(string ComNum, Int32 Baud)
         {
             try{
                 this.Close();               //保证初始化之前是关闭的

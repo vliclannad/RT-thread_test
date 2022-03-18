@@ -69,58 +69,6 @@ namespace RT_thread_pc._03_Function
                 }
             }
         }
-        /// ----------------------------------------------------------------
-        /// <summary>                                                       
-        /// 功    能:向MCU端发送自定义字符串
-        /// 内部调用:无                                                     
-        /// </summary>                                                      
-        /// <param name="SendArray">存放要发送的数据,字节数组</param>                     
-        /// ----------------------------------------------------------------
-
-
-
-
-
-        public void DataReceiveON(ref byte[] SendArray)
-        {
-            sci = new SCI(PublicVar.g_SCIComNum, PublicVar.g_SCIBaudRate);
-            if (sci.SCIOpen())
-            {
-                sci.SCISendData(ref SendArray);
-                
-                sci.Close();
-            }
-        }
-
-        
-
-        public void DataReceiveOFF(ref byte[] SendArray)
-        {
-            sci = new SCI(PublicVar.g_SCIComNum, PublicVar.g_SCIBaudRate);
-            {
-                sci.SCIOpen();
-                sci.SCISendData(ref SendArray);
-                
-                sci.SCIClose();
-            }
-
-        }
-
-
-        ///-----------------------------------------------------------------
-        /// <summary>                                                       
-        /// 对    象:SCIPort                                                
-        /// 事    件:DataReceived                                           
-        /// 功    能:串口接收数据                                           
-        /// 函数调用:(1)SCIReceiveData,串口接收函数                         
-        ///          (2)SCIUpdateRevtxtbox,更新文本框中的内容               
-        /// </summary>                                                      
-        /// <param name="sender"></param>                                   
-        /// <param name="e"></param>                                        
-        ///-----------------------------------------------------------------
-       
-
-
     }
 
         
