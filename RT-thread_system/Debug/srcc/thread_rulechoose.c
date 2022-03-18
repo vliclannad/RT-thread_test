@@ -14,9 +14,9 @@ void thread_rulechoose()
         uint8_t recvData[9];
     while(1)
     {
-        printf("进入命令选择线程，等待事件信号\n");
+        uart_send_string(UART_User,(void *)"进入命令选择线程，等待事件信号\n");
         rt_event_recv(EventWord,RULE_CHOOSE_EVENT,RT_EVENT_FLAG_OR|RT_EVENT_FLAG_CLEAR,RT_WAITING_FOREVER,&recvedstate);//等待命令选择线程的事件信号，串口接收完数据后会触发
-        printf("接收到事件信号\n");
+        uart_send_string(UART_User,(void *)"接收到事件信号\n");
         if(recvedstate==RULE_CHOOSE_EVENT)  //如果接收完成且正确
     	{
             if(gcRecvBuf[3]==CONNECT_CODE)//命令字为66，代表Pc端正和mcu取得连接
@@ -44,7 +44,7 @@ void thread_rulechoose()
                 }
                 if(gcRecvBuf[8]==0x00)//命令参数为00，代表关闭该功能，重新启动小灯线程，把小灯线程移入阻塞队列
                 {
-                    printf("接收到事件功能结束命令，事件功能模块结束");
+                    uart_send_string(UART_User,(void *)"接收到事件功能结束命令，事件功能模块结束");
                     rt_thread_detach(thd_bluelight);
                     rt_thread_detach(thd_greenlight);
                     gpio_init(LIGHT_BLUE,GPIO_OUTPUT,LIGHT_OFF);
@@ -81,7 +81,7 @@ void thread_rulechoose()
             {
                 if(gcRecvBuf[8]==0x01)//命令参数为01，代表启动该功能
                 {
-                    printf("接收到信号量功能开启命令，信号量功能模块开启\n");
+                    uart_send_string(UART_User,(void *)"接收到信号量功能开启命令，信号量功能模块开启\n");
                     rt_thread_detach(thd_bluelight);
                     rt_thread_detach(thd_greenlight);
                     rt_thread_detach(thd_messagerecv);
@@ -99,7 +99,7 @@ void thread_rulechoose()
                 }
                 if(gcRecvBuf[8]==0x00)//命令参数为00，代表关闭该功能
                 {
-                    printf("接收到信号量功能结束命令，信号量功能模块结束");
+                    uart_send_string(UART_User,(void *)"接收到信号量功能结束命令，信号量功能模块结束");
                     rt_thread_detach(thd_SPThread1);	
                     rt_thread_detach(thd_SPThread2);
                     rt_thread_detach(thd_SPThread3);
@@ -115,7 +115,7 @@ void thread_rulechoose()
             {
                 if(gcRecvBuf[8]==0x01)
                 {
-                    printf("接收到互斥量功能开启命令，互斥量功能模块开启\n");
+                    uart_send_string(UART_User,(void *)"接收到互斥量功能开启命令，互斥量功能模块开启\n");
                     rt_thread_detach(thd_bluelight);
                     rt_thread_detach(thd_greenlight);
                     rt_thread_detach(thd_messagerecv);
@@ -129,7 +129,7 @@ void thread_rulechoose()
                 }
                 if(gcRecvBuf[8]==0x00)
                 {
-                    printf("接收到互斥量功能关闭命令，互斥量功能模块关闭\n");
+                    uart_send_string(UART_User,(void *)"接收到互斥量功能关闭命令，互斥量功能模块关闭\n");
                     rt_thread_detach(thd_mutexRed);
                     rt_thread_detach(thd_mutexGreen);
                     rt_thread_detach(thd_mutexBlue);

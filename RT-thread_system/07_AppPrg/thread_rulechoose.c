@@ -16,7 +16,7 @@ void thread_rulechoose()
     {
         uart_send_string(UART_User,(void *)"进入命令选择线程，等待事件信号\n");
         rt_event_recv(EventWord,RULE_CHOOSE_EVENT,RT_EVENT_FLAG_OR|RT_EVENT_FLAG_CLEAR,RT_WAITING_FOREVER,&recvedstate);//等待命令选择线程的事件信号，串口接收完数据后会触发
-        uart_send_string(UART_User,(void *))("接收到事件信号\n");
+        uart_send_string(UART_User,(void *)"接收到事件信号\n");
         if(recvedstate==RULE_CHOOSE_EVENT)  //如果接收完成且正确
     	{
             if(gcRecvBuf[3]==CONNECT_CODE)//命令字为66，代表Pc端正和mcu取得连接

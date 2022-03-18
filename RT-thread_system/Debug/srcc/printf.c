@@ -18,6 +18,11 @@
 void out_char(char data) {
 	uart_send1(UART_printf, data);
 }
+
+//通过串口2发送
+void out_char2(char data){
+	uart_send1(UART_2,data);
+}
 //======================================================================
 //函数名称：printk_putc
 //功能概要：通过串口打出一个字符
@@ -670,6 +675,22 @@ int myprintf(const char *fmt, ...)
 	PRINTK_INFO info;
 	info.dest = DEST_CONSOLE;  //宏定义为1
 	info.func = &out_char;     //调用的串口输出函数
+	va_start(ap, fmt);  //对ap 进行初始化，让它指向可变参数表里面的第一个参数
+	rvalue = printk(&info, fmt, ap);
+
+	va_end(ap);
+
+	return rvalue;
+}
+
+
+int userprintf(const char *fmt, ...)
+{
+	char * ap;
+	int rvalue;
+	PRINTK_INFO info;
+	info.dest = DEST_CONSOLE;  //宏定义为1
+	info.func = &out_char2;     //调用的串口输出函数
 	va_start(ap, fmt);  //对ap 进行初始化，让它指向可变参数表里面的第一个参数
 	rvalue = printk(&info, fmt, ap);
 

@@ -180,7 +180,7 @@ namespace RT_thread_pc._02_Form
         private void BtnSwitch_message_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            PublicVar.g_TextBox = this.textBox_event;
+            PublicVar.g_TextBox = this.textBox_message;
             if (button.Text == "演示开始")
             {
                 string a = "演示开始";

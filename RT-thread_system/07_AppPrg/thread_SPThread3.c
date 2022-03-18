@@ -19,7 +19,8 @@ void thread_SPThread3()
 		gpio_init(LIGHT_BLUE,GPIO_OUTPUT,LIGHT_OFF);
     	delay_ms(1000);    //延时1秒
     	SPcount=SP->value; //获取信号量的值
-    	uart_send_string(UART_User,(void *)"当前SP个数为%d\n",SPcount);
+    	//uart_send_string(UART_User,(void *)"当前SP个数为%d\n",SPcount);
+		userprintf("当前SP个数为%d\n",SPcount);
     	uart_send_string(UART_User,(void *)"线程3请求1个SP\n");
 		if(SPcount==0)
 		{
@@ -28,7 +29,8 @@ void thread_SPThread3()
 		}
 		rt_sem_take(SP,RT_WAITING_FOREVER); //获取一个信号量
 		SPcount=SP->value;                 //获取信号量的值
-		uart_send_string(UART_User,(void *)"线程3获取1个SP，SP还剩%d\n",SPcount);
+		//uart_send_string(UART_User,(void *)"线程3获取1个SP，SP还剩%d\n",SPcount);
+		userprintf("线程3获取1个SP，SP还剩%d\n",SPcount);
 		delay_ms(3000);
 	    uart_send_string(UART_User,(void *)"转换红灯状态\n");
 		gpio_reverse(LIGHT_RED);

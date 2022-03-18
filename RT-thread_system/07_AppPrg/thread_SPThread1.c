@@ -21,7 +21,8 @@ void thread_SPThread1()
     {
     	delay_ms(1000);    //延时1秒
     	SPcount=SP->value;  //获取信号量的值
-    	uart_send_string(UART_User,(void *)"当前SP为%d\n",SPcount);
+    	//uart_send_string(UART_User,(void *)"当前SP为%d\n",SPcount);
+		userprintf("当前SP为%d\n",SPcount);
     	uart_send_string(UART_User,(void *)"线程1请求1个SP\n");
 		if(SPcount==0)
 		{
@@ -30,7 +31,8 @@ void thread_SPThread1()
 		//获取一个信号量
 		rt_sem_take(SP,RT_WAITING_FOREVER);
 		SPcount=SP->value;
-		uart_send_string(UART_User,(void *)"线程1获取1个SP，SP还剩%d\n",SPcount);
+		//uart_send_string(UART_User,(void *)"线程1获取1个SP，SP还剩%d\n",SPcount);
+		userprintf("线程1获取1个SP，SP还剩%d\n",SPcount);
 		delay_ms(5000);
 		//释放一个信号量
 		rt_sem_release(SP);

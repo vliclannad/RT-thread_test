@@ -47,6 +47,7 @@ typedef struct {
 //函数返回：字符串长度
 //======================================================================
 int myprintf(const char *, ...);
+int userprintf(const char *, ...);
 
 
 #define DEST_CONSOLE    (1)
