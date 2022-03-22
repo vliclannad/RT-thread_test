@@ -19,3 +19,5 @@ F:\GIT\RT-thread_test\RT-thread_pc\obj\Debug\RT-thread_pc.csproj.GenerateResourc
 F:\GIT\RT-thread_test\RT-thread_pc\obj\Debug\RT-thread_pc.csproj.CoreCompileInputs.cache
 F:\GIT\RT-thread_test\RT-thread_pc\obj\Debug\RT-thread_pc.exe
 F:\GIT\RT-thread_test\RT-thread_pc\obj\Debug\RT-thread_pc.pdb
+F:\GIT\RT-thread_test\RT-thread_pc\obj\Debug\RT_thread_pc._02_Form.Event.resources
+F:\GIT\RT-thread_test\RT-thread_pc\obj\Debug\RT_thread_pc._03_Function.UserControl1.resources

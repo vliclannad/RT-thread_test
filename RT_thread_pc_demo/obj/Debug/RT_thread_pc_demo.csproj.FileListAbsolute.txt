@@ -1,0 +1,14 @@
+F:\GIT\RT-thread_test\RT_thread_pc_demo\obj\Debug\RT_thread_pc_demo.csproj.AssemblyReference.cache
+F:\GIT\RT-thread_test\RT_thread_pc_demo\obj\Debug\RT_thread_pc_demo.csproj.SuggestedBindingRedirects.cache
+F:\GIT\RT-thread_test\RT_thread_pc_demo\obj\Debug\RT_thread_pc_demo.Main.resources
+F:\GIT\RT-thread_test\RT_thread_pc_demo\obj\Debug\RT_thread_pc_demo.Properties.Resources.resources
+F:\GIT\RT-thread_test\RT_thread_pc_demo\obj\Debug\RT_thread_pc_demo.csproj.GenerateResource.cache
+F:\GIT\RT-thread_test\RT_thread_pc_demo\obj\Debug\RT_thread_pc_demo.csproj.CoreCompileInputs.cache
+F:\GIT\RT-thread_test\RT_thread_pc_demo\bin\Debug\RT_thread_pc_demo.exe.config
+F:\GIT\RT-thread_test\RT_thread_pc_demo\bin\Debug\RT_thread_pc_demo.exe
+F:\GIT\RT-thread_test\RT_thread_pc_demo\bin\Debug\RT_thread_pc_demo.pdb
+F:\GIT\RT-thread_test\RT_thread_pc_demo\obj\Debug\RT_thread_pc_demo.exe
+F:\GIT\RT-thread_test\RT_thread_pc_demo\obj\Debug\RT_thread_pc_demo.pdb
+F:\GIT\RT-thread_test\RT_thread_pc_demo\obj\Debug\RT_thread_pc_demo._04_Control.Event.resources
+F:\GIT\RT-thread_test\RT_thread_pc_demo\obj\Debug\RT_thread_pc_demo._04_Control.Event_information.resources
+F:\GIT\RT-thread_test\RT_thread_pc_demo\obj\Debug\RT_thread_pc_demo._04_Control.MCU_connect.resources
