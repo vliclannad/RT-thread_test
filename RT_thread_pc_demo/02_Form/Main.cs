@@ -33,15 +33,20 @@ namespace RT_thread_pc_demo
         private void Main_Load(object sender, EventArgs e)
         {
             MCU_connect mCU_Connect = new MCU_connect();
+            Main_information main_Information = new Main_information();
+            ClearPanel(panel_main);
             ClearPanel(panel_connect);
             AddControlsToPanel(panel_connect, mCU_Connect);
-
+            AddControlsToPanel(panel_main,main_Information);
         }
 
 
         /**——————————————————————————菜单栏点击事件——————————————————————————**/
         private void Menu_main_Click(object sender, EventArgs e)
         {
+            Main_information main_Information = new Main_information();
+            ClearPanel(panel_main);
+            AddControlsToPanel(panel_main, main_Information);
 
         }
 
@@ -55,22 +60,45 @@ namespace RT_thread_pc_demo
 
         private void Menu_message_Click(object sender, EventArgs e)
         {
+            Message_information message_Information = new Message_information();
+            ClearPanel(panel_main);
+            AddControlsToPanel(panel_main, message_Information);
 
         }
 
         private void Menu_sp_Click(object sender, EventArgs e)
         {
-
+            Sp_information sp_Information = new Sp_information();
+            ClearPanel(panel_main);
+            AddControlsToPanel(panel_main, sp_Information);
         }
 
         private void Menu_mutex_Click(object sender, EventArgs e)
         {
+            Mutex_information mutex_Information = new Mutex_information();
+            ClearPanel(panel_main);
+            AddControlsToPanel(panel_main, mutex_Information);
 
         }
 
         private void Menu_help_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dr =MessageBox.Show("是否退出？","提示",MessageBoxButtons.OKCancel,MessageBoxIcon.Information);
+
+            if(dr ==DialogResult.OK)
+            {
+                e.Cancel = false;
+            }
+            else if (dr ==DialogResult.Cancel)
+            {
+                e.Cancel=true;
+
+            }
         }
 
         /**——————————————————————————菜单栏点击事件——————————————————————————**/

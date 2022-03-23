@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.Btn_toevent = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Btn_toevent
@@ -41,19 +42,31 @@
             this.Btn_toevent.UseVisualStyleBackColor = true;
             this.Btn_toevent.Click += new System.EventHandler(this.Btn_toevent_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(431, 42);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(86, 21);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "事件功能介绍";
+            // 
             // Event_information
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Btn_toevent);
             this.Name = "Event_information";
             this.Size = new System.Drawing.Size(1007, 554);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button Btn_toevent;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

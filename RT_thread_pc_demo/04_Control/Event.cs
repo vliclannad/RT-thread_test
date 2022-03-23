@@ -44,6 +44,17 @@ namespace RT_thread_pc_demo._04_Control
 
         }
 
+        ///-----------------------------------------------------------------
+        /// <summary>                                                       
+        /// 函数名:send_command                                     
+        /// 参  数:(1)byte[],要发送的命令             
+        ///        (2)string类型,要放入按钮text                    
+        /// 功  能:依据按钮text，发送命令，增加或删除串口接收委托       
+        /// 返  回:无                                                       
+        /// </summary>                                                      
+        /// <param name="textbox"></param>                                  
+        /// <param name="str"></param>                                      
+        ///-----------------------------------------------------------------
         public void send_command(ref byte[] SendArray, ref string a)
         {
 
@@ -54,7 +65,7 @@ namespace RT_thread_pc_demo._04_Control
                 {
                     //sci.SCIOpen();
                     sci.SCISendData(ref SendArray);
-                    sci.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.SCIPort_DataReceived);
+                    sci.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.SCIPort_DataReceived);//订阅事件
                     sci.SCIReceInt(1);
                 }
 
@@ -70,7 +81,20 @@ namespace RT_thread_pc_demo._04_Control
             }
         }
 
-        private void SCIPort_DataReceived(object sender,
+
+    
+    ///-----------------------------------------------------------------
+    /// <summary>                                                       
+    /// 对    象:SCIPort                                                
+    /// 事    件:DataReceived                                           
+    /// 功    能:串口接收数据                                           
+    /// 函数调用:(1)SCIReceiveData,串口接收函数                         
+    ///          (2)SCIUpdateRevtxtbox,更新文本框中的内容               
+    /// </summary>                                                      
+    /// <param name="sender"></param>                                   
+    /// <param name="e"></param>                                        
+    ///-----------------------------------------------------------------
+    private void SCIPort_DataReceived(object sender,
           System.IO.Ports.SerialDataReceivedEventArgs e)
         {
             String str = String.Empty;
@@ -98,6 +122,18 @@ namespace RT_thread_pc_demo._04_Control
             }
         }
 
+        ///-----------------------------------------------------------------
+        /// <summary>                                                       
+        /// 函数名:SCIUpdateRevtxtbox                                       
+        /// 参  数:(1)textbox,Object类型,接收数据要放入的文本框             
+        ///        (2)text,string类型,要放入文本框的数据                    
+        /// 功  能:若串行接收与Object不在同一线程中运行，那么通过invoke     
+        ///        跨线程用串口接收到的数据来更新接收文本框中的数据         
+        /// 返  回:无                                                       
+        /// </summary>                                                      
+        /// <param name="textbox"></param>                                  
+        /// <param name="str"></param>                                      
+        ///-----------------------------------------------------------------
         private void SCIUpdateRevtxtbox(Object textbox, string text)
         {
 

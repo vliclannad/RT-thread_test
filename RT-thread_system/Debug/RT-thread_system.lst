@@ -8926,7 +8926,8 @@ void thread_rulechoose()
  8010d8e:	2300      	movs	r3, #0
  8010d90:	2b07      	cmp	r3, #7
  8010d92:	dc09      	bgt.n	8010da8 <thread_rulechoose+0x118>
-				recvData[i] = gcRecvBuf[i+9];
+                {
+                    recvData[i] = gcRecvBuf[i+9];
  8010d94:	f103 0209 	add.w	r2, r3, #9
  8010d98:	4961      	ldr	r1, [pc, #388]	; (8010f20 <thread_rulechoose+0x290>)
  8010d9a:	5c89      	ldrb	r1, [r1, r2]
@@ -8936,6 +8937,9 @@ void thread_rulechoose()
 			    for(int i=0;i<8;i++)
  8010da4:	3301      	adds	r3, #1
  8010da6:	e7f3      	b.n	8010d90 <thread_rulechoose+0x100>
+
+                }
+				
 		        //将该消息存放到消息队列
 			    rt_mq_send(mq,recvData,sizeof(recvData));
  8010da8:	2209      	movs	r2, #9

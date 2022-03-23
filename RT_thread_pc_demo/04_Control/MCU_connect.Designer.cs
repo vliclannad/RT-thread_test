@@ -35,8 +35,11 @@
             // 
             // Btn_connect
             // 
+            this.Btn_connect.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_connect.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Btn_connect.Location = new System.Drawing.Point(711, 34);
+            this.Btn_connect.Location = new System.Drawing.Point(790, 30);
             this.Btn_connect.Name = "Btn_connect";
             this.Btn_connect.Size = new System.Drawing.Size(152, 38);
             this.Btn_connect.TabIndex = 3;
@@ -51,7 +54,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(269, 30);
+            this.label1.Location = new System.Drawing.Point(84, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(162, 39);
             this.label1.TabIndex = 4;
@@ -64,7 +67,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label_connectstate.AutoSize = true;
             this.label_connectstate.Font = new System.Drawing.Font("微软雅黑", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label_connectstate.Location = new System.Drawing.Point(437, 30);
+            this.label_connectstate.Location = new System.Drawing.Point(273, 26);
             this.label_connectstate.Name = "label_connectstate";
             this.label_connectstate.Size = new System.Drawing.Size(162, 39);
             this.label_connectstate.TabIndex = 5;
@@ -72,8 +75,8 @@
             // 
             // MCU_connect
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.label_connectstate);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Btn_connect);

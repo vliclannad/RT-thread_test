@@ -70,7 +70,11 @@ void thread_rulechoose()
                 rt_thread_startup(thd_messagerecv);//启动消息队列线程
                 //取出收到的数据作为一个消息
 			    for(int i=0;i<8;i++)
-				recvData[i] = gcRecvBuf[i+9];
+                {
+                    recvData[i] = gcRecvBuf[i+9];
+
+                }
+				
 		        //将该消息存放到消息队列
 			    rt_mq_send(mq,recvData,sizeof(recvData));
 		    }

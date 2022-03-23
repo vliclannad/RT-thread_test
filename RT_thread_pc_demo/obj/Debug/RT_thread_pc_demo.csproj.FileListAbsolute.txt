@@ -12,3 +12,10 @@ F:\GIT\RT-thread_test\RT_thread_pc_demo\obj\Debug\RT_thread_pc_demo.pdb
 F:\GIT\RT-thread_test\RT_thread_pc_demo\obj\Debug\RT_thread_pc_demo._04_Control.Event.resources
 F:\GIT\RT-thread_test\RT_thread_pc_demo\obj\Debug\RT_thread_pc_demo._04_Control.Event_information.resources
 F:\GIT\RT-thread_test\RT_thread_pc_demo\obj\Debug\RT_thread_pc_demo._04_Control.MCU_connect.resources
+F:\GIT\RT-thread_test\RT_thread_pc_demo\obj\Debug\RT_thread_pc_demo._04_Control.Message.resources
+F:\GIT\RT-thread_test\RT_thread_pc_demo\obj\Debug\RT_thread_pc_demo._04_Control.Main_information.resources
+F:\GIT\RT-thread_test\RT_thread_pc_demo\obj\Debug\RT_thread_pc_demo._04_Control.Message_information.resources
+F:\GIT\RT-thread_test\RT_thread_pc_demo\obj\Debug\RT_thread_pc_demo._04_Control.Sp.resources
+F:\GIT\RT-thread_test\RT_thread_pc_demo\obj\Debug\RT_thread_pc_demo._04_Control.Sp_information.resources
+F:\GIT\RT-thread_test\RT_thread_pc_demo\obj\Debug\RT_thread_pc_demo._04_Control.Mutex.resources
+F:\GIT\RT-thread_test\RT_thread_pc_demo\obj\Debug\RT_thread_pc_demo._04_Control.Mutex_information.resources

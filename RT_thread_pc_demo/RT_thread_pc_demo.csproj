@@ -57,6 +57,42 @@
     <Compile Include="03_Function\SCI.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="04_Control\Mutex.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="04_Control\Mutex.Designer.cs">
+      <DependentUpon>Mutex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="04_Control\Sp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="04_Control\Sp.Designer.cs">
+      <DependentUpon>Sp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="04_Control\Mutex_information.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="04_Control\Mutex_information.Designer.cs">
+      <DependentUpon>Mutex_information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="04_Control\Sp_informaion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="04_Control\Sp_informaion.Designer.cs">
+      <DependentUpon>Sp_informaion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="04_Control\Message_information.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="04_Control\Message_information.Designer.cs">
+      <DependentUpon>Message_information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="04_Control\Message.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="04_Control\Message.Designer.cs">
+      <DependentUpon>Message.cs</DependentUpon>
+    </Compile>
     <Compile Include="04_Control\Event.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -69,6 +105,12 @@
     <Compile Include="04_Control\Event_information.Designer.cs">
       <DependentUpon>Event_information.cs</DependentUpon>
     </Compile>
+    <Compile Include="04_Control\Main_information.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="04_Control\Main_information.Designer.cs">
+      <DependentUpon>Main_information.cs</DependentUpon>
+    </Compile>
     <Compile Include="04_Control\MCU_connect.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -80,11 +122,32 @@
     <EmbeddedResource Include="02_Form\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="04_Control\Mutex.resx">
+      <DependentUpon>Mutex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04_Control\Sp.resx">
+      <DependentUpon>Sp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04_Control\Mutex_information.resx">
+      <DependentUpon>Mutex_information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04_Control\Sp_informaion.resx">
+      <DependentUpon>Sp_informaion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04_Control\Message_information.resx">
+      <DependentUpon>Message_information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04_Control\Message.resx">
+      <DependentUpon>Message.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="04_Control\Event.resx">
       <DependentUpon>Event.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="04_Control\Event_information.resx">
       <DependentUpon>Event_information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04_Control\Main_information.resx">
+      <DependentUpon>Main_information.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="04_Control\MCU_connect.resx">
       <DependentUpon>MCU_connect.cs</DependentUpon>
@@ -113,7 +176,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="01_Doc\" />
-    <Folder Include="05_Infomation\" />
+    <Folder Include="05_Information\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
