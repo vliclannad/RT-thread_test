@@ -26,20 +26,28 @@ namespace RT_thread_pc_demo._04_Control
             Comm_Process comm = new Comm_Process();
             Button button = (Button)sender;
             PublicVar.g_TextBox = this.textBox_mutex;
-            if (button.Text == "演示开始")
+            if (PublicVar.g_SCIComNum == null)
             {
-                string a = "演示开始";
-                send_command(ref PublicVar.mutex_enable, ref a);
-
-                button.Text = "演示结束";//修改按钮上文字
-
+                DialogResult dr = MessageBox.Show("    设备未连接！", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (button.Text == "演示结束")
+            else
             {
-                string b = "演示结束";
-                send_command(ref PublicVar.mutex_close, ref b);
+                if (button.Text == "演示开始")
+                {
+                    string a = "演示开始";
+                    send_command(ref PublicVar.mutex_enable, ref a);
+                    Main.Menu_change += mcu_result;
 
-                button.Text = "演示开始";
+                    button.Text = "演示结束";//修改按钮上文字
+
+                }
+                else if (button.Text == "演示结束")
+                {
+                    string b = "演示结束";
+                    send_command(ref PublicVar.mutex_close, ref b);
+
+                    button.Text = "演示开始";
+                }
             }
 
         }
@@ -116,6 +124,16 @@ namespace RT_thread_pc_demo._04_Control
                 //将文本框中的内容调整到当前插入符号位置
                 ((TextBox)textbox).ScrollToCaret();
             }
+        }
+        private void mcu_result(object sender, EventArgs e)
+        {
+            sci.DataReceived -= new System.IO.Ports.SerialDataReceivedEventHandler(this.SCIPort_DataReceived);
+            if (sci.IsOpen)
+            {
+                //sci.SCISendData(ref PublicVar.mcuresult);
+                sci.SCIClose();
+            }
+
         }
     }
 }

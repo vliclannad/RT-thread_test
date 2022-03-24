@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RT_thread_pc_demo._04_Control;
 
 namespace RT_thread_pc_demo._04_Control
 {
@@ -26,21 +27,31 @@ namespace RT_thread_pc_demo._04_Control
             Comm_Process comm = new Comm_Process();
             Button button = (Button)sender;
             PublicVar.g_TextBox = this.textBox_message;
-            if (button.Text == "演示开始")
+            if (PublicVar.g_SCIComNum == null)
             {
-                string a = "演示开始";
-                send_command(ref PublicVar.message_enable, ref a);
+                DialogResult dr = MessageBox.Show("    设备未连接！", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (button.Text == "演示开始")
+                {
+                    string a = "演示开始";
+                    send_command(ref PublicVar.message_enable, ref a);
 
-                button.Text = "演示结束";//修改按钮上文字
+                    button.Text = "演示结束";//修改按钮上文字
+                    Main.Menu_change += mcu_result;
+
+                }
+                else if (button.Text == "演示结束")
+                {
+                    string b = "演示结束";
+                    send_command(ref PublicVar.message_close, ref b);
+
+                    button.Text = "演示开始";
+                }
 
             }
-            else if (button.Text == "演示结束")
-            {
-                string b = "演示结束";
-                send_command(ref PublicVar.message_close, ref b);
-
-                button.Text = "演示开始";
-            }
+            
 
         }
 
@@ -116,6 +127,16 @@ namespace RT_thread_pc_demo._04_Control
                 //将文本框中的内容调整到当前插入符号位置
                 ((TextBox)textbox).ScrollToCaret();
             }
+        }
+        private void mcu_result(object sender, EventArgs e)
+        {
+            sci.DataReceived -= new System.IO.Ports.SerialDataReceivedEventHandler(this.SCIPort_DataReceived);
+            if (sci.IsOpen)
+            {
+               // sci.SCISendData(ref PublicVar.mcuresult);
+                sci.SCIClose();
+            }
+
         }
     }
 }

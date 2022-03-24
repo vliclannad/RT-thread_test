@@ -23,6 +23,24 @@ void thread_rulechoose()
             {
                 uart_send_string(UART_User,(void*) "I can see you");//回发连接确认
             }
+            if(gcRecvBuf[3]==RESULT_CODE)
+            {
+
+                rt_thread_delete(thd_eventBlue);
+                rt_thread_delete(thd_eventGreen);
+                rt_thread_delete(thd_messagerecv);
+                rt_thread_delete(thd_SPThread1);	
+                rt_thread_delete(thd_SPThread2);
+                rt_thread_delete(thd_SPThread3);
+                rt_thread_delete(thd_mutexRed);
+                rt_thread_delete(thd_mutexGreen);
+                rt_thread_delete(thd_mutexBlue);
+                rt_thread_delete(thd_delayBlue);
+                rt_thread_delete(thd_delayGreen);
+                rt_thread_delete(thd_delayRed);
+
+            }
+
     		if(gcRecvBuf[7]==EVENT_CODE) //命令字为90，代表“事件功能”
             {
                 if(gcRecvBuf[8]==0x01)//命令参数为01，代表启动该功能，传递事件信号把小灯线程从阻塞队列移到就绪队列
@@ -35,18 +53,21 @@ void thread_rulechoose()
                     rt_thread_detach(thd_mutexRed);
                     rt_thread_detach(thd_mutexGreen);
                     rt_thread_detach(thd_mutexBlue);
+                    rt_thread_detach(thd_delayBlue);
+                    rt_thread_detach(thd_delayGreen);
+                    rt_thread_detach(thd_delayRed);
 
 
-                    rt_thread_startup(thd_bluelight);
-                    rt_thread_startup(thd_greenlight);
+                    rt_thread_startup(thd_eventBlue);
+                    rt_thread_startup(thd_eventGreen);
                     rt_event_send(EventWord,BLUE_LIGHT_EVENT);
 
                 }
                 if(gcRecvBuf[8]==0x00)//命令参数为00，代表关闭该功能，重新启动小灯线程，把小灯线程移入阻塞队列
                 {
                     uart_send_string(UART_User,(void *)"接收到事件功能结束命令，事件功能模块结束");
-                    rt_thread_detach(thd_bluelight);
-                    rt_thread_detach(thd_greenlight);
+                    rt_thread_detach(thd_eventBlue);
+                    rt_thread_detach(thd_eventGreen);
                     gpio_init(LIGHT_BLUE,GPIO_OUTPUT,LIGHT_OFF);
                     gpio_init(LIGHT_GREEN,GPIO_OUTPUT,LIGHT_OFF);
                     gpio_init(LIGHT_RED,GPIO_OUTPUT,LIGHT_OFF);
@@ -57,14 +78,17 @@ void thread_rulechoose()
 
             if(gcRecvBuf[7]==MESSAGE_CODE) //命令字为91，代表“消息队列功能”
             {
-                rt_thread_detach(thd_bluelight);
-                rt_thread_detach(thd_greenlight);
+                rt_thread_detach(thd_eventBlue);
+                rt_thread_detach(thd_eventGreen);
                 rt_thread_detach(thd_SPThread1);	
                 rt_thread_detach(thd_SPThread2);
                 rt_thread_detach(thd_SPThread3);
                 rt_thread_detach(thd_mutexRed);
                 rt_thread_detach(thd_mutexGreen);
                 rt_thread_detach(thd_mutexBlue);
+                rt_thread_detach(thd_delayBlue);
+                rt_thread_detach(thd_delayGreen);
+                rt_thread_detach(thd_delayRed);
 
 
                 rt_thread_startup(thd_messagerecv);//启动消息队列线程
@@ -81,17 +105,20 @@ void thread_rulechoose()
 
             
 
-            if(gcRecvBuf[7]==SEM_CODE) //命令字为90，代表“信号量功能”
+            if(gcRecvBuf[7]==SEM_CODE) //命令字为92，代表“信号量功能”
             {
                 if(gcRecvBuf[8]==0x01)//命令参数为01，代表启动该功能
                 {
                     uart_send_string(UART_User,(void *)"接收到信号量功能开启命令，信号量功能模块开启\n");
-                    rt_thread_detach(thd_bluelight);
-                    rt_thread_detach(thd_greenlight);
+                    rt_thread_detach(thd_eventBlue);
+                    rt_thread_detach(thd_eventGreen);
                     rt_thread_detach(thd_messagerecv);
                     rt_thread_detach(thd_mutexRed);
                     rt_thread_detach(thd_mutexGreen);
                     rt_thread_detach(thd_mutexBlue);
+                    rt_thread_detach(thd_delayBlue);
+                    rt_thread_detach(thd_delayGreen);
+                    rt_thread_detach(thd_delayRed);
 
 
 
@@ -115,17 +142,20 @@ void thread_rulechoose()
 
             }
 
-            if(gcRecvBuf[7]==MUTEX_CODE) //命令字为90，代表“互斥量功能”
+            if(gcRecvBuf[7]==MUTEX_CODE) //命令字为93，代表“功能”
             {
                 if(gcRecvBuf[8]==0x01)
                 {
-                    uart_send_string(UART_User,(void *)"接收到互斥量功能开启命令，互斥量功能模块开启\n");
-                    rt_thread_detach(thd_bluelight);
-                    rt_thread_detach(thd_greenlight);
+                    uart_send_string(UART_User,(void *)"接收到互斥量功能开启命令，功能模块开启\n");
+                    rt_thread_detach(thd_eventBlue);
+                    rt_thread_detach(thd_eventGreen);
                     rt_thread_detach(thd_messagerecv);
                     rt_thread_detach(thd_SPThread1);	
                     rt_thread_detach(thd_SPThread2);
                     rt_thread_detach(thd_SPThread3);
+                    rt_thread_detach(thd_delayBlue);
+                    rt_thread_detach(thd_delayGreen);
+                    rt_thread_detach(thd_delayRed);
 
                     rt_thread_startup(thd_mutexRed);//启动红灯线程
 	                rt_thread_startup(thd_mutexGreen);//启动绿灯线程
@@ -133,10 +163,42 @@ void thread_rulechoose()
                 }
                 if(gcRecvBuf[8]==0x00)
                 {
-                    uart_send_string(UART_User,(void *)"接收到互斥量功能关闭命令，互斥量功能模块关闭\n");
+                    uart_send_string(UART_User,(void *)"接收到互斥量功能关闭命令，功能模块关闭\n");
                     rt_thread_detach(thd_mutexRed);
                     rt_thread_detach(thd_mutexGreen);
                     rt_thread_detach(thd_mutexBlue);
+                    gpio_init(LIGHT_BLUE,GPIO_OUTPUT,LIGHT_OFF);
+                    gpio_init(LIGHT_GREEN,GPIO_OUTPUT,LIGHT_OFF);
+                    gpio_init(LIGHT_RED,GPIO_OUTPUT,LIGHT_OFF);
+                }
+
+            }
+
+                if(gcRecvBuf[7]==DELAY_CODE) //命令字为94，代表"延时功能”
+            {
+                if(gcRecvBuf[8]==0x01)
+                {
+                    uart_send_string(UART_User,(void *)"接收到延时功能开启命令，功能模块开启\n");
+                    rt_thread_detach(thd_eventBlue);
+                    rt_thread_detach(thd_eventGreen);
+                    rt_thread_detach(thd_messagerecv);
+                    rt_thread_detach(thd_SPThread1);	
+                    rt_thread_detach(thd_SPThread2);
+                    rt_thread_detach(thd_SPThread3);
+                    rt_thread_detach(thd_mutexRed);
+	                rt_thread_detach(thd_mutexGreen);
+	                rt_thread_detach(thd_mutexBlue);
+
+                    rt_thread_startup(thd_delayBlue);
+                    rt_thread_startup(thd_delayGreen);
+                    rt_thread_startup(thd_delayRed);
+                }
+                if(gcRecvBuf[8]==0x00)
+                {
+                    uart_send_string(UART_User,(void *)"接收到延时功能关闭命令，功能模块关闭\n");
+                    rt_thread_detach(thd_delayBlue);
+                    rt_thread_detach(thd_delayGreen);
+                    rt_thread_detach(thd_delayRed);
                     gpio_init(LIGHT_BLUE,GPIO_OUTPUT,LIGHT_OFF);
                     gpio_init(LIGHT_GREEN,GPIO_OUTPUT,LIGHT_OFF);
                     gpio_init(LIGHT_RED,GPIO_OUTPUT,LIGHT_OFF);

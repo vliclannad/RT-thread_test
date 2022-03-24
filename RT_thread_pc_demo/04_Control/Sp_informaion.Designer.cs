@@ -40,7 +40,7 @@
             this.Btn_tosp.TabIndex = 0;
             this.Btn_tosp.Text = "演示页面";
             this.Btn_tosp.UseVisualStyleBackColor = true;
-            this.Btn_tosp.Click += new System.EventHandler(this.Btn_tomessage_Click);
+            this.Btn_tosp.Click += new System.EventHandler(this.Btn_tosp_Click);
             // 
             // textBox1
             // 

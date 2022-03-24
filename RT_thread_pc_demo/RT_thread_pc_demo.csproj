@@ -63,6 +63,12 @@
     <Compile Include="04_Control\Mutex.Designer.cs">
       <DependentUpon>Mutex.cs</DependentUpon>
     </Compile>
+    <Compile Include="04_Control\Delay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="04_Control\Delay.Designer.cs">
+      <DependentUpon>Delay.cs</DependentUpon>
+    </Compile>
     <Compile Include="04_Control\Sp.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -74,6 +80,12 @@
     </Compile>
     <Compile Include="04_Control\Mutex_information.Designer.cs">
       <DependentUpon>Mutex_information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="04_Control\Delay_information.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="04_Control\Delay_information.Designer.cs">
+      <DependentUpon>Delay_information.cs</DependentUpon>
     </Compile>
     <Compile Include="04_Control\Sp_informaion.cs">
       <SubType>UserControl</SubType>
@@ -125,11 +137,17 @@
     <EmbeddedResource Include="04_Control\Mutex.resx">
       <DependentUpon>Mutex.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="04_Control\Delay.resx">
+      <DependentUpon>Delay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="04_Control\Sp.resx">
       <DependentUpon>Sp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="04_Control\Mutex_information.resx">
       <DependentUpon>Mutex_information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04_Control\Delay_information.resx">
+      <DependentUpon>Delay_information.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="04_Control\Sp_informaion.resx">
       <DependentUpon>Sp_informaion.cs</DependentUpon>

@@ -14,7 +14,6 @@ namespace RT_thread_pc_demo
         SCI sci;
         string[] SCIPorts;
         byte[] recvData = new byte[100];
-        byte[] userShake = {0xA5,0x5A,0x01,0x66}; //与终端握手帧数据
         
 
         /// ----------------------------------------------------------------
@@ -44,7 +43,7 @@ namespace RT_thread_pc_demo
                 sci = new SCI(SCIPorts[i], PublicVar.g_SCIBaudRate);
                 if (sci.SCIOpen())
                 {
-                    sci.SCISendData(ref userShake);
+                    sci.SCISendData(ref PublicVar.userShark);
 
                     Thread.Sleep(500);
                     if (sci.SCIReceiveData(ref recvData))

@@ -19,3 +19,5 @@ F:\GIT\RT-thread_test\RT_thread_pc_demo\obj\Debug\RT_thread_pc_demo._04_Control.
 F:\GIT\RT-thread_test\RT_thread_pc_demo\obj\Debug\RT_thread_pc_demo._04_Control.Sp_information.resources
 F:\GIT\RT-thread_test\RT_thread_pc_demo\obj\Debug\RT_thread_pc_demo._04_Control.Mutex.resources
 F:\GIT\RT-thread_test\RT_thread_pc_demo\obj\Debug\RT_thread_pc_demo._04_Control.Mutex_information.resources
+F:\GIT\RT-thread_test\RT_thread_pc_demo\obj\Debug\RT_thread_pc_demo._04_Control.Delay.resources
+F:\GIT\RT-thread_test\RT_thread_pc_demo\obj\Debug\RT_thread_pc_demo._04_Control.Delay_informaiton.resources

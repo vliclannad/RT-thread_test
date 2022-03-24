@@ -53,8 +53,8 @@ void app_init(void)
 	//创建命令选择线程
 	thd_rulechoose=rt_thread_create("rulechoose", (void *)thread_rulechoose, 0, 512, 9, 10);
 	//创建三色灯线程
-	thd_greenlight = rt_thread_create("greenlight", (void *)thread_greenlight, 0, 512, 10, 10);
-	thd_bluelight = rt_thread_create("bluelight", (void *)thread_bluelight, 0, 512, 10, 10);
+	thd_eventGreen = rt_thread_create("eventGreen", (void *)thread_eventGreen, 0, 512, 10, 10);
+	thd_eventBlue = rt_thread_create("eventBlue", (void *)thd_eventBlue, 0, 512, 10, 10);
 	//创建消息队列线程
 	thd_messagerecv = rt_thread_create("messagerecv", (void *)thread_messagerecv, 0, 512, 10, 10);
 	//创建三个信号量线程
@@ -62,9 +62,14 @@ void app_init(void)
 	thd_SPThread2 = rt_thread_create("SPThread2", (void *)thread_SPThread2, 0, 512, 10, 10);
 	thd_SPThread3 = rt_thread_create("SPThread3", (void *)thread_SPThread3, 0, 512, 10, 10);
 	//创建三个互斥量线程
-	thd_mutexBlue = rt_thread_create("redlight", (void *)thread_mutexBlue, 0, 512, 10, 10);
-	thd_mutexGreen = rt_thread_create("greenlight", (void *)thread_mutexGreen, 0, 512, 10, 10);
-	thd_mutexRed = rt_thread_create("bluelight", (void *)thread_mutexRed, 0, 512, 10, 10);
+	thd_mutexBlue = rt_thread_create("mutexBlue", (void *)thread_mutexBlue, 0, 512, 10, 10);
+	thd_mutexGreen = rt_thread_create("mutexGreen", (void *)thread_mutexGreen, 0, 512, 10, 10);
+	thd_mutexRed = rt_thread_create("mutexRed", (void *)thread_mutexRed, 0, 512, 10, 10);
+	//创建三个延时线程
+	thd_delayRed=rt_thread_create("delayRed", (void *)thread_delayRed, 0, 512, 10, 10);
+	thd_delayGreen=rt_thread_create("delayGreen", (void *)thread_delayGreen, 0, 512, 10, 10);
+	thd_delayBlue=rt_thread_create("delayBlue", (void *)thread_delayBlue, 0, 512, 10, 10);
+
 
 
 

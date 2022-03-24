@@ -34,6 +34,7 @@ namespace RT_thread_pc_demo._04_Control
                 label_connectstate.Text = "未找到设备！";
                 Btn_connect.Text = "重新连接";
             }
+            
         }
     }
 }

@@ -18,7 +18,7 @@ namespace RT_thread_pc_demo._04_Control
             InitializeComponent();
         }
         public Main  frmMain;
-        private void Btn_tomessage_Click(object sender, EventArgs e)
+        private void Btn_tosp_Click(object sender, EventArgs e)
         {
          
  

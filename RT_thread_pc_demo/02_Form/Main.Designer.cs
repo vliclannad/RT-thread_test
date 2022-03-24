@@ -37,6 +37,7 @@
             this.Menu_help = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_main = new System.Windows.Forms.Panel();
             this.panel_connect = new System.Windows.Forms.Panel();
+            this.Menu_delay = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,6 +46,7 @@
             this.menuStrip1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.menuStrip1.AutoSize = false;
             this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -53,10 +55,11 @@
             this.Menu_message,
             this.Menu_sp,
             this.Menu_mutex,
+            this.Menu_delay,
             this.Menu_help});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(428, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(499, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -108,7 +111,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel_main.BackColor = System.Drawing.SystemColors.Info;
-            this.panel_main.Location = new System.Drawing.Point(0, 25);
+            this.panel_main.Location = new System.Drawing.Point(0, 28);
             this.panel_main.Name = "panel_main";
             this.panel_main.Size = new System.Drawing.Size(1007, 554);
             this.panel_main.TabIndex = 1;
@@ -122,6 +125,13 @@
             this.panel_connect.Name = "panel_connect";
             this.panel_connect.Size = new System.Drawing.Size(1007, 100);
             this.panel_connect.TabIndex = 2;
+            // 
+            // Menu_delay
+            // 
+            this.Menu_delay.Name = "Menu_delay";
+            this.Menu_delay.Size = new System.Drawing.Size(68, 21);
+            this.Menu_delay.Text = "延时功能";
+            this.Menu_delay.Click += new System.EventHandler(this.Menu_delay_Click);
             // 
             // Main
             // 
@@ -140,7 +150,6 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -154,6 +163,7 @@
         private System.Windows.Forms.ToolStripMenuItem Menu_help;
         private System.Windows.Forms.Panel panel_main;
         private System.Windows.Forms.Panel panel_connect;
+        private System.Windows.Forms.ToolStripMenuItem Menu_delay;
     }
 }
 
