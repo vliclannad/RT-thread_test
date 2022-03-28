@@ -231,6 +231,30 @@ uint8_t uart_send_string(uint8_t uartNo, uint8_t* buff)
     return 1;          //发送成功
 }
 
+uint8_t useruart_send_string(uint8_t uartNo, uint8_t* buff)
+{
+	uint16_t n=0;
+    uint16_t i = 0;
+    uint8_t *buff_ptr = (uint8_t *)buff;     //定义指针指向要发送字符串首地址
+	uint8_t code_head[1024]={0Xa5,0x5a,0x03,0x82,0x01,0x00};
+	n=strlen(buff_ptr);
+	code_head[2]+=n;
+	strcat(code_head,buff_ptr);
+
+    //判断传入串口号参数是否有误，有误直接退出
+    if(!uart_is_uartNo(uartNo))
+    {
+        return 0;
+    }
+
+    for(i = 0; code_head[i] != '\0'; i++)   //遍历字符串里的字符
+    {
+        if (!uart_send1(uartNo,code_head[i]))//发送指针对应的字符
+            return 0;  //发送失败,返回
+    }
+    return 1;          //发送成功
+}
+
 //======================================================================
 //函数名称：uart_re1
 //参数说明：uartNo: 串口号:UART_1、UART_2、UART_3

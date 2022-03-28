@@ -66,9 +66,9 @@ void app_init(void)
 	thd_mutexGreen = rt_thread_create("mutexGreen", (void *)thread_mutexGreen, 0, 512, 10, 10);
 	thd_mutexRed = rt_thread_create("mutexRed", (void *)thread_mutexRed, 0, 512, 10, 10);
 	//创建三个延时线程
-	thd_delayRed=thread_create("delayRed", (void *)thread_delayRed, 0, 512, 10, 10);
-	thd_delayGreen=thread_create("delayGreen", (void *)thread_delayGreen, 0, 512, 10, 10);
-	thd_delayBlue=thread_create("delayBlue", (void *)thread_delayBlue, 0, 512, 10, 10);
+	thd_delayRed=rt_thread_create("delayRed", (void *)thread_delayRed, 0, 512, 10, 10);
+	thd_delayGreen=rt_thread_create("delayGreen", (void *)thread_delayGreen, 0, 512, 10, 10);
+	thd_delayBlue=rt_thread_create("delayBlue", (void *)thread_delayBlue, 0, 512, 10, 10);
 
 
 

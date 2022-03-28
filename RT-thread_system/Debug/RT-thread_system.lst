@@ -5,49 +5,49 @@ Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
   0 .isr_vector   00000190  0800d000  0800d000  0000d000  2**0
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  1 .text         00004a40  0800d800  0800d800  0000d800  2**3
+  1 .text         00004ad8  0800d800  0800d800  0000d800  2**3
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .rodata       00000bc8  08012240  08012240  00012240  2**2
+  2 .rodata       00000be8  080122d8  080122d8  000122d8  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  3 .rti_fn.0.end 00000004  08012e08  08012e08  00012e08  2**2
+  3 .rti_fn.0.end 00000004  08012ec0  08012ec0  00012ec0  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  4 .rti_fn.1.end 00000004  08012e0c  08012e0c  00012e0c  2**2
+  4 .rti_fn.1.end 00000004  08012ec4  08012ec4  00012ec4  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  5 .ARM.extab    00000000  08012e10  08012e10  000140a0  2**0
+  5 .ARM.extab    00000000  08012ec8  08012ec8  000140a0  2**0
                   CONTENTS
-  6 .ARM          00000008  08012e10  08012e10  00012e10  2**2
+  6 .ARM          00000008  08012ec8  08012ec8  00012ec8  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  7 .preinit_array 00000000  08012e18  08012e18  000140a0  2**0
+  7 .preinit_array 00000000  08012ed0  08012ed0  000140a0  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  8 .init_array   00000008  08012e18  08012e18  00012e18  2**2
+  8 .init_array   00000008  08012ed0  08012ed0  00012ed0  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  9 .fini_array   00000008  08012e20  08012e20  00012e20  2**2
+  9 .fini_array   00000008  08012ed8  08012ed8  00012ed8  2**2
                   CONTENTS, ALLOC, LOAD, DATA
- 10 .data         000000a0  20004000  08012e28  00014000  2**2
+ 10 .data         000000a0  20004000  08012ee0  00014000  2**2
                   CONTENTS, ALLOC, LOAD, DATA
- 11 .bss          00003bd8  200040a0  08012ec8  000140a0  2**2
+ 11 .bss          00003bd8  200040a0  08012f80  000140a0  2**2
                   ALLOC
  12 .ARM.attributes 00000030  00000000  00000000  000140a0  2**0
                   CONTENTS, READONLY
- 13 .debug_info   00020781  00000000  00000000  000140d0  2**0
+ 13 .debug_info   000208e7  00000000  00000000  000140d0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_abbrev 00004c04  00000000  00000000  00034851  2**0
+ 14 .debug_abbrev 00004c48  00000000  00000000  000349b7  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_loc    00007ce8  00000000  00000000  00039455  2**0
+ 15 .debug_loc    00007daa  00000000  00000000  000395ff  2**0
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_aranges 00000a58  00000000  00000000  00041140  2**3
+ 16 .debug_aranges 00000a60  00000000  00000000  000413b0  2**3
                   CONTENTS, READONLY, DEBUGGING
- 17 .debug_ranges 00000998  00000000  00000000  00041b98  2**3
+ 17 .debug_ranges 000009a0  00000000  00000000  00041e10  2**3
                   CONTENTS, READONLY, DEBUGGING
- 18 .debug_macro  0000564a  00000000  00000000  00042530  2**0
+ 18 .debug_macro  0000564a  00000000  00000000  000427b0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 19 .debug_line   0000b1ee  00000000  00000000  00047b7a  2**0
+ 19 .debug_line   0000b223  00000000  00000000  00047dfa  2**0
                   CONTENTS, READONLY, DEBUGGING
- 20 .debug_str    00085b9b  00000000  00000000  00052d68  2**0
+ 20 .debug_str    00085bb0  00000000  00000000  0005301d  2**0
                   CONTENTS, READONLY, DEBUGGING
- 21 .comment      0000007e  00000000  00000000  000d8903  2**0
+ 21 .comment      0000007e  00000000  00000000  000d8bcd  2**0
                   CONTENTS, READONLY
- 22 .debug_frame  00001c74  00000000  00000000  000d8984  2**2
+ 22 .debug_frame  00001cbc  00000000  00000000  000d8c4c  2**2
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -66,7 +66,7 @@ Disassembly of section .text:
  800d816:	bd10      	pop	{r4, pc}
  800d818:	200040a0 	.word	0x200040a0
  800d81c:	00000000 	.word	0x00000000
- 800d820:	08012224 	.word	0x08012224
+ 800d820:	080122c0 	.word	0x080122c0
 
 0800d824 <frame_dummy>:
  800d824:	b508      	push	{r3, lr}
@@ -78,7 +78,7 @@ Disassembly of section .text:
  800d832:	bd08      	pop	{r3, pc}
  800d834:	00000000 	.word	0x00000000
  800d838:	200040a4 	.word	0x200040a4
- 800d83c:	08012224 	.word	0x08012224
+ 800d83c:	080122c0 	.word	0x080122c0
 
 0800d840 <rt_hw_interrupt_disable>:
 
@@ -1541,8 +1541,8 @@ void rt_components_board_init(void)
 #endif
 }
  800e5d2:	bd10      	pop	{r4, pc}
- 800e5d4:	08012e08 	.word	0x08012e08
- 800e5d8:	08012e0c 	.word	0x08012e0c
+ 800e5d4:	08012ec0 	.word	0x08012ec0
+ 800e5d8:	08012ec4 	.word	0x08012ec4
 
 0800e5dc <thread_eventGreen>:
 //参数说明：无
@@ -1598,10 +1598,10 @@ void thread_eventGreen()
  800e628:	6818      	ldr	r0, [r3, #0]
  800e62a:	f001 fdc0 	bl	80101ae <rt_event_send>
  800e62e:	e7e0      	b.n	800e5f2 <thread_eventGreen+0x16>
- 800e630:	08012240 	.word	0x08012240
- 800e634:	08012258 	.word	0x08012258
+ 800e630:	080122d8 	.word	0x080122d8
+ 800e634:	080122f0 	.word	0x080122f0
  800e638:	20007348 	.word	0x20007348
- 800e63c:	0801227c 	.word	0x0801227c
+ 800e63c:	08012314 	.word	0x08012314
 
 0800e640 <rt_hw_stack_init>:
 //======================================================================
@@ -1805,25 +1805,25 @@ void rt_hw_hard_fault_exception(struct exception_info *exception_info)
  800e750:	bd10      	pop	{r4, pc}
  800e752:	bf00      	nop
  800e754:	200040bc 	.word	0x200040bc
- 800e758:	080122a4 	.word	0x080122a4
- 800e75c:	080122b4 	.word	0x080122b4
- 800e760:	080122c4 	.word	0x080122c4
- 800e764:	080122d4 	.word	0x080122d4
- 800e768:	080122e4 	.word	0x080122e4
- 800e76c:	080122f4 	.word	0x080122f4
- 800e770:	08012304 	.word	0x08012304
- 800e774:	08012314 	.word	0x08012314
- 800e778:	08012324 	.word	0x08012324
- 800e77c:	08012334 	.word	0x08012334
- 800e780:	08012344 	.word	0x08012344
- 800e784:	08012354 	.word	0x08012354
- 800e788:	08012364 	.word	0x08012364
- 800e78c:	08012374 	.word	0x08012374
- 800e790:	08012384 	.word	0x08012384
- 800e794:	08012394 	.word	0x08012394
- 800e798:	080123a4 	.word	0x080123a4
- 800e79c:	080123c4 	.word	0x080123c4
- 800e7a0:	080123e0 	.word	0x080123e0
+ 800e758:	0801233c 	.word	0x0801233c
+ 800e75c:	0801234c 	.word	0x0801234c
+ 800e760:	0801235c 	.word	0x0801235c
+ 800e764:	0801236c 	.word	0x0801236c
+ 800e768:	0801237c 	.word	0x0801237c
+ 800e76c:	0801238c 	.word	0x0801238c
+ 800e770:	0801239c 	.word	0x0801239c
+ 800e774:	080123ac 	.word	0x080123ac
+ 800e778:	080123bc 	.word	0x080123bc
+ 800e77c:	080123cc 	.word	0x080123cc
+ 800e780:	080123dc 	.word	0x080123dc
+ 800e784:	080123ec 	.word	0x080123ec
+ 800e788:	080123fc 	.word	0x080123fc
+ 800e78c:	0801240c 	.word	0x0801240c
+ 800e790:	0801241c 	.word	0x0801241c
+ 800e794:	0801242c 	.word	0x0801242c
+ 800e798:	0801243c 	.word	0x0801243c
+ 800e79c:	0801245c 	.word	0x0801245c
+ 800e7a0:	08012478 	.word	0x08012478
 
 0800e7a4 <printk_putc>:
 //功能概要：通过串口打出一个字符
@@ -2074,7 +2074,7 @@ void out_char2(char data){
  800e8a6:	9117      	str	r1, [sp, #92]	; 0x5c
  800e8a8:	224c      	movs	r2, #76	; 0x4c
  800e8aa:	4668      	mov	r0, sp
- 800e8ac:	f003 fcb1 	bl	8012212 <memset>
+ 800e8ac:	f003 fcf1 	bl	8012292 <memset>
 	p=(uint32_t)*f;//整数部分
  800e8b0:	e9d4 4500 	ldrd	r4, r5, [r4]
  800e8b4:	4620      	mov	r0, r4
@@ -2289,7 +2289,7 @@ int printk(PRINTK_INFO *info, const char *fmt, char * ap)
  800ea60:	2221      	movs	r2, #33	; 0x21
  800ea62:	2100      	movs	r1, #0
  800ea64:	a80d      	add	r0, sp, #52	; 0x34
- 800ea66:	f003 fbd4 	bl	8012212 <memset>
+ 800ea66:	f003 fc14 	bl	8012292 <memset>
  800ea6a:	2330      	movs	r3, #48	; 0x30
  800ea6c:	f88d 3034 	strb.w	r3, [sp, #52]	; 0x34
 	int *ivalp;
@@ -3613,7 +3613,7 @@ rt_inline void rt_list_remove(rt_list_t *n)
  800f204:	4604      	mov	r4, r0
     stack_start = (void *)RT_KERNEL_MALLOC(stack_size);
  800f206:	4630      	mov	r0, r6
- 800f208:	f002 fbc4 	bl	8011994 <rt_malloc>
+ 800f208:	f002 fc04 	bl	8011a14 <rt_malloc>
     if (stack_start == RT_NULL)
  800f20c:	b180      	cbz	r0, 800f230 <rt_thread_create+0x44>
     _rt_thread_init(thread,
@@ -4609,9 +4609,9 @@ void SystemCoreClockUpdate(void)
  800f790:	e7c3      	b.n	800f71a <SystemCoreClockUpdate+0x46>
  800f792:	bf00      	nop
  800f794:	40021000 	.word	0x40021000
- 800f798:	08012400 	.word	0x08012400
+ 800f798:	08012498 	.word	0x08012498
  800f79c:	20004000 	.word	0x20004000
- 800f7a0:	080123f0 	.word	0x080123f0
+ 800f7a0:	08012488 	.word	0x08012488
  800f7a4:	00f42400 	.word	0x00f42400
  800f7a8:	007a1200 	.word	0x007a1200
 
@@ -4835,13 +4835,13 @@ void thread_SPThread2()
  800f8f4:	2002      	movs	r0, #2
  800f8f6:	f001 fcc9 	bl	801128c <uart_send_string>
  800f8fa:	e7d3      	b.n	800f8a4 <thread_SPThread2+0xc>
- 800f8fc:	08012430 	.word	0x08012430
+ 800f8fc:	080124c8 	.word	0x080124c8
  800f900:	20007318 	.word	0x20007318
- 800f904:	08012478 	.word	0x08012478
- 800f908:	08012494 	.word	0x08012494
- 800f90c:	08012444 	.word	0x08012444
- 800f910:	08012450 	.word	0x08012450
- 800f914:	08012460 	.word	0x08012460
+ 800f904:	08012510 	.word	0x08012510
+ 800f908:	0801252c 	.word	0x0801252c
+ 800f90c:	080124dc 	.word	0x080124dc
+ 800f910:	080124e8 	.word	0x080124e8
+ 800f914:	080124f8 	.word	0x080124f8
 
 0800f918 <rt_object_get_information>:
 struct rt_object_information *
@@ -5016,7 +5016,7 @@ rt_object_t rt_object_allocate(enum rt_object_class_type type, const char *name)
 
     object = (struct rt_object *)RT_KERNEL_MALLOC(information->object_size);
  800f9b2:	68c0      	ldr	r0, [r0, #12]
- 800f9b4:	f001 ffee 	bl	8011994 <rt_malloc>
+ 800f9b4:	f002 f82e 	bl	8011a14 <rt_malloc>
     if (object == RT_NULL)
  800f9b8:	b1d8      	cbz	r0, 800f9f2 <rt_object_allocate+0x4c>
  800f9ba:	4604      	mov	r4, r0
@@ -5130,7 +5130,7 @@ void rt_object_delete(rt_object_t object)
     /* free the memory of object */
     RT_KERNEL_FREE(object);
  800fa1a:	4620      	mov	r0, r4
- 800fa1c:	f002 f848 	bl	8011ab0 <rt_free>
+ 800fa1c:	f002 f888 	bl	8011b30 <rt_free>
 }
  800fa20:	bd10      	pop	{r4, pc}
 
@@ -5169,7 +5169,7 @@ int main(void)
 }
  800fa3c:	2000      	movs	r0, #0
  800fa3e:	bd08      	pop	{r3, pc}
- 800fa40:	0801144d 	.word	0x0801144d
+ 800fa40:	080114c1 	.word	0x080114c1
 
 0800fa44 <rt_application_init>:
 //函数返回：无
@@ -5204,7 +5204,7 @@ void rt_application_init(void (*func)(void))
 }
  800fa62:	b003      	add	sp, #12
  800fa64:	f85d fb04 	ldr.w	pc, [sp], #4
- 800fa68:	080124a8 	.word	0x080124a8
+ 800fa68:	08012540 	.word	0x08012540
 
 0800fa6c <rtthread_startup>:
 {
@@ -5222,7 +5222,7 @@ void rt_application_init(void (*func)(void))
  800fa80:	4620      	mov	r0, r4
  800fa82:	f7ff ffdf 	bl	800fa44 <rt_application_init>
     rt_thread_idle_init();
- 800fa86:	f001 fcc1 	bl	801140c <rt_thread_idle_init>
+ 800fa86:	f001 fcfb 	bl	8011480 <rt_thread_idle_init>
     rt_system_scheduler_start();
  800fa8a:	f001 f923 	bl	8010cd4 <rt_system_scheduler_start>
 }
@@ -5320,14 +5320,14 @@ void thread_SPThread3()
  800fb20:	2002      	movs	r0, #2
  800fb22:	f001 fbb3 	bl	801128c <uart_send_string>
  800fb26:	e7c5      	b.n	800fab4 <thread_SPThread3+0x18>
- 800fb28:	080124b0 	.word	0x080124b0
+ 800fb28:	08012548 	.word	0x08012548
  800fb2c:	20007318 	.word	0x20007318
- 800fb30:	080124fc 	.word	0x080124fc
- 800fb34:	08012518 	.word	0x08012518
- 800fb38:	08012528 	.word	0x08012528
- 800fb3c:	080124c4 	.word	0x080124c4
- 800fb40:	080124d4 	.word	0x080124d4
- 800fb44:	080124e4 	.word	0x080124e4
+ 800fb30:	08012594 	.word	0x08012594
+ 800fb34:	080125b0 	.word	0x080125b0
+ 800fb38:	080125c0 	.word	0x080125c0
+ 800fb3c:	0801255c 	.word	0x0801255c
+ 800fb40:	0801256c 	.word	0x0801256c
+ 800fb44:	0801257c 	.word	0x0801257c
 
 0800fb48 <flash_erase>:
 //======================================================================
@@ -5404,7 +5404,7 @@ void flash_read_logic(uint8_t *dest,uint16_t sect,uint16_t offset,uint16_t N)
  800fba6:	eb02 21c1 	add.w	r1, r2, r1, lsl #11
     memcpy(dest,src,N);
  800fbaa:	461a      	mov	r2, r3
- 800fbac:	f002 fb26 	bl	80121fc <memcpy>
+ 800fbac:	f002 fb66 	bl	801227c <memcpy>
 }
  800fbb0:	bd08      	pop	{r3, pc}
 
@@ -5419,7 +5419,7 @@ void flash_read_physical(uint8_t *dest,uint32_t addr,uint16_t N)
     uint8_t *src;
     src=(uint8_t *)addr;
     memcpy(dest,src,N);
- 800fbb4:	f002 fb22 	bl	80121fc <memcpy>
+ 800fbb4:	f002 fb62 	bl	801227c <memcpy>
 }
  800fbb8:	bd08      	pop	{r3, pc}
 
@@ -5449,7 +5449,7 @@ uint8_t flash_isempty(uint16_t sect,uint16_t N)
  800fbd2:	4622      	mov	r2, r4
  800fbd4:	02c9      	lsls	r1, r1, #11
  800fbd6:	4668      	mov	r0, sp
- 800fbd8:	f002 fb10 	bl	80121fc <memcpy>
+ 800fbd8:	f002 fb50 	bl	801227c <memcpy>
     for(i = 0; i<N; i++)   //遍历区域内字节
  800fbdc:	2300      	movs	r3, #0
  800fbde:	42a3      	cmp	r3, r4
@@ -6979,7 +6979,7 @@ rt_err_t rt_mq_delete(rt_mq_t mq)
     /* free message queue pool */
     RT_KERNEL_FREE(mq->msg_pool);
  8010398:	69f0      	ldr	r0, [r6, #28]
- 801039a:	f001 fb89 	bl	8011ab0 <rt_free>
+ 801039a:	f001 fbc9 	bl	8011b30 <rt_free>
 
     /* delete message queue object */
     rt_object_delete(&(mq->parent.parent));
@@ -7023,7 +7023,7 @@ rt_err_t rt_mq_delete(rt_mq_t mq)
     mq->msg_pool = RT_KERNEL_MALLOC((mq->msg_size + sizeof(struct rt_mq_message)) * mq->max_msgs);
  80103d6:	3304      	adds	r3, #4
  80103d8:	fb00 f003 	mul.w	r0, r0, r3
- 80103dc:	f001 fada 	bl	8011994 <rt_malloc>
+ 80103dc:	f001 fb1a 	bl	8011a14 <rt_malloc>
  80103e0:	61e0      	str	r0, [r4, #28]
     if (mq->msg_pool == RT_NULL)
  80103e2:	b120      	cbz	r0, 80103ee <rt_mq_create+0x46>
@@ -7780,8 +7780,8 @@ rt_err_t rt_mq_recv(rt_mq_t    mq,
  801074e:	e8bd 87f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, pc}
  8010752:	bf00      	nop
  8010754:	cccccccd 	.word	0xcccccccd
- 8010758:	0801263c 	.word	0x0801263c
- 801075c:	08012658 	.word	0x08012658
+ 8010758:	080126d4 	.word	0x080126d4
+ 801075c:	080126f0 	.word	0x080126f0
 
 08010760 <rt_memset>:
 {
@@ -8536,7 +8536,7 @@ rt_int32_t rt_vsnprintf(char       *buf,
  8010b56:	703b      	strb	r3, [r7, #0]
  8010b58:	e7f7      	b.n	8010b4a <rt_vsnprintf+0x2fe>
  8010b5a:	bf00      	nop
- 8010b5c:	08012650 	.word	0x08012650
+ 8010b5c:	080126e8 	.word	0x080126e8
 
 08010b60 <rt_vsprintf>:
  * @param buf the buffer to save formatted string
@@ -8686,7 +8686,7 @@ int __rt_ffs(int value)
  8010bf8:	4770      	bx	lr
 }
  8010bfa:	4770      	bx	lr
- 8010bfc:	0801253c 	.word	0x0801253c
+ 8010bfc:	080125d4 	.word	0x080125d4
 
 08010c00 <thread_delayRed>:
 //参数说明：无
@@ -8725,9 +8725,9 @@ void thread_delayRed(void)
  8010c3a:	f240 1007 	movw	r0, #263	; 0x107
  8010c3e:	f7ff f8f3 	bl	800fe28 <gpio_reverse>
  8010c42:	e7ea      	b.n	8010c1a <thread_delayRed+0x1a>
- 8010c44:	0801266c 	.word	0x0801266c
- 8010c48:	08012690 	.word	0x08012690
- 8010c4c:	080126c0 	.word	0x080126c0
+ 8010c44:	08012704 	.word	0x08012704
+ 8010c48:	08012728 	.word	0x08012728
+ 8010c4c:	08012758 	.word	0x08012758
 
 08010c50 <rt_tick_get>:
  */
@@ -9236,9 +9236,9 @@ void thread_delayGreen(void)
  8010ea2:	f44f 7084 	mov.w	r0, #264	; 0x108
  8010ea6:	f7fe ffbf 	bl	800fe28 <gpio_reverse>
  8010eaa:	e7ea      	b.n	8010e82 <thread_delayGreen+0x1a>
- 8010eac:	080126fc 	.word	0x080126fc
- 8010eb0:	08012720 	.word	0x08012720
- 8010eb4:	08012750 	.word	0x08012750
+ 8010eac:	08012794 	.word	0x08012794
+ 8010eb0:	080127b8 	.word	0x080127b8
+ 8010eb4:	080127e8 	.word	0x080127e8
 
 08010eb8 <_SysTick_Config>:
 // core clock.
@@ -9333,7 +9333,7 @@ void rt_hw_board_init()
  8010f14:	f7ff ffea 	bl	8010eec <rt_heap_end_get>
  8010f18:	4601      	mov	r1, r0
  8010f1a:	4620      	mov	r0, r4
- 8010f1c:	f000 fcfa 	bl	8011914 <rt_system_heap_init>
+ 8010f1c:	f000 fd3a 	bl	8011994 <rt_system_heap_init>
 #endif
 
 }
@@ -9349,14 +9349,14 @@ void SysTick_Handler(void)
  8010f2c:	b508      	push	{r3, lr}
     /* enter interrupt */
     rt_interrupt_enter();
- 8010f2e:	f000 fe13 	bl	8011b58 <rt_interrupt_enter>
+ 8010f2e:	f000 fe53 	bl	8011bd8 <rt_interrupt_enter>
 
     rt_tick_increase();
  8010f32:	f7ff fe93 	bl	8010c5c <rt_tick_increase>
 
     /* leave interrupt */
     rt_interrupt_leave();
- 8010f36:	f000 fe1d 	bl	8011b74 <rt_interrupt_leave>
+ 8010f36:	f000 fe5d 	bl	8011bf4 <rt_interrupt_leave>
 }
  8010f3a:	bd08      	pop	{r3, pc}
 
@@ -9397,9 +9397,9 @@ void thread_delayBlue(void)
  8010f76:	f240 1009 	movw	r0, #265	; 0x109
  8010f7a:	f7fe ff55 	bl	800fe28 <gpio_reverse>
  8010f7e:	e7ea      	b.n	8010f56 <thread_delayBlue+0x1a>
- 8010f80:	0801278c 	.word	0x0801278c
- 8010f84:	080127ac 	.word	0x080127ac
- 8010f88:	080127dc 	.word	0x080127dc
+ 8010f80:	08012824 	.word	0x08012824
+ 8010f84:	08012844 	.word	0x08012844
+ 8010f88:	08012874 	.word	0x08012874
 
 08010f8c <thread_SPThread1>:
 //参数说明：无
@@ -9483,13 +9483,13 @@ void thread_SPThread1()
  801100c:	2002      	movs	r0, #2
  801100e:	f000 f93d 	bl	801128c <uart_send_string>
  8011012:	e7d3      	b.n	8010fbc <thread_SPThread1+0x30>
- 8011014:	08012818 	.word	0x08012818
+ 8011014:	080128b0 	.word	0x080128b0
  8011018:	20007318 	.word	0x20007318
- 801101c:	08012850 	.word	0x08012850
- 8011020:	0801286c 	.word	0x0801286c
- 8011024:	08012444 	.word	0x08012444
- 8011028:	0801282c 	.word	0x0801282c
- 801102c:	0801283c 	.word	0x0801283c
+ 801101c:	080128e8 	.word	0x080128e8
+ 8011020:	08012904 	.word	0x08012904
+ 8011024:	080124dc 	.word	0x080124dc
+ 8011028:	080128c4 	.word	0x080128c4
+ 801102c:	080128d4 	.word	0x080128d4
 
 08011030 <Vectors_Init>:
 //参数说明：无
@@ -9582,8 +9582,8 @@ void  Vectors_Init()
  801109c:	080000dc 	.word	0x080000dc
  80110a0:	e000ed00 	.word	0xe000ed00
  80110a4:	20007c70 	.word	0x20007c70
- 80110a8:	0801289c 	.word	0x0801289c
- 80110ac:	08012880 	.word	0x08012880
+ 80110a8:	08012934 	.word	0x08012934
+ 80110ac:	08012918 	.word	0x08012918
  80110b0:	0803f800 	.word	0x0803f800
 
 080110b4 <uart_is_uartNo>:
@@ -9874,2424 +9874,2499 @@ uint8_t uart_is_uartNo(uint8_t uartNo)
 }
  80112b2:	4618      	mov	r0, r3
  80112b4:	bd70      	pop	{r4, r5, r6, pc}
+
+080112b6 <useruart_send_string>:
+{
+ 80112b6:	b530      	push	{r4, r5, lr}
+ 80112b8:	f2ad 4d04 	subw	sp, sp, #1028	; 0x404
+ 80112bc:	4605      	mov	r5, r0
+ 80112be:	460c      	mov	r4, r1
+	uint8_t code_head[1024]={0Xa5,0x5a,0x03,0x82,0x01,0x00};
+ 80112c0:	f44f 6280 	mov.w	r2, #1024	; 0x400
+ 80112c4:	2100      	movs	r1, #0
+ 80112c6:	4668      	mov	r0, sp
+ 80112c8:	f000 ffe3 	bl	8012292 <memset>
+ 80112cc:	23a5      	movs	r3, #165	; 0xa5
+ 80112ce:	f88d 3000 	strb.w	r3, [sp]
+ 80112d2:	235a      	movs	r3, #90	; 0x5a
+ 80112d4:	f88d 3001 	strb.w	r3, [sp, #1]
+ 80112d8:	2303      	movs	r3, #3
+ 80112da:	f88d 3002 	strb.w	r3, [sp, #2]
+ 80112de:	2382      	movs	r3, #130	; 0x82
+ 80112e0:	f88d 3003 	strb.w	r3, [sp, #3]
+ 80112e4:	2301      	movs	r3, #1
+ 80112e6:	f88d 3004 	strb.w	r3, [sp, #4]
+	n=strlen(buff_ptr);
+ 80112ea:	4620      	mov	r0, r4
+ 80112ec:	f7fc fb44 	bl	800d978 <strlen>
+	code_head[2]+=n;
+ 80112f0:	3003      	adds	r0, #3
+ 80112f2:	f88d 0002 	strb.w	r0, [sp, #2]
+	strcat(code_head,buff_ptr);
+ 80112f6:	4621      	mov	r1, r4
+ 80112f8:	4668      	mov	r0, sp
+ 80112fa:	f000 ffd2 	bl	80122a2 <strcat>
+    if(!uart_is_uartNo(uartNo))
+ 80112fe:	4628      	mov	r0, r5
+ 8011300:	f7ff fed8 	bl	80110b4 <uart_is_uartNo>
+ 8011304:	4603      	mov	r3, r0
+ 8011306:	b160      	cbz	r0, 8011322 <useruart_send_string+0x6c>
+    for(i = 0; code_head[i] != '\0'; i++)   //遍历字符串里的字符
+ 8011308:	2400      	movs	r4, #0
+ 801130a:	f81d 1004 	ldrb.w	r1, [sp, r4]
+ 801130e:	b139      	cbz	r1, 8011320 <useruart_send_string+0x6a>
+        if (!uart_send1(uartNo,code_head[i]))//发送指针对应的字符
+ 8011310:	4628      	mov	r0, r5
+ 8011312:	f7ff ff7d 	bl	8011210 <uart_send1>
+ 8011316:	4603      	mov	r3, r0
+ 8011318:	b118      	cbz	r0, 8011322 <useruart_send_string+0x6c>
+    for(i = 0; code_head[i] != '\0'; i++)   //遍历字符串里的字符
+ 801131a:	3401      	adds	r4, #1
+ 801131c:	b2a4      	uxth	r4, r4
+ 801131e:	e7f4      	b.n	801130a <useruart_send_string+0x54>
+    return 1;          //发送成功
+ 8011320:	2301      	movs	r3, #1
+}
+ 8011322:	4618      	mov	r0, r3
+ 8011324:	f20d 4d04 	addw	sp, sp, #1028	; 0x404
+ 8011328:	bd30      	pop	{r4, r5, pc}
 	...
 
-080112b8 <uart_re1>:
+0801132c <uart_re1>:
 {
- 80112b8:	b570      	push	{r4, r5, r6, lr}
- 80112ba:	4604      	mov	r4, r0
- 80112bc:	460d      	mov	r5, r1
+ 801132c:	b570      	push	{r4, r5, r6, lr}
+ 801132e:	4604      	mov	r4, r0
+ 8011330:	460d      	mov	r5, r1
 	if(!uart_is_uartNo(uartNo))
- 80112be:	f7ff fef9 	bl	80110b4 <uart_is_uartNo>
- 80112c2:	4606      	mov	r6, r0
- 80112c4:	b170      	cbz	r0, 80112e4 <uart_re1+0x2c>
+ 8011332:	f7ff febf 	bl	80110b4 <uart_is_uartNo>
+ 8011336:	4606      	mov	r6, r0
+ 8011338:	b170      	cbz	r0, 8011358 <uart_re1+0x2c>
 	for (t = 0; t < 0xFBBB; t++)//查询指定次数
- 80112c6:	2200      	movs	r2, #0
- 80112c8:	f64f 33ba 	movw	r3, #64442	; 0xfbba
- 80112cc:	429a      	cmp	r2, r3
- 80112ce:	d811      	bhi.n	80112f4 <uart_re1+0x3c>
+ 801133a:	2200      	movs	r2, #0
+ 801133c:	f64f 33ba 	movw	r3, #64442	; 0xfbba
+ 8011340:	429a      	cmp	r2, r3
+ 8011342:	d811      	bhi.n	8011368 <uart_re1+0x3c>
 		if (USART_ARR[uartNo-1]->ISR & USART_ISR_RXNE_Msk)
- 80112d0:	1e63      	subs	r3, r4, #1
- 80112d2:	490c      	ldr	r1, [pc, #48]	; (8011304 <uart_re1+0x4c>)
- 80112d4:	f851 3023 	ldr.w	r3, [r1, r3, lsl #2]
- 80112d8:	69d9      	ldr	r1, [r3, #28]
- 80112da:	f011 0f20 	tst.w	r1, #32
- 80112de:	d105      	bne.n	80112ec <uart_re1+0x34>
+ 8011344:	1e63      	subs	r3, r4, #1
+ 8011346:	490c      	ldr	r1, [pc, #48]	; (8011378 <uart_re1+0x4c>)
+ 8011348:	f851 3023 	ldr.w	r3, [r1, r3, lsl #2]
+ 801134c:	69d9      	ldr	r1, [r3, #28]
+ 801134e:	f011 0f20 	tst.w	r1, #32
+ 8011352:	d105      	bne.n	8011360 <uart_re1+0x34>
 	for (t = 0; t < 0xFBBB; t++)//查询指定次数
- 80112e0:	3201      	adds	r2, #1
- 80112e2:	e7f1      	b.n	80112c8 <uart_re1+0x10>
+ 8011354:	3201      	adds	r2, #1
+ 8011356:	e7f1      	b.n	801133c <uart_re1+0x10>
 		*fp=0;
- 80112e4:	2300      	movs	r3, #0
- 80112e6:	702b      	strb	r3, [r5, #0]
+ 8011358:	2300      	movs	r3, #0
+ 801135a:	702b      	strb	r3, [r5, #0]
 }
- 80112e8:	4630      	mov	r0, r6
- 80112ea:	bd70      	pop	{r4, r5, r6, pc}
+ 801135c:	4630      	mov	r0, r6
+ 801135e:	bd70      	pop	{r4, r5, r6, pc}
 			dat=USART_ARR[uartNo-1]->RDR;    //获取数据,清接收中断位
- 80112ec:	8c9e      	ldrh	r6, [r3, #36]	; 0x24
- 80112ee:	b2f6      	uxtb	r6, r6
+ 8011360:	8c9e      	ldrh	r6, [r3, #36]	; 0x24
+ 8011362:	b2f6      	uxtb	r6, r6
 			*fp = 1;  //接收成功
- 80112f0:	2301      	movs	r3, #1
- 80112f2:	702b      	strb	r3, [r5, #0]
+ 8011364:	2301      	movs	r3, #1
+ 8011366:	702b      	strb	r3, [r5, #0]
 	if(t >= 0xFBBB)
- 80112f4:	f64f 33ba 	movw	r3, #64442	; 0xfbba
- 80112f8:	429a      	cmp	r2, r3
- 80112fa:	d9f5      	bls.n	80112e8 <uart_re1+0x30>
+ 8011368:	f64f 33ba 	movw	r3, #64442	; 0xfbba
+ 801136c:	429a      	cmp	r2, r3
+ 801136e:	d9f5      	bls.n	801135c <uart_re1+0x30>
 		*fp = 0;    //未收到数据
- 80112fc:	2300      	movs	r3, #0
- 80112fe:	702b      	strb	r3, [r5, #0]
+ 8011370:	2300      	movs	r3, #0
+ 8011372:	702b      	strb	r3, [r5, #0]
 		dat = 0xFF;
- 8011300:	26ff      	movs	r6, #255	; 0xff
- 8011302:	e7f1      	b.n	80112e8 <uart_re1+0x30>
- 8011304:	2000408c 	.word	0x2000408c
+ 8011374:	26ff      	movs	r6, #255	; 0xff
+ 8011376:	e7f1      	b.n	801135c <uart_re1+0x30>
+ 8011378:	2000408c 	.word	0x2000408c
 
-08011308 <uart_enable_re_int>:
+0801137c <uart_enable_re_int>:
 {
- 8011308:	b510      	push	{r4, lr}
- 801130a:	4604      	mov	r4, r0
+ 801137c:	b510      	push	{r4, lr}
+ 801137e:	4604      	mov	r4, r0
 	if(!uart_is_uartNo(uartNo))
- 801130c:	f7ff fed2 	bl	80110b4 <uart_is_uartNo>
- 8011310:	b198      	cbz	r0, 801133a <uart_enable_re_int+0x32>
+ 8011380:	f7ff fe98 	bl	80110b4 <uart_is_uartNo>
+ 8011384:	b198      	cbz	r0, 80113ae <uart_enable_re_int+0x32>
 	USART_ARR[uartNo-1]->CR1 |= USART_CR1_RXNEIE_Msk;    //开放UART接收中断
- 8011312:	1e60      	subs	r0, r4, #1
- 8011314:	4b09      	ldr	r3, [pc, #36]	; (801133c <uart_enable_re_int+0x34>)
- 8011316:	f853 2020 	ldr.w	r2, [r3, r0, lsl #2]
- 801131a:	6813      	ldr	r3, [r2, #0]
- 801131c:	f043 0320 	orr.w	r3, r3, #32
- 8011320:	6013      	str	r3, [r2, #0]
+ 8011386:	1e60      	subs	r0, r4, #1
+ 8011388:	4b09      	ldr	r3, [pc, #36]	; (80113b0 <uart_enable_re_int+0x34>)
+ 801138a:	f853 2020 	ldr.w	r2, [r3, r0, lsl #2]
+ 801138e:	6813      	ldr	r3, [r2, #0]
+ 8011390:	f043 0320 	orr.w	r3, r3, #32
+ 8011394:	6013      	str	r3, [r2, #0]
 	NVIC_EnableIRQ(table_irq_uart[uartNo-1]);    //开中断控制器IRQ中断
- 8011322:	4b07      	ldr	r3, [pc, #28]	; (8011340 <uart_enable_re_int+0x38>)
- 8011324:	561b      	ldrsb	r3, [r3, r0]
+ 8011396:	4b07      	ldr	r3, [pc, #28]	; (80113b4 <uart_enable_re_int+0x38>)
+ 8011398:	561b      	ldrsb	r3, [r3, r0]
   \param [in]      IRQn  Device specific interrupt number.
   \note    IRQn must not be negative.
  */
 __STATIC_INLINE void __NVIC_EnableIRQ(IRQn_Type IRQn)
 {
   if ((int32_t)(IRQn) >= 0)
- 8011326:	2b00      	cmp	r3, #0
- 8011328:	db07      	blt.n	801133a <uart_enable_re_int+0x32>
+ 801139a:	2b00      	cmp	r3, #0
+ 801139c:	db07      	blt.n	80113ae <uart_enable_re_int+0x32>
   {
     NVIC->ISER[(((uint32_t)IRQn) >> 5UL)] = (uint32_t)(1UL << (((uint32_t)IRQn) & 0x1FUL));
- 801132a:	f003 011f 	and.w	r1, r3, #31
- 801132e:	095b      	lsrs	r3, r3, #5
- 8011330:	2201      	movs	r2, #1
- 8011332:	408a      	lsls	r2, r1
- 8011334:	4903      	ldr	r1, [pc, #12]	; (8011344 <uart_enable_re_int+0x3c>)
- 8011336:	f841 2023 	str.w	r2, [r1, r3, lsl #2]
+ 801139e:	f003 011f 	and.w	r1, r3, #31
+ 80113a2:	095b      	lsrs	r3, r3, #5
+ 80113a4:	2201      	movs	r2, #1
+ 80113a6:	408a      	lsls	r2, r1
+ 80113a8:	4903      	ldr	r1, [pc, #12]	; (80113b8 <uart_enable_re_int+0x3c>)
+ 80113aa:	f841 2023 	str.w	r2, [r1, r3, lsl #2]
 }
- 801133a:	bd10      	pop	{r4, pc}
- 801133c:	2000408c 	.word	0x2000408c
- 8011340:	20004098 	.word	0x20004098
- 8011344:	e000e100 	.word	0xe000e100
+ 80113ae:	bd10      	pop	{r4, pc}
+ 80113b0:	2000408c 	.word	0x2000408c
+ 80113b4:	20004098 	.word	0x20004098
+ 80113b8:	e000e100 	.word	0xe000e100
 
-08011348 <uart_get_re_int>:
+080113bc <uart_get_re_int>:
 {
- 8011348:	b510      	push	{r4, lr}
- 801134a:	4604      	mov	r4, r0
+ 80113bc:	b510      	push	{r4, lr}
+ 80113be:	4604      	mov	r4, r0
 	if(!uart_is_uartNo(uartNo))
- 801134c:	f7ff feb2 	bl	80110b4 <uart_is_uartNo>
- 8011350:	4603      	mov	r3, r0
- 8011352:	b170      	cbz	r0, 8011372 <uart_get_re_int+0x2a>
+ 80113c0:	f7ff fe78 	bl	80110b4 <uart_is_uartNo>
+ 80113c4:	4603      	mov	r3, r0
+ 80113c6:	b170      	cbz	r0, 80113e6 <uart_get_re_int+0x2a>
 	if(((USART_ARR[uartNo-1]->ISR & USART_ISR_RXNE_Msk) == USART_ISR_RXNE_Msk)
- 8011354:	3c01      	subs	r4, #1
- 8011356:	4b09      	ldr	r3, [pc, #36]	; (801137c <uart_get_re_int+0x34>)
- 8011358:	f853 3024 	ldr.w	r3, [r3, r4, lsl #2]
- 801135c:	69da      	ldr	r2, [r3, #28]
- 801135e:	f012 0f20 	tst.w	r2, #32
- 8011362:	d005      	beq.n	8011370 <uart_get_re_int+0x28>
+ 80113c8:	3c01      	subs	r4, #1
+ 80113ca:	4b09      	ldr	r3, [pc, #36]	; (80113f0 <uart_get_re_int+0x34>)
+ 80113cc:	f853 3024 	ldr.w	r3, [r3, r4, lsl #2]
+ 80113d0:	69da      	ldr	r2, [r3, #28]
+ 80113d2:	f012 0f20 	tst.w	r2, #32
+ 80113d6:	d005      	beq.n	80113e4 <uart_get_re_int+0x28>
 			&& ((USART_ARR[uartNo-1]->CR1 & USART_CR1_RXNEIE_Msk) == USART_CR1_RXNEIE_Msk))
- 8011364:	681b      	ldr	r3, [r3, #0]
- 8011366:	f013 0f20 	tst.w	r3, #32
- 801136a:	d104      	bne.n	8011376 <uart_get_re_int+0x2e>
+ 80113d8:	681b      	ldr	r3, [r3, #0]
+ 80113da:	f013 0f20 	tst.w	r3, #32
+ 80113de:	d104      	bne.n	80113ea <uart_get_re_int+0x2e>
 		return 0;
- 801136c:	2300      	movs	r3, #0
- 801136e:	e000      	b.n	8011372 <uart_get_re_int+0x2a>
- 8011370:	2300      	movs	r3, #0
+ 80113e0:	2300      	movs	r3, #0
+ 80113e2:	e000      	b.n	80113e6 <uart_get_re_int+0x2a>
+ 80113e4:	2300      	movs	r3, #0
 }
- 8011372:	4618      	mov	r0, r3
- 8011374:	bd10      	pop	{r4, pc}
+ 80113e6:	4618      	mov	r0, r3
+ 80113e8:	bd10      	pop	{r4, pc}
 		return 1;
- 8011376:	2301      	movs	r3, #1
- 8011378:	e7fb      	b.n	8011372 <uart_get_re_int+0x2a>
- 801137a:	bf00      	nop
- 801137c:	2000408c 	.word	0x2000408c
+ 80113ea:	2301      	movs	r3, #1
+ 80113ec:	e7fb      	b.n	80113e6 <uart_get_re_int+0x2a>
+ 80113ee:	bf00      	nop
+ 80113f0:	2000408c 	.word	0x2000408c
 
-08011380 <rt_thread_idle_excute>:
+080113f4 <rt_thread_idle_excute>:
      * into a "if".
      *
      * So add the volatile qualifier here. */
     const volatile rt_list_t *l = (const volatile rt_list_t *)&rt_thread_defunct;
 
     return l->next != l;
- 8011380:	4b1f      	ldr	r3, [pc, #124]	; (8011400 <rt_thread_idle_excute+0x80>)
- 8011382:	681a      	ldr	r2, [r3, #0]
+ 80113f4:	4b1f      	ldr	r3, [pc, #124]	; (8011474 <rt_thread_idle_excute+0x80>)
+ 80113f6:	681a      	ldr	r2, [r3, #0]
  */
 void rt_thread_idle_excute(void)
 {
     /* Loop until there is no dead thread. So one call to rt_thread_idle_excute
      * will do all the cleanups. */
     while (_has_defunct_thread())
- 8011384:	429a      	cmp	r2, r3
- 8011386:	d039      	beq.n	80113fc <rt_thread_idle_excute+0x7c>
+ 80113f8:	429a      	cmp	r2, r3
+ 80113fa:	d039      	beq.n	8011470 <rt_thread_idle_excute+0x7c>
 {
- 8011388:	b570      	push	{r4, r5, r6, lr}
+ 80113fc:	b570      	push	{r4, r5, r6, lr}
         struct rt_dlmodule *module = RT_NULL;
 #endif
         RT_DEBUG_NOT_IN_INTERRUPT;
 
         /* disable interrupt */
         lock = rt_hw_interrupt_disable();
- 801138a:	f7fc fa59 	bl	800d840 <rt_hw_interrupt_disable>
- 801138e:	4606      	mov	r6, r0
+ 80113fe:	f7fc fa1f 	bl	800d840 <rt_hw_interrupt_disable>
+ 8011402:	4606      	mov	r6, r0
     return l->next != l;
- 8011390:	4b1b      	ldr	r3, [pc, #108]	; (8011400 <rt_thread_idle_excute+0x80>)
- 8011392:	681a      	ldr	r2, [r3, #0]
+ 8011404:	4b1b      	ldr	r3, [pc, #108]	; (8011474 <rt_thread_idle_excute+0x80>)
+ 8011406:	681a      	ldr	r2, [r3, #0]
 
         /* re-check whether list is empty */
         if (_has_defunct_thread())
- 8011394:	429a      	cmp	r2, r3
- 8011396:	d02e      	beq.n	80113f6 <rt_thread_idle_excute+0x76>
+ 8011408:	429a      	cmp	r2, r3
+ 801140a:	d02e      	beq.n	801146a <rt_thread_idle_excute+0x76>
         {
             /* get defunct thread */
             thread = rt_list_entry(rt_thread_defunct.next,
- 8011398:	681c      	ldr	r4, [r3, #0]
- 801139a:	f1a4 0514 	sub.w	r5, r4, #20
+ 801140c:	681c      	ldr	r4, [r3, #0]
+ 801140e:	f1a4 0514 	sub.w	r5, r4, #20
     n->next->prev = n->prev;
- 801139e:	6823      	ldr	r3, [r4, #0]
- 80113a0:	6862      	ldr	r2, [r4, #4]
- 80113a2:	605a      	str	r2, [r3, #4]
+ 8011412:	6823      	ldr	r3, [r4, #0]
+ 8011414:	6862      	ldr	r2, [r4, #4]
+ 8011416:	605a      	str	r2, [r3, #4]
     n->prev->next = n->next;
- 80113a4:	6863      	ldr	r3, [r4, #4]
- 80113a6:	6822      	ldr	r2, [r4, #0]
- 80113a8:	601a      	str	r2, [r3, #0]
+ 8011418:	6863      	ldr	r3, [r4, #4]
+ 801141a:	6822      	ldr	r2, [r4, #0]
+ 801141c:	601a      	str	r2, [r3, #0]
     n->next = n->prev = n;
- 80113aa:	6064      	str	r4, [r4, #4]
- 80113ac:	6024      	str	r4, [r4, #0]
+ 801141e:	6064      	str	r4, [r4, #4]
+ 8011420:	6024      	str	r4, [r4, #0]
 #endif
             /* remove defunct thread */
             rt_list_remove(&(thread->tlist));
 
             /* lock scheduler to prevent scheduling in cleanup function. */
             rt_enter_critical();
- 80113ae:	f7ff fd31 	bl	8010e14 <rt_enter_critical>
+ 8011422:	f7ff fcf7 	bl	8010e14 <rt_enter_critical>
 
             /* invoke thread cleanup */
             if (thread->cleanup != RT_NULL)
- 80113b2:	6e63      	ldr	r3, [r4, #100]	; 0x64
- 80113b4:	b10b      	cbz	r3, 80113ba <rt_thread_idle_excute+0x3a>
+ 8011426:	6e63      	ldr	r3, [r4, #100]	; 0x64
+ 8011428:	b10b      	cbz	r3, 801142e <rt_thread_idle_excute+0x3a>
                 thread->cleanup(thread);
- 80113b6:	4628      	mov	r0, r5
- 80113b8:	4798      	blx	r3
+ 801142a:	4628      	mov	r0, r5
+ 801142c:	4798      	blx	r3
 #ifdef RT_USING_SIGNALS
             rt_thread_free_sig(thread);
 #endif
 
             /* if it's a system object, not delete it */
             if (rt_object_is_systemobject((rt_object_t)thread) == RT_TRUE)
- 80113ba:	4628      	mov	r0, r5
- 80113bc:	f7fe fb31 	bl	800fa22 <rt_object_is_systemobject>
- 80113c0:	2801      	cmp	r0, #1
- 80113c2:	d00f      	beq.n	80113e4 <rt_thread_idle_excute+0x64>
+ 801142e:	4628      	mov	r0, r5
+ 8011430:	f7fe faf7 	bl	800fa22 <rt_object_is_systemobject>
+ 8011434:	2801      	cmp	r0, #1
+ 8011436:	d00f      	beq.n	8011458 <rt_thread_idle_excute+0x64>
 
                 return;
             }
 
             /* unlock scheduler */
             rt_exit_critical();
- 80113c4:	f7ff fd32 	bl	8010e2c <rt_exit_critical>
+ 8011438:	f7ff fcf8 	bl	8010e2c <rt_exit_critical>
             /* may the defunct thread list is removed by others, just return */
             return;
         }
 
         /* enable interrupt */
         rt_hw_interrupt_enable(lock);
- 80113c8:	4630      	mov	r0, r6
- 80113ca:	f7fc fa3d 	bl	800d848 <rt_hw_interrupt_enable>
+ 801143c:	4630      	mov	r0, r6
+ 801143e:	f7fc fa03 	bl	800d848 <rt_hw_interrupt_enable>
 
 #ifdef RT_USING_HEAP
         /* release thread's stack */
         RT_KERNEL_FREE(thread->stack_addr);
- 80113ce:	6960      	ldr	r0, [r4, #20]
- 80113d0:	f000 fb6e 	bl	8011ab0 <rt_free>
+ 8011442:	6960      	ldr	r0, [r4, #20]
+ 8011444:	f000 fb74 	bl	8011b30 <rt_free>
         /* delete thread object */
         rt_object_delete((rt_object_t)thread);
- 80113d4:	4628      	mov	r0, r5
- 80113d6:	f7fe fb0e 	bl	800f9f6 <rt_object_delete>
+ 8011448:	4628      	mov	r0, r5
+ 801144a:	f7fe fad4 	bl	800f9f6 <rt_object_delete>
     return l->next != l;
- 80113da:	4b09      	ldr	r3, [pc, #36]	; (8011400 <rt_thread_idle_excute+0x80>)
- 80113dc:	681a      	ldr	r2, [r3, #0]
+ 801144e:	4b09      	ldr	r3, [pc, #36]	; (8011474 <rt_thread_idle_excute+0x80>)
+ 8011450:	681a      	ldr	r2, [r3, #0]
     while (_has_defunct_thread())
- 80113de:	429a      	cmp	r2, r3
- 80113e0:	d1d3      	bne.n	801138a <rt_thread_idle_excute+0xa>
- 80113e2:	e00a      	b.n	80113fa <rt_thread_idle_excute+0x7a>
+ 8011452:	429a      	cmp	r2, r3
+ 8011454:	d1d3      	bne.n	80113fe <rt_thread_idle_excute+0xa>
+ 8011456:	e00a      	b.n	801146e <rt_thread_idle_excute+0x7a>
                 rt_object_detach((rt_object_t)thread);
- 80113e4:	4628      	mov	r0, r5
- 80113e6:	f7fe facb 	bl	800f980 <rt_object_detach>
+ 8011458:	4628      	mov	r0, r5
+ 801145a:	f7fe fa91 	bl	800f980 <rt_object_detach>
                 rt_exit_critical();
- 80113ea:	f7ff fd1f 	bl	8010e2c <rt_exit_critical>
+ 801145e:	f7ff fce5 	bl	8010e2c <rt_exit_critical>
                 rt_hw_interrupt_enable(lock);
- 80113ee:	4630      	mov	r0, r6
- 80113f0:	f7fc fa2a 	bl	800d848 <rt_hw_interrupt_enable>
+ 8011462:	4630      	mov	r0, r6
+ 8011464:	f7fc f9f0 	bl	800d848 <rt_hw_interrupt_enable>
                 return;
- 80113f4:	e001      	b.n	80113fa <rt_thread_idle_excute+0x7a>
+ 8011468:	e001      	b.n	801146e <rt_thread_idle_excute+0x7a>
             rt_hw_interrupt_enable(lock);
- 80113f6:	f7fc fa27 	bl	800d848 <rt_hw_interrupt_enable>
+ 801146a:	f7fc f9ed 	bl	800d848 <rt_hw_interrupt_enable>
 #endif
     }
 }
- 80113fa:	bd70      	pop	{r4, r5, r6, pc}
- 80113fc:	4770      	bx	lr
- 80113fe:	bf00      	nop
- 8011400:	20007c68 	.word	0x20007c68
+ 801146e:	bd70      	pop	{r4, r5, r6, pc}
+ 8011470:	4770      	bx	lr
+ 8011472:	bf00      	nop
+ 8011474:	20007c68 	.word	0x20007c68
 
-08011404 <rt_thread_idle_entry>:
+08011478 <rt_thread_idle_entry>:
 
 extern void rt_system_power_manager(void);
 static void rt_thread_idle_entry(void *parameter)
 {
- 8011404:	b508      	push	{r3, lr}
+ 8011478:	b508      	push	{r3, lr}
                 idle_hook_list[i]();
             }
         }
 #endif
 
         rt_thread_idle_excute();
- 8011406:	f7ff ffbb 	bl	8011380 <rt_thread_idle_excute>
- 801140a:	e7fc      	b.n	8011406 <rt_thread_idle_entry+0x2>
+ 801147a:	f7ff ffbb 	bl	80113f4 <rt_thread_idle_excute>
+ 801147e:	e7fc      	b.n	801147a <rt_thread_idle_entry+0x2>
 
-0801140c <rt_thread_idle_init>:
+08011480 <rt_thread_idle_init>:
  * This function will initialize idle thread, then start it.
  *
  * @note this function must be invoked when system init.
  */
 void rt_thread_idle_init(void)
 {
- 801140c:	b510      	push	{r4, lr}
- 801140e:	b084      	sub	sp, #16
+ 8011480:	b510      	push	{r4, lr}
+ 8011482:	b084      	sub	sp, #16
     /* initialize thread */
     rt_thread_init(&idle,
- 8011410:	4c0a      	ldr	r4, [pc, #40]	; (801143c <rt_thread_idle_init+0x30>)
- 8011412:	2320      	movs	r3, #32
- 8011414:	9303      	str	r3, [sp, #12]
- 8011416:	231f      	movs	r3, #31
- 8011418:	9302      	str	r3, [sp, #8]
- 801141a:	f44f 7380 	mov.w	r3, #256	; 0x100
- 801141e:	9301      	str	r3, [sp, #4]
- 8011420:	4b07      	ldr	r3, [pc, #28]	; (8011440 <rt_thread_idle_init+0x34>)
- 8011422:	9300      	str	r3, [sp, #0]
- 8011424:	2300      	movs	r3, #0
- 8011426:	4a07      	ldr	r2, [pc, #28]	; (8011444 <rt_thread_idle_init+0x38>)
- 8011428:	4907      	ldr	r1, [pc, #28]	; (8011448 <rt_thread_idle_init+0x3c>)
- 801142a:	4620      	mov	r0, r4
- 801142c:	f7fd fe91 	bl	800f152 <rt_thread_init>
+ 8011484:	4c0a      	ldr	r4, [pc, #40]	; (80114b0 <rt_thread_idle_init+0x30>)
+ 8011486:	2320      	movs	r3, #32
+ 8011488:	9303      	str	r3, [sp, #12]
+ 801148a:	231f      	movs	r3, #31
+ 801148c:	9302      	str	r3, [sp, #8]
+ 801148e:	f44f 7380 	mov.w	r3, #256	; 0x100
+ 8011492:	9301      	str	r3, [sp, #4]
+ 8011494:	4b07      	ldr	r3, [pc, #28]	; (80114b4 <rt_thread_idle_init+0x34>)
+ 8011496:	9300      	str	r3, [sp, #0]
+ 8011498:	2300      	movs	r3, #0
+ 801149a:	4a07      	ldr	r2, [pc, #28]	; (80114b8 <rt_thread_idle_init+0x38>)
+ 801149c:	4907      	ldr	r1, [pc, #28]	; (80114bc <rt_thread_idle_init+0x3c>)
+ 801149e:	4620      	mov	r0, r4
+ 80114a0:	f7fd fe57 	bl	800f152 <rt_thread_init>
                    sizeof(rt_thread_stack),
                    RT_THREAD_PRIORITY_MAX - 1,
                    32);
 
     /* startup */
     rt_thread_startup(&idle);
- 8011430:	4620      	mov	r0, r4
- 8011432:	f7fd ffc9 	bl	800f3c8 <rt_thread_startup>
+ 80114a4:	4620      	mov	r0, r4
+ 80114a6:	f7fd ff8f 	bl	800f3c8 <rt_thread_startup>
 }
- 8011436:	b004      	add	sp, #16
- 8011438:	bd10      	pop	{r4, pc}
- 801143a:	bf00      	nop
- 801143c:	20007154 	.word	0x20007154
- 8011440:	200071d4 	.word	0x200071d4
- 8011444:	08011405 	.word	0x08011405
- 8011448:	080128c8 	.word	0x080128c8
+ 80114aa:	b004      	add	sp, #16
+ 80114ac:	bd10      	pop	{r4, pc}
+ 80114ae:	bf00      	nop
+ 80114b0:	20007154 	.word	0x20007154
+ 80114b4:	200071d4 	.word	0x200071d4
+ 80114b8:	08011479 	.word	0x08011479
+ 80114bc:	08012960 	.word	0x08012960
 
-0801144c <app_init>:
+080114c0 <app_init>:
 //功能概要：主线程，要完成全局变量初始化、外设初始化、创建其他用户线程、启动用户线程等工作
 //内部调用：无
 //======================================================================
 
 void app_init(void)
 {
- 801144c:	b570      	push	{r4, r5, r6, lr}
- 801144e:	b082      	sub	sp, #8
+ 80114c0:	b570      	push	{r4, r5, r6, lr}
+ 80114c2:	b082      	sub	sp, #8
 
 
 	
 	//（1.2）【不变】BIOS中API接口表首地址、用户中断处理程序名初始化
 	//（1.3）【不变】关总中断
 	DISABLE_INTERRUPTS;
- 8011450:	b672      	cpsid	i
+ 80114c4:	b672      	cpsid	i
 	//（1.4）给主函数使用的局部变量赋初值
 
 	//（1.5）给全局变量赋初值
 
 	//（1.6）用户外设模块初始化
 	printf("  调用gpio_init函数，分别初始化红灯、绿灯、蓝灯\r\n");
- 8011452:	4870      	ldr	r0, [pc, #448]	; (8011614 <app_init+0x1c8>)
- 8011454:	f7fd fdd8 	bl	800f008 <myprintf>
+ 80114c6:	4870      	ldr	r0, [pc, #448]	; (8011688 <app_init+0x1c8>)
+ 80114c8:	f7fd fd9e 	bl	800f008 <myprintf>
 	gpio_init(LIGHT_GREEN,GPIO_OUTPUT,LIGHT_OFF);
- 8011458:	2201      	movs	r2, #1
- 801145a:	4611      	mov	r1, r2
- 801145c:	f44f 7084 	mov.w	r0, #264	; 0x108
- 8011460:	f7fe fcaa 	bl	800fdb8 <gpio_init>
+ 80114cc:	2201      	movs	r2, #1
+ 80114ce:	4611      	mov	r1, r2
+ 80114d0:	f44f 7084 	mov.w	r0, #264	; 0x108
+ 80114d4:	f7fe fc70 	bl	800fdb8 <gpio_init>
 	gpio_init(LIGHT_BLUE,GPIO_OUTPUT,LIGHT_OFF);
- 8011464:	2201      	movs	r2, #1
- 8011466:	4611      	mov	r1, r2
- 8011468:	f240 1009 	movw	r0, #265	; 0x109
- 801146c:	f7fe fca4 	bl	800fdb8 <gpio_init>
+ 80114d8:	2201      	movs	r2, #1
+ 80114da:	4611      	mov	r1, r2
+ 80114dc:	f240 1009 	movw	r0, #265	; 0x109
+ 80114e0:	f7fe fc6a 	bl	800fdb8 <gpio_init>
 	gpio_init(LIGHT_RED,GPIO_OUTPUT,LIGHT_OFF);
- 8011470:	2201      	movs	r2, #1
- 8011472:	4611      	mov	r1, r2
- 8011474:	f240 1007 	movw	r0, #263	; 0x107
- 8011478:	f7fe fc9e 	bl	800fdb8 <gpio_init>
+ 80114e4:	2201      	movs	r2, #1
+ 80114e6:	4611      	mov	r1, r2
+ 80114e8:	f240 1007 	movw	r0, #263	; 0x107
+ 80114ec:	f7fe fc64 	bl	800fdb8 <gpio_init>
 	uart_init(UART_User,115200); 
- 801147c:	f44f 31e1 	mov.w	r1, #115200	; 0x1c200
- 8011480:	2002      	movs	r0, #2
- 8011482:	f7ff fe1f 	bl	80110c4 <uart_init>
+ 80114f0:	f44f 31e1 	mov.w	r1, #115200	; 0x1c200
+ 80114f4:	2002      	movs	r0, #2
+ 80114f6:	f7ff fde5 	bl	80110c4 <uart_init>
 	//（1.7）使能模块中断
 	uart_enable_re_int(UART_User);
- 8011486:	2002      	movs	r0, #2
- 8011488:	f7ff ff3e 	bl	8011308 <uart_enable_re_int>
+ 80114fa:	2002      	movs	r0, #2
+ 80114fc:	f7ff ff3e 	bl	801137c <uart_enable_re_int>
 	//（1.8）【不变】开总中断
 	ENABLE_INTERRUPTS;
- 801148c:	b662      	cpsie	i
+ 8011500:	b662      	cpsie	i
 	printf("【金葫芦提示】本程序为带RT-Thread的STM32用户程序\r\n");
- 801148e:	4862      	ldr	r0, [pc, #392]	; (8011618 <app_init+0x1cc>)
- 8011490:	f7fd fdba 	bl	800f008 <myprintf>
+ 8011502:	4862      	ldr	r0, [pc, #392]	; (801168c <app_init+0x1cc>)
+ 8011504:	f7fd fd80 	bl	800f008 <myprintf>
 	printf("【基本功能】①在 RT-Thread启动后创建了红灯、绿灯和蓝灯三个用户线程\r\n");
- 8011494:	4861      	ldr	r0, [pc, #388]	; (801161c <app_init+0x1d0>)
- 8011496:	f7fd fdb7 	bl	800f008 <myprintf>
+ 8011508:	4861      	ldr	r0, [pc, #388]	; (8011690 <app_init+0x1d0>)
+ 801150a:	f7fd fd7d 	bl	800f008 <myprintf>
 	printf("	        ②实现蓝灯每10秒闪烁一次,并设置事件字\r\n");
- 801149a:	4861      	ldr	r0, [pc, #388]	; (8011620 <app_init+0x1d4>)
- 801149c:	f7fd fdb4 	bl	800f008 <myprintf>
+ 801150e:	4861      	ldr	r0, [pc, #388]	; (8011694 <app_init+0x1d4>)
+ 8011510:	f7fd fd7a 	bl	800f008 <myprintf>
 	printf("	        ③绿灯线程等待到事件字，转换绿灯状态\r\n");
- 80114a0:	4860      	ldr	r0, [pc, #384]	; (8011624 <app_init+0x1d8>)
- 80114a2:	f7fd fdb1 	bl	800f008 <myprintf>
+ 8011514:	4860      	ldr	r0, [pc, #384]	; (8011698 <app_init+0x1d8>)
+ 8011516:	f7fd fd77 	bl	800f008 <myprintf>
 	printf("【操作方法】连接串口User，选择波特率为115200，打开串口，查看输出结果...\r\r\n\n");
- 80114a6:	4860      	ldr	r0, [pc, #384]	; (8011628 <app_init+0x1dc>)
- 80114a8:	f7fd fdae 	bl	800f008 <myprintf>
+ 801151a:	4860      	ldr	r0, [pc, #384]	; (801169c <app_init+0x1dc>)
+ 801151c:	f7fd fd74 	bl	800f008 <myprintf>
 	printf("0-1.MCU启动\n");
- 80114ac:	485f      	ldr	r0, [pc, #380]	; (801162c <app_init+0x1e0>)
- 80114ae:	f7fd fdab 	bl	800f008 <myprintf>
+ 8011520:	485f      	ldr	r0, [pc, #380]	; (80116a0 <app_init+0x1e0>)
+ 8011522:	f7fd fd71 	bl	800f008 <myprintf>
 	
 	//创建事件字
 	EventWord=rt_event_create("EventWord",RT_IPC_FLAG_PRIO);
- 80114b2:	2101      	movs	r1, #1
- 80114b4:	485e      	ldr	r0, [pc, #376]	; (8011630 <app_init+0x1e4>)
- 80114b6:	f7fe fe69 	bl	801018c <rt_event_create>
- 80114ba:	4b5e      	ldr	r3, [pc, #376]	; (8011634 <app_init+0x1e8>)
- 80114bc:	6018      	str	r0, [r3, #0]
+ 8011526:	2101      	movs	r1, #1
+ 8011528:	485e      	ldr	r0, [pc, #376]	; (80116a4 <app_init+0x1e4>)
+ 801152a:	f7fe fe2f 	bl	801018c <rt_event_create>
+ 801152e:	4b5e      	ldr	r3, [pc, #376]	; (80116a8 <app_init+0x1e8>)
+ 8011530:	6018      	str	r0, [r3, #0]
 	//创建消息队列
 	mq=rt_mq_create("mq",9,4,RT_IPC_FLAG_FIFO);
- 80114be:	2300      	movs	r3, #0
- 80114c0:	2204      	movs	r2, #4
- 80114c2:	2109      	movs	r1, #9
- 80114c4:	485c      	ldr	r0, [pc, #368]	; (8011638 <app_init+0x1ec>)
- 80114c6:	f7fe ff6f 	bl	80103a8 <rt_mq_create>
- 80114ca:	4b5c      	ldr	r3, [pc, #368]	; (801163c <app_init+0x1f0>)
- 80114cc:	6018      	str	r0, [r3, #0]
+ 8011532:	2300      	movs	r3, #0
+ 8011534:	2204      	movs	r2, #4
+ 8011536:	2109      	movs	r1, #9
+ 8011538:	485c      	ldr	r0, [pc, #368]	; (80116ac <app_init+0x1ec>)
+ 801153a:	f7fe ff35 	bl	80103a8 <rt_mq_create>
+ 801153e:	4b5c      	ldr	r3, [pc, #368]	; (80116b0 <app_init+0x1f0>)
+ 8011540:	6018      	str	r0, [r3, #0]
 	//创建信号量
 	SP=rt_sem_create("SP",2,RT_IPC_FLAG_FIFO);
- 80114ce:	2200      	movs	r2, #0
- 80114d0:	2102      	movs	r1, #2
- 80114d2:	485b      	ldr	r0, [pc, #364]	; (8011640 <app_init+0x1f4>)
- 80114d4:	f7fe fcdc 	bl	800fe90 <rt_sem_create>
- 80114d8:	4b5a      	ldr	r3, [pc, #360]	; (8011644 <app_init+0x1f8>)
- 80114da:	6018      	str	r0, [r3, #0]
+ 8011542:	2200      	movs	r2, #0
+ 8011544:	2102      	movs	r1, #2
+ 8011546:	485b      	ldr	r0, [pc, #364]	; (80116b4 <app_init+0x1f4>)
+ 8011548:	f7fe fca2 	bl	800fe90 <rt_sem_create>
+ 801154c:	4b5a      	ldr	r3, [pc, #360]	; (80116b8 <app_init+0x1f8>)
+ 801154e:	6018      	str	r0, [r3, #0]
 	//创建互斥量
 	mutex=rt_mutex_create("mutex",RT_IPC_FLAG_PRIO);
- 80114dc:	2101      	movs	r1, #1
- 80114de:	485a      	ldr	r0, [pc, #360]	; (8011648 <app_init+0x1fc>)
- 80114e0:	f7fe fd69 	bl	800ffb6 <rt_mutex_create>
- 80114e4:	4b59      	ldr	r3, [pc, #356]	; (801164c <app_init+0x200>)
- 80114e6:	6018      	str	r0, [r3, #0]
+ 8011550:	2101      	movs	r1, #1
+ 8011552:	485a      	ldr	r0, [pc, #360]	; (80116bc <app_init+0x1fc>)
+ 8011554:	f7fe fd2f 	bl	800ffb6 <rt_mutex_create>
+ 8011558:	4b59      	ldr	r3, [pc, #356]	; (80116c0 <app_init+0x200>)
+ 801155a:	6018      	str	r0, [r3, #0]
 
 
 	//创建命令选择线程
 	thd_rulechoose=rt_thread_create("rulechoose", (void *)thread_rulechoose, 0, 512, 9, 10);
- 80114e8:	240a      	movs	r4, #10
- 80114ea:	9401      	str	r4, [sp, #4]
- 80114ec:	2309      	movs	r3, #9
- 80114ee:	9300      	str	r3, [sp, #0]
- 80114f0:	f44f 7300 	mov.w	r3, #512	; 0x200
- 80114f4:	2200      	movs	r2, #0
- 80114f6:	4956      	ldr	r1, [pc, #344]	; (8011650 <app_init+0x204>)
- 80114f8:	4856      	ldr	r0, [pc, #344]	; (8011654 <app_init+0x208>)
- 80114fa:	f7fd fe77 	bl	800f1ec <rt_thread_create>
- 80114fe:	4606      	mov	r6, r0
+ 801155c:	240a      	movs	r4, #10
+ 801155e:	9401      	str	r4, [sp, #4]
+ 8011560:	2309      	movs	r3, #9
+ 8011562:	9300      	str	r3, [sp, #0]
+ 8011564:	f44f 7300 	mov.w	r3, #512	; 0x200
+ 8011568:	2200      	movs	r2, #0
+ 801156a:	4956      	ldr	r1, [pc, #344]	; (80116c4 <app_init+0x204>)
+ 801156c:	4856      	ldr	r0, [pc, #344]	; (80116c8 <app_init+0x208>)
+ 801156e:	f7fd fe3d 	bl	800f1ec <rt_thread_create>
+ 8011572:	4606      	mov	r6, r0
 	//创建三色灯线程
 	thd_eventGreen = rt_thread_create("eventGreen", (void *)thread_eventGreen, 0, 512, 10, 10);
- 8011500:	9401      	str	r4, [sp, #4]
- 8011502:	9400      	str	r4, [sp, #0]
- 8011504:	f44f 7300 	mov.w	r3, #512	; 0x200
- 8011508:	2200      	movs	r2, #0
- 801150a:	4953      	ldr	r1, [pc, #332]	; (8011658 <app_init+0x20c>)
- 801150c:	4853      	ldr	r0, [pc, #332]	; (801165c <app_init+0x210>)
- 801150e:	f7fd fe6d 	bl	800f1ec <rt_thread_create>
- 8011512:	4b53      	ldr	r3, [pc, #332]	; (8011660 <app_init+0x214>)
- 8011514:	6018      	str	r0, [r3, #0]
+ 8011574:	9401      	str	r4, [sp, #4]
+ 8011576:	9400      	str	r4, [sp, #0]
+ 8011578:	f44f 7300 	mov.w	r3, #512	; 0x200
+ 801157c:	2200      	movs	r2, #0
+ 801157e:	4953      	ldr	r1, [pc, #332]	; (80116cc <app_init+0x20c>)
+ 8011580:	4853      	ldr	r0, [pc, #332]	; (80116d0 <app_init+0x210>)
+ 8011582:	f7fd fe33 	bl	800f1ec <rt_thread_create>
+ 8011586:	4b53      	ldr	r3, [pc, #332]	; (80116d4 <app_init+0x214>)
+ 8011588:	6018      	str	r0, [r3, #0]
 	thd_eventBlue = rt_thread_create("eventBlue", (void *)thd_eventBlue, 0, 512, 10, 10);
- 8011516:	4d53      	ldr	r5, [pc, #332]	; (8011664 <app_init+0x218>)
- 8011518:	9401      	str	r4, [sp, #4]
- 801151a:	9400      	str	r4, [sp, #0]
- 801151c:	f44f 7300 	mov.w	r3, #512	; 0x200
- 8011520:	2200      	movs	r2, #0
- 8011522:	6829      	ldr	r1, [r5, #0]
- 8011524:	4850      	ldr	r0, [pc, #320]	; (8011668 <app_init+0x21c>)
- 8011526:	f7fd fe61 	bl	800f1ec <rt_thread_create>
- 801152a:	6028      	str	r0, [r5, #0]
+ 801158a:	4d53      	ldr	r5, [pc, #332]	; (80116d8 <app_init+0x218>)
+ 801158c:	9401      	str	r4, [sp, #4]
+ 801158e:	9400      	str	r4, [sp, #0]
+ 8011590:	f44f 7300 	mov.w	r3, #512	; 0x200
+ 8011594:	2200      	movs	r2, #0
+ 8011596:	6829      	ldr	r1, [r5, #0]
+ 8011598:	4850      	ldr	r0, [pc, #320]	; (80116dc <app_init+0x21c>)
+ 801159a:	f7fd fe27 	bl	800f1ec <rt_thread_create>
+ 801159e:	6028      	str	r0, [r5, #0]
 	//创建消息队列线程
 	thd_messagerecv = rt_thread_create("messagerecv", (void *)thread_messagerecv, 0, 512, 10, 10);
- 801152c:	9401      	str	r4, [sp, #4]
- 801152e:	9400      	str	r4, [sp, #0]
- 8011530:	f44f 7300 	mov.w	r3, #512	; 0x200
- 8011534:	2200      	movs	r2, #0
- 8011536:	494d      	ldr	r1, [pc, #308]	; (801166c <app_init+0x220>)
- 8011538:	484d      	ldr	r0, [pc, #308]	; (8011670 <app_init+0x224>)
- 801153a:	f7fd fe57 	bl	800f1ec <rt_thread_create>
- 801153e:	4b4d      	ldr	r3, [pc, #308]	; (8011674 <app_init+0x228>)
- 8011540:	6018      	str	r0, [r3, #0]
+ 80115a0:	9401      	str	r4, [sp, #4]
+ 80115a2:	9400      	str	r4, [sp, #0]
+ 80115a4:	f44f 7300 	mov.w	r3, #512	; 0x200
+ 80115a8:	2200      	movs	r2, #0
+ 80115aa:	494d      	ldr	r1, [pc, #308]	; (80116e0 <app_init+0x220>)
+ 80115ac:	484d      	ldr	r0, [pc, #308]	; (80116e4 <app_init+0x224>)
+ 80115ae:	f7fd fe1d 	bl	800f1ec <rt_thread_create>
+ 80115b2:	4b4d      	ldr	r3, [pc, #308]	; (80116e8 <app_init+0x228>)
+ 80115b4:	6018      	str	r0, [r3, #0]
 	//创建三个信号量线程
 	thd_SPThread1 = rt_thread_create("SPThread1", (void *)thread_SPThread1, 0, 512, 10, 10);
- 8011542:	9401      	str	r4, [sp, #4]
- 8011544:	9400      	str	r4, [sp, #0]
- 8011546:	f44f 7300 	mov.w	r3, #512	; 0x200
- 801154a:	2200      	movs	r2, #0
- 801154c:	494a      	ldr	r1, [pc, #296]	; (8011678 <app_init+0x22c>)
- 801154e:	484b      	ldr	r0, [pc, #300]	; (801167c <app_init+0x230>)
- 8011550:	f7fd fe4c 	bl	800f1ec <rt_thread_create>
- 8011554:	4b4a      	ldr	r3, [pc, #296]	; (8011680 <app_init+0x234>)
- 8011556:	6018      	str	r0, [r3, #0]
+ 80115b6:	9401      	str	r4, [sp, #4]
+ 80115b8:	9400      	str	r4, [sp, #0]
+ 80115ba:	f44f 7300 	mov.w	r3, #512	; 0x200
+ 80115be:	2200      	movs	r2, #0
+ 80115c0:	494a      	ldr	r1, [pc, #296]	; (80116ec <app_init+0x22c>)
+ 80115c2:	484b      	ldr	r0, [pc, #300]	; (80116f0 <app_init+0x230>)
+ 80115c4:	f7fd fe12 	bl	800f1ec <rt_thread_create>
+ 80115c8:	4b4a      	ldr	r3, [pc, #296]	; (80116f4 <app_init+0x234>)
+ 80115ca:	6018      	str	r0, [r3, #0]
 	thd_SPThread2 = rt_thread_create("SPThread2", (void *)thread_SPThread2, 0, 512, 10, 10);
- 8011558:	9401      	str	r4, [sp, #4]
- 801155a:	9400      	str	r4, [sp, #0]
- 801155c:	f44f 7300 	mov.w	r3, #512	; 0x200
- 8011560:	2200      	movs	r2, #0
- 8011562:	4948      	ldr	r1, [pc, #288]	; (8011684 <app_init+0x238>)
- 8011564:	4848      	ldr	r0, [pc, #288]	; (8011688 <app_init+0x23c>)
- 8011566:	f7fd fe41 	bl	800f1ec <rt_thread_create>
- 801156a:	4b48      	ldr	r3, [pc, #288]	; (801168c <app_init+0x240>)
- 801156c:	6018      	str	r0, [r3, #0]
+ 80115cc:	9401      	str	r4, [sp, #4]
+ 80115ce:	9400      	str	r4, [sp, #0]
+ 80115d0:	f44f 7300 	mov.w	r3, #512	; 0x200
+ 80115d4:	2200      	movs	r2, #0
+ 80115d6:	4948      	ldr	r1, [pc, #288]	; (80116f8 <app_init+0x238>)
+ 80115d8:	4848      	ldr	r0, [pc, #288]	; (80116fc <app_init+0x23c>)
+ 80115da:	f7fd fe07 	bl	800f1ec <rt_thread_create>
+ 80115de:	4b48      	ldr	r3, [pc, #288]	; (8011700 <app_init+0x240>)
+ 80115e0:	6018      	str	r0, [r3, #0]
 	thd_SPThread3 = rt_thread_create("SPThread3", (void *)thread_SPThread3, 0, 512, 10, 10);
- 801156e:	9401      	str	r4, [sp, #4]
- 8011570:	9400      	str	r4, [sp, #0]
- 8011572:	f44f 7300 	mov.w	r3, #512	; 0x200
- 8011576:	2200      	movs	r2, #0
- 8011578:	4945      	ldr	r1, [pc, #276]	; (8011690 <app_init+0x244>)
- 801157a:	4846      	ldr	r0, [pc, #280]	; (8011694 <app_init+0x248>)
- 801157c:	f7fd fe36 	bl	800f1ec <rt_thread_create>
- 8011580:	4b45      	ldr	r3, [pc, #276]	; (8011698 <app_init+0x24c>)
- 8011582:	6018      	str	r0, [r3, #0]
+ 80115e2:	9401      	str	r4, [sp, #4]
+ 80115e4:	9400      	str	r4, [sp, #0]
+ 80115e6:	f44f 7300 	mov.w	r3, #512	; 0x200
+ 80115ea:	2200      	movs	r2, #0
+ 80115ec:	4945      	ldr	r1, [pc, #276]	; (8011704 <app_init+0x244>)
+ 80115ee:	4846      	ldr	r0, [pc, #280]	; (8011708 <app_init+0x248>)
+ 80115f0:	f7fd fdfc 	bl	800f1ec <rt_thread_create>
+ 80115f4:	4b45      	ldr	r3, [pc, #276]	; (801170c <app_init+0x24c>)
+ 80115f6:	6018      	str	r0, [r3, #0]
 	//创建三个互斥量线程
 	thd_mutexBlue = rt_thread_create("mutexBlue", (void *)thread_mutexBlue, 0, 512, 10, 10);
- 8011584:	9401      	str	r4, [sp, #4]
- 8011586:	9400      	str	r4, [sp, #0]
- 8011588:	f44f 7300 	mov.w	r3, #512	; 0x200
- 801158c:	2200      	movs	r2, #0
- 801158e:	4943      	ldr	r1, [pc, #268]	; (801169c <app_init+0x250>)
- 8011590:	4843      	ldr	r0, [pc, #268]	; (80116a0 <app_init+0x254>)
- 8011592:	f7fd fe2b 	bl	800f1ec <rt_thread_create>
- 8011596:	4b43      	ldr	r3, [pc, #268]	; (80116a4 <app_init+0x258>)
- 8011598:	6018      	str	r0, [r3, #0]
+ 80115f8:	9401      	str	r4, [sp, #4]
+ 80115fa:	9400      	str	r4, [sp, #0]
+ 80115fc:	f44f 7300 	mov.w	r3, #512	; 0x200
+ 8011600:	2200      	movs	r2, #0
+ 8011602:	4943      	ldr	r1, [pc, #268]	; (8011710 <app_init+0x250>)
+ 8011604:	4843      	ldr	r0, [pc, #268]	; (8011714 <app_init+0x254>)
+ 8011606:	f7fd fdf1 	bl	800f1ec <rt_thread_create>
+ 801160a:	4b43      	ldr	r3, [pc, #268]	; (8011718 <app_init+0x258>)
+ 801160c:	6018      	str	r0, [r3, #0]
 	thd_mutexGreen = rt_thread_create("mutexGreen", (void *)thread_mutexGreen, 0, 512, 10, 10);
- 801159a:	9401      	str	r4, [sp, #4]
- 801159c:	9400      	str	r4, [sp, #0]
- 801159e:	f44f 7300 	mov.w	r3, #512	; 0x200
- 80115a2:	2200      	movs	r2, #0
- 80115a4:	4940      	ldr	r1, [pc, #256]	; (80116a8 <app_init+0x25c>)
- 80115a6:	4841      	ldr	r0, [pc, #260]	; (80116ac <app_init+0x260>)
- 80115a8:	f7fd fe20 	bl	800f1ec <rt_thread_create>
- 80115ac:	4b40      	ldr	r3, [pc, #256]	; (80116b0 <app_init+0x264>)
- 80115ae:	6018      	str	r0, [r3, #0]
+ 801160e:	9401      	str	r4, [sp, #4]
+ 8011610:	9400      	str	r4, [sp, #0]
+ 8011612:	f44f 7300 	mov.w	r3, #512	; 0x200
+ 8011616:	2200      	movs	r2, #0
+ 8011618:	4940      	ldr	r1, [pc, #256]	; (801171c <app_init+0x25c>)
+ 801161a:	4841      	ldr	r0, [pc, #260]	; (8011720 <app_init+0x260>)
+ 801161c:	f7fd fde6 	bl	800f1ec <rt_thread_create>
+ 8011620:	4b40      	ldr	r3, [pc, #256]	; (8011724 <app_init+0x264>)
+ 8011622:	6018      	str	r0, [r3, #0]
 	thd_mutexRed = rt_thread_create("mutexRed", (void *)thread_mutexRed, 0, 512, 10, 10);
- 80115b0:	9401      	str	r4, [sp, #4]
- 80115b2:	9400      	str	r4, [sp, #0]
- 80115b4:	f44f 7300 	mov.w	r3, #512	; 0x200
- 80115b8:	2200      	movs	r2, #0
- 80115ba:	493e      	ldr	r1, [pc, #248]	; (80116b4 <app_init+0x268>)
- 80115bc:	483e      	ldr	r0, [pc, #248]	; (80116b8 <app_init+0x26c>)
- 80115be:	f7fd fe15 	bl	800f1ec <rt_thread_create>
- 80115c2:	4b3e      	ldr	r3, [pc, #248]	; (80116bc <app_init+0x270>)
- 80115c4:	6018      	str	r0, [r3, #0]
+ 8011624:	9401      	str	r4, [sp, #4]
+ 8011626:	9400      	str	r4, [sp, #0]
+ 8011628:	f44f 7300 	mov.w	r3, #512	; 0x200
+ 801162c:	2200      	movs	r2, #0
+ 801162e:	493e      	ldr	r1, [pc, #248]	; (8011728 <app_init+0x268>)
+ 8011630:	483e      	ldr	r0, [pc, #248]	; (801172c <app_init+0x26c>)
+ 8011632:	f7fd fddb 	bl	800f1ec <rt_thread_create>
+ 8011636:	4b3e      	ldr	r3, [pc, #248]	; (8011730 <app_init+0x270>)
+ 8011638:	6018      	str	r0, [r3, #0]
 	//创建三个延时线程
-	thd_delayRed=thread_create("delayRed", (void *)thread_delayRed, 0, 512, 10, 10);
- 80115c6:	9401      	str	r4, [sp, #4]
- 80115c8:	9400      	str	r4, [sp, #0]
- 80115ca:	f44f 7300 	mov.w	r3, #512	; 0x200
- 80115ce:	2200      	movs	r2, #0
- 80115d0:	493b      	ldr	r1, [pc, #236]	; (80116c0 <app_init+0x274>)
- 80115d2:	483c      	ldr	r0, [pc, #240]	; (80116c4 <app_init+0x278>)
- 80115d4:	f7fd fe0a 	bl	800f1ec <rt_thread_create>
- 80115d8:	4b3b      	ldr	r3, [pc, #236]	; (80116c8 <app_init+0x27c>)
- 80115da:	6018      	str	r0, [r3, #0]
-	thd_delayGreen=thread_create("delayGreen", (void *)thread_delayGreen, 0, 512, 10, 10);
- 80115dc:	9401      	str	r4, [sp, #4]
- 80115de:	9400      	str	r4, [sp, #0]
- 80115e0:	f44f 7300 	mov.w	r3, #512	; 0x200
- 80115e4:	2200      	movs	r2, #0
- 80115e6:	4939      	ldr	r1, [pc, #228]	; (80116cc <app_init+0x280>)
- 80115e8:	4839      	ldr	r0, [pc, #228]	; (80116d0 <app_init+0x284>)
- 80115ea:	f7fd fdff 	bl	800f1ec <rt_thread_create>
- 80115ee:	4b39      	ldr	r3, [pc, #228]	; (80116d4 <app_init+0x288>)
- 80115f0:	6018      	str	r0, [r3, #0]
-	thd_delayBlue=thread_create("delayBlue", (void *)thread_delayBlue, 0, 512, 10, 10);
- 80115f2:	9401      	str	r4, [sp, #4]
- 80115f4:	9400      	str	r4, [sp, #0]
- 80115f6:	f44f 7300 	mov.w	r3, #512	; 0x200
- 80115fa:	2200      	movs	r2, #0
- 80115fc:	4936      	ldr	r1, [pc, #216]	; (80116d8 <app_init+0x28c>)
- 80115fe:	4837      	ldr	r0, [pc, #220]	; (80116dc <app_init+0x290>)
- 8011600:	f7fd fdf4 	bl	800f1ec <rt_thread_create>
- 8011604:	4b36      	ldr	r3, [pc, #216]	; (80116e0 <app_init+0x294>)
- 8011606:	6018      	str	r0, [r3, #0]
+	thd_delayRed=rt_thread_create("delayRed", (void *)thread_delayRed, 0, 512, 10, 10);
+ 801163a:	9401      	str	r4, [sp, #4]
+ 801163c:	9400      	str	r4, [sp, #0]
+ 801163e:	f44f 7300 	mov.w	r3, #512	; 0x200
+ 8011642:	2200      	movs	r2, #0
+ 8011644:	493b      	ldr	r1, [pc, #236]	; (8011734 <app_init+0x274>)
+ 8011646:	483c      	ldr	r0, [pc, #240]	; (8011738 <app_init+0x278>)
+ 8011648:	f7fd fdd0 	bl	800f1ec <rt_thread_create>
+ 801164c:	4b3b      	ldr	r3, [pc, #236]	; (801173c <app_init+0x27c>)
+ 801164e:	6018      	str	r0, [r3, #0]
+	thd_delayGreen=rt_thread_create("delayGreen", (void *)thread_delayGreen, 0, 512, 10, 10);
+ 8011650:	9401      	str	r4, [sp, #4]
+ 8011652:	9400      	str	r4, [sp, #0]
+ 8011654:	f44f 7300 	mov.w	r3, #512	; 0x200
+ 8011658:	2200      	movs	r2, #0
+ 801165a:	4939      	ldr	r1, [pc, #228]	; (8011740 <app_init+0x280>)
+ 801165c:	4839      	ldr	r0, [pc, #228]	; (8011744 <app_init+0x284>)
+ 801165e:	f7fd fdc5 	bl	800f1ec <rt_thread_create>
+ 8011662:	4b39      	ldr	r3, [pc, #228]	; (8011748 <app_init+0x288>)
+ 8011664:	6018      	str	r0, [r3, #0]
+	thd_delayBlue=rt_thread_create("delayBlue", (void *)thread_delayBlue, 0, 512, 10, 10);
+ 8011666:	9401      	str	r4, [sp, #4]
+ 8011668:	9400      	str	r4, [sp, #0]
+ 801166a:	f44f 7300 	mov.w	r3, #512	; 0x200
+ 801166e:	2200      	movs	r2, #0
+ 8011670:	4936      	ldr	r1, [pc, #216]	; (801174c <app_init+0x28c>)
+ 8011672:	4837      	ldr	r0, [pc, #220]	; (8011750 <app_init+0x290>)
+ 8011674:	f7fd fdba 	bl	800f1ec <rt_thread_create>
+ 8011678:	4b36      	ldr	r3, [pc, #216]	; (8011754 <app_init+0x294>)
+ 801167a:	6018      	str	r0, [r3, #0]
 
 	   
 
 
 
     rt_thread_startup(thd_rulechoose);//启动命令选择线程
- 8011608:	4630      	mov	r0, r6
- 801160a:	f7fd fedd 	bl	800f3c8 <rt_thread_startup>
+ 801167c:	4630      	mov	r0, r6
+ 801167e:	f7fd fea3 	bl	800f3c8 <rt_thread_startup>
 }
- 801160e:	b002      	add	sp, #8
- 8011610:	bd70      	pop	{r4, r5, r6, pc}
- 8011612:	bf00      	nop
- 8011614:	080128d0 	.word	0x080128d0
- 8011618:	08012904 	.word	0x08012904
- 801161c:	08012938 	.word	0x08012938
- 8011620:	08012980 	.word	0x08012980
- 8011624:	080129b4 	.word	0x080129b4
- 8011628:	080129e4 	.word	0x080129e4
- 801162c:	08012a30 	.word	0x08012a30
- 8011630:	08012a40 	.word	0x08012a40
- 8011634:	20007348 	.word	0x20007348
- 8011638:	08012a4c 	.word	0x08012a4c
- 801163c:	2000733c 	.word	0x2000733c
- 8011640:	08012a50 	.word	0x08012a50
- 8011644:	20007318 	.word	0x20007318
- 8011648:	08012a54 	.word	0x08012a54
- 801164c:	20007334 	.word	0x20007334
- 8011650:	08011be9 	.word	0x08011be9
- 8011654:	08012a5c 	.word	0x08012a5c
- 8011658:	0800e5dd 	.word	0x0800e5dd
- 801165c:	08012a68 	.word	0x08012a68
- 8011660:	2000732c 	.word	0x2000732c
- 8011664:	20007350 	.word	0x20007350
- 8011668:	08012a74 	.word	0x08012a74
- 801166c:	080117fd 	.word	0x080117fd
- 8011670:	08012a80 	.word	0x08012a80
- 8011674:	20007338 	.word	0x20007338
- 8011678:	08010f8d 	.word	0x08010f8d
- 801167c:	08012a8c 	.word	0x08012a8c
- 8011680:	20007324 	.word	0x20007324
- 8011684:	0800f899 	.word	0x0800f899
- 8011688:	08012a98 	.word	0x08012a98
- 801168c:	20007340 	.word	0x20007340
- 8011690:	0800fa9d 	.word	0x0800fa9d
- 8011694:	08012aa4 	.word	0x08012aa4
- 8011698:	20007354 	.word	0x20007354
- 801169c:	08012101 	.word	0x08012101
- 80116a0:	08012ab0 	.word	0x08012ab0
- 80116a4:	20007b58 	.word	0x20007b58
- 80116a8:	08011b91 	.word	0x08011b91
- 80116ac:	08012abc 	.word	0x08012abc
- 80116b0:	2000731c 	.word	0x2000731c
- 80116b4:	080117a5 	.word	0x080117a5
- 80116b8:	08012ac8 	.word	0x08012ac8
- 80116bc:	20007330 	.word	0x20007330
- 80116c0:	08010c01 	.word	0x08010c01
- 80116c4:	08012ad4 	.word	0x08012ad4
- 80116c8:	20007328 	.word	0x20007328
- 80116cc:	08010e69 	.word	0x08010e69
- 80116d0:	08012ae0 	.word	0x08012ae0
- 80116d4:	20007344 	.word	0x20007344
- 80116d8:	08010f3d 	.word	0x08010f3d
- 80116dc:	08012aec 	.word	0x08012aec
- 80116e0:	20007320 	.word	0x20007320
+ 8011682:	b002      	add	sp, #8
+ 8011684:	bd70      	pop	{r4, r5, r6, pc}
+ 8011686:	bf00      	nop
+ 8011688:	08012968 	.word	0x08012968
+ 801168c:	0801299c 	.word	0x0801299c
+ 8011690:	080129d0 	.word	0x080129d0
+ 8011694:	08012a18 	.word	0x08012a18
+ 8011698:	08012a4c 	.word	0x08012a4c
+ 801169c:	08012a7c 	.word	0x08012a7c
+ 80116a0:	08012ac8 	.word	0x08012ac8
+ 80116a4:	08012ad8 	.word	0x08012ad8
+ 80116a8:	20007348 	.word	0x20007348
+ 80116ac:	08012ae4 	.word	0x08012ae4
+ 80116b0:	2000733c 	.word	0x2000733c
+ 80116b4:	08012ae8 	.word	0x08012ae8
+ 80116b8:	20007318 	.word	0x20007318
+ 80116bc:	08012aec 	.word	0x08012aec
+ 80116c0:	20007334 	.word	0x20007334
+ 80116c4:	08011c69 	.word	0x08011c69
+ 80116c8:	08012af4 	.word	0x08012af4
+ 80116cc:	0800e5dd 	.word	0x0800e5dd
+ 80116d0:	08012b00 	.word	0x08012b00
+ 80116d4:	2000732c 	.word	0x2000732c
+ 80116d8:	20007350 	.word	0x20007350
+ 80116dc:	08012b0c 	.word	0x08012b0c
+ 80116e0:	08011871 	.word	0x08011871
+ 80116e4:	08012b18 	.word	0x08012b18
+ 80116e8:	20007338 	.word	0x20007338
+ 80116ec:	08010f8d 	.word	0x08010f8d
+ 80116f0:	08012b24 	.word	0x08012b24
+ 80116f4:	20007324 	.word	0x20007324
+ 80116f8:	0800f899 	.word	0x0800f899
+ 80116fc:	08012b30 	.word	0x08012b30
+ 8011700:	20007340 	.word	0x20007340
+ 8011704:	0800fa9d 	.word	0x0800fa9d
+ 8011708:	08012b3c 	.word	0x08012b3c
+ 801170c:	20007354 	.word	0x20007354
+ 8011710:	08012181 	.word	0x08012181
+ 8011714:	08012b48 	.word	0x08012b48
+ 8011718:	20007b58 	.word	0x20007b58
+ 801171c:	08011c11 	.word	0x08011c11
+ 8011720:	08012b54 	.word	0x08012b54
+ 8011724:	2000731c 	.word	0x2000731c
+ 8011728:	08011819 	.word	0x08011819
+ 801172c:	08012b60 	.word	0x08012b60
+ 8011730:	20007330 	.word	0x20007330
+ 8011734:	08010c01 	.word	0x08010c01
+ 8011738:	08012b6c 	.word	0x08012b6c
+ 801173c:	20007328 	.word	0x20007328
+ 8011740:	08010e69 	.word	0x08010e69
+ 8011744:	08012b78 	.word	0x08012b78
+ 8011748:	20007344 	.word	0x20007344
+ 801174c:	08010f3d 	.word	0x08010f3d
+ 8011750:	08012b84 	.word	0x08012b84
+ 8011754:	20007320 	.word	0x20007320
 
-080116e4 <useremuart_frame>:
+08011758 <useremuart_frame>:
 	static uint16_t length = 1;
 	uint16_t ret_val;
 	
 	
 	//（1）若未接收到数据或者未遇到帧头，则退出并返回0  帧头长度为两个字节
 	if(((index-1) == 0 && ch != emuartFrameHead[0]) ||
- 80116e4:	4b17      	ldr	r3, [pc, #92]	; (8011744 <useremuart_frame+0x60>)
- 80116e6:	881b      	ldrh	r3, [r3, #0]
- 80116e8:	2b01      	cmp	r3, #1
- 80116ea:	d012      	beq.n	8011712 <useremuart_frame+0x2e>
- 80116ec:	2b02      	cmp	r3, #2
- 80116ee:	d019      	beq.n	8011724 <useremuart_frame+0x40>
+ 8011758:	4b17      	ldr	r3, [pc, #92]	; (80117b8 <useremuart_frame+0x60>)
+ 801175a:	881b      	ldrh	r3, [r3, #0]
+ 801175c:	2b01      	cmp	r3, #1
+ 801175e:	d012      	beq.n	8011786 <useremuart_frame+0x2e>
+ 8011760:	2b02      	cmp	r3, #2
+ 8011762:	d019      	beq.n	8011798 <useremuart_frame+0x40>
 {
- 80116f0:	b410      	push	{r4}
+ 8011764:	b410      	push	{r4}
 		length = 1;
 		ret_val = 0;     //接收数据错误
 		goto uecom_recv_exit;
 	}
 	//（2）正确接收到了帧头，继续执行，将数据存入data数组
 	data[(index++)-1] = ch;
- 80116f2:	1c5a      	adds	r2, r3, #1
- 80116f4:	b292      	uxth	r2, r2
- 80116f6:	4c13      	ldr	r4, [pc, #76]	; (8011744 <useremuart_frame+0x60>)
- 80116f8:	8022      	strh	r2, [r4, #0]
- 80116fa:	3b01      	subs	r3, #1
- 80116fc:	54c8      	strb	r0, [r1, r3]
+ 8011766:	1c5a      	adds	r2, r3, #1
+ 8011768:	b292      	uxth	r2, r2
+ 801176a:	4c13      	ldr	r4, [pc, #76]	; (80117b8 <useremuart_frame+0x60>)
+ 801176c:	8022      	strh	r2, [r4, #0]
+ 801176e:	3b01      	subs	r3, #1
+ 8011770:	54c8      	strb	r0, [r1, r3]
 	//printf("%d",index);
 	//（3）当获取到第四个数据时，求出有效数据长度
 
 
 	if((index-1) == 3)
- 80116fe:	2a04      	cmp	r2, #4
- 8011700:	d013      	beq.n	801172a <useremuart_frame+0x46>
+ 8011772:	2a04      	cmp	r2, #4
+ 8011774:	d013      	beq.n	801179e <useremuart_frame+0x46>
 	{
 		//printf("长度正确赋予\n");
 		length = data[2];
 	}
 	//判断数据是否接收完毕，接收完毕退出组帧
 	if(index==data[2]+4)
- 8011702:	788b      	ldrb	r3, [r1, #2]
- 8011704:	3304      	adds	r3, #4
- 8011706:	429a      	cmp	r2, r3
- 8011708:	d013      	beq.n	8011732 <useremuart_frame+0x4e>
+ 8011776:	788b      	ldrb	r3, [r1, #2]
+ 8011778:	3304      	adds	r3, #4
+ 801177a:	429a      	cmp	r2, r3
+ 801177c:	d013      	beq.n	80117a6 <useremuart_frame+0x4e>
 		ret_val = (length+3); //返回有效数据长度
 		length=1;
 		//data[(length-1)] = 0; //令数组长度为0
 		goto uecom_recv_exit;
 	}
 	ret_val = 0;
- 801170a:	2000      	movs	r0, #0
+ 801177e:	2000      	movs	r0, #0
 	goto uecom_recv_exit;
 uecom_recv_exit:
     return ret_val;
- 801170c:	f85d 4b04 	ldr.w	r4, [sp], #4
- 8011710:	4770      	bx	lr
+ 8011780:	f85d 4b04 	ldr.w	r4, [sp], #4
+ 8011784:	4770      	bx	lr
 	if(((index-1) == 0 && ch != emuartFrameHead[0]) ||
- 8011712:	28a5      	cmp	r0, #165	; 0xa5
- 8011714:	d0ea      	beq.n	80116ec <useremuart_frame+0x8>
+ 8011786:	28a5      	cmp	r0, #165	; 0xa5
+ 8011788:	d0ea      	beq.n	8011760 <useremuart_frame+0x8>
 		index = 1;
- 8011716:	2301      	movs	r3, #1
- 8011718:	4a0a      	ldr	r2, [pc, #40]	; (8011744 <useremuart_frame+0x60>)
- 801171a:	8013      	strh	r3, [r2, #0]
+ 801178a:	2301      	movs	r3, #1
+ 801178c:	4a0a      	ldr	r2, [pc, #40]	; (80117b8 <useremuart_frame+0x60>)
+ 801178e:	8013      	strh	r3, [r2, #0]
 		length = 1;
- 801171c:	4a0a      	ldr	r2, [pc, #40]	; (8011748 <useremuart_frame+0x64>)
- 801171e:	8013      	strh	r3, [r2, #0]
+ 8011790:	4a0a      	ldr	r2, [pc, #40]	; (80117bc <useremuart_frame+0x64>)
+ 8011792:	8013      	strh	r3, [r2, #0]
 		ret_val = 0;     //接收数据错误
- 8011720:	2000      	movs	r0, #0
- 8011722:	4770      	bx	lr
+ 8011794:	2000      	movs	r0, #0
+ 8011796:	4770      	bx	lr
 			((index-1) == 1 && ch != emuartFrameHead[1]))
- 8011724:	285a      	cmp	r0, #90	; 0x5a
- 8011726:	d1f6      	bne.n	8011716 <useremuart_frame+0x32>
- 8011728:	e7e2      	b.n	80116f0 <useremuart_frame+0xc>
+ 8011798:	285a      	cmp	r0, #90	; 0x5a
+ 801179a:	d1f6      	bne.n	801178a <useremuart_frame+0x32>
+ 801179c:	e7e2      	b.n	8011764 <useremuart_frame+0xc>
 		length = data[2];
- 801172a:	7888      	ldrb	r0, [r1, #2]
- 801172c:	4b06      	ldr	r3, [pc, #24]	; (8011748 <useremuart_frame+0x64>)
- 801172e:	8018      	strh	r0, [r3, #0]
- 8011730:	e7e7      	b.n	8011702 <useremuart_frame+0x1e>
+ 801179e:	7888      	ldrb	r0, [r1, #2]
+ 80117a0:	4b06      	ldr	r3, [pc, #24]	; (80117bc <useremuart_frame+0x64>)
+ 80117a2:	8018      	strh	r0, [r3, #0]
+ 80117a4:	e7e7      	b.n	8011776 <useremuart_frame+0x1e>
 		index = 1;
- 8011732:	2201      	movs	r2, #1
- 8011734:	4b03      	ldr	r3, [pc, #12]	; (8011744 <useremuart_frame+0x60>)
- 8011736:	801a      	strh	r2, [r3, #0]
+ 80117a6:	2201      	movs	r2, #1
+ 80117a8:	4b03      	ldr	r3, [pc, #12]	; (80117b8 <useremuart_frame+0x60>)
+ 80117aa:	801a      	strh	r2, [r3, #0]
 		ret_val = (length+3); //返回有效数据长度
- 8011738:	4b03      	ldr	r3, [pc, #12]	; (8011748 <useremuart_frame+0x64>)
- 801173a:	8818      	ldrh	r0, [r3, #0]
- 801173c:	3003      	adds	r0, #3
- 801173e:	b280      	uxth	r0, r0
+ 80117ac:	4b03      	ldr	r3, [pc, #12]	; (80117bc <useremuart_frame+0x64>)
+ 80117ae:	8818      	ldrh	r0, [r3, #0]
+ 80117b0:	3003      	adds	r0, #3
+ 80117b2:	b280      	uxth	r0, r0
 		length=1;
- 8011740:	801a      	strh	r2, [r3, #0]
+ 80117b4:	801a      	strh	r2, [r3, #0]
 		goto uecom_recv_exit;
- 8011742:	e7e3      	b.n	801170c <useremuart_frame+0x28>
- 8011744:	2000409c 	.word	0x2000409c
- 8011748:	2000409e 	.word	0x2000409e
+ 80117b6:	e7e3      	b.n	8011780 <useremuart_frame+0x28>
+ 80117b8:	2000409c 	.word	0x2000409c
+ 80117bc:	2000409e 	.word	0x2000409e
 
-0801174c <USART2_IRQHandler>:
+080117c0 <USART2_IRQHandler>:
 {
- 801174c:	b500      	push	{lr}
- 801174e:	b083      	sub	sp, #12
+ 80117c0:	b500      	push	{lr}
+ 80117c2:	b083      	sub	sp, #12
     DISABLE_INTERRUPTS;      //关总中断
- 8011750:	b672      	cpsid	i
+ 80117c4:	b672      	cpsid	i
     if(!uart_get_re_int(UART_User)) goto UART_User_Handler_EXIT;
- 8011752:	2002      	movs	r0, #2
- 8011754:	f7ff fdf8 	bl	8011348 <uart_get_re_int>
- 8011758:	b918      	cbnz	r0, 8011762 <USART2_IRQHandler+0x16>
+ 80117c6:	2002      	movs	r0, #2
+ 80117c8:	f7ff fdf8 	bl	80113bc <uart_get_re_int>
+ 80117cc:	b918      	cbnz	r0, 80117d6 <USART2_IRQHandler+0x16>
     ENABLE_INTERRUPTS;
- 801175a:	b662      	cpsie	i
+ 80117ce:	b662      	cpsie	i
 }
- 801175c:	b003      	add	sp, #12
- 801175e:	f85d fb04 	ldr.w	pc, [sp], #4
+ 80117d0:	b003      	add	sp, #12
+ 80117d2:	f85d fb04 	ldr.w	pc, [sp], #4
     ch = uart_re1(UART_User,&flag);        //调用接收一个字节的函数
- 8011762:	f10d 0107 	add.w	r1, sp, #7
- 8011766:	2002      	movs	r0, #2
- 8011768:	f7ff fda6 	bl	80112b8 <uart_re1>
+ 80117d6:	f10d 0107 	add.w	r1, sp, #7
+ 80117da:	2002      	movs	r0, #2
+ 80117dc:	f7ff fda6 	bl	801132c <uart_re1>
     if(!flag) goto UART_User_Handler_EXIT; //实际未收到数据，退出
- 801176c:	f89d 3007 	ldrb.w	r3, [sp, #7]
- 8011770:	2b00      	cmp	r3, #0
- 8011772:	d0f2      	beq.n	801175a <USART2_IRQHandler+0xe>
+ 80117e0:	f89d 3007 	ldrb.w	r3, [sp, #7]
+ 80117e4:	2b00      	cmp	r3, #0
+ 80117e6:	d0f2      	beq.n	80117ce <USART2_IRQHandler+0xe>
        gcRecvLen =useremuart_frame(ch,(uint8_t*)gcRecvBuf);//对接收数据组帧，返回0组帧未成功，返回长度组帧成功。
- 8011774:	4908      	ldr	r1, [pc, #32]	; (8011798 <USART2_IRQHandler+0x4c>)
- 8011776:	f7ff ffb5 	bl	80116e4 <useremuart_frame>
- 801177a:	4b08      	ldr	r3, [pc, #32]	; (801179c <USART2_IRQHandler+0x50>)
- 801177c:	8018      	strh	r0, [r3, #0]
+ 80117e8:	4908      	ldr	r1, [pc, #32]	; (801180c <USART2_IRQHandler+0x4c>)
+ 80117ea:	f7ff ffb5 	bl	8011758 <useremuart_frame>
+ 80117ee:	4b08      	ldr	r3, [pc, #32]	; (8011810 <USART2_IRQHandler+0x50>)
+ 80117f0:	8018      	strh	r0, [r3, #0]
        if (gcRecvLen == 0) goto UART_User_Handler_EXIT; 
- 801177e:	881b      	ldrh	r3, [r3, #0]
- 8011780:	b29b      	uxth	r3, r3
- 8011782:	2b00      	cmp	r3, #0
- 8011784:	d0e9      	beq.n	801175a <USART2_IRQHandler+0xe>
+ 80117f2:	881b      	ldrh	r3, [r3, #0]
+ 80117f4:	b29b      	uxth	r3, r3
+ 80117f6:	2b00      	cmp	r3, #0
+ 80117f8:	d0e9      	beq.n	80117ce <USART2_IRQHandler+0xe>
        rt_event_send(EventWord,RULE_CHOOSE_EVENT);//数据接收完成，对命令选择事件置位
- 8011786:	2102      	movs	r1, #2
- 8011788:	4b05      	ldr	r3, [pc, #20]	; (80117a0 <USART2_IRQHandler+0x54>)
- 801178a:	6818      	ldr	r0, [r3, #0]
- 801178c:	f7fe fd0f 	bl	80101ae <rt_event_send>
+ 80117fa:	2102      	movs	r1, #2
+ 80117fc:	4b05      	ldr	r3, [pc, #20]	; (8011814 <USART2_IRQHandler+0x54>)
+ 80117fe:	6818      	ldr	r0, [r3, #0]
+ 8011800:	f7fe fcd5 	bl	80101ae <rt_event_send>
         gcRecvLen = 0;   //帧已经使用完毕，下次若收到一个字节，可以继续组帧
- 8011790:	4b02      	ldr	r3, [pc, #8]	; (801179c <USART2_IRQHandler+0x50>)
- 8011792:	2200      	movs	r2, #0
- 8011794:	801a      	strh	r2, [r3, #0]
- 8011796:	e7e0      	b.n	801175a <USART2_IRQHandler+0xe>
- 8011798:	20007358 	.word	0x20007358
- 801179c:	2000734c 	.word	0x2000734c
- 80117a0:	20007348 	.word	0x20007348
+ 8011804:	4b02      	ldr	r3, [pc, #8]	; (8011810 <USART2_IRQHandler+0x50>)
+ 8011806:	2200      	movs	r2, #0
+ 8011808:	801a      	strh	r2, [r3, #0]
+ 801180a:	e7e0      	b.n	80117ce <USART2_IRQHandler+0xe>
+ 801180c:	20007358 	.word	0x20007358
+ 8011810:	2000734c 	.word	0x2000734c
+ 8011814:	20007348 	.word	0x20007348
 
-080117a4 <thread_mutexRed>:
+08011818 <thread_mutexRed>:
 //参数说明：无
 //功能概要：每5秒红灯反转
 //内部调用：无
 //======================================================================
 void thread_mutexRed()
 {
- 80117a4:	b508      	push	{r3, lr}
+ 8011818:	b508      	push	{r3, lr}
     //（1）======申明局部变量==========================================
     gpio_init(LIGHT_RED,GPIO_OUTPUT,LIGHT_OFF);
- 80117a6:	2201      	movs	r2, #1
- 80117a8:	4611      	mov	r1, r2
- 80117aa:	f240 1007 	movw	r0, #263	; 0x107
- 80117ae:	f7fe fb03 	bl	800fdb8 <gpio_init>
+ 801181a:	2201      	movs	r2, #1
+ 801181c:	4611      	mov	r1, r2
+ 801181e:	f240 1007 	movw	r0, #263	; 0x107
+ 8011822:	f7fe fac9 	bl	800fdb8 <gpio_init>
     uart_send_string(UART_User,(void *)"第一次进入红灯线程！\r\n");
- 80117b2:	490f      	ldr	r1, [pc, #60]	; (80117f0 <thread_mutexRed+0x4c>)
- 80117b4:	2002      	movs	r0, #2
- 80117b6:	f7ff fd69 	bl	801128c <uart_send_string>
+ 8011826:	490f      	ldr	r1, [pc, #60]	; (8011864 <thread_mutexRed+0x4c>)
+ 8011828:	2002      	movs	r0, #2
+ 801182a:	f7ff fd2f 	bl	801128c <uart_send_string>
     //（2）======主循环（开始）==========================================
     while (1)
     {
     	//1.锁住单色灯互斥量
     	rt_mutex_take(mutex,RT_WAITING_FOREVER);
- 80117ba:	4c0e      	ldr	r4, [pc, #56]	; (80117f4 <thread_mutexRed+0x50>)
- 80117bc:	f04f 31ff 	mov.w	r1, #4294967295
- 80117c0:	6820      	ldr	r0, [r4, #0]
- 80117c2:	f7fe fc0e 	bl	800ffe2 <rt_mutex_take>
+ 801182e:	4c0e      	ldr	r4, [pc, #56]	; (8011868 <thread_mutexRed+0x50>)
+ 8011830:	f04f 31ff 	mov.w	r1, #4294967295
+ 8011834:	6820      	ldr	r0, [r4, #0]
+ 8011836:	f7fe fbd4 	bl	800ffe2 <rt_mutex_take>
         uart_send_string(UART_User,(void *)"\r\n锁定单色互斥量成功！红灯反转，延时5秒\r\n");
- 80117c6:	490c      	ldr	r1, [pc, #48]	; (80117f8 <thread_mutexRed+0x54>)
- 80117c8:	2002      	movs	r0, #2
- 80117ca:	f7ff fd5f 	bl	801128c <uart_send_string>
+ 801183a:	490c      	ldr	r1, [pc, #48]	; (801186c <thread_mutexRed+0x54>)
+ 801183c:	2002      	movs	r0, #2
+ 801183e:	f7ff fd25 	bl	801128c <uart_send_string>
         //2.红灯变亮
         gpio_reverse(LIGHT_RED);
- 80117ce:	f240 1007 	movw	r0, #263	; 0x107
- 80117d2:	f7fe fb29 	bl	800fe28 <gpio_reverse>
+ 8011842:	f240 1007 	movw	r0, #263	; 0x107
+ 8011846:	f7fe faef 	bl	800fe28 <gpio_reverse>
         //3.延时5秒
         delay_ms(5000);
- 80117d6:	f241 3088 	movw	r0, #5000	; 0x1388
- 80117da:	f7fd fdcd 	bl	800f378 <rt_thread_delay>
+ 801184a:	f241 3088 	movw	r0, #5000	; 0x1388
+ 801184e:	f7fd fd93 	bl	800f378 <rt_thread_delay>
     	//4.红灯变暗
     	gpio_reverse(LIGHT_RED);
- 80117de:	f240 1007 	movw	r0, #263	; 0x107
- 80117e2:	f7fe fb21 	bl	800fe28 <gpio_reverse>
+ 8011852:	f240 1007 	movw	r0, #263	; 0x107
+ 8011856:	f7fe fae7 	bl	800fe28 <gpio_reverse>
         //5.解锁单色灯互斥量
 		rt_mutex_release(mutex);
- 80117e6:	6820      	ldr	r0, [r4, #0]
- 80117e8:	f7fe fc87 	bl	80100fa <rt_mutex_release>
- 80117ec:	e7e5      	b.n	80117ba <thread_mutexRed+0x16>
- 80117ee:	bf00      	nop
- 80117f0:	08012af8 	.word	0x08012af8
- 80117f4:	20007334 	.word	0x20007334
- 80117f8:	08012b10 	.word	0x08012b10
+ 801185a:	6820      	ldr	r0, [r4, #0]
+ 801185c:	f7fe fc4d 	bl	80100fa <rt_mutex_release>
+ 8011860:	e7e5      	b.n	801182e <thread_mutexRed+0x16>
+ 8011862:	bf00      	nop
+ 8011864:	08012b90 	.word	0x08012b90
+ 8011868:	20007334 	.word	0x20007334
+ 801186c:	08012ba8 	.word	0x08012ba8
 
-080117fc <thread_messagerecv>:
+08011870 <thread_messagerecv>:
 //参数说明：无
 //功能概要：如果队列中有消息，则打印出相关的相应的消息，并此时消息队列中消息的个数
 //内部调用：无
 //======================================================================
 void thread_messagerecv()
 {
- 80117fc:	b510      	push	{r4, lr}
- 80117fe:	b082      	sub	sp, #8
+ 8011870:	b510      	push	{r4, lr}
+ 8011872:	b082      	sub	sp, #8
 	//（1）======申明局部变量==========================================
     uint8_t temp[8];
 	char *cnt;
 	uint8_t recvState;
 	printf("第一次进入消息接收线程!\r\n");
- 8011800:	4824      	ldr	r0, [pc, #144]	; (8011894 <thread_messagerecv+0x98>)
- 8011802:	f7fd fc01 	bl	800f008 <myprintf>
+ 8011874:	4826      	ldr	r0, [pc, #152]	; (8011910 <thread_messagerecv+0xa0>)
+ 8011876:	f7fd fbc7 	bl	800f008 <myprintf>
 	gpio_init(LIGHT_BLUE,GPIO_OUTPUT,LIGHT_OFF);
- 8011806:	2201      	movs	r2, #1
- 8011808:	4611      	mov	r1, r2
- 801180a:	f240 1009 	movw	r0, #265	; 0x109
- 801180e:	f7fe fad3 	bl	800fdb8 <gpio_init>
+ 801187a:	2201      	movs	r2, #1
+ 801187c:	4611      	mov	r1, r2
+ 801187e:	f240 1009 	movw	r0, #265	; 0x109
+ 8011882:	f7fe fa99 	bl	800fdb8 <gpio_init>
     gpio_init(LIGHT_GREEN,GPIO_OUTPUT,LIGHT_OFF);
- 8011812:	2201      	movs	r2, #1
- 8011814:	4611      	mov	r1, r2
- 8011816:	f44f 7084 	mov.w	r0, #264	; 0x108
- 801181a:	f7fe facd 	bl	800fdb8 <gpio_init>
+ 8011886:	2201      	movs	r2, #1
+ 8011888:	4611      	mov	r1, r2
+ 801188a:	f44f 7084 	mov.w	r0, #264	; 0x108
+ 801188e:	f7fe fa93 	bl	800fdb8 <gpio_init>
     gpio_init(LIGHT_RED,GPIO_OUTPUT,LIGHT_OFF);
- 801181e:	2201      	movs	r2, #1
- 8011820:	4611      	mov	r1, r2
- 8011822:	f240 1007 	movw	r0, #263	; 0x107
- 8011826:	f7fe fac7 	bl	800fdb8 <gpio_init>
+ 8011892:	2201      	movs	r2, #1
+ 8011894:	4611      	mov	r1, r2
+ 8011896:	f240 1007 	movw	r0, #263	; 0x107
+ 801189a:	f7fe fa8d 	bl	800fdb8 <gpio_init>
 	 //（2）======主循环（开始）==========================================
     while (1)
     {
 	    //等待消息
 		recvState=mq_recv(mq,&temp,sizeof(temp),RT_WAITING_FOREVER);
- 801182a:	f04f 33ff 	mov.w	r3, #4294967295
- 801182e:	2208      	movs	r2, #8
- 8011830:	4669      	mov	r1, sp
- 8011832:	4819      	ldr	r0, [pc, #100]	; (8011898 <thread_messagerecv+0x9c>)
- 8011834:	6800      	ldr	r0, [r0, #0]
- 8011836:	f7fe fe31 	bl	801049c <rt_mq_recv>
- 801183a:	b2c0      	uxtb	r0, r0
+ 801189e:	f04f 33ff 	mov.w	r3, #4294967295
+ 80118a2:	2208      	movs	r2, #8
+ 80118a4:	4669      	mov	r1, sp
+ 80118a6:	481b      	ldr	r0, [pc, #108]	; (8011914 <thread_messagerecv+0xa4>)
+ 80118a8:	6800      	ldr	r0, [r0, #0]
+ 80118aa:	f7fe fdf7 	bl	801049c <rt_mq_recv>
+ 80118ae:	b2c0      	uxtb	r0, r0
 
 		if(recvState==0)  //若获得消息
- 801183c:	2800      	cmp	r0, #0
- 801183e:	d1f4      	bne.n	801182a <thread_messagerecv+0x2e>
+ 80118b0:	2800      	cmp	r0, #0
+ 80118b2:	d1f4      	bne.n	801189e <thread_messagerecv+0x2e>
        	{
 			cnt = rt_malloc(1);//申请内存  
- 8011840:	2001      	movs	r0, #1
- 8011842:	f000 f8a7 	bl	8011994 <rt_malloc>
- 8011846:	4604      	mov	r4, r0
+ 80118b4:	2001      	movs	r0, #1
+ 80118b6:	f000 f8ad 	bl	8011a14 <rt_malloc>
+ 80118ba:	4604      	mov	r4, r0
     	   	rt_sprintf(cnt,"%d",mq->entry);//entry队列中的消息索引
- 8011848:	4b13      	ldr	r3, [pc, #76]	; (8011898 <thread_messagerecv+0x9c>)
- 801184a:	681b      	ldr	r3, [r3, #0]
- 801184c:	8c9a      	ldrh	r2, [r3, #36]	; 0x24
- 801184e:	4913      	ldr	r1, [pc, #76]	; (801189c <thread_messagerecv+0xa0>)
- 8011850:	f7ff f98e 	bl	8010b70 <rt_sprintf>
+ 80118bc:	4b15      	ldr	r3, [pc, #84]	; (8011914 <thread_messagerecv+0xa4>)
+ 80118be:	681b      	ldr	r3, [r3, #0]
+ 80118c0:	8c9a      	ldrh	r2, [r3, #36]	; 0x24
+ 80118c2:	4915      	ldr	r1, [pc, #84]	; (8011918 <thread_messagerecv+0xa8>)
+ 80118c4:	f7ff f954 	bl	8010b70 <rt_sprintf>
     	   	uart_send_string(UART_User,(void*)"消息队列中消息数=");
- 8011854:	4912      	ldr	r1, [pc, #72]	; (80118a0 <thread_messagerecv+0xa4>)
- 8011856:	2002      	movs	r0, #2
- 8011858:	f7ff fd18 	bl	801128c <uart_send_string>
+ 80118c8:	4914      	ldr	r1, [pc, #80]	; (801191c <thread_messagerecv+0xac>)
+ 80118ca:	2002      	movs	r0, #2
+ 80118cc:	f7ff fcde 	bl	801128c <uart_send_string>
     	   	uart_send_string(UART_User,(uint8_t *)cnt);
- 801185c:	4621      	mov	r1, r4
- 801185e:	2002      	movs	r0, #2
- 8011860:	f7ff fd14 	bl	801128c <uart_send_string>
+ 80118d0:	4621      	mov	r1, r4
+ 80118d2:	2002      	movs	r0, #2
+ 80118d4:	f7ff fcda 	bl	801128c <uart_send_string>
     	   	uart_send_string(UART_User,(void *) "\r\n");
- 8011864:	4c0f      	ldr	r4, [pc, #60]	; (80118a4 <thread_messagerecv+0xa8>)
- 8011866:	4621      	mov	r1, r4
- 8011868:	2002      	movs	r0, #2
- 801186a:	f7ff fd0f 	bl	801128c <uart_send_string>
+ 80118d8:	4c11      	ldr	r4, [pc, #68]	; (8011920 <thread_messagerecv+0xb0>)
+ 80118da:	4621      	mov	r1, r4
+ 80118dc:	2002      	movs	r0, #2
+ 80118de:	f7ff fcd5 	bl	801128c <uart_send_string>
     	   	uart_send_string(UART_User,(void*) "当前取出的消息=");
- 801186e:	490e      	ldr	r1, [pc, #56]	; (80118a8 <thread_messagerecv+0xac>)
- 8011870:	2002      	movs	r0, #2
- 8011872:	f7ff fd0b 	bl	801128c <uart_send_string>
+ 80118e2:	4910      	ldr	r1, [pc, #64]	; (8011924 <thread_messagerecv+0xb4>)
+ 80118e4:	2002      	movs	r0, #2
+ 80118e6:	f7ff fcd1 	bl	801128c <uart_send_string>
     	   	uart_sendN(UART_User,8,temp);
- 8011876:	466a      	mov	r2, sp
- 8011878:	2108      	movs	r1, #8
- 801187a:	2002      	movs	r0, #2
- 801187c:	f7ff fcec 	bl	8011258 <uart_sendN>
+ 80118ea:	466a      	mov	r2, sp
+ 80118ec:	2108      	movs	r1, #8
+ 80118ee:	2002      	movs	r0, #2
+ 80118f0:	f7ff fcb2 	bl	8011258 <uart_sendN>
     	   	uart_send_string(UART_User,(void *) "\r\n");
- 8011880:	4621      	mov	r1, r4
- 8011882:	2002      	movs	r0, #2
- 8011884:	f7ff fd02 	bl	801128c <uart_send_string>
+ 80118f4:	4621      	mov	r1, r4
+ 80118f6:	2002      	movs	r0, #2
+ 80118f8:	f7ff fcc8 	bl	801128c <uart_send_string>
     	   	delay_ms(1000);                //延迟，为了演示消息堆积的情况
- 8011888:	f44f 707a 	mov.w	r0, #1000	; 0x3e8
- 801188c:	f7fd fd74 	bl	800f378 <rt_thread_delay>
- 8011890:	e7cb      	b.n	801182a <thread_messagerecv+0x2e>
- 8011892:	bf00      	nop
- 8011894:	08012b3c 	.word	0x08012b3c
- 8011898:	2000733c 	.word	0x2000733c
- 801189c:	08012b58 	.word	0x08012b58
- 80118a0:	08012b5c 	.word	0x08012b5c
- 80118a4:	080127a8 	.word	0x080127a8
- 80118a8:	08012b70 	.word	0x08012b70
+ 80118fc:	f44f 707a 	mov.w	r0, #1000	; 0x3e8
+ 8011900:	f7fd fd3a 	bl	800f378 <rt_thread_delay>
 
-080118ac <plug_holes>:
+
+			useruart_send_string(UART_User,(void*)"消息消息消息消息消息消息消息消息");
+ 8011904:	4908      	ldr	r1, [pc, #32]	; (8011928 <thread_messagerecv+0xb8>)
+ 8011906:	2002      	movs	r0, #2
+ 8011908:	f7ff fcd5 	bl	80112b6 <useruart_send_string>
+ 801190c:	e7c7      	b.n	801189e <thread_messagerecv+0x2e>
+ 801190e:	bf00      	nop
+ 8011910:	08012bd4 	.word	0x08012bd4
+ 8011914:	2000733c 	.word	0x2000733c
+ 8011918:	08012bf0 	.word	0x08012bf0
+ 801191c:	08012bf4 	.word	0x08012bf4
+ 8011920:	08012840 	.word	0x08012840
+ 8011924:	08012c08 	.word	0x08012c08
+ 8011928:	08012c18 	.word	0x08012c18
+
+0801192c <plug_holes>:
     RT_ASSERT((rt_uint8_t *)mem >= heap_ptr);
     RT_ASSERT((rt_uint8_t *)mem < (rt_uint8_t *)heap_end);
     RT_ASSERT(mem->used == 0);
 
     /* plug hole forward */
     nmem = (struct heap_mem *)&heap_ptr[mem->next];
- 80118ac:	4b16      	ldr	r3, [pc, #88]	; (8011908 <plug_holes+0x5c>)
- 80118ae:	6819      	ldr	r1, [r3, #0]
- 80118b0:	6842      	ldr	r2, [r0, #4]
- 80118b2:	440a      	add	r2, r1
+ 801192c:	4b16      	ldr	r3, [pc, #88]	; (8011988 <plug_holes+0x5c>)
+ 801192e:	6819      	ldr	r1, [r3, #0]
+ 8011930:	6842      	ldr	r2, [r0, #4]
+ 8011932:	440a      	add	r2, r1
     if (mem != nmem &&
- 80118b4:	4290      	cmp	r0, r2
- 80118b6:	d00f      	beq.n	80118d8 <plug_holes+0x2c>
+ 8011934:	4290      	cmp	r0, r2
+ 8011936:	d00f      	beq.n	8011958 <plug_holes+0x2c>
         nmem->used == 0 &&
- 80118b8:	8853      	ldrh	r3, [r2, #2]
+ 8011938:	8853      	ldrh	r3, [r2, #2]
     if (mem != nmem &&
- 80118ba:	b96b      	cbnz	r3, 80118d8 <plug_holes+0x2c>
+ 801193a:	b96b      	cbnz	r3, 8011958 <plug_holes+0x2c>
         (rt_uint8_t *)nmem != (rt_uint8_t *)heap_end)
- 80118bc:	4b13      	ldr	r3, [pc, #76]	; (801190c <plug_holes+0x60>)
- 80118be:	681b      	ldr	r3, [r3, #0]
+ 801193c:	4b13      	ldr	r3, [pc, #76]	; (801198c <plug_holes+0x60>)
+ 801193e:	681b      	ldr	r3, [r3, #0]
         nmem->used == 0 &&
- 80118c0:	4293      	cmp	r3, r2
- 80118c2:	d009      	beq.n	80118d8 <plug_holes+0x2c>
+ 8011940:	4293      	cmp	r3, r2
+ 8011942:	d009      	beq.n	8011958 <plug_holes+0x2c>
     {
         /* if mem->next is unused and not end of heap_ptr,
          * combine mem and mem->next
          */
         if (lfree == nmem)
- 80118c4:	4b12      	ldr	r3, [pc, #72]	; (8011910 <plug_holes+0x64>)
- 80118c6:	681b      	ldr	r3, [r3, #0]
- 80118c8:	4293      	cmp	r3, r2
- 80118ca:	d016      	beq.n	80118fa <plug_holes+0x4e>
+ 8011944:	4b12      	ldr	r3, [pc, #72]	; (8011990 <plug_holes+0x64>)
+ 8011946:	681b      	ldr	r3, [r3, #0]
+ 8011948:	4293      	cmp	r3, r2
+ 801194a:	d016      	beq.n	801197a <plug_holes+0x4e>
         {
             lfree = mem;
         }
         mem->next = nmem->next;
- 80118cc:	6853      	ldr	r3, [r2, #4]
- 80118ce:	6043      	str	r3, [r0, #4]
+ 801194c:	6853      	ldr	r3, [r2, #4]
+ 801194e:	6043      	str	r3, [r0, #4]
         ((struct heap_mem *)&heap_ptr[nmem->next])->prev = (rt_uint8_t *)mem - heap_ptr;
- 80118d0:	6853      	ldr	r3, [r2, #4]
- 80118d2:	440b      	add	r3, r1
- 80118d4:	1a42      	subs	r2, r0, r1
- 80118d6:	609a      	str	r2, [r3, #8]
+ 8011950:	6853      	ldr	r3, [r2, #4]
+ 8011952:	440b      	add	r3, r1
+ 8011954:	1a42      	subs	r2, r0, r1
+ 8011956:	609a      	str	r2, [r3, #8]
     }
 
     /* plug hole backward */
     pmem = (struct heap_mem *)&heap_ptr[mem->prev];
- 80118d8:	6883      	ldr	r3, [r0, #8]
- 80118da:	440b      	add	r3, r1
+ 8011958:	6883      	ldr	r3, [r0, #8]
+ 801195a:	440b      	add	r3, r1
     if (pmem != mem && pmem->used == 0)
- 80118dc:	4298      	cmp	r0, r3
- 80118de:	d00b      	beq.n	80118f8 <plug_holes+0x4c>
- 80118e0:	885a      	ldrh	r2, [r3, #2]
- 80118e2:	b94a      	cbnz	r2, 80118f8 <plug_holes+0x4c>
+ 801195c:	4298      	cmp	r0, r3
+ 801195e:	d00b      	beq.n	8011978 <plug_holes+0x4c>
+ 8011960:	885a      	ldrh	r2, [r3, #2]
+ 8011962:	b94a      	cbnz	r2, 8011978 <plug_holes+0x4c>
     {
         /* if mem->prev is unused, combine mem and mem->prev */
         if (lfree == mem)
- 80118e4:	4a0a      	ldr	r2, [pc, #40]	; (8011910 <plug_holes+0x64>)
- 80118e6:	6812      	ldr	r2, [r2, #0]
- 80118e8:	4282      	cmp	r2, r0
- 80118ea:	d009      	beq.n	8011900 <plug_holes+0x54>
+ 8011964:	4a0a      	ldr	r2, [pc, #40]	; (8011990 <plug_holes+0x64>)
+ 8011966:	6812      	ldr	r2, [r2, #0]
+ 8011968:	4282      	cmp	r2, r0
+ 801196a:	d009      	beq.n	8011980 <plug_holes+0x54>
         {
             lfree = pmem;
         }
         pmem->next = mem->next;
- 80118ec:	6842      	ldr	r2, [r0, #4]
- 80118ee:	605a      	str	r2, [r3, #4]
+ 801196c:	6842      	ldr	r2, [r0, #4]
+ 801196e:	605a      	str	r2, [r3, #4]
         ((struct heap_mem *)&heap_ptr[mem->next])->prev = (rt_uint8_t *)pmem - heap_ptr;
- 80118f0:	6842      	ldr	r2, [r0, #4]
- 80118f2:	440a      	add	r2, r1
- 80118f4:	1a5b      	subs	r3, r3, r1
- 80118f6:	6093      	str	r3, [r2, #8]
+ 8011970:	6842      	ldr	r2, [r0, #4]
+ 8011972:	440a      	add	r2, r1
+ 8011974:	1a5b      	subs	r3, r3, r1
+ 8011976:	6093      	str	r3, [r2, #8]
     }
 }
- 80118f8:	4770      	bx	lr
+ 8011978:	4770      	bx	lr
             lfree = mem;
- 80118fa:	4b05      	ldr	r3, [pc, #20]	; (8011910 <plug_holes+0x64>)
- 80118fc:	6018      	str	r0, [r3, #0]
- 80118fe:	e7e5      	b.n	80118cc <plug_holes+0x20>
+ 801197a:	4b05      	ldr	r3, [pc, #20]	; (8011990 <plug_holes+0x64>)
+ 801197c:	6018      	str	r0, [r3, #0]
+ 801197e:	e7e5      	b.n	801194c <plug_holes+0x20>
             lfree = pmem;
- 8011900:	4a03      	ldr	r2, [pc, #12]	; (8011910 <plug_holes+0x64>)
- 8011902:	6013      	str	r3, [r2, #0]
- 8011904:	e7f2      	b.n	80118ec <plug_holes+0x40>
- 8011906:	bf00      	nop
- 8011908:	200072d8 	.word	0x200072d8
- 801190c:	200072d4 	.word	0x200072d4
- 8011910:	200072fc 	.word	0x200072fc
+ 8011980:	4a03      	ldr	r2, [pc, #12]	; (8011990 <plug_holes+0x64>)
+ 8011982:	6013      	str	r3, [r2, #0]
+ 8011984:	e7f2      	b.n	801196c <plug_holes+0x40>
+ 8011986:	bf00      	nop
+ 8011988:	200072d8 	.word	0x200072d8
+ 801198c:	200072d4 	.word	0x200072d4
+ 8011990:	200072fc 	.word	0x200072fc
 
-08011914 <rt_system_heap_init>:
+08011994 <rt_system_heap_init>:
  *
  * @param begin_addr the beginning address of system heap memory.
  * @param end_addr the end address of system heap memory.
  */
 void rt_system_heap_init(void *begin_addr, void *end_addr)
 {
- 8011914:	b570      	push	{r4, r5, r6, lr}
+ 8011994:	b570      	push	{r4, r5, r6, lr}
     struct heap_mem *mem;
     rt_uint32_t begin_align = RT_ALIGN((rt_uint32_t)begin_addr, RT_ALIGN_SIZE);
     rt_uint32_t end_align = RT_ALIGN_DOWN((rt_uint32_t)end_addr, RT_ALIGN_SIZE);
- 8011916:	f021 0303 	bic.w	r3, r1, #3
+ 8011996:	f021 0303 	bic.w	r3, r1, #3
 
     RT_DEBUG_NOT_IN_INTERRUPT;
 
     /* alignment addr */
     if ((end_align > (2 * SIZEOF_STRUCT_MEM)) &&
- 801191a:	2b18      	cmp	r3, #24
- 801191c:	d906      	bls.n	801192c <rt_system_heap_init+0x18>
- 801191e:	1cc4      	adds	r4, r0, #3
- 8011920:	f024 0403 	bic.w	r4, r4, #3
+ 801199a:	2b18      	cmp	r3, #24
+ 801199c:	d906      	bls.n	80119ac <rt_system_heap_init+0x18>
+ 801199e:	1cc4      	adds	r4, r0, #3
+ 80119a0:	f024 0403 	bic.w	r4, r4, #3
         ((end_align - 2 * SIZEOF_STRUCT_MEM) >= begin_align))
- 8011924:	f1a3 0218 	sub.w	r2, r3, #24
+ 80119a4:	f1a3 0218 	sub.w	r2, r3, #24
     if ((end_align > (2 * SIZEOF_STRUCT_MEM)) &&
- 8011928:	42a2      	cmp	r2, r4
- 801192a:	d205      	bcs.n	8011938 <rt_system_heap_init+0x24>
+ 80119a8:	42a2      	cmp	r2, r4
+ 80119aa:	d205      	bcs.n	80119b8 <rt_system_heap_init+0x24>
         /* calculate the aligned memory size */
         mem_size_aligned = end_align - begin_align - 2 * SIZEOF_STRUCT_MEM;
     }
     else
     {
         rt_kprintf("mem init, error begin address 0x%x, and end address 0x%x\n",
- 801192c:	460a      	mov	r2, r1
- 801192e:	4601      	mov	r1, r0
- 8011930:	4811      	ldr	r0, [pc, #68]	; (8011978 <rt_system_heap_init+0x64>)
- 8011932:	f7ff f92d 	bl	8010b90 <rt_kprintf>
+ 80119ac:	460a      	mov	r2, r1
+ 80119ae:	4601      	mov	r1, r0
+ 80119b0:	4811      	ldr	r0, [pc, #68]	; (80119f8 <rt_system_heap_init+0x64>)
+ 80119b2:	f7ff f8ed 	bl	8010b90 <rt_kprintf>
 
     rt_sem_init(&heap_sem, "heap", 1, RT_IPC_FLAG_FIFO);
 
     /* initialize the lowest-free pointer to the start of the heap */
     lfree = (struct heap_mem *)heap_ptr;
 }
- 8011936:	bd70      	pop	{r4, r5, r6, pc}
+ 80119b6:	bd70      	pop	{r4, r5, r6, pc}
         mem_size_aligned = end_align - begin_align - 2 * SIZEOF_STRUCT_MEM;
- 8011938:	1b1b      	subs	r3, r3, r4
- 801193a:	f1a3 0118 	sub.w	r1, r3, #24
- 801193e:	4a0f      	ldr	r2, [pc, #60]	; (801197c <rt_system_heap_init+0x68>)
- 8011940:	6011      	str	r1, [r2, #0]
+ 80119b8:	1b1b      	subs	r3, r3, r4
+ 80119ba:	f1a3 0118 	sub.w	r1, r3, #24
+ 80119be:	4a0f      	ldr	r2, [pc, #60]	; (80119fc <rt_system_heap_init+0x68>)
+ 80119c0:	6011      	str	r1, [r2, #0]
     heap_ptr = (rt_uint8_t *)begin_align;
- 8011942:	4d0f      	ldr	r5, [pc, #60]	; (8011980 <rt_system_heap_init+0x6c>)
- 8011944:	602c      	str	r4, [r5, #0]
+ 80119c2:	4d0f      	ldr	r5, [pc, #60]	; (8011a00 <rt_system_heap_init+0x6c>)
+ 80119c4:	602c      	str	r4, [r5, #0]
     mem->magic = HEAP_MAGIC;
- 8011946:	f44f 52f5 	mov.w	r2, #7840	; 0x1ea0
- 801194a:	8022      	strh	r2, [r4, #0]
+ 80119c6:	f44f 52f5 	mov.w	r2, #7840	; 0x1ea0
+ 80119ca:	8022      	strh	r2, [r4, #0]
     mem->next  = mem_size_aligned + SIZEOF_STRUCT_MEM;
- 801194c:	f1a3 010c 	sub.w	r1, r3, #12
- 8011950:	6061      	str	r1, [r4, #4]
+ 80119cc:	f1a3 010c 	sub.w	r1, r3, #12
+ 80119d0:	6061      	str	r1, [r4, #4]
     mem->prev  = 0;
- 8011952:	2300      	movs	r3, #0
- 8011954:	60a3      	str	r3, [r4, #8]
+ 80119d2:	2300      	movs	r3, #0
+ 80119d4:	60a3      	str	r3, [r4, #8]
     mem->used  = 0;
- 8011956:	8063      	strh	r3, [r4, #2]
+ 80119d6:	8063      	strh	r3, [r4, #2]
     heap_end        = (struct heap_mem *)&heap_ptr[mem->next];
- 8011958:	1860      	adds	r0, r4, r1
- 801195a:	4e0a      	ldr	r6, [pc, #40]	; (8011984 <rt_system_heap_init+0x70>)
- 801195c:	6030      	str	r0, [r6, #0]
+ 80119d8:	1860      	adds	r0, r4, r1
+ 80119da:	4e0a      	ldr	r6, [pc, #40]	; (8011a04 <rt_system_heap_init+0x70>)
+ 80119dc:	6030      	str	r0, [r6, #0]
     heap_end->magic = HEAP_MAGIC;
- 801195e:	5262      	strh	r2, [r4, r1]
+ 80119de:	5262      	strh	r2, [r4, r1]
     heap_end->used  = 1;
- 8011960:	2201      	movs	r2, #1
- 8011962:	8042      	strh	r2, [r0, #2]
+ 80119e0:	2201      	movs	r2, #1
+ 80119e2:	8042      	strh	r2, [r0, #2]
     heap_end->next  = mem_size_aligned + SIZEOF_STRUCT_MEM;
- 8011964:	6041      	str	r1, [r0, #4]
+ 80119e4:	6041      	str	r1, [r0, #4]
     heap_end->prev  = mem_size_aligned + SIZEOF_STRUCT_MEM;
- 8011966:	6081      	str	r1, [r0, #8]
+ 80119e6:	6081      	str	r1, [r0, #8]
     rt_sem_init(&heap_sem, "heap", 1, RT_IPC_FLAG_FIFO);
- 8011968:	4907      	ldr	r1, [pc, #28]	; (8011988 <rt_system_heap_init+0x74>)
- 801196a:	4808      	ldr	r0, [pc, #32]	; (801198c <rt_system_heap_init+0x78>)
- 801196c:	f7fe fa80 	bl	800fe70 <rt_sem_init>
+ 80119e8:	4907      	ldr	r1, [pc, #28]	; (8011a08 <rt_system_heap_init+0x74>)
+ 80119ea:	4808      	ldr	r0, [pc, #32]	; (8011a0c <rt_system_heap_init+0x78>)
+ 80119ec:	f7fe fa40 	bl	800fe70 <rt_sem_init>
     lfree = (struct heap_mem *)heap_ptr;
- 8011970:	682a      	ldr	r2, [r5, #0]
- 8011972:	4b07      	ldr	r3, [pc, #28]	; (8011990 <rt_system_heap_init+0x7c>)
- 8011974:	601a      	str	r2, [r3, #0]
- 8011976:	e7de      	b.n	8011936 <rt_system_heap_init+0x22>
- 8011978:	08012bd4 	.word	0x08012bd4
- 801197c:	20007304 	.word	0x20007304
- 8011980:	200072d8 	.word	0x200072d8
- 8011984:	200072d4 	.word	0x200072d4
- 8011988:	08012bcc 	.word	0x08012bcc
- 801198c:	200072dc 	.word	0x200072dc
- 8011990:	200072fc 	.word	0x200072fc
+ 80119f0:	682a      	ldr	r2, [r5, #0]
+ 80119f2:	4b07      	ldr	r3, [pc, #28]	; (8011a10 <rt_system_heap_init+0x7c>)
+ 80119f4:	601a      	str	r2, [r3, #0]
+ 80119f6:	e7de      	b.n	80119b6 <rt_system_heap_init+0x22>
+ 80119f8:	08012c90 	.word	0x08012c90
+ 80119fc:	20007304 	.word	0x20007304
+ 8011a00:	200072d8 	.word	0x200072d8
+ 8011a04:	200072d4 	.word	0x200072d4
+ 8011a08:	08012c88 	.word	0x08012c88
+ 8011a0c:	200072dc 	.word	0x200072dc
+ 8011a10:	200072fc 	.word	0x200072fc
 
-08011994 <rt_malloc>:
+08011a14 <rt_malloc>:
 void *rt_malloc(rt_size_t size)
 {
     rt_size_t ptr, ptr2;
     struct heap_mem *mem, *mem2;
 
     if (size == 0)
- 8011994:	2800      	cmp	r0, #0
- 8011996:	d079      	beq.n	8011a8c <rt_malloc+0xf8>
+ 8011a14:	2800      	cmp	r0, #0
+ 8011a16:	d079      	beq.n	8011b0c <rt_malloc+0xf8>
 {
- 8011998:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
- 801199a:	4605      	mov	r5, r0
+ 8011a18:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 8011a1a:	4605      	mov	r5, r0
         return RT_NULL;
 
     RT_DEBUG_NOT_IN_INTERRUPT;
 
     if (size != RT_ALIGN(size, RT_ALIGN_SIZE))
- 801199c:	3503      	adds	r5, #3
- 801199e:	f025 0503 	bic.w	r5, r5, #3
+ 8011a1c:	3503      	adds	r5, #3
+ 8011a1e:	f025 0503 	bic.w	r5, r5, #3
         RT_DEBUG_LOG(RT_DEBUG_MEM, ("malloc size %d\n", size));
 
     /* alignment size */
     size = RT_ALIGN(size, RT_ALIGN_SIZE);
 
     if (size > mem_size_aligned)
- 80119a2:	4b3c      	ldr	r3, [pc, #240]	; (8011a94 <rt_malloc+0x100>)
- 80119a4:	681b      	ldr	r3, [r3, #0]
- 80119a6:	429d      	cmp	r5, r3
- 80119a8:	d872      	bhi.n	8011a90 <rt_malloc+0xfc>
+ 8011a22:	4b3c      	ldr	r3, [pc, #240]	; (8011b14 <rt_malloc+0x100>)
+ 8011a24:	681b      	ldr	r3, [r3, #0]
+ 8011a26:	429d      	cmp	r5, r3
+ 8011a28:	d872      	bhi.n	8011b10 <rt_malloc+0xfc>
 
         return RT_NULL;
     }
 
     /* every data block must be at least MIN_SIZE_ALIGNED long */
     if (size < MIN_SIZE_ALIGNED)
- 80119aa:	2d0b      	cmp	r5, #11
- 80119ac:	d800      	bhi.n	80119b0 <rt_malloc+0x1c>
+ 8011a2a:	2d0b      	cmp	r5, #11
+ 8011a2c:	d800      	bhi.n	8011a30 <rt_malloc+0x1c>
         size = MIN_SIZE_ALIGNED;
- 80119ae:	250c      	movs	r5, #12
+ 8011a2e:	250c      	movs	r5, #12
 
     /* take memory semaphore */
     rt_sem_take(&heap_sem, RT_WAITING_FOREVER);
- 80119b0:	f04f 31ff 	mov.w	r1, #4294967295
- 80119b4:	4838      	ldr	r0, [pc, #224]	; (8011a98 <rt_malloc+0x104>)
- 80119b6:	f7fe fa7c 	bl	800feb2 <rt_sem_take>
+ 8011a30:	f04f 31ff 	mov.w	r1, #4294967295
+ 8011a34:	4838      	ldr	r0, [pc, #224]	; (8011b18 <rt_malloc+0x104>)
+ 8011a36:	f7fe fa3c 	bl	800feb2 <rt_sem_take>
 
     for (ptr = (rt_uint8_t *)lfree - heap_ptr;
- 80119ba:	4b38      	ldr	r3, [pc, #224]	; (8011a9c <rt_malloc+0x108>)
- 80119bc:	681e      	ldr	r6, [r3, #0]
- 80119be:	4b38      	ldr	r3, [pc, #224]	; (8011aa0 <rt_malloc+0x10c>)
- 80119c0:	681b      	ldr	r3, [r3, #0]
- 80119c2:	1b9b      	subs	r3, r3, r6
- 80119c4:	e01f      	b.n	8011a06 <rt_malloc+0x72>
+ 8011a3a:	4b38      	ldr	r3, [pc, #224]	; (8011b1c <rt_malloc+0x108>)
+ 8011a3c:	681e      	ldr	r6, [r3, #0]
+ 8011a3e:	4b38      	ldr	r3, [pc, #224]	; (8011b20 <rt_malloc+0x10c>)
+ 8011a40:	681b      	ldr	r3, [r3, #0]
+ 8011a42:	1b9b      	subs	r3, r3, r6
+ 8011a44:	e01f      	b.n	8011a86 <rt_malloc+0x72>
                  * take care of this).
                  * -> near fit or excact fit: do not split, no mem2 creation
                  * also can't move mem->next directly behind mem, since mem->next
                  * will always be used at this point!
                  */
                 mem->used = 1;
- 80119c6:	2301      	movs	r3, #1
- 80119c8:	8063      	strh	r3, [r4, #2]
+ 8011a46:	2301      	movs	r3, #1
+ 8011a48:	8063      	strh	r3, [r4, #2]
 #ifdef RT_MEM_STATS
                 used_mem += mem->next - ((rt_uint8_t *)mem - heap_ptr);
- 80119ca:	1ba3      	subs	r3, r4, r6
- 80119cc:	1ac3      	subs	r3, r0, r3
- 80119ce:	4a35      	ldr	r2, [pc, #212]	; (8011aa4 <rt_malloc+0x110>)
- 80119d0:	6810      	ldr	r0, [r2, #0]
- 80119d2:	4403      	add	r3, r0
- 80119d4:	6013      	str	r3, [r2, #0]
+ 8011a4a:	1ba3      	subs	r3, r4, r6
+ 8011a4c:	1ac3      	subs	r3, r0, r3
+ 8011a4e:	4a35      	ldr	r2, [pc, #212]	; (8011b24 <rt_malloc+0x110>)
+ 8011a50:	6810      	ldr	r0, [r2, #0]
+ 8011a52:	4403      	add	r3, r0
+ 8011a54:	6013      	str	r3, [r2, #0]
                 if (max_mem < used_mem)
- 80119d6:	4a34      	ldr	r2, [pc, #208]	; (8011aa8 <rt_malloc+0x114>)
- 80119d8:	6812      	ldr	r2, [r2, #0]
- 80119da:	4293      	cmp	r3, r2
- 80119dc:	d944      	bls.n	8011a68 <rt_malloc+0xd4>
+ 8011a56:	4a34      	ldr	r2, [pc, #208]	; (8011b28 <rt_malloc+0x114>)
+ 8011a58:	6812      	ldr	r2, [r2, #0]
+ 8011a5a:	4293      	cmp	r3, r2
+ 8011a5c:	d944      	bls.n	8011ae8 <rt_malloc+0xd4>
                     max_mem = used_mem;
- 80119de:	4a32      	ldr	r2, [pc, #200]	; (8011aa8 <rt_malloc+0x114>)
- 80119e0:	6013      	str	r3, [r2, #0]
- 80119e2:	e041      	b.n	8011a68 <rt_malloc+0xd4>
+ 8011a5e:	4a32      	ldr	r2, [pc, #200]	; (8011b28 <rt_malloc+0x114>)
+ 8011a60:	6013      	str	r3, [r2, #0]
+ 8011a62:	e041      	b.n	8011ae8 <rt_malloc+0xd4>
 
             if (mem == lfree)
             {
                 /* Find next free block after mem and update lowest free pointer */
                 while (lfree->used && lfree != heap_end)
                     lfree = (struct heap_mem *)&heap_ptr[lfree->next];
- 80119e4:	685a      	ldr	r2, [r3, #4]
- 80119e6:	4b2d      	ldr	r3, [pc, #180]	; (8011a9c <rt_malloc+0x108>)
- 80119e8:	681b      	ldr	r3, [r3, #0]
- 80119ea:	4413      	add	r3, r2
- 80119ec:	4a2c      	ldr	r2, [pc, #176]	; (8011aa0 <rt_malloc+0x10c>)
- 80119ee:	6013      	str	r3, [r2, #0]
+ 8011a64:	685a      	ldr	r2, [r3, #4]
+ 8011a66:	4b2d      	ldr	r3, [pc, #180]	; (8011b1c <rt_malloc+0x108>)
+ 8011a68:	681b      	ldr	r3, [r3, #0]
+ 8011a6a:	4413      	add	r3, r2
+ 8011a6c:	4a2c      	ldr	r2, [pc, #176]	; (8011b20 <rt_malloc+0x10c>)
+ 8011a6e:	6013      	str	r3, [r2, #0]
                 while (lfree->used && lfree != heap_end)
- 80119f0:	4b2b      	ldr	r3, [pc, #172]	; (8011aa0 <rt_malloc+0x10c>)
- 80119f2:	681b      	ldr	r3, [r3, #0]
- 80119f4:	885a      	ldrh	r2, [r3, #2]
- 80119f6:	2a00      	cmp	r2, #0
- 80119f8:	d03d      	beq.n	8011a76 <rt_malloc+0xe2>
- 80119fa:	4a2c      	ldr	r2, [pc, #176]	; (8011aac <rt_malloc+0x118>)
- 80119fc:	6812      	ldr	r2, [r2, #0]
- 80119fe:	4293      	cmp	r3, r2
- 8011a00:	d1f0      	bne.n	80119e4 <rt_malloc+0x50>
- 8011a02:	e038      	b.n	8011a76 <rt_malloc+0xe2>
+ 8011a70:	4b2b      	ldr	r3, [pc, #172]	; (8011b20 <rt_malloc+0x10c>)
+ 8011a72:	681b      	ldr	r3, [r3, #0]
+ 8011a74:	885a      	ldrh	r2, [r3, #2]
+ 8011a76:	2a00      	cmp	r2, #0
+ 8011a78:	d03d      	beq.n	8011af6 <rt_malloc+0xe2>
+ 8011a7a:	4a2c      	ldr	r2, [pc, #176]	; (8011b2c <rt_malloc+0x118>)
+ 8011a7c:	6812      	ldr	r2, [r2, #0]
+ 8011a7e:	4293      	cmp	r3, r2
+ 8011a80:	d1f0      	bne.n	8011a64 <rt_malloc+0x50>
+ 8011a82:	e038      	b.n	8011af6 <rt_malloc+0xe2>
          ptr = ((struct heap_mem *)&heap_ptr[ptr])->next)
- 8011a04:	6863      	ldr	r3, [r4, #4]
+ 8011a84:	6863      	ldr	r3, [r4, #4]
          ptr < mem_size_aligned - size;
- 8011a06:	4a23      	ldr	r2, [pc, #140]	; (8011a94 <rt_malloc+0x100>)
- 8011a08:	6812      	ldr	r2, [r2, #0]
- 8011a0a:	1b51      	subs	r1, r2, r5
+ 8011a86:	4a23      	ldr	r2, [pc, #140]	; (8011b14 <rt_malloc+0x100>)
+ 8011a88:	6812      	ldr	r2, [r2, #0]
+ 8011a8a:	1b51      	subs	r1, r2, r5
     for (ptr = (rt_uint8_t *)lfree - heap_ptr;
- 8011a0c:	4299      	cmp	r1, r3
- 8011a0e:	d938      	bls.n	8011a82 <rt_malloc+0xee>
+ 8011a8c:	4299      	cmp	r1, r3
+ 8011a8e:	d938      	bls.n	8011b02 <rt_malloc+0xee>
         mem = (struct heap_mem *)&heap_ptr[ptr];
- 8011a10:	18f4      	adds	r4, r6, r3
+ 8011a90:	18f4      	adds	r4, r6, r3
         if ((!mem->used) && (mem->next - (ptr + SIZEOF_STRUCT_MEM)) >= size)
- 8011a12:	8861      	ldrh	r1, [r4, #2]
- 8011a14:	2900      	cmp	r1, #0
- 8011a16:	d1f5      	bne.n	8011a04 <rt_malloc+0x70>
- 8011a18:	6860      	ldr	r0, [r4, #4]
- 8011a1a:	1ac1      	subs	r1, r0, r3
- 8011a1c:	390c      	subs	r1, #12
- 8011a1e:	42a9      	cmp	r1, r5
- 8011a20:	d3f0      	bcc.n	8011a04 <rt_malloc+0x70>
+ 8011a92:	8861      	ldrh	r1, [r4, #2]
+ 8011a94:	2900      	cmp	r1, #0
+ 8011a96:	d1f5      	bne.n	8011a84 <rt_malloc+0x70>
+ 8011a98:	6860      	ldr	r0, [r4, #4]
+ 8011a9a:	1ac1      	subs	r1, r0, r3
+ 8011a9c:	390c      	subs	r1, #12
+ 8011a9e:	42a9      	cmp	r1, r5
+ 8011aa0:	d3f0      	bcc.n	8011a84 <rt_malloc+0x70>
                 (size + SIZEOF_STRUCT_MEM + MIN_SIZE_ALIGNED))
- 8011a22:	f105 0718 	add.w	r7, r5, #24
+ 8011aa2:	f105 0718 	add.w	r7, r5, #24
             if (mem->next - (ptr + SIZEOF_STRUCT_MEM) >=
- 8011a26:	42b9      	cmp	r1, r7
- 8011a28:	d3cd      	bcc.n	80119c6 <rt_malloc+0x32>
+ 8011aa6:	42b9      	cmp	r1, r7
+ 8011aa8:	d3cd      	bcc.n	8011a46 <rt_malloc+0x32>
                 ptr2 = ptr + SIZEOF_STRUCT_MEM + size;
- 8011a2a:	18e9      	adds	r1, r5, r3
- 8011a2c:	310c      	adds	r1, #12
+ 8011aaa:	18e9      	adds	r1, r5, r3
+ 8011aac:	310c      	adds	r1, #12
                 mem2       = (struct heap_mem *)&heap_ptr[ptr2];
- 8011a2e:	1870      	adds	r0, r6, r1
+ 8011aae:	1870      	adds	r0, r6, r1
                 mem2->magic = HEAP_MAGIC;
- 8011a30:	f44f 57f5 	mov.w	r7, #7840	; 0x1ea0
- 8011a34:	5277      	strh	r7, [r6, r1]
+ 8011ab0:	f44f 57f5 	mov.w	r7, #7840	; 0x1ea0
+ 8011ab4:	5277      	strh	r7, [r6, r1]
                 mem2->used = 0;
- 8011a36:	2700      	movs	r7, #0
- 8011a38:	8047      	strh	r7, [r0, #2]
+ 8011ab6:	2700      	movs	r7, #0
+ 8011ab8:	8047      	strh	r7, [r0, #2]
                 mem2->next = mem->next;
- 8011a3a:	6867      	ldr	r7, [r4, #4]
- 8011a3c:	6047      	str	r7, [r0, #4]
+ 8011aba:	6867      	ldr	r7, [r4, #4]
+ 8011abc:	6047      	str	r7, [r0, #4]
                 mem2->prev = ptr;
- 8011a3e:	6083      	str	r3, [r0, #8]
+ 8011abe:	6083      	str	r3, [r0, #8]
                 mem->next = ptr2;
- 8011a40:	6061      	str	r1, [r4, #4]
+ 8011ac0:	6061      	str	r1, [r4, #4]
                 mem->used = 1;
- 8011a42:	2301      	movs	r3, #1
- 8011a44:	8063      	strh	r3, [r4, #2]
+ 8011ac2:	2301      	movs	r3, #1
+ 8011ac4:	8063      	strh	r3, [r4, #2]
                 if (mem2->next != mem_size_aligned + SIZEOF_STRUCT_MEM)
- 8011a46:	6843      	ldr	r3, [r0, #4]
- 8011a48:	320c      	adds	r2, #12
- 8011a4a:	4293      	cmp	r3, r2
- 8011a4c:	d001      	beq.n	8011a52 <rt_malloc+0xbe>
+ 8011ac6:	6843      	ldr	r3, [r0, #4]
+ 8011ac8:	320c      	adds	r2, #12
+ 8011aca:	4293      	cmp	r3, r2
+ 8011acc:	d001      	beq.n	8011ad2 <rt_malloc+0xbe>
                     ((struct heap_mem *)&heap_ptr[mem2->next])->prev = ptr2;
- 8011a4e:	4433      	add	r3, r6
- 8011a50:	6099      	str	r1, [r3, #8]
+ 8011ace:	4433      	add	r3, r6
+ 8011ad0:	6099      	str	r1, [r3, #8]
                 used_mem += (size + SIZEOF_STRUCT_MEM);
- 8011a52:	4b14      	ldr	r3, [pc, #80]	; (8011aa4 <rt_malloc+0x110>)
- 8011a54:	681a      	ldr	r2, [r3, #0]
- 8011a56:	4415      	add	r5, r2
- 8011a58:	350c      	adds	r5, #12
- 8011a5a:	601d      	str	r5, [r3, #0]
+ 8011ad2:	4b14      	ldr	r3, [pc, #80]	; (8011b24 <rt_malloc+0x110>)
+ 8011ad4:	681a      	ldr	r2, [r3, #0]
+ 8011ad6:	4415      	add	r5, r2
+ 8011ad8:	350c      	adds	r5, #12
+ 8011ada:	601d      	str	r5, [r3, #0]
                 if (max_mem < used_mem)
- 8011a5c:	4b12      	ldr	r3, [pc, #72]	; (8011aa8 <rt_malloc+0x114>)
- 8011a5e:	681b      	ldr	r3, [r3, #0]
- 8011a60:	429d      	cmp	r5, r3
- 8011a62:	d901      	bls.n	8011a68 <rt_malloc+0xd4>
+ 8011adc:	4b12      	ldr	r3, [pc, #72]	; (8011b28 <rt_malloc+0x114>)
+ 8011ade:	681b      	ldr	r3, [r3, #0]
+ 8011ae0:	429d      	cmp	r5, r3
+ 8011ae2:	d901      	bls.n	8011ae8 <rt_malloc+0xd4>
                     max_mem = used_mem;
- 8011a64:	4b10      	ldr	r3, [pc, #64]	; (8011aa8 <rt_malloc+0x114>)
- 8011a66:	601d      	str	r5, [r3, #0]
+ 8011ae4:	4b10      	ldr	r3, [pc, #64]	; (8011b28 <rt_malloc+0x114>)
+ 8011ae6:	601d      	str	r5, [r3, #0]
             mem->magic = HEAP_MAGIC;
- 8011a68:	f44f 53f5 	mov.w	r3, #7840	; 0x1ea0
- 8011a6c:	8023      	strh	r3, [r4, #0]
+ 8011ae8:	f44f 53f5 	mov.w	r3, #7840	; 0x1ea0
+ 8011aec:	8023      	strh	r3, [r4, #0]
             if (mem == lfree)
- 8011a6e:	4b0c      	ldr	r3, [pc, #48]	; (8011aa0 <rt_malloc+0x10c>)
- 8011a70:	681b      	ldr	r3, [r3, #0]
- 8011a72:	42a3      	cmp	r3, r4
- 8011a74:	d0bc      	beq.n	80119f0 <rt_malloc+0x5c>
+ 8011aee:	4b0c      	ldr	r3, [pc, #48]	; (8011b20 <rt_malloc+0x10c>)
+ 8011af0:	681b      	ldr	r3, [r3, #0]
+ 8011af2:	42a3      	cmp	r3, r4
+ 8011af4:	d0bc      	beq.n	8011a70 <rt_malloc+0x5c>
 
                 RT_ASSERT(((lfree == heap_end) || (!lfree->used)));
             }
 
             rt_sem_release(&heap_sem);
- 8011a76:	4808      	ldr	r0, [pc, #32]	; (8011a98 <rt_malloc+0x104>)
- 8011a78:	f7fe fa81 	bl	800ff7e <rt_sem_release>
+ 8011af6:	4808      	ldr	r0, [pc, #32]	; (8011b18 <rt_malloc+0x104>)
+ 8011af8:	f7fe fa41 	bl	800ff7e <rt_sem_release>
 
             RT_OBJECT_HOOK_CALL(rt_malloc_hook,
                                 (((void *)((rt_uint8_t *)mem + SIZEOF_STRUCT_MEM)), size));
 
             /* return the memory data except mem struct */
             return (rt_uint8_t *)mem + SIZEOF_STRUCT_MEM;
- 8011a7c:	f104 000c 	add.w	r0, r4, #12
- 8011a80:	e003      	b.n	8011a8a <rt_malloc+0xf6>
+ 8011afc:	f104 000c 	add.w	r0, r4, #12
+ 8011b00:	e003      	b.n	8011b0a <rt_malloc+0xf6>
         }
     }
 
     rt_sem_release(&heap_sem);
- 8011a82:	4805      	ldr	r0, [pc, #20]	; (8011a98 <rt_malloc+0x104>)
- 8011a84:	f7fe fa7b 	bl	800ff7e <rt_sem_release>
+ 8011b02:	4805      	ldr	r0, [pc, #20]	; (8011b18 <rt_malloc+0x104>)
+ 8011b04:	f7fe fa3b 	bl	800ff7e <rt_sem_release>
 
     return RT_NULL;
- 8011a88:	2000      	movs	r0, #0
+ 8011b08:	2000      	movs	r0, #0
 }
- 8011a8a:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
+ 8011b0a:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
         return RT_NULL;
- 8011a8c:	2000      	movs	r0, #0
+ 8011b0c:	2000      	movs	r0, #0
 }
- 8011a8e:	4770      	bx	lr
+ 8011b0e:	4770      	bx	lr
         return RT_NULL;
- 8011a90:	2000      	movs	r0, #0
- 8011a92:	e7fa      	b.n	8011a8a <rt_malloc+0xf6>
- 8011a94:	20007304 	.word	0x20007304
- 8011a98:	200072dc 	.word	0x200072dc
- 8011a9c:	200072d8 	.word	0x200072d8
- 8011aa0:	200072fc 	.word	0x200072fc
- 8011aa4:	20007308 	.word	0x20007308
- 8011aa8:	20007300 	.word	0x20007300
- 8011aac:	200072d4 	.word	0x200072d4
+ 8011b10:	2000      	movs	r0, #0
+ 8011b12:	e7fa      	b.n	8011b0a <rt_malloc+0xf6>
+ 8011b14:	20007304 	.word	0x20007304
+ 8011b18:	200072dc 	.word	0x200072dc
+ 8011b1c:	200072d8 	.word	0x200072d8
+ 8011b20:	200072fc 	.word	0x200072fc
+ 8011b24:	20007308 	.word	0x20007308
+ 8011b28:	20007300 	.word	0x20007300
+ 8011b2c:	200072d4 	.word	0x200072d4
 
-08011ab0 <rt_free>:
+08011b30 <rt_free>:
  */
 void rt_free(void *rmem)
 {
     struct heap_mem *mem;
 
     if (rmem == RT_NULL)
- 8011ab0:	2800      	cmp	r0, #0
- 8011ab2:	d042      	beq.n	8011b3a <rt_free+0x8a>
+ 8011b30:	2800      	cmp	r0, #0
+ 8011b32:	d042      	beq.n	8011bba <rt_free+0x8a>
 {
- 8011ab4:	b538      	push	{r3, r4, r5, lr}
- 8011ab6:	4604      	mov	r4, r0
+ 8011b34:	b538      	push	{r3, r4, r5, lr}
+ 8011b36:	4604      	mov	r4, r0
     RT_ASSERT((rt_uint8_t *)rmem >= (rt_uint8_t *)heap_ptr &&
               (rt_uint8_t *)rmem < (rt_uint8_t *)heap_end);
 
     RT_OBJECT_HOOK_CALL(rt_free_hook, (rmem));
 
     if ((rt_uint8_t *)rmem < (rt_uint8_t *)heap_ptr ||
- 8011ab8:	4a20      	ldr	r2, [pc, #128]	; (8011b3c <rt_free+0x8c>)
- 8011aba:	6812      	ldr	r2, [r2, #0]
- 8011abc:	4282      	cmp	r2, r0
- 8011abe:	d803      	bhi.n	8011ac8 <rt_free+0x18>
+ 8011b38:	4a20      	ldr	r2, [pc, #128]	; (8011bbc <rt_free+0x8c>)
+ 8011b3a:	6812      	ldr	r2, [r2, #0]
+ 8011b3c:	4282      	cmp	r2, r0
+ 8011b3e:	d803      	bhi.n	8011b48 <rt_free+0x18>
         (rt_uint8_t *)rmem >= (rt_uint8_t *)heap_end)
- 8011ac0:	4a1f      	ldr	r2, [pc, #124]	; (8011b40 <rt_free+0x90>)
- 8011ac2:	6812      	ldr	r2, [r2, #0]
+ 8011b40:	4a1f      	ldr	r2, [pc, #124]	; (8011bc0 <rt_free+0x90>)
+ 8011b42:	6812      	ldr	r2, [r2, #0]
     if ((rt_uint8_t *)rmem < (rt_uint8_t *)heap_ptr ||
- 8011ac4:	4282      	cmp	r2, r0
- 8011ac6:	d800      	bhi.n	8011aca <rt_free+0x1a>
+ 8011b44:	4282      	cmp	r2, r0
+ 8011b46:	d800      	bhi.n	8011b4a <rt_free+0x1a>
 #endif
 
     /* finally, see if prev or next are free also */
     plug_holes(mem);
     rt_sem_release(&heap_sem);
 }
- 8011ac8:	bd38      	pop	{r3, r4, r5, pc}
+ 8011b48:	bd38      	pop	{r3, r4, r5, pc}
     mem = (struct heap_mem *)((rt_uint8_t *)rmem - SIZEOF_STRUCT_MEM);
- 8011aca:	f1a0 050c 	sub.w	r5, r0, #12
+ 8011b4a:	f1a0 050c 	sub.w	r5, r0, #12
     rt_sem_take(&heap_sem, RT_WAITING_FOREVER);
- 8011ace:	f04f 31ff 	mov.w	r1, #4294967295
- 8011ad2:	481c      	ldr	r0, [pc, #112]	; (8011b44 <rt_free+0x94>)
- 8011ad4:	f7fe f9ed 	bl	800feb2 <rt_sem_take>
+ 8011b4e:	f04f 31ff 	mov.w	r1, #4294967295
+ 8011b52:	481c      	ldr	r0, [pc, #112]	; (8011bc4 <rt_free+0x94>)
+ 8011b54:	f7fe f9ad 	bl	800feb2 <rt_sem_take>
     if (!mem->used || mem->magic != HEAP_MAGIC)
- 8011ad8:	f834 3c0a 	ldrh.w	r3, [r4, #-10]
- 8011adc:	b123      	cbz	r3, 8011ae8 <rt_free+0x38>
- 8011ade:	f834 3c0c 	ldrh.w	r3, [r4, #-12]
- 8011ae2:	f5b3 5ff5 	cmp.w	r3, #7840	; 0x1ea0
- 8011ae6:	d00a      	beq.n	8011afe <rt_free+0x4e>
+ 8011b58:	f834 3c0a 	ldrh.w	r3, [r4, #-10]
+ 8011b5c:	b123      	cbz	r3, 8011b68 <rt_free+0x38>
+ 8011b5e:	f834 3c0c 	ldrh.w	r3, [r4, #-12]
+ 8011b62:	f5b3 5ff5 	cmp.w	r3, #7840	; 0x1ea0
+ 8011b66:	d00a      	beq.n	8011b7e <rt_free+0x4e>
         rt_kprintf("to free a bad data block:\n");
- 8011ae8:	4817      	ldr	r0, [pc, #92]	; (8011b48 <rt_free+0x98>)
- 8011aea:	f7ff f851 	bl	8010b90 <rt_kprintf>
+ 8011b68:	4817      	ldr	r0, [pc, #92]	; (8011bc8 <rt_free+0x98>)
+ 8011b6a:	f7ff f811 	bl	8010b90 <rt_kprintf>
         rt_kprintf("mem: 0x%08x, used flag: %d, magic code: 0x%04x\n", mem, mem->used, mem->magic);
- 8011aee:	f834 3c0c 	ldrh.w	r3, [r4, #-12]
- 8011af2:	f834 2c0a 	ldrh.w	r2, [r4, #-10]
- 8011af6:	4629      	mov	r1, r5
- 8011af8:	4814      	ldr	r0, [pc, #80]	; (8011b4c <rt_free+0x9c>)
- 8011afa:	f7ff f849 	bl	8010b90 <rt_kprintf>
+ 8011b6e:	f834 3c0c 	ldrh.w	r3, [r4, #-12]
+ 8011b72:	f834 2c0a 	ldrh.w	r2, [r4, #-10]
+ 8011b76:	4629      	mov	r1, r5
+ 8011b78:	4814      	ldr	r0, [pc, #80]	; (8011bcc <rt_free+0x9c>)
+ 8011b7a:	f7ff f809 	bl	8010b90 <rt_kprintf>
     mem->used  = 0;
- 8011afe:	2300      	movs	r3, #0
- 8011b00:	f824 3c0a 	strh.w	r3, [r4, #-10]
+ 8011b7e:	2300      	movs	r3, #0
+ 8011b80:	f824 3c0a 	strh.w	r3, [r4, #-10]
     mem->magic = HEAP_MAGIC;
- 8011b04:	f44f 53f5 	mov.w	r3, #7840	; 0x1ea0
- 8011b08:	f824 3c0c 	strh.w	r3, [r4, #-12]
+ 8011b84:	f44f 53f5 	mov.w	r3, #7840	; 0x1ea0
+ 8011b88:	f824 3c0c 	strh.w	r3, [r4, #-12]
     if (mem < lfree)
- 8011b0c:	4b10      	ldr	r3, [pc, #64]	; (8011b50 <rt_free+0xa0>)
- 8011b0e:	681b      	ldr	r3, [r3, #0]
- 8011b10:	42ab      	cmp	r3, r5
- 8011b12:	d901      	bls.n	8011b18 <rt_free+0x68>
+ 8011b8c:	4b10      	ldr	r3, [pc, #64]	; (8011bd0 <rt_free+0xa0>)
+ 8011b8e:	681b      	ldr	r3, [r3, #0]
+ 8011b90:	42ab      	cmp	r3, r5
+ 8011b92:	d901      	bls.n	8011b98 <rt_free+0x68>
         lfree = mem;
- 8011b14:	4b0e      	ldr	r3, [pc, #56]	; (8011b50 <rt_free+0xa0>)
- 8011b16:	601d      	str	r5, [r3, #0]
+ 8011b94:	4b0e      	ldr	r3, [pc, #56]	; (8011bd0 <rt_free+0xa0>)
+ 8011b96:	601d      	str	r5, [r3, #0]
     used_mem -= (mem->next - ((rt_uint8_t *)mem - heap_ptr));
- 8011b18:	4b08      	ldr	r3, [pc, #32]	; (8011b3c <rt_free+0x8c>)
- 8011b1a:	681b      	ldr	r3, [r3, #0]
- 8011b1c:	1aeb      	subs	r3, r5, r3
- 8011b1e:	f854 2c08 	ldr.w	r2, [r4, #-8]
- 8011b22:	1a9b      	subs	r3, r3, r2
- 8011b24:	490b      	ldr	r1, [pc, #44]	; (8011b54 <rt_free+0xa4>)
- 8011b26:	680a      	ldr	r2, [r1, #0]
- 8011b28:	4413      	add	r3, r2
- 8011b2a:	600b      	str	r3, [r1, #0]
+ 8011b98:	4b08      	ldr	r3, [pc, #32]	; (8011bbc <rt_free+0x8c>)
+ 8011b9a:	681b      	ldr	r3, [r3, #0]
+ 8011b9c:	1aeb      	subs	r3, r5, r3
+ 8011b9e:	f854 2c08 	ldr.w	r2, [r4, #-8]
+ 8011ba2:	1a9b      	subs	r3, r3, r2
+ 8011ba4:	490b      	ldr	r1, [pc, #44]	; (8011bd4 <rt_free+0xa4>)
+ 8011ba6:	680a      	ldr	r2, [r1, #0]
+ 8011ba8:	4413      	add	r3, r2
+ 8011baa:	600b      	str	r3, [r1, #0]
     plug_holes(mem);
- 8011b2c:	4628      	mov	r0, r5
- 8011b2e:	f7ff febd 	bl	80118ac <plug_holes>
+ 8011bac:	4628      	mov	r0, r5
+ 8011bae:	f7ff febd 	bl	801192c <plug_holes>
     rt_sem_release(&heap_sem);
- 8011b32:	4804      	ldr	r0, [pc, #16]	; (8011b44 <rt_free+0x94>)
- 8011b34:	f7fe fa23 	bl	800ff7e <rt_sem_release>
- 8011b38:	e7c6      	b.n	8011ac8 <rt_free+0x18>
- 8011b3a:	4770      	bx	lr
- 8011b3c:	200072d8 	.word	0x200072d8
- 8011b40:	200072d4 	.word	0x200072d4
- 8011b44:	200072dc 	.word	0x200072dc
- 8011b48:	08012b80 	.word	0x08012b80
- 8011b4c:	08012b9c 	.word	0x08012b9c
- 8011b50:	200072fc 	.word	0x200072fc
- 8011b54:	20007308 	.word	0x20007308
+ 8011bb2:	4804      	ldr	r0, [pc, #16]	; (8011bc4 <rt_free+0x94>)
+ 8011bb4:	f7fe f9e3 	bl	800ff7e <rt_sem_release>
+ 8011bb8:	e7c6      	b.n	8011b48 <rt_free+0x18>
+ 8011bba:	4770      	bx	lr
+ 8011bbc:	200072d8 	.word	0x200072d8
+ 8011bc0:	200072d4 	.word	0x200072d4
+ 8011bc4:	200072dc 	.word	0x200072dc
+ 8011bc8:	08012c3c 	.word	0x08012c3c
+ 8011bcc:	08012c58 	.word	0x08012c58
+ 8011bd0:	200072fc 	.word	0x200072fc
+ 8011bd4:	20007308 	.word	0x20007308
 
-08011b58 <rt_interrupt_enter>:
+08011bd8 <rt_interrupt_enter>:
  * @note please don't invoke this routine in application
  *
  * @see rt_interrupt_leave
  */
 void rt_interrupt_enter(void)
 {
- 8011b58:	b508      	push	{r3, lr}
+ 8011bd8:	b508      	push	{r3, lr}
     rt_base_t level;
 
     RT_DEBUG_LOG(RT_DEBUG_IRQ, ("irq coming..., irq nest:%d\n",
                                 rt_interrupt_nest));
 
     level = rt_hw_interrupt_disable();
- 8011b5a:	f7fb fe71 	bl	800d840 <rt_hw_interrupt_disable>
+ 8011bda:	f7fb fe31 	bl	800d840 <rt_hw_interrupt_disable>
     rt_interrupt_nest ++;
- 8011b5e:	4a04      	ldr	r2, [pc, #16]	; (8011b70 <rt_interrupt_enter+0x18>)
- 8011b60:	7813      	ldrb	r3, [r2, #0]
- 8011b62:	3301      	adds	r3, #1
- 8011b64:	b2db      	uxtb	r3, r3
- 8011b66:	7013      	strb	r3, [r2, #0]
+ 8011bde:	4a04      	ldr	r2, [pc, #16]	; (8011bf0 <rt_interrupt_enter+0x18>)
+ 8011be0:	7813      	ldrb	r3, [r2, #0]
+ 8011be2:	3301      	adds	r3, #1
+ 8011be4:	b2db      	uxtb	r3, r3
+ 8011be6:	7013      	strb	r3, [r2, #0]
     RT_OBJECT_HOOK_CALL(rt_interrupt_enter_hook,());
     rt_hw_interrupt_enable(level);
- 8011b68:	f7fb fe6e 	bl	800d848 <rt_hw_interrupt_enable>
+ 8011be8:	f7fb fe2e 	bl	800d848 <rt_hw_interrupt_enable>
 }
- 8011b6c:	bd08      	pop	{r3, pc}
- 8011b6e:	bf00      	nop
- 8011b70:	20007c74 	.word	0x20007c74
+ 8011bec:	bd08      	pop	{r3, pc}
+ 8011bee:	bf00      	nop
+ 8011bf0:	20007c74 	.word	0x20007c74
 
-08011b74 <rt_interrupt_leave>:
+08011bf4 <rt_interrupt_leave>:
  * @note please don't invoke this routine in application
  *
  * @see rt_interrupt_enter
  */
 void rt_interrupt_leave(void)
 {
- 8011b74:	b508      	push	{r3, lr}
+ 8011bf4:	b508      	push	{r3, lr}
     rt_base_t level;
 
     RT_DEBUG_LOG(RT_DEBUG_IRQ, ("irq leave, irq nest:%d\n",
                                 rt_interrupt_nest));
 
     level = rt_hw_interrupt_disable();
- 8011b76:	f7fb fe63 	bl	800d840 <rt_hw_interrupt_disable>
+ 8011bf6:	f7fb fe23 	bl	800d840 <rt_hw_interrupt_disable>
     rt_interrupt_nest --;
- 8011b7a:	4a04      	ldr	r2, [pc, #16]	; (8011b8c <rt_interrupt_leave+0x18>)
- 8011b7c:	7813      	ldrb	r3, [r2, #0]
- 8011b7e:	3b01      	subs	r3, #1
- 8011b80:	b2db      	uxtb	r3, r3
- 8011b82:	7013      	strb	r3, [r2, #0]
+ 8011bfa:	4a04      	ldr	r2, [pc, #16]	; (8011c0c <rt_interrupt_leave+0x18>)
+ 8011bfc:	7813      	ldrb	r3, [r2, #0]
+ 8011bfe:	3b01      	subs	r3, #1
+ 8011c00:	b2db      	uxtb	r3, r3
+ 8011c02:	7013      	strb	r3, [r2, #0]
     RT_OBJECT_HOOK_CALL(rt_interrupt_leave_hook,());
     rt_hw_interrupt_enable(level);
- 8011b84:	f7fb fe60 	bl	800d848 <rt_hw_interrupt_enable>
+ 8011c04:	f7fb fe20 	bl	800d848 <rt_hw_interrupt_enable>
 }
- 8011b88:	bd08      	pop	{r3, pc}
- 8011b8a:	bf00      	nop
- 8011b8c:	20007c74 	.word	0x20007c74
+ 8011c08:	bd08      	pop	{r3, pc}
+ 8011c0a:	bf00      	nop
+ 8011c0c:	20007c74 	.word	0x20007c74
 
-08011b90 <thread_mutexGreen>:
+08011c10 <thread_mutexGreen>:
 //参数说明：无
 //功能概要：每10秒绿灯反转
 //内部调用：无
 //======================================================================
 void thread_mutexGreen()
 {
- 8011b90:	b508      	push	{r3, lr}
+ 8011c10:	b508      	push	{r3, lr}
      //（1）======申明局部变量==========================================
     gpio_init(LIGHT_GREEN,GPIO_OUTPUT,LIGHT_OFF);
- 8011b92:	2201      	movs	r2, #1
- 8011b94:	4611      	mov	r1, r2
- 8011b96:	f44f 7084 	mov.w	r0, #264	; 0x108
- 8011b9a:	f7fe f90d 	bl	800fdb8 <gpio_init>
+ 8011c12:	2201      	movs	r2, #1
+ 8011c14:	4611      	mov	r1, r2
+ 8011c16:	f44f 7084 	mov.w	r0, #264	; 0x108
+ 8011c1a:	f7fe f8cd 	bl	800fdb8 <gpio_init>
     uart_send_string(UART_User,(void *)"第一次进入绿灯线程！\r\n");
- 8011b9e:	490f      	ldr	r1, [pc, #60]	; (8011bdc <thread_mutexGreen+0x4c>)
- 8011ba0:	2002      	movs	r0, #2
- 8011ba2:	f7ff fb73 	bl	801128c <uart_send_string>
+ 8011c1e:	490f      	ldr	r1, [pc, #60]	; (8011c5c <thread_mutexGreen+0x4c>)
+ 8011c20:	2002      	movs	r0, #2
+ 8011c22:	f7ff fb33 	bl	801128c <uart_send_string>
     //（2）======主循环（开始）==========================================
     while (1)
     {
     	//1.锁住单色灯互斥量
     	rt_mutex_take(mutex,RT_WAITING_FOREVER);
- 8011ba6:	4c0e      	ldr	r4, [pc, #56]	; (8011be0 <thread_mutexGreen+0x50>)
- 8011ba8:	f04f 31ff 	mov.w	r1, #4294967295
- 8011bac:	6820      	ldr	r0, [r4, #0]
- 8011bae:	f7fe fa18 	bl	800ffe2 <rt_mutex_take>
+ 8011c26:	4c0e      	ldr	r4, [pc, #56]	; (8011c60 <thread_mutexGreen+0x50>)
+ 8011c28:	f04f 31ff 	mov.w	r1, #4294967295
+ 8011c2c:	6820      	ldr	r0, [r4, #0]
+ 8011c2e:	f7fe f9d8 	bl	800ffe2 <rt_mutex_take>
     	uart_send_string(UART_User,(void *)"\r\n锁定单色互斥量成功！绿灯反转，延时10秒\r\n");
- 8011bb2:	490c      	ldr	r1, [pc, #48]	; (8011be4 <thread_mutexGreen+0x54>)
- 8011bb4:	2002      	movs	r0, #2
- 8011bb6:	f7ff fb69 	bl	801128c <uart_send_string>
+ 8011c32:	490c      	ldr	r1, [pc, #48]	; (8011c64 <thread_mutexGreen+0x54>)
+ 8011c34:	2002      	movs	r0, #2
+ 8011c36:	f7ff fb29 	bl	801128c <uart_send_string>
         //2.绿灯变亮
         gpio_reverse(LIGHT_GREEN);
- 8011bba:	f44f 7084 	mov.w	r0, #264	; 0x108
- 8011bbe:	f7fe f933 	bl	800fe28 <gpio_reverse>
+ 8011c3a:	f44f 7084 	mov.w	r0, #264	; 0x108
+ 8011c3e:	f7fe f8f3 	bl	800fe28 <gpio_reverse>
         //3.延时10秒
         delay_ms(10000);
- 8011bc2:	f242 7010 	movw	r0, #10000	; 0x2710
- 8011bc6:	f7fd fbd7 	bl	800f378 <rt_thread_delay>
+ 8011c42:	f242 7010 	movw	r0, #10000	; 0x2710
+ 8011c46:	f7fd fb97 	bl	800f378 <rt_thread_delay>
     	//4.绿灯变暗
     	gpio_reverse(LIGHT_GREEN);
- 8011bca:	f44f 7084 	mov.w	r0, #264	; 0x108
- 8011bce:	f7fe f92b 	bl	800fe28 <gpio_reverse>
+ 8011c4a:	f44f 7084 	mov.w	r0, #264	; 0x108
+ 8011c4e:	f7fe f8eb 	bl	800fe28 <gpio_reverse>
     	//5.解锁单色灯互斥量
 		rt_mutex_release(mutex);
- 8011bd2:	6820      	ldr	r0, [r4, #0]
- 8011bd4:	f7fe fa91 	bl	80100fa <rt_mutex_release>
- 8011bd8:	e7e5      	b.n	8011ba6 <thread_mutexGreen+0x16>
- 8011bda:	bf00      	nop
- 8011bdc:	08012c10 	.word	0x08012c10
- 8011be0:	20007334 	.word	0x20007334
- 8011be4:	08012c28 	.word	0x08012c28
+ 8011c52:	6820      	ldr	r0, [r4, #0]
+ 8011c54:	f7fe fa51 	bl	80100fa <rt_mutex_release>
+ 8011c58:	e7e5      	b.n	8011c26 <thread_mutexGreen+0x16>
+ 8011c5a:	bf00      	nop
+ 8011c5c:	08012ccc 	.word	0x08012ccc
+ 8011c60:	20007334 	.word	0x20007334
+ 8011c64:	08012ce4 	.word	0x08012ce4
 
-08011be8 <thread_rulechoose>:
+08011c68 <thread_rulechoose>:
 //功能概要：根据接收到的命令，启动/挂起对应的线程
 //内部调用：无
 //======================================================================
 
 void thread_rulechoose()
 {
- 8011be8:	b500      	push	{lr}
- 8011bea:	b087      	sub	sp, #28
- 8011bec:	e19a      	b.n	8011f24 <thread_rulechoose+0x33c>
+ 8011c68:	b500      	push	{lr}
+ 8011c6a:	b087      	sub	sp, #28
+ 8011c6c:	e19a      	b.n	8011fa4 <thread_rulechoose+0x33c>
         uart_send_string(UART_User,(void *)"接收到事件信号\n");
         if(recvedstate==RULE_CHOOSE_EVENT)  //如果接收完成且正确
     	{
             if(gcRecvBuf[3]==CONNECT_CODE)//命令字为66，代表Pc端正和mcu取得连接
             {
                 uart_send_string(UART_User,(void*) "I can see you");//回发连接确认
- 8011bee:	499d      	ldr	r1, [pc, #628]	; (8011e64 <thread_rulechoose+0x27c>)
- 8011bf0:	2002      	movs	r0, #2
- 8011bf2:	f7ff fb4b 	bl	801128c <uart_send_string>
- 8011bf6:	e1b0      	b.n	8011f5a <thread_rulechoose+0x372>
+ 8011c6e:	499d      	ldr	r1, [pc, #628]	; (8011ee4 <thread_rulechoose+0x27c>)
+ 8011c70:	2002      	movs	r0, #2
+ 8011c72:	f7ff fb0b 	bl	801128c <uart_send_string>
+ 8011c76:	e1b0      	b.n	8011fda <thread_rulechoose+0x372>
             }
             if(gcRecvBuf[3]==RESULT_CODE)
             {
 
                 rt_thread_delete(thd_eventBlue);
- 8011bf8:	4b9b      	ldr	r3, [pc, #620]	; (8011e68 <thread_rulechoose+0x280>)
- 8011bfa:	6818      	ldr	r0, [r3, #0]
- 8011bfc:	f7fd fb20 	bl	800f240 <rt_thread_delete>
+ 8011c78:	4b9b      	ldr	r3, [pc, #620]	; (8011ee8 <thread_rulechoose+0x280>)
+ 8011c7a:	6818      	ldr	r0, [r3, #0]
+ 8011c7c:	f7fd fae0 	bl	800f240 <rt_thread_delete>
                 rt_thread_delete(thd_eventGreen);
- 8011c00:	4b9a      	ldr	r3, [pc, #616]	; (8011e6c <thread_rulechoose+0x284>)
- 8011c02:	6818      	ldr	r0, [r3, #0]
- 8011c04:	f7fd fb1c 	bl	800f240 <rt_thread_delete>
+ 8011c80:	4b9a      	ldr	r3, [pc, #616]	; (8011eec <thread_rulechoose+0x284>)
+ 8011c82:	6818      	ldr	r0, [r3, #0]
+ 8011c84:	f7fd fadc 	bl	800f240 <rt_thread_delete>
                 rt_thread_delete(thd_messagerecv);
- 8011c08:	4b99      	ldr	r3, [pc, #612]	; (8011e70 <thread_rulechoose+0x288>)
- 8011c0a:	6818      	ldr	r0, [r3, #0]
- 8011c0c:	f7fd fb18 	bl	800f240 <rt_thread_delete>
+ 8011c88:	4b99      	ldr	r3, [pc, #612]	; (8011ef0 <thread_rulechoose+0x288>)
+ 8011c8a:	6818      	ldr	r0, [r3, #0]
+ 8011c8c:	f7fd fad8 	bl	800f240 <rt_thread_delete>
                 rt_thread_delete(thd_SPThread1);	
- 8011c10:	4b98      	ldr	r3, [pc, #608]	; (8011e74 <thread_rulechoose+0x28c>)
- 8011c12:	6818      	ldr	r0, [r3, #0]
- 8011c14:	f7fd fb14 	bl	800f240 <rt_thread_delete>
+ 8011c90:	4b98      	ldr	r3, [pc, #608]	; (8011ef4 <thread_rulechoose+0x28c>)
+ 8011c92:	6818      	ldr	r0, [r3, #0]
+ 8011c94:	f7fd fad4 	bl	800f240 <rt_thread_delete>
                 rt_thread_delete(thd_SPThread2);
- 8011c18:	4b97      	ldr	r3, [pc, #604]	; (8011e78 <thread_rulechoose+0x290>)
- 8011c1a:	6818      	ldr	r0, [r3, #0]
- 8011c1c:	f7fd fb10 	bl	800f240 <rt_thread_delete>
+ 8011c98:	4b97      	ldr	r3, [pc, #604]	; (8011ef8 <thread_rulechoose+0x290>)
+ 8011c9a:	6818      	ldr	r0, [r3, #0]
+ 8011c9c:	f7fd fad0 	bl	800f240 <rt_thread_delete>
                 rt_thread_delete(thd_SPThread3);
- 8011c20:	4b96      	ldr	r3, [pc, #600]	; (8011e7c <thread_rulechoose+0x294>)
- 8011c22:	6818      	ldr	r0, [r3, #0]
- 8011c24:	f7fd fb0c 	bl	800f240 <rt_thread_delete>
+ 8011ca0:	4b96      	ldr	r3, [pc, #600]	; (8011efc <thread_rulechoose+0x294>)
+ 8011ca2:	6818      	ldr	r0, [r3, #0]
+ 8011ca4:	f7fd facc 	bl	800f240 <rt_thread_delete>
                 rt_thread_delete(thd_mutexRed);
- 8011c28:	4b95      	ldr	r3, [pc, #596]	; (8011e80 <thread_rulechoose+0x298>)
- 8011c2a:	6818      	ldr	r0, [r3, #0]
- 8011c2c:	f7fd fb08 	bl	800f240 <rt_thread_delete>
+ 8011ca8:	4b95      	ldr	r3, [pc, #596]	; (8011f00 <thread_rulechoose+0x298>)
+ 8011caa:	6818      	ldr	r0, [r3, #0]
+ 8011cac:	f7fd fac8 	bl	800f240 <rt_thread_delete>
                 rt_thread_delete(thd_mutexGreen);
- 8011c30:	4b94      	ldr	r3, [pc, #592]	; (8011e84 <thread_rulechoose+0x29c>)
- 8011c32:	6818      	ldr	r0, [r3, #0]
- 8011c34:	f7fd fb04 	bl	800f240 <rt_thread_delete>
+ 8011cb0:	4b94      	ldr	r3, [pc, #592]	; (8011f04 <thread_rulechoose+0x29c>)
+ 8011cb2:	6818      	ldr	r0, [r3, #0]
+ 8011cb4:	f7fd fac4 	bl	800f240 <rt_thread_delete>
                 rt_thread_delete(thd_mutexBlue);
- 8011c38:	4b93      	ldr	r3, [pc, #588]	; (8011e88 <thread_rulechoose+0x2a0>)
- 8011c3a:	6818      	ldr	r0, [r3, #0]
- 8011c3c:	f7fd fb00 	bl	800f240 <rt_thread_delete>
+ 8011cb8:	4b93      	ldr	r3, [pc, #588]	; (8011f08 <thread_rulechoose+0x2a0>)
+ 8011cba:	6818      	ldr	r0, [r3, #0]
+ 8011cbc:	f7fd fac0 	bl	800f240 <rt_thread_delete>
                 rt_thread_delete(thd_delayBlue);
- 8011c40:	4b92      	ldr	r3, [pc, #584]	; (8011e8c <thread_rulechoose+0x2a4>)
- 8011c42:	6818      	ldr	r0, [r3, #0]
- 8011c44:	f7fd fafc 	bl	800f240 <rt_thread_delete>
+ 8011cc0:	4b92      	ldr	r3, [pc, #584]	; (8011f0c <thread_rulechoose+0x2a4>)
+ 8011cc2:	6818      	ldr	r0, [r3, #0]
+ 8011cc4:	f7fd fabc 	bl	800f240 <rt_thread_delete>
                 rt_thread_delete(thd_delayGreen);
- 8011c48:	4b91      	ldr	r3, [pc, #580]	; (8011e90 <thread_rulechoose+0x2a8>)
- 8011c4a:	6818      	ldr	r0, [r3, #0]
- 8011c4c:	f7fd faf8 	bl	800f240 <rt_thread_delete>
+ 8011cc8:	4b91      	ldr	r3, [pc, #580]	; (8011f10 <thread_rulechoose+0x2a8>)
+ 8011cca:	6818      	ldr	r0, [r3, #0]
+ 8011ccc:	f7fd fab8 	bl	800f240 <rt_thread_delete>
                 rt_thread_delete(thd_delayRed);
- 8011c50:	4b90      	ldr	r3, [pc, #576]	; (8011e94 <thread_rulechoose+0x2ac>)
- 8011c52:	6818      	ldr	r0, [r3, #0]
- 8011c54:	f7fd faf4 	bl	800f240 <rt_thread_delete>
- 8011c58:	e185      	b.n	8011f66 <thread_rulechoose+0x37e>
+ 8011cd0:	4b90      	ldr	r3, [pc, #576]	; (8011f14 <thread_rulechoose+0x2ac>)
+ 8011cd2:	6818      	ldr	r0, [r3, #0]
+ 8011cd4:	f7fd fab4 	bl	800f240 <rt_thread_delete>
+ 8011cd8:	e185      	b.n	8011fe6 <thread_rulechoose+0x37e>
 
             }
 
     		if(gcRecvBuf[7]==EVENT_CODE) //命令字为90，代表“事件功能”
             {
                 if(gcRecvBuf[8]==0x01)//命令参数为01，代表启动该功能，传递事件信号把小灯线程从阻塞队列移到就绪队列
- 8011c5a:	4b8f      	ldr	r3, [pc, #572]	; (8011e98 <thread_rulechoose+0x2b0>)
- 8011c5c:	7a1b      	ldrb	r3, [r3, #8]
- 8011c5e:	b2db      	uxtb	r3, r3
- 8011c60:	2b01      	cmp	r3, #1
- 8011c62:	d023      	beq.n	8011cac <thread_rulechoose+0xc4>
+ 8011cda:	4b8f      	ldr	r3, [pc, #572]	; (8011f18 <thread_rulechoose+0x2b0>)
+ 8011cdc:	7a1b      	ldrb	r3, [r3, #8]
+ 8011cde:	b2db      	uxtb	r3, r3
+ 8011ce0:	2b01      	cmp	r3, #1
+ 8011ce2:	d023      	beq.n	8011d2c <thread_rulechoose+0xc4>
                     rt_thread_startup(thd_eventBlue);
                     rt_thread_startup(thd_eventGreen);
                     rt_event_send(EventWord,BLUE_LIGHT_EVENT);
 
                 }
                 if(gcRecvBuf[8]==0x00)//命令参数为00，代表关闭该功能，重新启动小灯线程，把小灯线程移入阻塞队列
- 8011c64:	4b8c      	ldr	r3, [pc, #560]	; (8011e98 <thread_rulechoose+0x2b0>)
- 8011c66:	7a1b      	ldrb	r3, [r3, #8]
- 8011c68:	2b00      	cmp	r3, #0
- 8011c6a:	f040 8182 	bne.w	8011f72 <thread_rulechoose+0x38a>
+ 8011ce4:	4b8c      	ldr	r3, [pc, #560]	; (8011f18 <thread_rulechoose+0x2b0>)
+ 8011ce6:	7a1b      	ldrb	r3, [r3, #8]
+ 8011ce8:	2b00      	cmp	r3, #0
+ 8011cea:	f040 8182 	bne.w	8011ff2 <thread_rulechoose+0x38a>
                 {
                     uart_send_string(UART_User,(void *)"接收到事件功能结束命令，事件功能模块结束");
- 8011c6e:	498b      	ldr	r1, [pc, #556]	; (8011e9c <thread_rulechoose+0x2b4>)
- 8011c70:	2002      	movs	r0, #2
- 8011c72:	f7ff fb0b 	bl	801128c <uart_send_string>
+ 8011cee:	498b      	ldr	r1, [pc, #556]	; (8011f1c <thread_rulechoose+0x2b4>)
+ 8011cf0:	2002      	movs	r0, #2
+ 8011cf2:	f7ff facb 	bl	801128c <uart_send_string>
                     rt_thread_detach(thd_eventBlue);
- 8011c76:	4b7c      	ldr	r3, [pc, #496]	; (8011e68 <thread_rulechoose+0x280>)
- 8011c78:	6818      	ldr	r0, [r3, #0]
- 8011c7a:	f7fd fa8b 	bl	800f194 <rt_thread_detach>
+ 8011cf6:	4b7c      	ldr	r3, [pc, #496]	; (8011ee8 <thread_rulechoose+0x280>)
+ 8011cf8:	6818      	ldr	r0, [r3, #0]
+ 8011cfa:	f7fd fa4b 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_eventGreen);
- 8011c7e:	4b7b      	ldr	r3, [pc, #492]	; (8011e6c <thread_rulechoose+0x284>)
- 8011c80:	6818      	ldr	r0, [r3, #0]
- 8011c82:	f7fd fa87 	bl	800f194 <rt_thread_detach>
+ 8011cfe:	4b7b      	ldr	r3, [pc, #492]	; (8011eec <thread_rulechoose+0x284>)
+ 8011d00:	6818      	ldr	r0, [r3, #0]
+ 8011d02:	f7fd fa47 	bl	800f194 <rt_thread_detach>
                     gpio_init(LIGHT_BLUE,GPIO_OUTPUT,LIGHT_OFF);
- 8011c86:	2201      	movs	r2, #1
- 8011c88:	4611      	mov	r1, r2
- 8011c8a:	f240 1009 	movw	r0, #265	; 0x109
- 8011c8e:	f7fe f893 	bl	800fdb8 <gpio_init>
+ 8011d06:	2201      	movs	r2, #1
+ 8011d08:	4611      	mov	r1, r2
+ 8011d0a:	f240 1009 	movw	r0, #265	; 0x109
+ 8011d0e:	f7fe f853 	bl	800fdb8 <gpio_init>
                     gpio_init(LIGHT_GREEN,GPIO_OUTPUT,LIGHT_OFF);
- 8011c92:	2201      	movs	r2, #1
- 8011c94:	4611      	mov	r1, r2
- 8011c96:	f44f 7084 	mov.w	r0, #264	; 0x108
- 8011c9a:	f7fe f88d 	bl	800fdb8 <gpio_init>
+ 8011d12:	2201      	movs	r2, #1
+ 8011d14:	4611      	mov	r1, r2
+ 8011d16:	f44f 7084 	mov.w	r0, #264	; 0x108
+ 8011d1a:	f7fe f84d 	bl	800fdb8 <gpio_init>
                     gpio_init(LIGHT_RED,GPIO_OUTPUT,LIGHT_OFF);
- 8011c9e:	2201      	movs	r2, #1
- 8011ca0:	4611      	mov	r1, r2
- 8011ca2:	f240 1007 	movw	r0, #263	; 0x107
- 8011ca6:	f7fe f887 	bl	800fdb8 <gpio_init>
- 8011caa:	e162      	b.n	8011f72 <thread_rulechoose+0x38a>
+ 8011d1e:	2201      	movs	r2, #1
+ 8011d20:	4611      	mov	r1, r2
+ 8011d22:	f240 1007 	movw	r0, #263	; 0x107
+ 8011d26:	f7fe f847 	bl	800fdb8 <gpio_init>
+ 8011d2a:	e162      	b.n	8011ff2 <thread_rulechoose+0x38a>
                     rt_thread_detach(thd_messagerecv);
- 8011cac:	4b70      	ldr	r3, [pc, #448]	; (8011e70 <thread_rulechoose+0x288>)
- 8011cae:	6818      	ldr	r0, [r3, #0]
- 8011cb0:	f7fd fa70 	bl	800f194 <rt_thread_detach>
+ 8011d2c:	4b70      	ldr	r3, [pc, #448]	; (8011ef0 <thread_rulechoose+0x288>)
+ 8011d2e:	6818      	ldr	r0, [r3, #0]
+ 8011d30:	f7fd fa30 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_SPThread1);	
- 8011cb4:	4b6f      	ldr	r3, [pc, #444]	; (8011e74 <thread_rulechoose+0x28c>)
- 8011cb6:	6818      	ldr	r0, [r3, #0]
- 8011cb8:	f7fd fa6c 	bl	800f194 <rt_thread_detach>
+ 8011d34:	4b6f      	ldr	r3, [pc, #444]	; (8011ef4 <thread_rulechoose+0x28c>)
+ 8011d36:	6818      	ldr	r0, [r3, #0]
+ 8011d38:	f7fd fa2c 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_SPThread2);
- 8011cbc:	4b6e      	ldr	r3, [pc, #440]	; (8011e78 <thread_rulechoose+0x290>)
- 8011cbe:	6818      	ldr	r0, [r3, #0]
- 8011cc0:	f7fd fa68 	bl	800f194 <rt_thread_detach>
+ 8011d3c:	4b6e      	ldr	r3, [pc, #440]	; (8011ef8 <thread_rulechoose+0x290>)
+ 8011d3e:	6818      	ldr	r0, [r3, #0]
+ 8011d40:	f7fd fa28 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_SPThread3);
- 8011cc4:	4b6d      	ldr	r3, [pc, #436]	; (8011e7c <thread_rulechoose+0x294>)
- 8011cc6:	6818      	ldr	r0, [r3, #0]
- 8011cc8:	f7fd fa64 	bl	800f194 <rt_thread_detach>
+ 8011d44:	4b6d      	ldr	r3, [pc, #436]	; (8011efc <thread_rulechoose+0x294>)
+ 8011d46:	6818      	ldr	r0, [r3, #0]
+ 8011d48:	f7fd fa24 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_mutexRed);
- 8011ccc:	4b6c      	ldr	r3, [pc, #432]	; (8011e80 <thread_rulechoose+0x298>)
- 8011cce:	6818      	ldr	r0, [r3, #0]
- 8011cd0:	f7fd fa60 	bl	800f194 <rt_thread_detach>
+ 8011d4c:	4b6c      	ldr	r3, [pc, #432]	; (8011f00 <thread_rulechoose+0x298>)
+ 8011d4e:	6818      	ldr	r0, [r3, #0]
+ 8011d50:	f7fd fa20 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_mutexGreen);
- 8011cd4:	4b6b      	ldr	r3, [pc, #428]	; (8011e84 <thread_rulechoose+0x29c>)
- 8011cd6:	6818      	ldr	r0, [r3, #0]
- 8011cd8:	f7fd fa5c 	bl	800f194 <rt_thread_detach>
+ 8011d54:	4b6b      	ldr	r3, [pc, #428]	; (8011f04 <thread_rulechoose+0x29c>)
+ 8011d56:	6818      	ldr	r0, [r3, #0]
+ 8011d58:	f7fd fa1c 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_mutexBlue);
- 8011cdc:	4b6a      	ldr	r3, [pc, #424]	; (8011e88 <thread_rulechoose+0x2a0>)
- 8011cde:	6818      	ldr	r0, [r3, #0]
- 8011ce0:	f7fd fa58 	bl	800f194 <rt_thread_detach>
+ 8011d5c:	4b6a      	ldr	r3, [pc, #424]	; (8011f08 <thread_rulechoose+0x2a0>)
+ 8011d5e:	6818      	ldr	r0, [r3, #0]
+ 8011d60:	f7fd fa18 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_delayBlue);
- 8011ce4:	4b69      	ldr	r3, [pc, #420]	; (8011e8c <thread_rulechoose+0x2a4>)
- 8011ce6:	6818      	ldr	r0, [r3, #0]
- 8011ce8:	f7fd fa54 	bl	800f194 <rt_thread_detach>
+ 8011d64:	4b69      	ldr	r3, [pc, #420]	; (8011f0c <thread_rulechoose+0x2a4>)
+ 8011d66:	6818      	ldr	r0, [r3, #0]
+ 8011d68:	f7fd fa14 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_delayGreen);
- 8011cec:	4b68      	ldr	r3, [pc, #416]	; (8011e90 <thread_rulechoose+0x2a8>)
- 8011cee:	6818      	ldr	r0, [r3, #0]
- 8011cf0:	f7fd fa50 	bl	800f194 <rt_thread_detach>
+ 8011d6c:	4b68      	ldr	r3, [pc, #416]	; (8011f10 <thread_rulechoose+0x2a8>)
+ 8011d6e:	6818      	ldr	r0, [r3, #0]
+ 8011d70:	f7fd fa10 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_delayRed);
- 8011cf4:	4b67      	ldr	r3, [pc, #412]	; (8011e94 <thread_rulechoose+0x2ac>)
- 8011cf6:	6818      	ldr	r0, [r3, #0]
- 8011cf8:	f7fd fa4c 	bl	800f194 <rt_thread_detach>
+ 8011d74:	4b67      	ldr	r3, [pc, #412]	; (8011f14 <thread_rulechoose+0x2ac>)
+ 8011d76:	6818      	ldr	r0, [r3, #0]
+ 8011d78:	f7fd fa0c 	bl	800f194 <rt_thread_detach>
                     rt_thread_startup(thd_eventBlue);
- 8011cfc:	4b5a      	ldr	r3, [pc, #360]	; (8011e68 <thread_rulechoose+0x280>)
- 8011cfe:	6818      	ldr	r0, [r3, #0]
- 8011d00:	f7fd fb62 	bl	800f3c8 <rt_thread_startup>
+ 8011d7c:	4b5a      	ldr	r3, [pc, #360]	; (8011ee8 <thread_rulechoose+0x280>)
+ 8011d7e:	6818      	ldr	r0, [r3, #0]
+ 8011d80:	f7fd fb22 	bl	800f3c8 <rt_thread_startup>
                     rt_thread_startup(thd_eventGreen);
- 8011d04:	4b59      	ldr	r3, [pc, #356]	; (8011e6c <thread_rulechoose+0x284>)
- 8011d06:	6818      	ldr	r0, [r3, #0]
- 8011d08:	f7fd fb5e 	bl	800f3c8 <rt_thread_startup>
+ 8011d84:	4b59      	ldr	r3, [pc, #356]	; (8011eec <thread_rulechoose+0x284>)
+ 8011d86:	6818      	ldr	r0, [r3, #0]
+ 8011d88:	f7fd fb1e 	bl	800f3c8 <rt_thread_startup>
                     rt_event_send(EventWord,BLUE_LIGHT_EVENT);
- 8011d0c:	2108      	movs	r1, #8
- 8011d0e:	4b64      	ldr	r3, [pc, #400]	; (8011ea0 <thread_rulechoose+0x2b8>)
- 8011d10:	6818      	ldr	r0, [r3, #0]
- 8011d12:	f7fe fa4c 	bl	80101ae <rt_event_send>
- 8011d16:	e7a5      	b.n	8011c64 <thread_rulechoose+0x7c>
+ 8011d8c:	2108      	movs	r1, #8
+ 8011d8e:	4b64      	ldr	r3, [pc, #400]	; (8011f20 <thread_rulechoose+0x2b8>)
+ 8011d90:	6818      	ldr	r0, [r3, #0]
+ 8011d92:	f7fe fa0c 	bl	80101ae <rt_event_send>
+ 8011d96:	e7a5      	b.n	8011ce4 <thread_rulechoose+0x7c>
 
             }
 
             if(gcRecvBuf[7]==MESSAGE_CODE) //命令字为91，代表“消息队列功能”
             {
                 rt_thread_detach(thd_eventBlue);
- 8011d18:	4b53      	ldr	r3, [pc, #332]	; (8011e68 <thread_rulechoose+0x280>)
- 8011d1a:	6818      	ldr	r0, [r3, #0]
- 8011d1c:	f7fd fa3a 	bl	800f194 <rt_thread_detach>
+ 8011d98:	4b53      	ldr	r3, [pc, #332]	; (8011ee8 <thread_rulechoose+0x280>)
+ 8011d9a:	6818      	ldr	r0, [r3, #0]
+ 8011d9c:	f7fd f9fa 	bl	800f194 <rt_thread_detach>
                 rt_thread_detach(thd_eventGreen);
- 8011d20:	4b52      	ldr	r3, [pc, #328]	; (8011e6c <thread_rulechoose+0x284>)
- 8011d22:	6818      	ldr	r0, [r3, #0]
- 8011d24:	f7fd fa36 	bl	800f194 <rt_thread_detach>
+ 8011da0:	4b52      	ldr	r3, [pc, #328]	; (8011eec <thread_rulechoose+0x284>)
+ 8011da2:	6818      	ldr	r0, [r3, #0]
+ 8011da4:	f7fd f9f6 	bl	800f194 <rt_thread_detach>
                 rt_thread_detach(thd_SPThread1);	
- 8011d28:	4b52      	ldr	r3, [pc, #328]	; (8011e74 <thread_rulechoose+0x28c>)
- 8011d2a:	6818      	ldr	r0, [r3, #0]
- 8011d2c:	f7fd fa32 	bl	800f194 <rt_thread_detach>
+ 8011da8:	4b52      	ldr	r3, [pc, #328]	; (8011ef4 <thread_rulechoose+0x28c>)
+ 8011daa:	6818      	ldr	r0, [r3, #0]
+ 8011dac:	f7fd f9f2 	bl	800f194 <rt_thread_detach>
                 rt_thread_detach(thd_SPThread2);
- 8011d30:	4b51      	ldr	r3, [pc, #324]	; (8011e78 <thread_rulechoose+0x290>)
- 8011d32:	6818      	ldr	r0, [r3, #0]
- 8011d34:	f7fd fa2e 	bl	800f194 <rt_thread_detach>
+ 8011db0:	4b51      	ldr	r3, [pc, #324]	; (8011ef8 <thread_rulechoose+0x290>)
+ 8011db2:	6818      	ldr	r0, [r3, #0]
+ 8011db4:	f7fd f9ee 	bl	800f194 <rt_thread_detach>
                 rt_thread_detach(thd_SPThread3);
- 8011d38:	4b50      	ldr	r3, [pc, #320]	; (8011e7c <thread_rulechoose+0x294>)
- 8011d3a:	6818      	ldr	r0, [r3, #0]
- 8011d3c:	f7fd fa2a 	bl	800f194 <rt_thread_detach>
+ 8011db8:	4b50      	ldr	r3, [pc, #320]	; (8011efc <thread_rulechoose+0x294>)
+ 8011dba:	6818      	ldr	r0, [r3, #0]
+ 8011dbc:	f7fd f9ea 	bl	800f194 <rt_thread_detach>
                 rt_thread_detach(thd_mutexRed);
- 8011d40:	4b4f      	ldr	r3, [pc, #316]	; (8011e80 <thread_rulechoose+0x298>)
- 8011d42:	6818      	ldr	r0, [r3, #0]
- 8011d44:	f7fd fa26 	bl	800f194 <rt_thread_detach>
+ 8011dc0:	4b4f      	ldr	r3, [pc, #316]	; (8011f00 <thread_rulechoose+0x298>)
+ 8011dc2:	6818      	ldr	r0, [r3, #0]
+ 8011dc4:	f7fd f9e6 	bl	800f194 <rt_thread_detach>
                 rt_thread_detach(thd_mutexGreen);
- 8011d48:	4b4e      	ldr	r3, [pc, #312]	; (8011e84 <thread_rulechoose+0x29c>)
- 8011d4a:	6818      	ldr	r0, [r3, #0]
- 8011d4c:	f7fd fa22 	bl	800f194 <rt_thread_detach>
+ 8011dc8:	4b4e      	ldr	r3, [pc, #312]	; (8011f04 <thread_rulechoose+0x29c>)
+ 8011dca:	6818      	ldr	r0, [r3, #0]
+ 8011dcc:	f7fd f9e2 	bl	800f194 <rt_thread_detach>
                 rt_thread_detach(thd_mutexBlue);
- 8011d50:	4b4d      	ldr	r3, [pc, #308]	; (8011e88 <thread_rulechoose+0x2a0>)
- 8011d52:	6818      	ldr	r0, [r3, #0]
- 8011d54:	f7fd fa1e 	bl	800f194 <rt_thread_detach>
+ 8011dd0:	4b4d      	ldr	r3, [pc, #308]	; (8011f08 <thread_rulechoose+0x2a0>)
+ 8011dd2:	6818      	ldr	r0, [r3, #0]
+ 8011dd4:	f7fd f9de 	bl	800f194 <rt_thread_detach>
                 rt_thread_detach(thd_delayBlue);
- 8011d58:	4b4c      	ldr	r3, [pc, #304]	; (8011e8c <thread_rulechoose+0x2a4>)
- 8011d5a:	6818      	ldr	r0, [r3, #0]
- 8011d5c:	f7fd fa1a 	bl	800f194 <rt_thread_detach>
+ 8011dd8:	4b4c      	ldr	r3, [pc, #304]	; (8011f0c <thread_rulechoose+0x2a4>)
+ 8011dda:	6818      	ldr	r0, [r3, #0]
+ 8011ddc:	f7fd f9da 	bl	800f194 <rt_thread_detach>
                 rt_thread_detach(thd_delayGreen);
- 8011d60:	4b4b      	ldr	r3, [pc, #300]	; (8011e90 <thread_rulechoose+0x2a8>)
- 8011d62:	6818      	ldr	r0, [r3, #0]
- 8011d64:	f7fd fa16 	bl	800f194 <rt_thread_detach>
+ 8011de0:	4b4b      	ldr	r3, [pc, #300]	; (8011f10 <thread_rulechoose+0x2a8>)
+ 8011de2:	6818      	ldr	r0, [r3, #0]
+ 8011de4:	f7fd f9d6 	bl	800f194 <rt_thread_detach>
                 rt_thread_detach(thd_delayRed);
- 8011d68:	4b4a      	ldr	r3, [pc, #296]	; (8011e94 <thread_rulechoose+0x2ac>)
- 8011d6a:	6818      	ldr	r0, [r3, #0]
- 8011d6c:	f7fd fa12 	bl	800f194 <rt_thread_detach>
+ 8011de8:	4b4a      	ldr	r3, [pc, #296]	; (8011f14 <thread_rulechoose+0x2ac>)
+ 8011dea:	6818      	ldr	r0, [r3, #0]
+ 8011dec:	f7fd f9d2 	bl	800f194 <rt_thread_detach>
 
 
                 rt_thread_startup(thd_messagerecv);//启动消息队列线程
- 8011d70:	4b3f      	ldr	r3, [pc, #252]	; (8011e70 <thread_rulechoose+0x288>)
- 8011d72:	6818      	ldr	r0, [r3, #0]
- 8011d74:	f7fd fb28 	bl	800f3c8 <rt_thread_startup>
+ 8011df0:	4b3f      	ldr	r3, [pc, #252]	; (8011ef0 <thread_rulechoose+0x288>)
+ 8011df2:	6818      	ldr	r0, [r3, #0]
+ 8011df4:	f7fd fae8 	bl	800f3c8 <rt_thread_startup>
                 //取出收到的数据作为一个消息
 			    for(int i=0;i<8;i++)
- 8011d78:	2300      	movs	r3, #0
- 8011d7a:	2b07      	cmp	r3, #7
- 8011d7c:	dc09      	bgt.n	8011d92 <thread_rulechoose+0x1aa>
+ 8011df8:	2300      	movs	r3, #0
+ 8011dfa:	2b07      	cmp	r3, #7
+ 8011dfc:	dc09      	bgt.n	8011e12 <thread_rulechoose+0x1aa>
                 {
                     recvData[i] = gcRecvBuf[i+9];
- 8011d7e:	f103 0209 	add.w	r2, r3, #9
- 8011d82:	4945      	ldr	r1, [pc, #276]	; (8011e98 <thread_rulechoose+0x2b0>)
- 8011d84:	5c89      	ldrb	r1, [r1, r2]
- 8011d86:	aa06      	add	r2, sp, #24
- 8011d88:	441a      	add	r2, r3
- 8011d8a:	f802 1c10 	strb.w	r1, [r2, #-16]
+ 8011dfe:	f103 0209 	add.w	r2, r3, #9
+ 8011e02:	4945      	ldr	r1, [pc, #276]	; (8011f18 <thread_rulechoose+0x2b0>)
+ 8011e04:	5c89      	ldrb	r1, [r1, r2]
+ 8011e06:	aa06      	add	r2, sp, #24
+ 8011e08:	441a      	add	r2, r3
+ 8011e0a:	f802 1c10 	strb.w	r1, [r2, #-16]
 			    for(int i=0;i<8;i++)
- 8011d8e:	3301      	adds	r3, #1
- 8011d90:	e7f3      	b.n	8011d7a <thread_rulechoose+0x192>
+ 8011e0e:	3301      	adds	r3, #1
+ 8011e10:	e7f3      	b.n	8011dfa <thread_rulechoose+0x192>
 
                 }
 				
 		        //将该消息存放到消息队列
 			    rt_mq_send(mq,recvData,sizeof(recvData));
- 8011d92:	2209      	movs	r2, #9
- 8011d94:	a902      	add	r1, sp, #8
- 8011d96:	4b43      	ldr	r3, [pc, #268]	; (8011ea4 <thread_rulechoose+0x2bc>)
- 8011d98:	6818      	ldr	r0, [r3, #0]
- 8011d9a:	f7fe fb3e 	bl	801041a <rt_mq_send>
- 8011d9e:	e0ee      	b.n	8011f7e <thread_rulechoose+0x396>
+ 8011e12:	2209      	movs	r2, #9
+ 8011e14:	a902      	add	r1, sp, #8
+ 8011e16:	4b43      	ldr	r3, [pc, #268]	; (8011f24 <thread_rulechoose+0x2bc>)
+ 8011e18:	6818      	ldr	r0, [r3, #0]
+ 8011e1a:	f7fe fafe 	bl	801041a <rt_mq_send>
+ 8011e1e:	e0ee      	b.n	8011ffe <thread_rulechoose+0x396>
 
             
 
             if(gcRecvBuf[7]==SEM_CODE) //命令字为92，代表“信号量功能”
             {
                 if(gcRecvBuf[8]==0x01)//命令参数为01，代表启动该功能
- 8011da0:	4b3d      	ldr	r3, [pc, #244]	; (8011e98 <thread_rulechoose+0x2b0>)
- 8011da2:	7a1b      	ldrb	r3, [r3, #8]
- 8011da4:	b2db      	uxtb	r3, r3
- 8011da6:	2b01      	cmp	r3, #1
- 8011da8:	d027      	beq.n	8011dfa <thread_rulechoose+0x212>
+ 8011e20:	4b3d      	ldr	r3, [pc, #244]	; (8011f18 <thread_rulechoose+0x2b0>)
+ 8011e22:	7a1b      	ldrb	r3, [r3, #8]
+ 8011e24:	b2db      	uxtb	r3, r3
+ 8011e26:	2b01      	cmp	r3, #1
+ 8011e28:	d027      	beq.n	8011e7a <thread_rulechoose+0x212>
 	                rt_thread_startup(thd_SPThread2);//启动信号量线程2
 	                rt_thread_startup(thd_SPThread3);//启动信号量线程
 
 
                 }
                 if(gcRecvBuf[8]==0x00)//命令参数为00，代表关闭该功能
- 8011daa:	4b3b      	ldr	r3, [pc, #236]	; (8011e98 <thread_rulechoose+0x2b0>)
- 8011dac:	7a1b      	ldrb	r3, [r3, #8]
- 8011dae:	2b00      	cmp	r3, #0
- 8011db0:	f040 80eb 	bne.w	8011f8a <thread_rulechoose+0x3a2>
+ 8011e2a:	4b3b      	ldr	r3, [pc, #236]	; (8011f18 <thread_rulechoose+0x2b0>)
+ 8011e2c:	7a1b      	ldrb	r3, [r3, #8]
+ 8011e2e:	2b00      	cmp	r3, #0
+ 8011e30:	f040 80eb 	bne.w	801200a <thread_rulechoose+0x3a2>
                 {
                     uart_send_string(UART_User,(void *)"接收到信号量功能结束命令，信号量功能模块结束");
- 8011db4:	493c      	ldr	r1, [pc, #240]	; (8011ea8 <thread_rulechoose+0x2c0>)
- 8011db6:	2002      	movs	r0, #2
- 8011db8:	f7ff fa68 	bl	801128c <uart_send_string>
+ 8011e34:	493c      	ldr	r1, [pc, #240]	; (8011f28 <thread_rulechoose+0x2c0>)
+ 8011e36:	2002      	movs	r0, #2
+ 8011e38:	f7ff fa28 	bl	801128c <uart_send_string>
                     rt_thread_detach(thd_SPThread1);	
- 8011dbc:	4b2d      	ldr	r3, [pc, #180]	; (8011e74 <thread_rulechoose+0x28c>)
- 8011dbe:	6818      	ldr	r0, [r3, #0]
- 8011dc0:	f7fd f9e8 	bl	800f194 <rt_thread_detach>
+ 8011e3c:	4b2d      	ldr	r3, [pc, #180]	; (8011ef4 <thread_rulechoose+0x28c>)
+ 8011e3e:	6818      	ldr	r0, [r3, #0]
+ 8011e40:	f7fd f9a8 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_SPThread2);
- 8011dc4:	4b2c      	ldr	r3, [pc, #176]	; (8011e78 <thread_rulechoose+0x290>)
- 8011dc6:	6818      	ldr	r0, [r3, #0]
- 8011dc8:	f7fd f9e4 	bl	800f194 <rt_thread_detach>
+ 8011e44:	4b2c      	ldr	r3, [pc, #176]	; (8011ef8 <thread_rulechoose+0x290>)
+ 8011e46:	6818      	ldr	r0, [r3, #0]
+ 8011e48:	f7fd f9a4 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_SPThread3);
- 8011dcc:	4b2b      	ldr	r3, [pc, #172]	; (8011e7c <thread_rulechoose+0x294>)
- 8011dce:	6818      	ldr	r0, [r3, #0]
- 8011dd0:	f7fd f9e0 	bl	800f194 <rt_thread_detach>
+ 8011e4c:	4b2b      	ldr	r3, [pc, #172]	; (8011efc <thread_rulechoose+0x294>)
+ 8011e4e:	6818      	ldr	r0, [r3, #0]
+ 8011e50:	f7fd f9a0 	bl	800f194 <rt_thread_detach>
                     gpio_init(LIGHT_BLUE,GPIO_OUTPUT,LIGHT_OFF);
- 8011dd4:	2201      	movs	r2, #1
- 8011dd6:	4611      	mov	r1, r2
- 8011dd8:	f240 1009 	movw	r0, #265	; 0x109
- 8011ddc:	f7fd ffec 	bl	800fdb8 <gpio_init>
+ 8011e54:	2201      	movs	r2, #1
+ 8011e56:	4611      	mov	r1, r2
+ 8011e58:	f240 1009 	movw	r0, #265	; 0x109
+ 8011e5c:	f7fd ffac 	bl	800fdb8 <gpio_init>
                     gpio_init(LIGHT_GREEN,GPIO_OUTPUT,LIGHT_OFF);
- 8011de0:	2201      	movs	r2, #1
- 8011de2:	4611      	mov	r1, r2
- 8011de4:	f44f 7084 	mov.w	r0, #264	; 0x108
- 8011de8:	f7fd ffe6 	bl	800fdb8 <gpio_init>
+ 8011e60:	2201      	movs	r2, #1
+ 8011e62:	4611      	mov	r1, r2
+ 8011e64:	f44f 7084 	mov.w	r0, #264	; 0x108
+ 8011e68:	f7fd ffa6 	bl	800fdb8 <gpio_init>
                     gpio_init(LIGHT_RED,GPIO_OUTPUT,LIGHT_OFF);
- 8011dec:	2201      	movs	r2, #1
- 8011dee:	4611      	mov	r1, r2
- 8011df0:	f240 1007 	movw	r0, #263	; 0x107
- 8011df4:	f7fd ffe0 	bl	800fdb8 <gpio_init>
- 8011df8:	e0c7      	b.n	8011f8a <thread_rulechoose+0x3a2>
+ 8011e6c:	2201      	movs	r2, #1
+ 8011e6e:	4611      	mov	r1, r2
+ 8011e70:	f240 1007 	movw	r0, #263	; 0x107
+ 8011e74:	f7fd ffa0 	bl	800fdb8 <gpio_init>
+ 8011e78:	e0c7      	b.n	801200a <thread_rulechoose+0x3a2>
                     uart_send_string(UART_User,(void *)"接收到信号量功能开启命令，信号量功能模块开启\n");
- 8011dfa:	492c      	ldr	r1, [pc, #176]	; (8011eac <thread_rulechoose+0x2c4>)
- 8011dfc:	2002      	movs	r0, #2
- 8011dfe:	f7ff fa45 	bl	801128c <uart_send_string>
+ 8011e7a:	492c      	ldr	r1, [pc, #176]	; (8011f2c <thread_rulechoose+0x2c4>)
+ 8011e7c:	2002      	movs	r0, #2
+ 8011e7e:	f7ff fa05 	bl	801128c <uart_send_string>
                     rt_thread_detach(thd_eventBlue);
- 8011e02:	4b19      	ldr	r3, [pc, #100]	; (8011e68 <thread_rulechoose+0x280>)
- 8011e04:	6818      	ldr	r0, [r3, #0]
- 8011e06:	f7fd f9c5 	bl	800f194 <rt_thread_detach>
+ 8011e82:	4b19      	ldr	r3, [pc, #100]	; (8011ee8 <thread_rulechoose+0x280>)
+ 8011e84:	6818      	ldr	r0, [r3, #0]
+ 8011e86:	f7fd f985 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_eventGreen);
- 8011e0a:	4b18      	ldr	r3, [pc, #96]	; (8011e6c <thread_rulechoose+0x284>)
- 8011e0c:	6818      	ldr	r0, [r3, #0]
- 8011e0e:	f7fd f9c1 	bl	800f194 <rt_thread_detach>
+ 8011e8a:	4b18      	ldr	r3, [pc, #96]	; (8011eec <thread_rulechoose+0x284>)
+ 8011e8c:	6818      	ldr	r0, [r3, #0]
+ 8011e8e:	f7fd f981 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_messagerecv);
- 8011e12:	4b17      	ldr	r3, [pc, #92]	; (8011e70 <thread_rulechoose+0x288>)
- 8011e14:	6818      	ldr	r0, [r3, #0]
- 8011e16:	f7fd f9bd 	bl	800f194 <rt_thread_detach>
+ 8011e92:	4b17      	ldr	r3, [pc, #92]	; (8011ef0 <thread_rulechoose+0x288>)
+ 8011e94:	6818      	ldr	r0, [r3, #0]
+ 8011e96:	f7fd f97d 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_mutexRed);
- 8011e1a:	4b19      	ldr	r3, [pc, #100]	; (8011e80 <thread_rulechoose+0x298>)
- 8011e1c:	6818      	ldr	r0, [r3, #0]
- 8011e1e:	f7fd f9b9 	bl	800f194 <rt_thread_detach>
+ 8011e9a:	4b19      	ldr	r3, [pc, #100]	; (8011f00 <thread_rulechoose+0x298>)
+ 8011e9c:	6818      	ldr	r0, [r3, #0]
+ 8011e9e:	f7fd f979 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_mutexGreen);
- 8011e22:	4b18      	ldr	r3, [pc, #96]	; (8011e84 <thread_rulechoose+0x29c>)
- 8011e24:	6818      	ldr	r0, [r3, #0]
- 8011e26:	f7fd f9b5 	bl	800f194 <rt_thread_detach>
+ 8011ea2:	4b18      	ldr	r3, [pc, #96]	; (8011f04 <thread_rulechoose+0x29c>)
+ 8011ea4:	6818      	ldr	r0, [r3, #0]
+ 8011ea6:	f7fd f975 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_mutexBlue);
- 8011e2a:	4b17      	ldr	r3, [pc, #92]	; (8011e88 <thread_rulechoose+0x2a0>)
- 8011e2c:	6818      	ldr	r0, [r3, #0]
- 8011e2e:	f7fd f9b1 	bl	800f194 <rt_thread_detach>
+ 8011eaa:	4b17      	ldr	r3, [pc, #92]	; (8011f08 <thread_rulechoose+0x2a0>)
+ 8011eac:	6818      	ldr	r0, [r3, #0]
+ 8011eae:	f7fd f971 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_delayBlue);
- 8011e32:	4b16      	ldr	r3, [pc, #88]	; (8011e8c <thread_rulechoose+0x2a4>)
- 8011e34:	6818      	ldr	r0, [r3, #0]
- 8011e36:	f7fd f9ad 	bl	800f194 <rt_thread_detach>
+ 8011eb2:	4b16      	ldr	r3, [pc, #88]	; (8011f0c <thread_rulechoose+0x2a4>)
+ 8011eb4:	6818      	ldr	r0, [r3, #0]
+ 8011eb6:	f7fd f96d 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_delayGreen);
- 8011e3a:	4b15      	ldr	r3, [pc, #84]	; (8011e90 <thread_rulechoose+0x2a8>)
- 8011e3c:	6818      	ldr	r0, [r3, #0]
- 8011e3e:	f7fd f9a9 	bl	800f194 <rt_thread_detach>
+ 8011eba:	4b15      	ldr	r3, [pc, #84]	; (8011f10 <thread_rulechoose+0x2a8>)
+ 8011ebc:	6818      	ldr	r0, [r3, #0]
+ 8011ebe:	f7fd f969 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_delayRed);
- 8011e42:	4b14      	ldr	r3, [pc, #80]	; (8011e94 <thread_rulechoose+0x2ac>)
- 8011e44:	6818      	ldr	r0, [r3, #0]
- 8011e46:	f7fd f9a5 	bl	800f194 <rt_thread_detach>
+ 8011ec2:	4b14      	ldr	r3, [pc, #80]	; (8011f14 <thread_rulechoose+0x2ac>)
+ 8011ec4:	6818      	ldr	r0, [r3, #0]
+ 8011ec6:	f7fd f965 	bl	800f194 <rt_thread_detach>
 	                rt_thread_startup(thd_SPThread1);//启动信号量线程1
- 8011e4a:	4b0a      	ldr	r3, [pc, #40]	; (8011e74 <thread_rulechoose+0x28c>)
- 8011e4c:	6818      	ldr	r0, [r3, #0]
- 8011e4e:	f7fd fabb 	bl	800f3c8 <rt_thread_startup>
+ 8011eca:	4b0a      	ldr	r3, [pc, #40]	; (8011ef4 <thread_rulechoose+0x28c>)
+ 8011ecc:	6818      	ldr	r0, [r3, #0]
+ 8011ece:	f7fd fa7b 	bl	800f3c8 <rt_thread_startup>
 	                rt_thread_startup(thd_SPThread2);//启动信号量线程2
- 8011e52:	4b09      	ldr	r3, [pc, #36]	; (8011e78 <thread_rulechoose+0x290>)
- 8011e54:	6818      	ldr	r0, [r3, #0]
- 8011e56:	f7fd fab7 	bl	800f3c8 <rt_thread_startup>
+ 8011ed2:	4b09      	ldr	r3, [pc, #36]	; (8011ef8 <thread_rulechoose+0x290>)
+ 8011ed4:	6818      	ldr	r0, [r3, #0]
+ 8011ed6:	f7fd fa77 	bl	800f3c8 <rt_thread_startup>
 	                rt_thread_startup(thd_SPThread3);//启动信号量线程
- 8011e5a:	4b08      	ldr	r3, [pc, #32]	; (8011e7c <thread_rulechoose+0x294>)
- 8011e5c:	6818      	ldr	r0, [r3, #0]
- 8011e5e:	f7fd fab3 	bl	800f3c8 <rt_thread_startup>
- 8011e62:	e7a2      	b.n	8011daa <thread_rulechoose+0x1c2>
- 8011e64:	08012c84 	.word	0x08012c84
- 8011e68:	20007350 	.word	0x20007350
- 8011e6c:	2000732c 	.word	0x2000732c
- 8011e70:	20007338 	.word	0x20007338
- 8011e74:	20007324 	.word	0x20007324
- 8011e78:	20007340 	.word	0x20007340
- 8011e7c:	20007354 	.word	0x20007354
- 8011e80:	20007330 	.word	0x20007330
- 8011e84:	2000731c 	.word	0x2000731c
- 8011e88:	20007b58 	.word	0x20007b58
- 8011e8c:	20007320 	.word	0x20007320
- 8011e90:	20007344 	.word	0x20007344
- 8011e94:	20007328 	.word	0x20007328
- 8011e98:	20007358 	.word	0x20007358
- 8011e9c:	08012c94 	.word	0x08012c94
- 8011ea0:	20007348 	.word	0x20007348
- 8011ea4:	2000733c 	.word	0x2000733c
- 8011ea8:	08012cf0 	.word	0x08012cf0
- 8011eac:	08012cc0 	.word	0x08012cc0
+ 8011eda:	4b08      	ldr	r3, [pc, #32]	; (8011efc <thread_rulechoose+0x294>)
+ 8011edc:	6818      	ldr	r0, [r3, #0]
+ 8011ede:	f7fd fa73 	bl	800f3c8 <rt_thread_startup>
+ 8011ee2:	e7a2      	b.n	8011e2a <thread_rulechoose+0x1c2>
+ 8011ee4:	08012d40 	.word	0x08012d40
+ 8011ee8:	20007350 	.word	0x20007350
+ 8011eec:	2000732c 	.word	0x2000732c
+ 8011ef0:	20007338 	.word	0x20007338
+ 8011ef4:	20007324 	.word	0x20007324
+ 8011ef8:	20007340 	.word	0x20007340
+ 8011efc:	20007354 	.word	0x20007354
+ 8011f00:	20007330 	.word	0x20007330
+ 8011f04:	2000731c 	.word	0x2000731c
+ 8011f08:	20007b58 	.word	0x20007b58
+ 8011f0c:	20007320 	.word	0x20007320
+ 8011f10:	20007344 	.word	0x20007344
+ 8011f14:	20007328 	.word	0x20007328
+ 8011f18:	20007358 	.word	0x20007358
+ 8011f1c:	08012d50 	.word	0x08012d50
+ 8011f20:	20007348 	.word	0x20007348
+ 8011f24:	2000733c 	.word	0x2000733c
+ 8011f28:	08012dac 	.word	0x08012dac
+ 8011f2c:	08012d7c 	.word	0x08012d7c
 
             if(gcRecvBuf[7]==MUTEX_CODE) //命令字为93，代表“功能”
             {
                 if(gcRecvBuf[8]==0x01)
                 {
                     uart_send_string(UART_User,(void *)"接收到互斥量功能开启命令，功能模块开启\n");
- 8011eb0:	497f      	ldr	r1, [pc, #508]	; (80120b0 <thread_rulechoose+0x4c8>)
- 8011eb2:	2002      	movs	r0, #2
- 8011eb4:	f7ff f9ea 	bl	801128c <uart_send_string>
+ 8011f30:	497f      	ldr	r1, [pc, #508]	; (8012130 <thread_rulechoose+0x4c8>)
+ 8011f32:	2002      	movs	r0, #2
+ 8011f34:	f7ff f9aa 	bl	801128c <uart_send_string>
                     rt_thread_detach(thd_eventBlue);
- 8011eb8:	4b7e      	ldr	r3, [pc, #504]	; (80120b4 <thread_rulechoose+0x4cc>)
- 8011eba:	6818      	ldr	r0, [r3, #0]
- 8011ebc:	f7fd f96a 	bl	800f194 <rt_thread_detach>
+ 8011f38:	4b7e      	ldr	r3, [pc, #504]	; (8012134 <thread_rulechoose+0x4cc>)
+ 8011f3a:	6818      	ldr	r0, [r3, #0]
+ 8011f3c:	f7fd f92a 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_eventGreen);
- 8011ec0:	4b7d      	ldr	r3, [pc, #500]	; (80120b8 <thread_rulechoose+0x4d0>)
- 8011ec2:	6818      	ldr	r0, [r3, #0]
- 8011ec4:	f7fd f966 	bl	800f194 <rt_thread_detach>
+ 8011f40:	4b7d      	ldr	r3, [pc, #500]	; (8012138 <thread_rulechoose+0x4d0>)
+ 8011f42:	6818      	ldr	r0, [r3, #0]
+ 8011f44:	f7fd f926 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_messagerecv);
- 8011ec8:	4b7c      	ldr	r3, [pc, #496]	; (80120bc <thread_rulechoose+0x4d4>)
- 8011eca:	6818      	ldr	r0, [r3, #0]
- 8011ecc:	f7fd f962 	bl	800f194 <rt_thread_detach>
+ 8011f48:	4b7c      	ldr	r3, [pc, #496]	; (801213c <thread_rulechoose+0x4d4>)
+ 8011f4a:	6818      	ldr	r0, [r3, #0]
+ 8011f4c:	f7fd f922 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_SPThread1);	
- 8011ed0:	4b7b      	ldr	r3, [pc, #492]	; (80120c0 <thread_rulechoose+0x4d8>)
- 8011ed2:	6818      	ldr	r0, [r3, #0]
- 8011ed4:	f7fd f95e 	bl	800f194 <rt_thread_detach>
+ 8011f50:	4b7b      	ldr	r3, [pc, #492]	; (8012140 <thread_rulechoose+0x4d8>)
+ 8011f52:	6818      	ldr	r0, [r3, #0]
+ 8011f54:	f7fd f91e 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_SPThread2);
- 8011ed8:	4b7a      	ldr	r3, [pc, #488]	; (80120c4 <thread_rulechoose+0x4dc>)
- 8011eda:	6818      	ldr	r0, [r3, #0]
- 8011edc:	f7fd f95a 	bl	800f194 <rt_thread_detach>
+ 8011f58:	4b7a      	ldr	r3, [pc, #488]	; (8012144 <thread_rulechoose+0x4dc>)
+ 8011f5a:	6818      	ldr	r0, [r3, #0]
+ 8011f5c:	f7fd f91a 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_SPThread3);
- 8011ee0:	4b79      	ldr	r3, [pc, #484]	; (80120c8 <thread_rulechoose+0x4e0>)
- 8011ee2:	6818      	ldr	r0, [r3, #0]
- 8011ee4:	f7fd f956 	bl	800f194 <rt_thread_detach>
+ 8011f60:	4b79      	ldr	r3, [pc, #484]	; (8012148 <thread_rulechoose+0x4e0>)
+ 8011f62:	6818      	ldr	r0, [r3, #0]
+ 8011f64:	f7fd f916 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_delayBlue);
- 8011ee8:	4b78      	ldr	r3, [pc, #480]	; (80120cc <thread_rulechoose+0x4e4>)
- 8011eea:	6818      	ldr	r0, [r3, #0]
- 8011eec:	f7fd f952 	bl	800f194 <rt_thread_detach>
+ 8011f68:	4b78      	ldr	r3, [pc, #480]	; (801214c <thread_rulechoose+0x4e4>)
+ 8011f6a:	6818      	ldr	r0, [r3, #0]
+ 8011f6c:	f7fd f912 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_delayGreen);
- 8011ef0:	4b77      	ldr	r3, [pc, #476]	; (80120d0 <thread_rulechoose+0x4e8>)
- 8011ef2:	6818      	ldr	r0, [r3, #0]
- 8011ef4:	f7fd f94e 	bl	800f194 <rt_thread_detach>
+ 8011f70:	4b77      	ldr	r3, [pc, #476]	; (8012150 <thread_rulechoose+0x4e8>)
+ 8011f72:	6818      	ldr	r0, [r3, #0]
+ 8011f74:	f7fd f90e 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_delayRed);
- 8011ef8:	4b76      	ldr	r3, [pc, #472]	; (80120d4 <thread_rulechoose+0x4ec>)
- 8011efa:	6818      	ldr	r0, [r3, #0]
- 8011efc:	f7fd f94a 	bl	800f194 <rt_thread_detach>
+ 8011f78:	4b76      	ldr	r3, [pc, #472]	; (8012154 <thread_rulechoose+0x4ec>)
+ 8011f7a:	6818      	ldr	r0, [r3, #0]
+ 8011f7c:	f7fd f90a 	bl	800f194 <rt_thread_detach>
 
                     rt_thread_startup(thd_mutexRed);//启动红灯线程
- 8011f00:	4b75      	ldr	r3, [pc, #468]	; (80120d8 <thread_rulechoose+0x4f0>)
- 8011f02:	6818      	ldr	r0, [r3, #0]
- 8011f04:	f7fd fa60 	bl	800f3c8 <rt_thread_startup>
+ 8011f80:	4b75      	ldr	r3, [pc, #468]	; (8012158 <thread_rulechoose+0x4f0>)
+ 8011f82:	6818      	ldr	r0, [r3, #0]
+ 8011f84:	f7fd fa20 	bl	800f3c8 <rt_thread_startup>
 	                rt_thread_startup(thd_mutexGreen);//启动绿灯线程
- 8011f08:	4b74      	ldr	r3, [pc, #464]	; (80120dc <thread_rulechoose+0x4f4>)
- 8011f0a:	6818      	ldr	r0, [r3, #0]
- 8011f0c:	f7fd fa5c 	bl	800f3c8 <rt_thread_startup>
+ 8011f88:	4b74      	ldr	r3, [pc, #464]	; (801215c <thread_rulechoose+0x4f4>)
+ 8011f8a:	6818      	ldr	r0, [r3, #0]
+ 8011f8c:	f7fd fa1c 	bl	800f3c8 <rt_thread_startup>
 	                rt_thread_startup(thd_mutexBlue);//启动蓝灯线程
- 8011f10:	4b73      	ldr	r3, [pc, #460]	; (80120e0 <thread_rulechoose+0x4f8>)
- 8011f12:	6818      	ldr	r0, [r3, #0]
- 8011f14:	f7fd fa58 	bl	800f3c8 <rt_thread_startup>
- 8011f18:	e041      	b.n	8011f9e <thread_rulechoose+0x3b6>
+ 8011f90:	4b73      	ldr	r3, [pc, #460]	; (8012160 <thread_rulechoose+0x4f8>)
+ 8011f92:	6818      	ldr	r0, [r3, #0]
+ 8011f94:	f7fd fa18 	bl	800f3c8 <rt_thread_startup>
+ 8011f98:	e041      	b.n	801201e <thread_rulechoose+0x3b6>
                     gpio_init(LIGHT_RED,GPIO_OUTPUT,LIGHT_OFF);
                 }
 
             }
 
                 if(gcRecvBuf[7]==DELAY_CODE) //命令字为94，代表"延时功能”
- 8011f1a:	4b72      	ldr	r3, [pc, #456]	; (80120e4 <thread_rulechoose+0x4fc>)
- 8011f1c:	79db      	ldrb	r3, [r3, #7]
- 8011f1e:	b2db      	uxtb	r3, r3
- 8011f20:	2b94      	cmp	r3, #148	; 0x94
- 8011f22:	d063      	beq.n	8011fec <thread_rulechoose+0x404>
+ 8011f9a:	4b72      	ldr	r3, [pc, #456]	; (8012164 <thread_rulechoose+0x4fc>)
+ 8011f9c:	79db      	ldrb	r3, [r3, #7]
+ 8011f9e:	b2db      	uxtb	r3, r3
+ 8011fa0:	2b94      	cmp	r3, #148	; 0x94
+ 8011fa2:	d063      	beq.n	801206c <thread_rulechoose+0x404>
         uart_send_string(UART_User,(void *)"进入命令选择线程，等待事件信号\n");
- 8011f24:	4970      	ldr	r1, [pc, #448]	; (80120e8 <thread_rulechoose+0x500>)
- 8011f26:	2002      	movs	r0, #2
- 8011f28:	f7ff f9b0 	bl	801128c <uart_send_string>
+ 8011fa4:	4970      	ldr	r1, [pc, #448]	; (8012168 <thread_rulechoose+0x500>)
+ 8011fa6:	2002      	movs	r0, #2
+ 8011fa8:	f7ff f970 	bl	801128c <uart_send_string>
         rt_event_recv(EventWord,RULE_CHOOSE_EVENT,RT_EVENT_FLAG_OR|RT_EVENT_FLAG_CLEAR,RT_WAITING_FOREVER,&recvedstate);//等待命令选择线程的事件信号，串口接收完数据后会触发
- 8011f2c:	4b6f      	ldr	r3, [pc, #444]	; (80120ec <thread_rulechoose+0x504>)
- 8011f2e:	6818      	ldr	r0, [r3, #0]
- 8011f30:	ab05      	add	r3, sp, #20
- 8011f32:	9300      	str	r3, [sp, #0]
- 8011f34:	f04f 33ff 	mov.w	r3, #4294967295
- 8011f38:	2206      	movs	r2, #6
- 8011f3a:	2102      	movs	r1, #2
- 8011f3c:	f7fe f983 	bl	8010246 <rt_event_recv>
+ 8011fac:	4b6f      	ldr	r3, [pc, #444]	; (801216c <thread_rulechoose+0x504>)
+ 8011fae:	6818      	ldr	r0, [r3, #0]
+ 8011fb0:	ab05      	add	r3, sp, #20
+ 8011fb2:	9300      	str	r3, [sp, #0]
+ 8011fb4:	f04f 33ff 	mov.w	r3, #4294967295
+ 8011fb8:	2206      	movs	r2, #6
+ 8011fba:	2102      	movs	r1, #2
+ 8011fbc:	f7fe f943 	bl	8010246 <rt_event_recv>
         uart_send_string(UART_User,(void *)"接收到事件信号\n");
- 8011f40:	496b      	ldr	r1, [pc, #428]	; (80120f0 <thread_rulechoose+0x508>)
- 8011f42:	2002      	movs	r0, #2
- 8011f44:	f7ff f9a2 	bl	801128c <uart_send_string>
+ 8011fc0:	496b      	ldr	r1, [pc, #428]	; (8012170 <thread_rulechoose+0x508>)
+ 8011fc2:	2002      	movs	r0, #2
+ 8011fc4:	f7ff f962 	bl	801128c <uart_send_string>
         if(recvedstate==RULE_CHOOSE_EVENT)  //如果接收完成且正确
- 8011f48:	9b05      	ldr	r3, [sp, #20]
- 8011f4a:	2b02      	cmp	r3, #2
- 8011f4c:	d1ea      	bne.n	8011f24 <thread_rulechoose+0x33c>
+ 8011fc8:	9b05      	ldr	r3, [sp, #20]
+ 8011fca:	2b02      	cmp	r3, #2
+ 8011fcc:	d1ea      	bne.n	8011fa4 <thread_rulechoose+0x33c>
             if(gcRecvBuf[3]==CONNECT_CODE)//命令字为66，代表Pc端正和mcu取得连接
- 8011f4e:	4b65      	ldr	r3, [pc, #404]	; (80120e4 <thread_rulechoose+0x4fc>)
- 8011f50:	78db      	ldrb	r3, [r3, #3]
- 8011f52:	b2db      	uxtb	r3, r3
- 8011f54:	2b66      	cmp	r3, #102	; 0x66
- 8011f56:	f43f ae4a 	beq.w	8011bee <thread_rulechoose+0x6>
+ 8011fce:	4b65      	ldr	r3, [pc, #404]	; (8012164 <thread_rulechoose+0x4fc>)
+ 8011fd0:	78db      	ldrb	r3, [r3, #3]
+ 8011fd2:	b2db      	uxtb	r3, r3
+ 8011fd4:	2b66      	cmp	r3, #102	; 0x66
+ 8011fd6:	f43f ae4a 	beq.w	8011c6e <thread_rulechoose+0x6>
             if(gcRecvBuf[3]==RESULT_CODE)
- 8011f5a:	4b62      	ldr	r3, [pc, #392]	; (80120e4 <thread_rulechoose+0x4fc>)
- 8011f5c:	78db      	ldrb	r3, [r3, #3]
- 8011f5e:	b2db      	uxtb	r3, r3
- 8011f60:	2b77      	cmp	r3, #119	; 0x77
- 8011f62:	f43f ae49 	beq.w	8011bf8 <thread_rulechoose+0x10>
+ 8011fda:	4b62      	ldr	r3, [pc, #392]	; (8012164 <thread_rulechoose+0x4fc>)
+ 8011fdc:	78db      	ldrb	r3, [r3, #3]
+ 8011fde:	b2db      	uxtb	r3, r3
+ 8011fe0:	2b77      	cmp	r3, #119	; 0x77
+ 8011fe2:	f43f ae49 	beq.w	8011c78 <thread_rulechoose+0x10>
     		if(gcRecvBuf[7]==EVENT_CODE) //命令字为90，代表“事件功能”
- 8011f66:	4b5f      	ldr	r3, [pc, #380]	; (80120e4 <thread_rulechoose+0x4fc>)
- 8011f68:	79db      	ldrb	r3, [r3, #7]
- 8011f6a:	b2db      	uxtb	r3, r3
- 8011f6c:	2b90      	cmp	r3, #144	; 0x90
- 8011f6e:	f43f ae74 	beq.w	8011c5a <thread_rulechoose+0x72>
+ 8011fe6:	4b5f      	ldr	r3, [pc, #380]	; (8012164 <thread_rulechoose+0x4fc>)
+ 8011fe8:	79db      	ldrb	r3, [r3, #7]
+ 8011fea:	b2db      	uxtb	r3, r3
+ 8011fec:	2b90      	cmp	r3, #144	; 0x90
+ 8011fee:	f43f ae74 	beq.w	8011cda <thread_rulechoose+0x72>
             if(gcRecvBuf[7]==MESSAGE_CODE) //命令字为91，代表“消息队列功能”
- 8011f72:	4b5c      	ldr	r3, [pc, #368]	; (80120e4 <thread_rulechoose+0x4fc>)
- 8011f74:	79db      	ldrb	r3, [r3, #7]
- 8011f76:	b2db      	uxtb	r3, r3
- 8011f78:	2b91      	cmp	r3, #145	; 0x91
- 8011f7a:	f43f aecd 	beq.w	8011d18 <thread_rulechoose+0x130>
+ 8011ff2:	4b5c      	ldr	r3, [pc, #368]	; (8012164 <thread_rulechoose+0x4fc>)
+ 8011ff4:	79db      	ldrb	r3, [r3, #7]
+ 8011ff6:	b2db      	uxtb	r3, r3
+ 8011ff8:	2b91      	cmp	r3, #145	; 0x91
+ 8011ffa:	f43f aecd 	beq.w	8011d98 <thread_rulechoose+0x130>
             if(gcRecvBuf[7]==SEM_CODE) //命令字为92，代表“信号量功能”
- 8011f7e:	4b59      	ldr	r3, [pc, #356]	; (80120e4 <thread_rulechoose+0x4fc>)
- 8011f80:	79db      	ldrb	r3, [r3, #7]
- 8011f82:	b2db      	uxtb	r3, r3
- 8011f84:	2b92      	cmp	r3, #146	; 0x92
- 8011f86:	f43f af0b 	beq.w	8011da0 <thread_rulechoose+0x1b8>
+ 8011ffe:	4b59      	ldr	r3, [pc, #356]	; (8012164 <thread_rulechoose+0x4fc>)
+ 8012000:	79db      	ldrb	r3, [r3, #7]
+ 8012002:	b2db      	uxtb	r3, r3
+ 8012004:	2b92      	cmp	r3, #146	; 0x92
+ 8012006:	f43f af0b 	beq.w	8011e20 <thread_rulechoose+0x1b8>
             if(gcRecvBuf[7]==MUTEX_CODE) //命令字为93，代表“功能”
- 8011f8a:	4b56      	ldr	r3, [pc, #344]	; (80120e4 <thread_rulechoose+0x4fc>)
- 8011f8c:	79db      	ldrb	r3, [r3, #7]
- 8011f8e:	b2db      	uxtb	r3, r3
- 8011f90:	2b93      	cmp	r3, #147	; 0x93
- 8011f92:	d1c2      	bne.n	8011f1a <thread_rulechoose+0x332>
+ 801200a:	4b56      	ldr	r3, [pc, #344]	; (8012164 <thread_rulechoose+0x4fc>)
+ 801200c:	79db      	ldrb	r3, [r3, #7]
+ 801200e:	b2db      	uxtb	r3, r3
+ 8012010:	2b93      	cmp	r3, #147	; 0x93
+ 8012012:	d1c2      	bne.n	8011f9a <thread_rulechoose+0x332>
                 if(gcRecvBuf[8]==0x01)
- 8011f94:	4b53      	ldr	r3, [pc, #332]	; (80120e4 <thread_rulechoose+0x4fc>)
- 8011f96:	7a1b      	ldrb	r3, [r3, #8]
- 8011f98:	b2db      	uxtb	r3, r3
- 8011f9a:	2b01      	cmp	r3, #1
- 8011f9c:	d088      	beq.n	8011eb0 <thread_rulechoose+0x2c8>
+ 8012014:	4b53      	ldr	r3, [pc, #332]	; (8012164 <thread_rulechoose+0x4fc>)
+ 8012016:	7a1b      	ldrb	r3, [r3, #8]
+ 8012018:	b2db      	uxtb	r3, r3
+ 801201a:	2b01      	cmp	r3, #1
+ 801201c:	d088      	beq.n	8011f30 <thread_rulechoose+0x2c8>
                 if(gcRecvBuf[8]==0x00)
- 8011f9e:	4b51      	ldr	r3, [pc, #324]	; (80120e4 <thread_rulechoose+0x4fc>)
- 8011fa0:	7a1b      	ldrb	r3, [r3, #8]
- 8011fa2:	2b00      	cmp	r3, #0
- 8011fa4:	d1b9      	bne.n	8011f1a <thread_rulechoose+0x332>
+ 801201e:	4b51      	ldr	r3, [pc, #324]	; (8012164 <thread_rulechoose+0x4fc>)
+ 8012020:	7a1b      	ldrb	r3, [r3, #8]
+ 8012022:	2b00      	cmp	r3, #0
+ 8012024:	d1b9      	bne.n	8011f9a <thread_rulechoose+0x332>
                     uart_send_string(UART_User,(void *)"接收到互斥量功能关闭命令，功能模块关闭\n");
- 8011fa6:	4953      	ldr	r1, [pc, #332]	; (80120f4 <thread_rulechoose+0x50c>)
- 8011fa8:	2002      	movs	r0, #2
- 8011faa:	f7ff f96f 	bl	801128c <uart_send_string>
+ 8012026:	4953      	ldr	r1, [pc, #332]	; (8012174 <thread_rulechoose+0x50c>)
+ 8012028:	2002      	movs	r0, #2
+ 801202a:	f7ff f92f 	bl	801128c <uart_send_string>
                     rt_thread_detach(thd_mutexRed);
- 8011fae:	4b4a      	ldr	r3, [pc, #296]	; (80120d8 <thread_rulechoose+0x4f0>)
- 8011fb0:	6818      	ldr	r0, [r3, #0]
- 8011fb2:	f7fd f8ef 	bl	800f194 <rt_thread_detach>
+ 801202e:	4b4a      	ldr	r3, [pc, #296]	; (8012158 <thread_rulechoose+0x4f0>)
+ 8012030:	6818      	ldr	r0, [r3, #0]
+ 8012032:	f7fd f8af 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_mutexGreen);
- 8011fb6:	4b49      	ldr	r3, [pc, #292]	; (80120dc <thread_rulechoose+0x4f4>)
- 8011fb8:	6818      	ldr	r0, [r3, #0]
- 8011fba:	f7fd f8eb 	bl	800f194 <rt_thread_detach>
+ 8012036:	4b49      	ldr	r3, [pc, #292]	; (801215c <thread_rulechoose+0x4f4>)
+ 8012038:	6818      	ldr	r0, [r3, #0]
+ 801203a:	f7fd f8ab 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_mutexBlue);
- 8011fbe:	4b48      	ldr	r3, [pc, #288]	; (80120e0 <thread_rulechoose+0x4f8>)
- 8011fc0:	6818      	ldr	r0, [r3, #0]
- 8011fc2:	f7fd f8e7 	bl	800f194 <rt_thread_detach>
+ 801203e:	4b48      	ldr	r3, [pc, #288]	; (8012160 <thread_rulechoose+0x4f8>)
+ 8012040:	6818      	ldr	r0, [r3, #0]
+ 8012042:	f7fd f8a7 	bl	800f194 <rt_thread_detach>
                     gpio_init(LIGHT_BLUE,GPIO_OUTPUT,LIGHT_OFF);
- 8011fc6:	2201      	movs	r2, #1
- 8011fc8:	4611      	mov	r1, r2
- 8011fca:	f240 1009 	movw	r0, #265	; 0x109
- 8011fce:	f7fd fef3 	bl	800fdb8 <gpio_init>
+ 8012046:	2201      	movs	r2, #1
+ 8012048:	4611      	mov	r1, r2
+ 801204a:	f240 1009 	movw	r0, #265	; 0x109
+ 801204e:	f7fd feb3 	bl	800fdb8 <gpio_init>
                     gpio_init(LIGHT_GREEN,GPIO_OUTPUT,LIGHT_OFF);
- 8011fd2:	2201      	movs	r2, #1
- 8011fd4:	4611      	mov	r1, r2
- 8011fd6:	f44f 7084 	mov.w	r0, #264	; 0x108
- 8011fda:	f7fd feed 	bl	800fdb8 <gpio_init>
+ 8012052:	2201      	movs	r2, #1
+ 8012054:	4611      	mov	r1, r2
+ 8012056:	f44f 7084 	mov.w	r0, #264	; 0x108
+ 801205a:	f7fd fead 	bl	800fdb8 <gpio_init>
                     gpio_init(LIGHT_RED,GPIO_OUTPUT,LIGHT_OFF);
- 8011fde:	2201      	movs	r2, #1
- 8011fe0:	4611      	mov	r1, r2
- 8011fe2:	f240 1007 	movw	r0, #263	; 0x107
- 8011fe6:	f7fd fee7 	bl	800fdb8 <gpio_init>
- 8011fea:	e796      	b.n	8011f1a <thread_rulechoose+0x332>
+ 801205e:	2201      	movs	r2, #1
+ 8012060:	4611      	mov	r1, r2
+ 8012062:	f240 1007 	movw	r0, #263	; 0x107
+ 8012066:	f7fd fea7 	bl	800fdb8 <gpio_init>
+ 801206a:	e796      	b.n	8011f9a <thread_rulechoose+0x332>
             {
                 if(gcRecvBuf[8]==0x01)
- 8011fec:	4b3d      	ldr	r3, [pc, #244]	; (80120e4 <thread_rulechoose+0x4fc>)
- 8011fee:	7a1b      	ldrb	r3, [r3, #8]
- 8011ff0:	b2db      	uxtb	r3, r3
- 8011ff2:	2b01      	cmp	r3, #1
- 8011ff4:	d026      	beq.n	8012044 <thread_rulechoose+0x45c>
+ 801206c:	4b3d      	ldr	r3, [pc, #244]	; (8012164 <thread_rulechoose+0x4fc>)
+ 801206e:	7a1b      	ldrb	r3, [r3, #8]
+ 8012070:	b2db      	uxtb	r3, r3
+ 8012072:	2b01      	cmp	r3, #1
+ 8012074:	d026      	beq.n	80120c4 <thread_rulechoose+0x45c>
 
                     rt_thread_startup(thd_delayBlue);
                     rt_thread_startup(thd_delayGreen);
                     rt_thread_startup(thd_delayRed);
                 }
                 if(gcRecvBuf[8]==0x00)
- 8011ff6:	4b3b      	ldr	r3, [pc, #236]	; (80120e4 <thread_rulechoose+0x4fc>)
- 8011ff8:	7a1b      	ldrb	r3, [r3, #8]
- 8011ffa:	2b00      	cmp	r3, #0
- 8011ffc:	d192      	bne.n	8011f24 <thread_rulechoose+0x33c>
+ 8012076:	4b3b      	ldr	r3, [pc, #236]	; (8012164 <thread_rulechoose+0x4fc>)
+ 8012078:	7a1b      	ldrb	r3, [r3, #8]
+ 801207a:	2b00      	cmp	r3, #0
+ 801207c:	d192      	bne.n	8011fa4 <thread_rulechoose+0x33c>
                 {
                     uart_send_string(UART_User,(void *)"接收到延时功能关闭命令，功能模块关闭\n");
- 8011ffe:	493e      	ldr	r1, [pc, #248]	; (80120f8 <thread_rulechoose+0x510>)
- 8012000:	2002      	movs	r0, #2
- 8012002:	f7ff f943 	bl	801128c <uart_send_string>
+ 801207e:	493e      	ldr	r1, [pc, #248]	; (8012178 <thread_rulechoose+0x510>)
+ 8012080:	2002      	movs	r0, #2
+ 8012082:	f7ff f903 	bl	801128c <uart_send_string>
                     rt_thread_detach(thd_delayBlue);
- 8012006:	4b31      	ldr	r3, [pc, #196]	; (80120cc <thread_rulechoose+0x4e4>)
- 8012008:	6818      	ldr	r0, [r3, #0]
- 801200a:	f7fd f8c3 	bl	800f194 <rt_thread_detach>
+ 8012086:	4b31      	ldr	r3, [pc, #196]	; (801214c <thread_rulechoose+0x4e4>)
+ 8012088:	6818      	ldr	r0, [r3, #0]
+ 801208a:	f7fd f883 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_delayGreen);
- 801200e:	4b30      	ldr	r3, [pc, #192]	; (80120d0 <thread_rulechoose+0x4e8>)
- 8012010:	6818      	ldr	r0, [r3, #0]
- 8012012:	f7fd f8bf 	bl	800f194 <rt_thread_detach>
+ 801208e:	4b30      	ldr	r3, [pc, #192]	; (8012150 <thread_rulechoose+0x4e8>)
+ 8012090:	6818      	ldr	r0, [r3, #0]
+ 8012092:	f7fd f87f 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_delayRed);
- 8012016:	4b2f      	ldr	r3, [pc, #188]	; (80120d4 <thread_rulechoose+0x4ec>)
- 8012018:	6818      	ldr	r0, [r3, #0]
- 801201a:	f7fd f8bb 	bl	800f194 <rt_thread_detach>
+ 8012096:	4b2f      	ldr	r3, [pc, #188]	; (8012154 <thread_rulechoose+0x4ec>)
+ 8012098:	6818      	ldr	r0, [r3, #0]
+ 801209a:	f7fd f87b 	bl	800f194 <rt_thread_detach>
                     gpio_init(LIGHT_BLUE,GPIO_OUTPUT,LIGHT_OFF);
- 801201e:	2201      	movs	r2, #1
- 8012020:	4611      	mov	r1, r2
- 8012022:	f240 1009 	movw	r0, #265	; 0x109
- 8012026:	f7fd fec7 	bl	800fdb8 <gpio_init>
+ 801209e:	2201      	movs	r2, #1
+ 80120a0:	4611      	mov	r1, r2
+ 80120a2:	f240 1009 	movw	r0, #265	; 0x109
+ 80120a6:	f7fd fe87 	bl	800fdb8 <gpio_init>
                     gpio_init(LIGHT_GREEN,GPIO_OUTPUT,LIGHT_OFF);
- 801202a:	2201      	movs	r2, #1
- 801202c:	4611      	mov	r1, r2
- 801202e:	f44f 7084 	mov.w	r0, #264	; 0x108
- 8012032:	f7fd fec1 	bl	800fdb8 <gpio_init>
+ 80120aa:	2201      	movs	r2, #1
+ 80120ac:	4611      	mov	r1, r2
+ 80120ae:	f44f 7084 	mov.w	r0, #264	; 0x108
+ 80120b2:	f7fd fe81 	bl	800fdb8 <gpio_init>
                     gpio_init(LIGHT_RED,GPIO_OUTPUT,LIGHT_OFF);
- 8012036:	2201      	movs	r2, #1
- 8012038:	4611      	mov	r1, r2
- 801203a:	f240 1007 	movw	r0, #263	; 0x107
- 801203e:	f7fd febb 	bl	800fdb8 <gpio_init>
- 8012042:	e76f      	b.n	8011f24 <thread_rulechoose+0x33c>
+ 80120b6:	2201      	movs	r2, #1
+ 80120b8:	4611      	mov	r1, r2
+ 80120ba:	f240 1007 	movw	r0, #263	; 0x107
+ 80120be:	f7fd fe7b 	bl	800fdb8 <gpio_init>
+ 80120c2:	e76f      	b.n	8011fa4 <thread_rulechoose+0x33c>
                     uart_send_string(UART_User,(void *)"接收到延时功能开启命令，功能模块开启\n");
- 8012044:	492d      	ldr	r1, [pc, #180]	; (80120fc <thread_rulechoose+0x514>)
- 8012046:	2002      	movs	r0, #2
- 8012048:	f7ff f920 	bl	801128c <uart_send_string>
+ 80120c4:	492d      	ldr	r1, [pc, #180]	; (801217c <thread_rulechoose+0x514>)
+ 80120c6:	2002      	movs	r0, #2
+ 80120c8:	f7ff f8e0 	bl	801128c <uart_send_string>
                     rt_thread_detach(thd_eventBlue);
- 801204c:	4b19      	ldr	r3, [pc, #100]	; (80120b4 <thread_rulechoose+0x4cc>)
- 801204e:	6818      	ldr	r0, [r3, #0]
- 8012050:	f7fd f8a0 	bl	800f194 <rt_thread_detach>
+ 80120cc:	4b19      	ldr	r3, [pc, #100]	; (8012134 <thread_rulechoose+0x4cc>)
+ 80120ce:	6818      	ldr	r0, [r3, #0]
+ 80120d0:	f7fd f860 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_eventGreen);
- 8012054:	4b18      	ldr	r3, [pc, #96]	; (80120b8 <thread_rulechoose+0x4d0>)
- 8012056:	6818      	ldr	r0, [r3, #0]
- 8012058:	f7fd f89c 	bl	800f194 <rt_thread_detach>
+ 80120d4:	4b18      	ldr	r3, [pc, #96]	; (8012138 <thread_rulechoose+0x4d0>)
+ 80120d6:	6818      	ldr	r0, [r3, #0]
+ 80120d8:	f7fd f85c 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_messagerecv);
- 801205c:	4b17      	ldr	r3, [pc, #92]	; (80120bc <thread_rulechoose+0x4d4>)
- 801205e:	6818      	ldr	r0, [r3, #0]
- 8012060:	f7fd f898 	bl	800f194 <rt_thread_detach>
+ 80120dc:	4b17      	ldr	r3, [pc, #92]	; (801213c <thread_rulechoose+0x4d4>)
+ 80120de:	6818      	ldr	r0, [r3, #0]
+ 80120e0:	f7fd f858 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_SPThread1);	
- 8012064:	4b16      	ldr	r3, [pc, #88]	; (80120c0 <thread_rulechoose+0x4d8>)
- 8012066:	6818      	ldr	r0, [r3, #0]
- 8012068:	f7fd f894 	bl	800f194 <rt_thread_detach>
+ 80120e4:	4b16      	ldr	r3, [pc, #88]	; (8012140 <thread_rulechoose+0x4d8>)
+ 80120e6:	6818      	ldr	r0, [r3, #0]
+ 80120e8:	f7fd f854 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_SPThread2);
- 801206c:	4b15      	ldr	r3, [pc, #84]	; (80120c4 <thread_rulechoose+0x4dc>)
- 801206e:	6818      	ldr	r0, [r3, #0]
- 8012070:	f7fd f890 	bl	800f194 <rt_thread_detach>
+ 80120ec:	4b15      	ldr	r3, [pc, #84]	; (8012144 <thread_rulechoose+0x4dc>)
+ 80120ee:	6818      	ldr	r0, [r3, #0]
+ 80120f0:	f7fd f850 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_SPThread3);
- 8012074:	4b14      	ldr	r3, [pc, #80]	; (80120c8 <thread_rulechoose+0x4e0>)
- 8012076:	6818      	ldr	r0, [r3, #0]
- 8012078:	f7fd f88c 	bl	800f194 <rt_thread_detach>
+ 80120f4:	4b14      	ldr	r3, [pc, #80]	; (8012148 <thread_rulechoose+0x4e0>)
+ 80120f6:	6818      	ldr	r0, [r3, #0]
+ 80120f8:	f7fd f84c 	bl	800f194 <rt_thread_detach>
                     rt_thread_detach(thd_mutexRed);
- 801207c:	4b16      	ldr	r3, [pc, #88]	; (80120d8 <thread_rulechoose+0x4f0>)
- 801207e:	6818      	ldr	r0, [r3, #0]
- 8012080:	f7fd f888 	bl	800f194 <rt_thread_detach>
+ 80120fc:	4b16      	ldr	r3, [pc, #88]	; (8012158 <thread_rulechoose+0x4f0>)
+ 80120fe:	6818      	ldr	r0, [r3, #0]
+ 8012100:	f7fd f848 	bl	800f194 <rt_thread_detach>
 	                rt_thread_detach(thd_mutexGreen);
- 8012084:	4b15      	ldr	r3, [pc, #84]	; (80120dc <thread_rulechoose+0x4f4>)
- 8012086:	6818      	ldr	r0, [r3, #0]
- 8012088:	f7fd f884 	bl	800f194 <rt_thread_detach>
+ 8012104:	4b15      	ldr	r3, [pc, #84]	; (801215c <thread_rulechoose+0x4f4>)
+ 8012106:	6818      	ldr	r0, [r3, #0]
+ 8012108:	f7fd f844 	bl	800f194 <rt_thread_detach>
 	                rt_thread_detach(thd_mutexBlue);
- 801208c:	4b14      	ldr	r3, [pc, #80]	; (80120e0 <thread_rulechoose+0x4f8>)
- 801208e:	6818      	ldr	r0, [r3, #0]
- 8012090:	f7fd f880 	bl	800f194 <rt_thread_detach>
+ 801210c:	4b14      	ldr	r3, [pc, #80]	; (8012160 <thread_rulechoose+0x4f8>)
+ 801210e:	6818      	ldr	r0, [r3, #0]
+ 8012110:	f7fd f840 	bl	800f194 <rt_thread_detach>
                     rt_thread_startup(thd_delayBlue);
- 8012094:	4b0d      	ldr	r3, [pc, #52]	; (80120cc <thread_rulechoose+0x4e4>)
- 8012096:	6818      	ldr	r0, [r3, #0]
- 8012098:	f7fd f996 	bl	800f3c8 <rt_thread_startup>
+ 8012114:	4b0d      	ldr	r3, [pc, #52]	; (801214c <thread_rulechoose+0x4e4>)
+ 8012116:	6818      	ldr	r0, [r3, #0]
+ 8012118:	f7fd f956 	bl	800f3c8 <rt_thread_startup>
                     rt_thread_startup(thd_delayGreen);
- 801209c:	4b0c      	ldr	r3, [pc, #48]	; (80120d0 <thread_rulechoose+0x4e8>)
- 801209e:	6818      	ldr	r0, [r3, #0]
- 80120a0:	f7fd f992 	bl	800f3c8 <rt_thread_startup>
+ 801211c:	4b0c      	ldr	r3, [pc, #48]	; (8012150 <thread_rulechoose+0x4e8>)
+ 801211e:	6818      	ldr	r0, [r3, #0]
+ 8012120:	f7fd f952 	bl	800f3c8 <rt_thread_startup>
                     rt_thread_startup(thd_delayRed);
- 80120a4:	4b0b      	ldr	r3, [pc, #44]	; (80120d4 <thread_rulechoose+0x4ec>)
- 80120a6:	6818      	ldr	r0, [r3, #0]
- 80120a8:	f7fd f98e 	bl	800f3c8 <rt_thread_startup>
- 80120ac:	e7a3      	b.n	8011ff6 <thread_rulechoose+0x40e>
- 80120ae:	bf00      	nop
- 80120b0:	08012d20 	.word	0x08012d20
- 80120b4:	20007350 	.word	0x20007350
- 80120b8:	2000732c 	.word	0x2000732c
- 80120bc:	20007338 	.word	0x20007338
- 80120c0:	20007324 	.word	0x20007324
- 80120c4:	20007340 	.word	0x20007340
- 80120c8:	20007354 	.word	0x20007354
- 80120cc:	20007320 	.word	0x20007320
- 80120d0:	20007344 	.word	0x20007344
- 80120d4:	20007328 	.word	0x20007328
- 80120d8:	20007330 	.word	0x20007330
- 80120dc:	2000731c 	.word	0x2000731c
- 80120e0:	20007b58 	.word	0x20007b58
- 80120e4:	20007358 	.word	0x20007358
- 80120e8:	08012c54 	.word	0x08012c54
- 80120ec:	20007348 	.word	0x20007348
- 80120f0:	08012c74 	.word	0x08012c74
- 80120f4:	08012d48 	.word	0x08012d48
- 80120f8:	08012d98 	.word	0x08012d98
- 80120fc:	08012d70 	.word	0x08012d70
+ 8012124:	4b0b      	ldr	r3, [pc, #44]	; (8012154 <thread_rulechoose+0x4ec>)
+ 8012126:	6818      	ldr	r0, [r3, #0]
+ 8012128:	f7fd f94e 	bl	800f3c8 <rt_thread_startup>
+ 801212c:	e7a3      	b.n	8012076 <thread_rulechoose+0x40e>
+ 801212e:	bf00      	nop
+ 8012130:	08012ddc 	.word	0x08012ddc
+ 8012134:	20007350 	.word	0x20007350
+ 8012138:	2000732c 	.word	0x2000732c
+ 801213c:	20007338 	.word	0x20007338
+ 8012140:	20007324 	.word	0x20007324
+ 8012144:	20007340 	.word	0x20007340
+ 8012148:	20007354 	.word	0x20007354
+ 801214c:	20007320 	.word	0x20007320
+ 8012150:	20007344 	.word	0x20007344
+ 8012154:	20007328 	.word	0x20007328
+ 8012158:	20007330 	.word	0x20007330
+ 801215c:	2000731c 	.word	0x2000731c
+ 8012160:	20007b58 	.word	0x20007b58
+ 8012164:	20007358 	.word	0x20007358
+ 8012168:	08012d10 	.word	0x08012d10
+ 801216c:	20007348 	.word	0x20007348
+ 8012170:	08012d30 	.word	0x08012d30
+ 8012174:	08012e04 	.word	0x08012e04
+ 8012178:	08012e54 	.word	0x08012e54
+ 801217c:	08012e2c 	.word	0x08012e2c
 
-08012100 <thread_mutexBlue>:
+08012180 <thread_mutexBlue>:
 //参数说明：无
 //功能概要：每20秒蓝灯反转
 //内部调用：无
 //======================================================================
 void thread_mutexBlue()
 {
- 8012100:	b508      	push	{r3, lr}
+ 8012180:	b508      	push	{r3, lr}
     //（1）======申明局部变量==========================================
     gpio_init(LIGHT_BLUE,GPIO_OUTPUT,LIGHT_OFF);
- 8012102:	2201      	movs	r2, #1
- 8012104:	4611      	mov	r1, r2
- 8012106:	f240 1009 	movw	r0, #265	; 0x109
- 801210a:	f7fd fe55 	bl	800fdb8 <gpio_init>
+ 8012182:	2201      	movs	r2, #1
+ 8012184:	4611      	mov	r1, r2
+ 8012186:	f240 1009 	movw	r0, #265	; 0x109
+ 801218a:	f7fd fe15 	bl	800fdb8 <gpio_init>
     uart_send_string(UART_User,(void *)"第一次进入蓝灯线程！\r\n");
- 801210e:	490f      	ldr	r1, [pc, #60]	; (801214c <thread_mutexBlue+0x4c>)
- 8012110:	2002      	movs	r0, #2
- 8012112:	f7ff f8bb 	bl	801128c <uart_send_string>
+ 801218e:	490f      	ldr	r1, [pc, #60]	; (80121cc <thread_mutexBlue+0x4c>)
+ 8012190:	2002      	movs	r0, #2
+ 8012192:	f7ff f87b 	bl	801128c <uart_send_string>
     //（2）======主循环（开始）==========================================
     while (1)
     {
     	//1.锁住单色灯互斥量
     	rt_mutex_take(mutex,RT_WAITING_FOREVER);
- 8012116:	4c0e      	ldr	r4, [pc, #56]	; (8012150 <thread_mutexBlue+0x50>)
- 8012118:	f04f 31ff 	mov.w	r1, #4294967295
- 801211c:	6820      	ldr	r0, [r4, #0]
- 801211e:	f7fd ff60 	bl	800ffe2 <rt_mutex_take>
+ 8012196:	4c0e      	ldr	r4, [pc, #56]	; (80121d0 <thread_mutexBlue+0x50>)
+ 8012198:	f04f 31ff 	mov.w	r1, #4294967295
+ 801219c:	6820      	ldr	r0, [r4, #0]
+ 801219e:	f7fd ff20 	bl	800ffe2 <rt_mutex_take>
 		uart_send_string(UART_User,(void *)"\r\n锁定单色互斥量成功！蓝灯反转，延时20秒\r\n");
- 8012122:	490c      	ldr	r1, [pc, #48]	; (8012154 <thread_mutexBlue+0x54>)
- 8012124:	2002      	movs	r0, #2
- 8012126:	f7ff f8b1 	bl	801128c <uart_send_string>
+ 80121a2:	490c      	ldr	r1, [pc, #48]	; (80121d4 <thread_mutexBlue+0x54>)
+ 80121a4:	2002      	movs	r0, #2
+ 80121a6:	f7ff f871 	bl	801128c <uart_send_string>
 		//2.蓝灯变亮
 		gpio_reverse(LIGHT_BLUE);
- 801212a:	f240 1009 	movw	r0, #265	; 0x109
- 801212e:	f7fd fe7b 	bl	800fe28 <gpio_reverse>
+ 80121aa:	f240 1009 	movw	r0, #265	; 0x109
+ 80121ae:	f7fd fe3b 	bl	800fe28 <gpio_reverse>
 		//3.延时20秒
 		delay_ms(20000);
- 8012132:	f644 6020 	movw	r0, #20000	; 0x4e20
- 8012136:	f7fd f91f 	bl	800f378 <rt_thread_delay>
+ 80121b2:	f644 6020 	movw	r0, #20000	; 0x4e20
+ 80121b6:	f7fd f8df 	bl	800f378 <rt_thread_delay>
 		//4.蓝灯变暗
 		gpio_reverse(LIGHT_BLUE);
- 801213a:	f240 1009 	movw	r0, #265	; 0x109
- 801213e:	f7fd fe73 	bl	800fe28 <gpio_reverse>
+ 80121ba:	f240 1009 	movw	r0, #265	; 0x109
+ 80121be:	f7fd fe33 	bl	800fe28 <gpio_reverse>
 		//5.解锁单色灯互斥量
 		rt_mutex_release(mutex);
- 8012142:	6820      	ldr	r0, [r4, #0]
- 8012144:	f7fd ffd9 	bl	80100fa <rt_mutex_release>
- 8012148:	e7e5      	b.n	8012116 <thread_mutexBlue+0x16>
- 801214a:	bf00      	nop
- 801214c:	08012dc0 	.word	0x08012dc0
- 8012150:	20007334 	.word	0x20007334
- 8012154:	08012dd8 	.word	0x08012dd8
+ 80121c2:	6820      	ldr	r0, [r4, #0]
+ 80121c4:	f7fd ff99 	bl	80100fa <rt_mutex_release>
+ 80121c8:	e7e5      	b.n	8012196 <thread_mutexBlue+0x16>
+ 80121ca:	bf00      	nop
+ 80121cc:	08012e7c 	.word	0x08012e7c
+ 80121d0:	20007334 	.word	0x20007334
+ 80121d4:	08012e94 	.word	0x08012e94
 
-08012158 <Reset_Handler>:
+080121d8 <Reset_Handler>:
 
     .section	.text.Reset_Handler
 	.weak	Reset_Handler
 	.type	Reset_Handler, %function
 Reset_Handler:
   ldr   sp, =_estack    /* Atollic update: set stack pointer */
- 8012158:	f8df d038 	ldr.w	sp, [pc, #56]	; 8012194 <LoopForever+0x2>
+ 80121d8:	f8df d038 	ldr.w	sp, [pc, #56]	; 8012214 <LoopForever+0x2>
 
 /* Copy the data segment initializers from flash to SRAM */
   movs	r1, #0
- 801215c:	2100      	movs	r1, #0
+ 80121dc:	2100      	movs	r1, #0
   b	LoopCopyDataInit
- 801215e:	e003      	b.n	8012168 <LoopCopyDataInit>
+ 80121de:	e003      	b.n	80121e8 <LoopCopyDataInit>
 
-08012160 <CopyDataInit>:
+080121e0 <CopyDataInit>:
 
 CopyDataInit:
 	ldr	r3, =_sidata
- 8012160:	4b0d      	ldr	r3, [pc, #52]	; (8012198 <LoopForever+0x6>)
+ 80121e0:	4b0d      	ldr	r3, [pc, #52]	; (8012218 <LoopForever+0x6>)
 	ldr	r3, [r3, r1]
- 8012162:	585b      	ldr	r3, [r3, r1]
+ 80121e2:	585b      	ldr	r3, [r3, r1]
 	str	r3, [r0, r1]
- 8012164:	5043      	str	r3, [r0, r1]
+ 80121e4:	5043      	str	r3, [r0, r1]
 	adds	r1, r1, #4
- 8012166:	3104      	adds	r1, #4
+ 80121e6:	3104      	adds	r1, #4
 
-08012168 <LoopCopyDataInit>:
+080121e8 <LoopCopyDataInit>:
 
 LoopCopyDataInit:
 	ldr	r0, =_sdata
- 8012168:	480c      	ldr	r0, [pc, #48]	; (801219c <LoopForever+0xa>)
+ 80121e8:	480c      	ldr	r0, [pc, #48]	; (801221c <LoopForever+0xa>)
 	ldr	r3, =_edata
- 801216a:	4b0d      	ldr	r3, [pc, #52]	; (80121a0 <LoopForever+0xe>)
+ 80121ea:	4b0d      	ldr	r3, [pc, #52]	; (8012220 <LoopForever+0xe>)
 	adds	r2, r0, r1
- 801216c:	1842      	adds	r2, r0, r1
+ 80121ec:	1842      	adds	r2, r0, r1
 	cmp	r2, r3
- 801216e:	429a      	cmp	r2, r3
+ 80121ee:	429a      	cmp	r2, r3
 	bcc	CopyDataInit
- 8012170:	d3f6      	bcc.n	8012160 <CopyDataInit>
+ 80121f0:	d3f6      	bcc.n	80121e0 <CopyDataInit>
 	ldr	r2, =_sbss
- 8012172:	4a0c      	ldr	r2, [pc, #48]	; (80121a4 <LoopForever+0x12>)
+ 80121f2:	4a0c      	ldr	r2, [pc, #48]	; (8012224 <LoopForever+0x12>)
 	b	LoopFillZerobss
- 8012174:	e002      	b.n	801217c <LoopFillZerobss>
+ 80121f4:	e002      	b.n	80121fc <LoopFillZerobss>
 
-08012176 <FillZerobss>:
+080121f6 <FillZerobss>:
 /* Zero fill the bss segment. */
 FillZerobss:
 	movs	r3, #0
- 8012176:	2300      	movs	r3, #0
+ 80121f6:	2300      	movs	r3, #0
 	str	r3, [r2], #4
- 8012178:	f842 3b04 	str.w	r3, [r2], #4
+ 80121f8:	f842 3b04 	str.w	r3, [r2], #4
 
-0801217c <LoopFillZerobss>:
+080121fc <LoopFillZerobss>:
 
 LoopFillZerobss:
 	ldr	r3, = _ebss
- 801217c:	4b0a      	ldr	r3, [pc, #40]	; (80121a8 <LoopForever+0x16>)
+ 80121fc:	4b0a      	ldr	r3, [pc, #40]	; (8012228 <LoopForever+0x16>)
 	cmp	r2, r3
- 801217e:	429a      	cmp	r2, r3
+ 80121fe:	429a      	cmp	r2, r3
 	bcc	FillZerobss
- 8012180:	d3f9      	bcc.n	8012176 <FillZerobss>
+ 8012200:	d3f9      	bcc.n	80121f6 <FillZerobss>
 	
 	//* Call the clock system intitialization function.*/
     bl  SystemInit
- 8012182:	f7fd fb61 	bl	800f848 <SystemInit>
+ 8012202:	f7fd fb21 	bl	800f848 <SystemInit>
 //  【CC_User 2.1】调用BIOS_API_Init函数
     bl  Vectors_Init    /*【固定】中断继承，.s文件仅修改此处*/
- 8012186:	f7fe ff53 	bl	8011030 <Vectors_Init>
+ 8012206:	f7fe ff13 	bl	8011030 <Vectors_Init>
 /* Call static constructors */
 //  【CC_User 2.2】1.需调用__libc_init_array，若不执行则C++类构造函数不会执行
 //                2.__libc_init_array函数须在BIOS_API_Init之后执行
 //                3.__libc_init_array函数的具体功能待进一步了解
     bl __libc_init_array
- 801218a:	f000 f813 	bl	80121b4 <__libc_init_array>
+ 801220a:	f000 f813 	bl	8012234 <__libc_init_array>
 /* Call the application's entry point.*/
 	bl	main
- 801218e:	f7fd fc51 	bl	800fa34 <main>
+ 801220e:	f7fd fc11 	bl	800fa34 <main>
 
-08012192 <LoopForever>:
+08012212 <LoopForever>:
 	
 
 
 LoopForever:
     b LoopForever
- 8012192:	e7fe      	b.n	8012192 <LoopForever>
+ 8012212:	e7fe      	b.n	8012212 <LoopForever>
   ldr   sp, =_estack    /* Atollic update: set stack pointer */
- 8012194:	2000ffff 	.word	0x2000ffff
+ 8012214:	2000ffff 	.word	0x2000ffff
 	ldr	r3, =_sidata
- 8012198:	08012e28 	.word	0x08012e28
+ 8012218:	08012ee0 	.word	0x08012ee0
 	ldr	r0, =_sdata
- 801219c:	20004000 	.word	0x20004000
+ 801221c:	20004000 	.word	0x20004000
 	ldr	r3, =_edata
- 80121a0:	200040a0 	.word	0x200040a0
+ 8012220:	200040a0 	.word	0x200040a0
 	ldr	r2, =_sbss
- 80121a4:	200040a0 	.word	0x200040a0
+ 8012224:	200040a0 	.word	0x200040a0
 	ldr	r3, = _ebss
- 80121a8:	20007c78 	.word	0x20007c78
+ 8012228:	20007c78 	.word	0x20007c78
 
-080121ac <ADC1_IRQHandler>:
+0801222c <ADC1_IRQHandler>:
 */
     .section	.text.Default_Handler,"ax",%progbits
 Default_Handler:
     //Infinite_Loop:
 	//b	Infinite_Loop
 	push  {lr}        //【20200812】修改.s文件，缺省中断，直接返回
- 80121ac:	b500      	push	{lr}
+ 801222c:	b500      	push	{lr}
     nop
- 80121ae:	bf00      	nop
+ 801222e:	bf00      	nop
     pop   {pc}
- 80121b0:	bd00      	pop	{pc}
+ 8012230:	bd00      	pop	{pc}
 	...
 
-080121b4 <__libc_init_array>:
- 80121b4:	b570      	push	{r4, r5, r6, lr}
- 80121b6:	4e0d      	ldr	r6, [pc, #52]	; (80121ec <__libc_init_array+0x38>)
- 80121b8:	4c0d      	ldr	r4, [pc, #52]	; (80121f0 <__libc_init_array+0x3c>)
- 80121ba:	1ba4      	subs	r4, r4, r6
- 80121bc:	10a4      	asrs	r4, r4, #2
- 80121be:	2500      	movs	r5, #0
- 80121c0:	42a5      	cmp	r5, r4
- 80121c2:	d109      	bne.n	80121d8 <__libc_init_array+0x24>
- 80121c4:	4e0b      	ldr	r6, [pc, #44]	; (80121f4 <__libc_init_array+0x40>)
- 80121c6:	4c0c      	ldr	r4, [pc, #48]	; (80121f8 <__libc_init_array+0x44>)
- 80121c8:	f000 f82c 	bl	8012224 <_init>
- 80121cc:	1ba4      	subs	r4, r4, r6
- 80121ce:	10a4      	asrs	r4, r4, #2
- 80121d0:	2500      	movs	r5, #0
- 80121d2:	42a5      	cmp	r5, r4
- 80121d4:	d105      	bne.n	80121e2 <__libc_init_array+0x2e>
- 80121d6:	bd70      	pop	{r4, r5, r6, pc}
- 80121d8:	f856 3025 	ldr.w	r3, [r6, r5, lsl #2]
- 80121dc:	4798      	blx	r3
- 80121de:	3501      	adds	r5, #1
- 80121e0:	e7ee      	b.n	80121c0 <__libc_init_array+0xc>
- 80121e2:	f856 3025 	ldr.w	r3, [r6, r5, lsl #2]
- 80121e6:	4798      	blx	r3
- 80121e8:	3501      	adds	r5, #1
- 80121ea:	e7f2      	b.n	80121d2 <__libc_init_array+0x1e>
- 80121ec:	08012e18 	.word	0x08012e18
- 80121f0:	08012e18 	.word	0x08012e18
- 80121f4:	08012e18 	.word	0x08012e18
- 80121f8:	08012e1c 	.word	0x08012e1c
+08012234 <__libc_init_array>:
+ 8012234:	b570      	push	{r4, r5, r6, lr}
+ 8012236:	4e0d      	ldr	r6, [pc, #52]	; (801226c <__libc_init_array+0x38>)
+ 8012238:	4c0d      	ldr	r4, [pc, #52]	; (8012270 <__libc_init_array+0x3c>)
+ 801223a:	1ba4      	subs	r4, r4, r6
+ 801223c:	10a4      	asrs	r4, r4, #2
+ 801223e:	2500      	movs	r5, #0
+ 8012240:	42a5      	cmp	r5, r4
+ 8012242:	d109      	bne.n	8012258 <__libc_init_array+0x24>
+ 8012244:	4e0b      	ldr	r6, [pc, #44]	; (8012274 <__libc_init_array+0x40>)
+ 8012246:	4c0c      	ldr	r4, [pc, #48]	; (8012278 <__libc_init_array+0x44>)
+ 8012248:	f000 f83a 	bl	80122c0 <_init>
+ 801224c:	1ba4      	subs	r4, r4, r6
+ 801224e:	10a4      	asrs	r4, r4, #2
+ 8012250:	2500      	movs	r5, #0
+ 8012252:	42a5      	cmp	r5, r4
+ 8012254:	d105      	bne.n	8012262 <__libc_init_array+0x2e>
+ 8012256:	bd70      	pop	{r4, r5, r6, pc}
+ 8012258:	f856 3025 	ldr.w	r3, [r6, r5, lsl #2]
+ 801225c:	4798      	blx	r3
+ 801225e:	3501      	adds	r5, #1
+ 8012260:	e7ee      	b.n	8012240 <__libc_init_array+0xc>
+ 8012262:	f856 3025 	ldr.w	r3, [r6, r5, lsl #2]
+ 8012266:	4798      	blx	r3
+ 8012268:	3501      	adds	r5, #1
+ 801226a:	e7f2      	b.n	8012252 <__libc_init_array+0x1e>
+ 801226c:	08012ed0 	.word	0x08012ed0
+ 8012270:	08012ed0 	.word	0x08012ed0
+ 8012274:	08012ed0 	.word	0x08012ed0
+ 8012278:	08012ed4 	.word	0x08012ed4
 
-080121fc <memcpy>:
- 80121fc:	b510      	push	{r4, lr}
- 80121fe:	1e43      	subs	r3, r0, #1
- 8012200:	440a      	add	r2, r1
- 8012202:	4291      	cmp	r1, r2
- 8012204:	d100      	bne.n	8012208 <memcpy+0xc>
- 8012206:	bd10      	pop	{r4, pc}
- 8012208:	f811 4b01 	ldrb.w	r4, [r1], #1
- 801220c:	f803 4f01 	strb.w	r4, [r3, #1]!
- 8012210:	e7f7      	b.n	8012202 <memcpy+0x6>
+0801227c <memcpy>:
+ 801227c:	b510      	push	{r4, lr}
+ 801227e:	1e43      	subs	r3, r0, #1
+ 8012280:	440a      	add	r2, r1
+ 8012282:	4291      	cmp	r1, r2
+ 8012284:	d100      	bne.n	8012288 <memcpy+0xc>
+ 8012286:	bd10      	pop	{r4, pc}
+ 8012288:	f811 4b01 	ldrb.w	r4, [r1], #1
+ 801228c:	f803 4f01 	strb.w	r4, [r3, #1]!
+ 8012290:	e7f7      	b.n	8012282 <memcpy+0x6>
 
-08012212 <memset>:
- 8012212:	4402      	add	r2, r0
- 8012214:	4603      	mov	r3, r0
- 8012216:	4293      	cmp	r3, r2
- 8012218:	d100      	bne.n	801221c <memset+0xa>
- 801221a:	4770      	bx	lr
- 801221c:	f803 1b01 	strb.w	r1, [r3], #1
- 8012220:	e7f9      	b.n	8012216 <memset+0x4>
-	...
+08012292 <memset>:
+ 8012292:	4402      	add	r2, r0
+ 8012294:	4603      	mov	r3, r0
+ 8012296:	4293      	cmp	r3, r2
+ 8012298:	d100      	bne.n	801229c <memset+0xa>
+ 801229a:	4770      	bx	lr
+ 801229c:	f803 1b01 	strb.w	r1, [r3], #1
+ 80122a0:	e7f9      	b.n	8012296 <memset+0x4>
 
-08012224 <_init>:
- 8012224:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
- 8012226:	bf00      	nop
- 8012228:	bcf8      	pop	{r3, r4, r5, r6, r7}
- 801222a:	bc08      	pop	{r3}
- 801222c:	469e      	mov	lr, r3
- 801222e:	4770      	bx	lr
+080122a2 <strcat>:
+ 80122a2:	b510      	push	{r4, lr}
+ 80122a4:	4603      	mov	r3, r0
+ 80122a6:	781a      	ldrb	r2, [r3, #0]
+ 80122a8:	1c5c      	adds	r4, r3, #1
+ 80122aa:	b93a      	cbnz	r2, 80122bc <strcat+0x1a>
+ 80122ac:	3b01      	subs	r3, #1
+ 80122ae:	f811 2b01 	ldrb.w	r2, [r1], #1
+ 80122b2:	f803 2f01 	strb.w	r2, [r3, #1]!
+ 80122b6:	2a00      	cmp	r2, #0
+ 80122b8:	d1f9      	bne.n	80122ae <strcat+0xc>
+ 80122ba:	bd10      	pop	{r4, pc}
+ 80122bc:	4623      	mov	r3, r4
+ 80122be:	e7f2      	b.n	80122a6 <strcat+0x4>
 
-08012230 <_fini>:
- 8012230:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
- 8012232:	bf00      	nop
- 8012234:	bcf8      	pop	{r3, r4, r5, r6, r7}
- 8012236:	bc08      	pop	{r3}
- 8012238:	469e      	mov	lr, r3
- 801223a:	4770      	bx	lr
- 801223c:	0000      	movs	r0, r0
-	...
+080122c0 <_init>:
+ 80122c0:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 80122c2:	bf00      	nop
+ 80122c4:	bcf8      	pop	{r3, r4, r5, r6, r7}
+ 80122c6:	bc08      	pop	{r3}
+ 80122c8:	469e      	mov	lr, r3
+ 80122ca:	4770      	bx	lr
+
+080122cc <_fini>:
+ 80122cc:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 80122ce:	bf00      	nop
+ 80122d0:	bcf8      	pop	{r3, r4, r5, r6, r7}
+ 80122d2:	bc08      	pop	{r3}
+ 80122d4:	469e      	mov	lr, r3
+ 80122d6:	4770      	bx	lr

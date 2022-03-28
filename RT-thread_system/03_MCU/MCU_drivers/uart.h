@@ -62,6 +62,8 @@ uint8_t uart_sendN(uint8_t uartNo ,uint16_t len ,uint8_t* buff);
  //=====================================================================
 uint8_t uart_send_string(uint8_t uartNo, uint8_t *buff);
 
+uint8_t useruart_send_string(uint8_t uartNo, uint8_t *buff);
+
  //=====================================================================
 //函数名称：uart_re1
 //参数说明：uartNo: 串口号:UART_1、UART_2、UART_3

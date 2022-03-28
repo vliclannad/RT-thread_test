@@ -34,6 +34,9 @@ void thread_messagerecv()
     	   	uart_sendN(UART_User,8,temp);
     	   	uart_send_string(UART_User,(void *) "\r\n");
     	   	delay_ms(1000);                //延迟，为了演示消息堆积的情况
+
+
+			useruart_send_string(UART_User,(void*)"消息消息消息消息消息消息消息消息");
     	 }
     }//（2）======主循环（结束）==========================================
 }

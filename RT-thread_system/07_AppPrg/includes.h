@@ -33,7 +33,7 @@
 #endif
 //（在此增加全局变量）
 
-
+G_VAR_PREFIX uint8_t code_head[1024]={0Xa5,0x5a,0x0c,0x82,0x01,0x00};
 //（系统保留）
 G_VAR_PREFIX vuint16_t gcRecvLen;
 G_VAR_PREFIX vuint16_t gcRecvDCLen;
