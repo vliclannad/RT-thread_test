@@ -22,6 +22,7 @@ void thread_rulechoose()
             if(gcRecvBuf[3]==CONNECT_CODE)//命令字为66，代表Pc端正和mcu取得连接
             {
                 uart_send_string(UART_User,(void*) "I can see you");//回发连接确认
+                LCD_ShowString(96,50,BLUE,GRAY,(char *)" 已连接");
             }
             if(gcRecvBuf[3]==RESULT_CODE)
             {
@@ -46,6 +47,7 @@ void thread_rulechoose()
                 if(gcRecvBuf[8]==0x01)//命令参数为01，代表启动该功能，传递事件信号把小灯线程从阻塞队列移到就绪队列
                 {  
                     //启动该功能线程前先关闭其他功能线程
+                    uart_send_string(UART_User,(void *)"接收到事件功能开启命令，开启事件功能");
                     rt_thread_detach(thd_messagerecv);
                     rt_thread_detach(thd_SPThread1);	
                     rt_thread_detach(thd_SPThread2);
@@ -61,6 +63,7 @@ void thread_rulechoose()
                     rt_thread_startup(thd_eventBlue);
                     rt_thread_startup(thd_eventGreen);
                     rt_event_send(EventWord,BLUE_LIGHT_EVENT);
+                    LCD_ShowString(6,125,BLACK,GRAY,(char *)"当前状态:执行事件演示      ");
 
                 }
                 if(gcRecvBuf[8]==0x00)//命令参数为00，代表关闭该功能，重新启动小灯线程，把小灯线程移入阻塞队列
@@ -71,6 +74,7 @@ void thread_rulechoose()
                     gpio_init(LIGHT_BLUE,GPIO_OUTPUT,LIGHT_OFF);
                     gpio_init(LIGHT_GREEN,GPIO_OUTPUT,LIGHT_OFF);
                     gpio_init(LIGHT_RED,GPIO_OUTPUT,LIGHT_OFF);
+                    LCD_ShowString(6,125,BLACK,GRAY,(char *)"当前状态:等待命令      ");
                 }
                 
 
@@ -125,6 +129,7 @@ void thread_rulechoose()
 	                rt_thread_startup(thd_SPThread1);//启动信号量线程1
 	                rt_thread_startup(thd_SPThread2);//启动信号量线程2
 	                rt_thread_startup(thd_SPThread3);//启动信号量线程
+                    LCD_ShowString(6,125,BLACK,GRAY,(char *)"当前状态:执行信号量演示      ");
 
 
                 }
@@ -137,6 +142,7 @@ void thread_rulechoose()
                     gpio_init(LIGHT_BLUE,GPIO_OUTPUT,LIGHT_OFF);
                     gpio_init(LIGHT_GREEN,GPIO_OUTPUT,LIGHT_OFF);
                     gpio_init(LIGHT_RED,GPIO_OUTPUT,LIGHT_OFF);
+                    LCD_ShowString(6,125,BLACK,GRAY,(char *)"当前状态:等待命令      ");
 
                 }
 
@@ -157,9 +163,10 @@ void thread_rulechoose()
                     rt_thread_detach(thd_delayGreen);
                     rt_thread_detach(thd_delayRed);
 
-                    rt_thread_startup(thd_mutexRed);//启动红灯线程
-	                rt_thread_startup(thd_mutexGreen);//启动绿灯线程
-	                rt_thread_startup(thd_mutexBlue);//启动蓝灯线程
+                    rt_thread_startup(thd_mutexRed);//启动互斥量线程
+	                rt_thread_startup(thd_mutexGreen);//启动互斥量线程
+	                rt_thread_startup(thd_mutexBlue);//启动互斥量线程
+                    LCD_ShowString(6,125,BLACK,GRAY,(char *)"当前状态:执行互斥量演示      ");
                 }
                 if(gcRecvBuf[8]==0x00)
                 {
@@ -170,6 +177,7 @@ void thread_rulechoose()
                     gpio_init(LIGHT_BLUE,GPIO_OUTPUT,LIGHT_OFF);
                     gpio_init(LIGHT_GREEN,GPIO_OUTPUT,LIGHT_OFF);
                     gpio_init(LIGHT_RED,GPIO_OUTPUT,LIGHT_OFF);
+                    LCD_ShowString(6,125,BLACK,GRAY,(char *)"当前状态:等待命令      ");
                 }
 
             }
@@ -192,6 +200,7 @@ void thread_rulechoose()
                     rt_thread_startup(thd_delayBlue);
                     rt_thread_startup(thd_delayGreen);
                     rt_thread_startup(thd_delayRed);
+                    LCD_ShowString(6,125,BLACK,GRAY,(char *)"当前状态:执行延时演示      ");
                 }
                 if(gcRecvBuf[8]==0x00)
                 {
@@ -202,6 +211,7 @@ void thread_rulechoose()
                     gpio_init(LIGHT_BLUE,GPIO_OUTPUT,LIGHT_OFF);
                     gpio_init(LIGHT_GREEN,GPIO_OUTPUT,LIGHT_OFF);
                     gpio_init(LIGHT_RED,GPIO_OUTPUT,LIGHT_OFF);
+                    LCD_ShowString(6,125,BLACK,GRAY,(char *)"当前状态:等待命令      ");
                 }
 
             }

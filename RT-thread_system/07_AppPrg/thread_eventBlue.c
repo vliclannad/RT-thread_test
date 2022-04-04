@@ -27,10 +27,12 @@ void thread_eventBlue()
      {  //如果接收完成且正确
     	uart_send_string(UART_User,(void *)"----进入蓝灯线程-----\r\n");
     	uart_send_string(UART_User,(void *)"在蓝灯线程中，设置绿灯事件\r\n");
+       // useruart_send_string(UART_User,(void *)"----在蓝灯线程中，设置绿灯事件-----\r\n");
     	//设置GREEN_LIGHT_EVENT事件位
         rt_event_send(EventWord,GREEN_LIGHT_EVENT);
         uart_send_string(UART_User,(void *)"------蓝灯闪烁------\r\n");
-	  	  gpio_reverse(LIGHT_BLUE);
+       // useruart_send_string(UART_User,(void *)"----蓝灯闪烁-----\r\n");
+	  	gpio_reverse(LIGHT_BLUE);
         delay_ms(10000);
 
      }

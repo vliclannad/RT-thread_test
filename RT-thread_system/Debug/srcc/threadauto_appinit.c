@@ -29,16 +29,22 @@ void app_init(void)
 	gpio_init(LIGHT_BLUE,GPIO_OUTPUT,LIGHT_OFF);
 	gpio_init(LIGHT_RED,GPIO_OUTPUT,LIGHT_OFF);
 	uart_init(UART_User,115200); 
+	    //LCD初始化、初始界面绘制
+    LCD_Init();
+    LCD_aotu(2,2,238,318,0);
+    LCD_ShowString(35,20,BLACK,GRAY,(char *)"RT-Thread实验演示系统");
+    LCD_ShowString(96,50,RED,GRAY,(char *)" 未连接");
+    
+    LCD_ShowString(6,90,BLACK,GRAY,(char *)"程序版本:1.01");
+    LCD_aotu(4,110,236,120,1);
+    LCD_ShowString(6,125,BLACK,GRAY,(char *)"当前状态:等待命令");
+    LCD_aotu(4,145,236,155,1);
+    LCD_ShowString(6,160,BLACK,GRAY,(char *)"小灯状态:关");
+    LCD_aotu(4,180,236,190,1);
 	//（1.7）使能模块中断
 	uart_enable_re_int(UART_User);
 	//（1.8）【不变】开总中断
 	ENABLE_INTERRUPTS;
-	printf("【金葫芦提示】本程序为带RT-Thread的STM32用户程序\r\n");
-	printf("【基本功能】①在 RT-Thread启动后创建了红灯、绿灯和蓝灯三个用户线程\r\n");
-	printf("	        ②实现蓝灯每10秒闪烁一次,并设置事件字\r\n");
-	printf("	        ③绿灯线程等待到事件字，转换绿灯状态\r\n");
-	printf("【操作方法】连接串口User，选择波特率为115200，打开串口，查看输出结果...\r\r\n\n");
-	printf("0-1.MCU启动\n");
 	
 	//创建事件字
 	EventWord=rt_event_create("EventWord",RT_IPC_FLAG_PRIO);
@@ -54,7 +60,7 @@ void app_init(void)
 	thd_rulechoose=rt_thread_create("rulechoose", (void *)thread_rulechoose, 0, 512, 9, 10);
 	//创建三色灯线程
 	thd_eventGreen = rt_thread_create("eventGreen", (void *)thread_eventGreen, 0, 512, 10, 10);
-	thd_eventBlue = rt_thread_create("eventBlue", (void *)thd_eventBlue, 0, 512, 10, 10);
+	thd_eventBlue = rt_thread_create("eventBlue", (void *)thread_eventBlue, 0, 512, 10, 10);
 	//创建消息队列线程
 	thd_messagerecv = rt_thread_create("messagerecv", (void *)thread_messagerecv, 0, 512, 10, 10);
 	//创建三个信号量线程
@@ -70,6 +76,8 @@ void app_init(void)
 	thd_delayGreen=rt_thread_create("delayGreen", (void *)thread_delayGreen, 0, 512, 10, 10);
 	thd_delayBlue=rt_thread_create("delayBlue", (void *)thread_delayBlue, 0, 512, 10, 10);
 
+	thd_lcdshow=rt_thread_create("lcdshow", (void *)thread_lcdshow, 0, 512, 10, 10);
+
 
 
 
@@ -78,4 +86,5 @@ void app_init(void)
 
 
     rt_thread_startup(thd_rulechoose);//启动命令选择线程
+	rt_thread_startup(thd_lcdshow);
 }

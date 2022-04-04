@@ -1,4 +1,4 @@
-obj/thread_messagerecv.o: srcc/thread_messagerecv.c \
+obj/thread_lcdshow.o: srcc/thread_lcdshow.c \
  F:\GIT\RT-thread_test\RT-thread_system\07_AppPrg/includes.h \
  F:\GIT\RT-thread_test\RT-thread_system\05_UserBoard/user.h \
  F:\GIT\RT-thread_test\RT-thread_system\05_UserBoard/printf.h \
@@ -26,7 +26,11 @@ obj/thread_messagerecv.o: srcc/thread_messagerecv.c \
  F:\GIT\RT-thread_test\RT-thread_system\05_UserBoard\RT-Thread_Src\include/rtdef.h \
  F:\GIT\RT-thread_test\RT-thread_system\05_UserBoard\RT-Thread_Src\include/rtservice.h \
  F:\GIT\RT-thread_test\RT-thread_system\05_UserBoard\RT-Thread_Src\include/rtm.h \
- F:\GIT\RT-thread_test\RT-thread_system\06_SoftComponent/NumToStr.h
+ F:\GIT\RT-thread_test\RT-thread_system\06_SoftComponent/NumToStr.h \
+ F:\GIT\RT-thread_test\RT-thread_system\05_UserBoard/lcd.h \
+ F:\GIT\RT-thread_test\RT-thread_system\03_MCU\MCU_drivers/wdog.h \
+ F:\GIT\RT-thread_test\RT-thread_system\03_MCU\MCU_drivers/spi.h \
+ F:\GIT\RT-thread_test\RT-thread_system\03_MCU\MCU_drivers/adc.h
 
 F:\GIT\RT-thread_test\RT-thread_system\07_AppPrg/includes.h:
 
@@ -83,3 +87,11 @@ F:\GIT\RT-thread_test\RT-thread_system\05_UserBoard\RT-Thread_Src\include/rtserv
 F:\GIT\RT-thread_test\RT-thread_system\05_UserBoard\RT-Thread_Src\include/rtm.h:
 
 F:\GIT\RT-thread_test\RT-thread_system\06_SoftComponent/NumToStr.h:
+
+F:\GIT\RT-thread_test\RT-thread_system\05_UserBoard/lcd.h:
+
+F:\GIT\RT-thread_test\RT-thread_system\03_MCU\MCU_drivers/wdog.h:
+
+F:\GIT\RT-thread_test\RT-thread_system\03_MCU\MCU_drivers/spi.h:
+
+F:\GIT\RT-thread_test\RT-thread_system\03_MCU\MCU_drivers/adc.h:

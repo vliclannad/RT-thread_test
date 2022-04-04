@@ -13,6 +13,8 @@
 #include "user.h"
 #include <OsFunc.h>
 #include "NumToStr.h"
+#include "lcd.h"
+#include "adc.h"
 
 //----------------------------------------------------------------------
 //（2）全局使用的宏常数。
@@ -33,7 +35,6 @@
 #endif
 //（在此增加全局变量）
 
-G_VAR_PREFIX uint8_t code_head[1024]={0Xa5,0x5a,0x0c,0x82,0x01,0x00};
 //（系统保留）
 G_VAR_PREFIX vuint16_t gcRecvLen;
 G_VAR_PREFIX vuint16_t gcRecvDCLen;
@@ -43,6 +44,7 @@ G_VAR_PREFIX rt_event_t EventWord;
 G_VAR_PREFIX rt_mq_t mq;
 G_VAR_PREFIX rt_sem_t SP;
 G_VAR_PREFIX rt_mutex_t mutex;
+
 
 G_VAR_PREFIX	rt_thread_t thd_eventGreen;
 G_VAR_PREFIX 	rt_thread_t thd_eventBlue;
@@ -56,6 +58,7 @@ G_VAR_PREFIX 	rt_thread_t thd_mutexRed;
 G_VAR_PREFIX  rt_thread_t thd_delayGreen;
 G_VAR_PREFIX  rt_thread_t thd_delayBlue;
 G_VAR_PREFIX  rt_thread_t thd_delayRed;
+G_VAR_PREFIX  rt_thread_t thd_lcdshow;
 //线程函数声明
 void app_init(void);
 void thread_rulechoose();
@@ -71,6 +74,7 @@ void thread_mutexRed();
 void thread_delayBlue();
 void thread_delayGreen();
 void thread_delayRed();
+void thread_lcdshow();
 //void thread_cloose(uint16_t thread_number);
 #define delay_ms(x)  rt_thread_delay(x)
 //----------------------------------------------------------------------
