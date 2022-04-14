@@ -11,7 +11,7 @@ void app_init(void)
 {
 	//（1）======启动部分（开头）==========================================
 	//（1.1）声明main函数使用的局部变量
-	rt_thread_t thd_rulechoose;
+	rt_thread_t thd_cmdchoose;
 
 
 	
@@ -57,7 +57,7 @@ void app_init(void)
 
 
 	//创建命令选择线程
-	thd_rulechoose=rt_thread_create("rulechoose", (void *)thread_rulechoose, 0, 512, 9, 10);
+	thd_cmdchoose=rt_thread_create("cmdchoose", (void *)thread_cmdchoose, 0, 512, 9, 10);
 	//创建三色灯线程
 	thd_eventGreen = rt_thread_create("eventGreen", (void *)thread_eventGreen, 0, 512, 10, 10);
 	thd_eventBlue = rt_thread_create("eventBlue", (void *)thread_eventBlue, 0, 512, 10, 10);
@@ -85,6 +85,6 @@ void app_init(void)
 
 
 
-    rt_thread_startup(thd_rulechoose);//启动命令选择线程
-	rt_thread_startup(thd_lcdshow);
+    rt_thread_startup(thd_cmdchoose);//启动命令选择线程
+	rt_thread_startup(thd_lcdshow);//启动LCD屏自动更新线程
 }

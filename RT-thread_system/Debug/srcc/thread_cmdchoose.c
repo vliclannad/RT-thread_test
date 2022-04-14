@@ -1,30 +1,30 @@
 #include "includes.h"
 
 //======================================================================
-//函数名称：rule_choose
+//函数名称：cmd_choose
 //函数返回：无
 //参数说明：无
 //功能概要：根据接收到的命令，启动/挂起对应的线程
 //内部调用：无
 //======================================================================
 
-void thread_rulechoose()
+void thread_cmdchoose()
 {
         uint32_t recvedstate;
         uint8_t recvData[9];
     while(1)
     {
         uart_send_string(UART_User,(void *)"进入命令选择线程，等待事件信号\n");
-        rt_event_recv(EventWord,RULE_CHOOSE_EVENT,RT_EVENT_FLAG_OR|RT_EVENT_FLAG_CLEAR,RT_WAITING_FOREVER,&recvedstate);//等待命令选择线程的事件信号，串口接收完数据后会触发
+        rt_event_recv(EventWord,CMD_CHOOSE_EVENT,RT_EVENT_FLAG_OR|RT_EVENT_FLAG_CLEAR,RT_WAITING_FOREVER,&recvedstate);//等待命令选择线程的事件信号，串口接收完数据后会触发
         uart_send_string(UART_User,(void *)"接收到事件信号\n");
-        if(recvedstate==RULE_CHOOSE_EVENT)  //如果接收完成且正确
+        if(recvedstate==CMD_CHOOSE_EVENT)  //如果接收完成且正确
     	{
-            if(gcRecvBuf[3]==CONNECT_CODE)//命令字为66，代表Pc端正和mcu取得连接
+            if(gcRecvBuf[7]==CONNECT_CODE)//命令字为66，代表Pc端正和mcu取得连接
             {
                 uart_send_string(UART_User,(void*) "I can see you");//回发连接确认
                 LCD_ShowString(96,50,BLUE,GRAY,(char *)" 已连接");
             }
-            if(gcRecvBuf[3]==RESULT_CODE)
+            if(gcRecvBuf[7]==RESULT_CODE)
             {
 
                 rt_thread_delete(thd_eventBlue);

@@ -194,7 +194,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="01_Doc\" />
-    <Folder Include="05_Information\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="05_Information\delay_information.txt" />
+    <Content Include="05_Information\main_information.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

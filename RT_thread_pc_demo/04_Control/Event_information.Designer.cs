@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.Btn_toevent = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Btn_toevent
@@ -42,20 +42,26 @@
             this.Btn_toevent.UseVisualStyleBackColor = true;
             this.Btn_toevent.Click += new System.EventHandler(this.Btn_toevent_Click);
             // 
-            // textBox1
+            // textBox2
             // 
-            this.textBox1.Location = new System.Drawing.Point(431, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(86, 21);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "事件功能介绍";
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox2.BackColor = System.Drawing.SystemColors.Info;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox2.Location = new System.Drawing.Point(369, 40);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(203, 28);
+            this.textBox2.TabIndex = 2;
+            this.textBox2.Text = "实验一 事件演示";
             // 
             // Event_information
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.Btn_toevent);
             this.Name = "Event_information";
             this.Size = new System.Drawing.Size(1007, 554);
@@ -67,6 +73,6 @@
         #endregion
 
         private System.Windows.Forms.Button Btn_toevent;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

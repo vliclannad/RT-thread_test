@@ -30,7 +30,7 @@ void UART_User_Handler(void)
     
        gcRecvLen =useremuart_frame(ch,(uint8_t*)gcRecvBuf);//对接收数据组帧，返回0组帧未成功，返回长度组帧成功。
        if (gcRecvLen == 0) goto UART_User_Handler_EXIT; 
-       rt_event_send(EventWord,RULE_CHOOSE_EVENT);//数据接收完成，对命令选择事件置位
+       rt_event_send(EventWord,CMD_CHOOSE_EVENT);//数据接收完成，对命令选择事件置位
         gcRecvLen = 0;   //帧已经使用完毕，下次若收到一个字节，可以继续组帧
         //【使用模板提供的User串口通信帧结构（结束)】
      

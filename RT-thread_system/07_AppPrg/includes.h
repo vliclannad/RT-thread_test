@@ -18,7 +18,7 @@
 
 //----------------------------------------------------------------------
 //（2）全局使用的宏常数。
-#define RULE_CHOOSE_EVENT  (1<<1)      //定义命令选择事件位第1位
+#define CMD_CHOOSE_EVENT  (1<<1)      //定义命令选择事件位第1位
 #define GREEN_LIGHT_EVENT  (1<<2)      //定义绿灯事件为事件字第2位
 #define BLUE_LIGHT_EVENT  (1<<3)      //定义蓝灯事件为事件字第3位
 //----------------------------------------------------------------------
@@ -61,7 +61,7 @@ G_VAR_PREFIX  rt_thread_t thd_delayRed;
 G_VAR_PREFIX  rt_thread_t thd_lcdshow;
 //线程函数声明
 void app_init(void);
-void thread_rulechoose();
+void thread_cmdchoose();
 void thread_eventGreen();
 void thread_eventBlue();
 void thread_messagerecv();

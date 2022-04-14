@@ -56,7 +56,7 @@ namespace RT_thread_pc_demo
             AddControlsToPanel(panel_main, main_Information);
             if(Menu_change != null)
             {
-                Menu_change(sender, e);
+                Menu_change(sender, e);//触发该事件
 
             }
 

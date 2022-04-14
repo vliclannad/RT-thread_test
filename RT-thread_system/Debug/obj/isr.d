@@ -1,4 +1,4 @@
-obj/thread_lcdshow.o: srcc/thread_lcdshow.c \
+obj/isr.o: srcc/isr.c \
  F:\GIT\RT-thread_test\RT-thread_system\07_AppPrg/includes.h \
  F:\GIT\RT-thread_test\RT-thread_system\05_UserBoard/user.h \
  F:\GIT\RT-thread_test\RT-thread_system\05_UserBoard/printf.h \

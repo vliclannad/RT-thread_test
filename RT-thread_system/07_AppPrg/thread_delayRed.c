@@ -13,9 +13,9 @@ void thread_delayRed(void)
     gpio_init(LIGHT_RED,GPIO_OUTPUT,LIGHT_OFF);
     while (1)
     {
-    	userprintf("3-1.当前运行的线程=%x，红灯延时5秒（开始）；\r\n",thread_self());
+    	userprintf("当前运行的线程=%x，红灯延时5秒（开始）；\r\n",thread_self());
 		delay_ms(5000);  //延时5秒
-		userprintf("3-2.当前运行的线程=%x，红灯延时5秒（结束），红灯反转。\r\n",thread_self());
+		userprintf("当前运行的线程=%x，红灯延时5秒（结束），红灯反转。\r\n",thread_self());
 		gpio_reverse(LIGHT_RED);    //灯的状态反转
     }
 }

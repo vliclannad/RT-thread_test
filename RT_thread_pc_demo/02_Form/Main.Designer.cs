@@ -34,10 +34,10 @@
             this.Menu_message = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_sp = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_mutex = new System.Windows.Forms.ToolStripMenuItem();
+            this.Menu_delay = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_help = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_main = new System.Windows.Forms.Panel();
             this.panel_connect = new System.Windows.Forms.Panel();
-            this.Menu_delay = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,11 +51,11 @@
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Menu_main,
+            this.Menu_delay,
             this.Menu_event,
             this.Menu_message,
             this.Menu_sp,
             this.Menu_mutex,
-            this.Menu_delay,
             this.Menu_help});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -74,29 +74,36 @@
             // 
             this.Menu_event.Name = "Menu_event";
             this.Menu_event.Size = new System.Drawing.Size(68, 21);
-            this.Menu_event.Text = "事件功能";
+            this.Menu_event.Text = "事件实验";
             this.Menu_event.Click += new System.EventHandler(this.Menu_event_Click);
             // 
             // Menu_message
             // 
             this.Menu_message.Name = "Menu_message";
             this.Menu_message.Size = new System.Drawing.Size(92, 21);
-            this.Menu_message.Text = "消息队列功能";
+            this.Menu_message.Text = "消息队列实验";
             this.Menu_message.Click += new System.EventHandler(this.Menu_message_Click);
             // 
             // Menu_sp
             // 
             this.Menu_sp.Name = "Menu_sp";
             this.Menu_sp.Size = new System.Drawing.Size(80, 21);
-            this.Menu_sp.Text = "信号量功能";
+            this.Menu_sp.Text = "信号量实验";
             this.Menu_sp.Click += new System.EventHandler(this.Menu_sp_Click);
             // 
             // Menu_mutex
             // 
             this.Menu_mutex.Name = "Menu_mutex";
             this.Menu_mutex.Size = new System.Drawing.Size(80, 21);
-            this.Menu_mutex.Text = "互斥量功能";
+            this.Menu_mutex.Text = "互斥量实验";
             this.Menu_mutex.Click += new System.EventHandler(this.Menu_mutex_Click);
+            // 
+            // Menu_delay
+            // 
+            this.Menu_delay.Name = "Menu_delay";
+            this.Menu_delay.Size = new System.Drawing.Size(68, 21);
+            this.Menu_delay.Text = "延时实验";
+            this.Menu_delay.Click += new System.EventHandler(this.Menu_delay_Click);
             // 
             // Menu_help
             // 
@@ -125,13 +132,6 @@
             this.panel_connect.Name = "panel_connect";
             this.panel_connect.Size = new System.Drawing.Size(1007, 100);
             this.panel_connect.TabIndex = 2;
-            // 
-            // Menu_delay
-            // 
-            this.Menu_delay.Name = "Menu_delay";
-            this.Menu_delay.Size = new System.Drawing.Size(68, 21);
-            this.Menu_delay.Text = "延时功能";
-            this.Menu_delay.Click += new System.EventHandler(this.Menu_delay_Click);
             // 
             // Main
             // 
