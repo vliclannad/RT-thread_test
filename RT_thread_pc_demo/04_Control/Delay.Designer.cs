@@ -38,7 +38,7 @@
             this.BtnSwitch_delay.Name = "BtnSwitch_delay";
             this.BtnSwitch_delay.Size = new System.Drawing.Size(195, 75);
             this.BtnSwitch_delay.TabIndex = 1;
-            this.BtnSwitch_delay.Text = "演示开始";
+            this.BtnSwitch_delay.Text = "实验开始";
             this.BtnSwitch_delay.UseVisualStyleBackColor = true;
             this.BtnSwitch_delay.Click += new System.EventHandler(this.BtnSwitch_delay_Click);
             // 

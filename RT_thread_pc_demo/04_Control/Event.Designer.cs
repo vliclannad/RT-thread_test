@@ -38,7 +38,7 @@
             this.BtnSwitch_event.Name = "BtnSwitch_event";
             this.BtnSwitch_event.Size = new System.Drawing.Size(195, 75);
             this.BtnSwitch_event.TabIndex = 1;
-            this.BtnSwitch_event.Text = "演示开始";
+            this.BtnSwitch_event.Text = "实验开始";
             this.BtnSwitch_event.UseVisualStyleBackColor = true;
             this.BtnSwitch_event.Click += new System.EventHandler(this.BtnSwitch_event_Click);
             // 

@@ -38,7 +38,7 @@
             this.Btn_tomessage.Name = "Btn_tomessage";
             this.Btn_tomessage.Size = new System.Drawing.Size(99, 36);
             this.Btn_tomessage.TabIndex = 0;
-            this.Btn_tomessage.Text = "演示页面";
+            this.Btn_tomessage.Text = "实验页面";
             this.Btn_tomessage.UseVisualStyleBackColor = true;
             this.Btn_tomessage.Click += new System.EventHandler(this.Btn_tomessage_Click);
             // 

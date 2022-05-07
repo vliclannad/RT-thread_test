@@ -41,7 +41,7 @@
             this.Btn_todelay.Name = "Btn_todelay";
             this.Btn_todelay.Size = new System.Drawing.Size(176, 80);
             this.Btn_todelay.TabIndex = 0;
-            this.Btn_todelay.Text = "演示页面";
+            this.Btn_todelay.Text = "实验页面";
             this.Btn_todelay.UseVisualStyleBackColor = true;
             this.Btn_todelay.Click += new System.EventHandler(this.Btn_todelay_Click);
             // 
@@ -58,7 +58,7 @@
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(203, 28);
             this.textBox2.TabIndex = 3;
-            this.textBox2.Text = "实验一 延时实验演示";
+            this.textBox2.Text = "实验一 延时实验";
             // 
             // groupBox1
             // 

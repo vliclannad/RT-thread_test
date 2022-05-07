@@ -35,5 +35,7 @@
 
 
         public static string path_main="..\\..\\05_Information\\main_information.txt";
+        public static string path_event_1 = "..\\..\\05_Information\\event_information_1.txt";
+        public static string path_event_2 = "..\\..\\05_Information\\event_information_2.txt";
     }
 }

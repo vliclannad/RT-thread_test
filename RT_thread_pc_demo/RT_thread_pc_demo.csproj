@@ -197,6 +197,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="05_Information\delay_information.txt" />
+    <Content Include="05_Information\event_information_1.txt" />
+    <Content Include="05_Information\event_information_2.txt" />
+    <Content Include="05_Information\image\事件实验.png" />
     <Content Include="05_Information\main_information.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -38,7 +38,7 @@
             this.BtnSwitch_message.Name = "BtnSwitch_message";
             this.BtnSwitch_message.Size = new System.Drawing.Size(195, 75);
             this.BtnSwitch_message.TabIndex = 1;
-            this.BtnSwitch_message.Text = "演示开始";
+            this.BtnSwitch_message.Text = "实验开始";
             this.BtnSwitch_message.UseVisualStyleBackColor = true;
             this.BtnSwitch_message.Click += new System.EventHandler(this.BtnSwitch_message_Click);
             // 
