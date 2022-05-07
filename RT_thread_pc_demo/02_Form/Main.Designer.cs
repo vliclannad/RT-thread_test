@@ -30,11 +30,11 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.Menu_main = new System.Windows.Forms.ToolStripMenuItem();
+            this.Menu_delay = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_event = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_message = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_sp = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_mutex = new System.Windows.Forms.ToolStripMenuItem();
-            this.Menu_delay = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_help = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_main = new System.Windows.Forms.Panel();
             this.panel_connect = new System.Windows.Forms.Panel();
@@ -70,6 +70,13 @@
             this.Menu_main.Text = "主页面";
             this.Menu_main.Click += new System.EventHandler(this.Menu_main_Click);
             // 
+            // Menu_delay
+            // 
+            this.Menu_delay.Name = "Menu_delay";
+            this.Menu_delay.Size = new System.Drawing.Size(68, 21);
+            this.Menu_delay.Text = "延时实验";
+            this.Menu_delay.Click += new System.EventHandler(this.Menu_delay_Click);
+            // 
             // Menu_event
             // 
             this.Menu_event.Name = "Menu_event";
@@ -97,13 +104,6 @@
             this.Menu_mutex.Size = new System.Drawing.Size(80, 21);
             this.Menu_mutex.Text = "互斥量实验";
             this.Menu_mutex.Click += new System.EventHandler(this.Menu_mutex_Click);
-            // 
-            // Menu_delay
-            // 
-            this.Menu_delay.Name = "Menu_delay";
-            this.Menu_delay.Size = new System.Drawing.Size(68, 21);
-            this.Menu_delay.Text = "延时实验";
-            this.Menu_delay.Click += new System.EventHandler(this.Menu_delay_Click);
             // 
             // Menu_help
             // 
@@ -143,6 +143,7 @@
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "Main";
             this.Text = "RT_thread演示系统";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);

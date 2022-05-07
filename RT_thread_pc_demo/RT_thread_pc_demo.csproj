@@ -196,7 +196,14 @@
     <Folder Include="01_Doc\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="05_Information\delay_information.txt" />
+    <Content Include="05_Information\mutex_information_1.txt" />
+    <Content Include="05_Information\mutex_information_2.txt" />
+    <Content Include="05_Information\sp_information_2.txt" />
+    <Content Include="05_Information\sp_information_1.txt" />
+    <Content Include="05_Information\message_information_2.txt" />
+    <Content Include="05_Information\message_information_1.txt" />
+    <Content Include="05_Information\delay_information_2.txt" />
+    <Content Include="05_Information\delay_information_1.txt" />
     <Content Include="05_Information\event_information_1.txt" />
     <Content Include="05_Information\event_information_2.txt" />
     <Content Include="05_Information\image\事件实验.png" />

@@ -18,7 +18,8 @@ namespace RT_thread_pc_demo._04_Control
         {
             InitializeComponent();
             InitializeComponent();
-            textBox_delay.Text = OpenTextFile(PublicVar.path_main);
+            textBox_delay_1.Text = OpenTextFile(PublicVar.path_delay_1);
+            textBox_delay_2.Text = OpenTextFile(PublicVar.path_delay_2);
         }
         public Main  frmMain;
         private void Btn_todelay_Click(object sender, EventArgs e)

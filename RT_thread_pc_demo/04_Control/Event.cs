@@ -38,21 +38,21 @@ namespace RT_thread_pc_demo._04_Control
             }
             else
             {
-                if (button.Text == "演示开始")
+                if (button.Text == "开始实验")
                 {
-                    string a = "演示开始";
+                    string a = "开始实验";
                     send_command(ref PublicVar.event_enable, ref a);
 
-                    button.Text = "演示结束";//修改按钮上文字
+                    button.Text = "结束实验";//修改按钮上文字
                     Main.Menu_change += mcu_result;
 
                 }
-                else if (button.Text == "演示结束")
+                else if (button.Text == "结束实验")
                 {
-                    string b = "演示结束";
+                    string b = "结束实验";
                     send_command(ref PublicVar.event_close, ref b);
 
-                    button.Text = "演示开始";
+                    button.Text = "开始实验";
                 }
 
             }

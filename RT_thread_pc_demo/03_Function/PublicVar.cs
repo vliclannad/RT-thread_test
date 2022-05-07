@@ -35,7 +35,15 @@
 
 
         public static string path_main="..\\..\\05_Information\\main_information.txt";
+        public static string path_delay_1 = "..\\..\\05_Information\\delay_information_1.txt";
+        public static string path_delay_2 = "..\\..\\05_Information\\delay_information_2.txt";
         public static string path_event_1 = "..\\..\\05_Information\\event_information_1.txt";
         public static string path_event_2 = "..\\..\\05_Information\\event_information_2.txt";
+        public static string path_message_1 = "..\\..\\05_Information\\message_information_1.txt";
+        public static string path_message_2 = "..\\..\\05_Information\\message_information_2.txt";
+        public static string path_sp_1 = "..\\..\\05_Information\\sp_information_1.txt";
+        public static string path_sp_2 = "..\\..\\05_Information\\sp_information_2.txt";
+        public static string path_mutex_1 = "..\\..\\05_Information\\mutex_information_1.txt";
+        public static string path_mutex_2 = "..\\..\\05_Information\\mutex_information_2.txt";
     }
 }

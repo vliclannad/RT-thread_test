@@ -31,15 +31,21 @@
             this.Btn_todelay = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox_delay = new System.Windows.Forms.TextBox();
+            this.textBox_delay_1 = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox_delay_2 = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Btn_todelay
             // 
-            this.Btn_todelay.Location = new System.Drawing.Point(647, 114);
+            this.Btn_todelay.Location = new System.Drawing.Point(124, 455);
             this.Btn_todelay.Name = "Btn_todelay";
-            this.Btn_todelay.Size = new System.Drawing.Size(176, 80);
+            this.Btn_todelay.Size = new System.Drawing.Size(243, 64);
             this.Btn_todelay.TabIndex = 0;
             this.Btn_todelay.Text = "实验页面";
             this.Btn_todelay.UseVisualStyleBackColor = true;
@@ -56,39 +62,85 @@
             this.textBox2.Location = new System.Drawing.Point(389, 52);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(203, 28);
+            this.textBox2.Size = new System.Drawing.Size(167, 28);
             this.textBox2.TabIndex = 3;
             this.textBox2.Text = "实验一 延时实验";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox_delay);
+            this.groupBox1.Controls.Add(this.textBox_delay_1);
             this.groupBox1.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox1.Location = new System.Drawing.Point(14, 95);
+            this.groupBox1.Location = new System.Drawing.Point(40, 81);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(578, 245);
+            this.groupBox1.Size = new System.Drawing.Size(463, 161);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "实验简介";
             // 
-            // textBox_delay
+            // textBox_delay_1
             // 
-            this.textBox_delay.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.textBox_delay_1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_delay.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox_delay.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox_delay.Location = new System.Drawing.Point(34, 28);
-            this.textBox_delay.Multiline = true;
-            this.textBox_delay.Name = "textBox_delay";
-            this.textBox_delay.ReadOnly = true;
-            this.textBox_delay.Size = new System.Drawing.Size(508, 179);
-            this.textBox_delay.TabIndex = 1;
+            this.textBox_delay_1.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox_delay_1.CausesValidation = false;
+            this.textBox_delay_1.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox_delay_1.Location = new System.Drawing.Point(34, 28);
+            this.textBox_delay_1.Multiline = true;
+            this.textBox_delay_1.Name = "textBox_delay_1";
+            this.textBox_delay_1.ReadOnly = true;
+            this.textBox_delay_1.Size = new System.Drawing.Size(392, 110);
+            this.textBox_delay_1.TabIndex = 1;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.textBox_delay_2);
+            this.groupBox2.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox2.Location = new System.Drawing.Point(40, 248);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(463, 201);
+            this.groupBox2.TabIndex = 5;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "延时概述";
+            // 
+            // textBox_delay_2
+            // 
+            this.textBox_delay_2.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox_delay_2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox_delay_2.Location = new System.Drawing.Point(34, 28);
+            this.textBox_delay_2.Multiline = true;
+            this.textBox_delay_2.Name = "textBox_delay_2";
+            this.textBox_delay_2.ReadOnly = true;
+            this.textBox_delay_2.Size = new System.Drawing.Size(392, 152);
+            this.textBox_delay_2.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(576, 119);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(361, 288);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(707, 416);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 12);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "延时实验流程图";
             // 
             // Delay_informaiton
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.Btn_todelay);
@@ -96,6 +148,9 @@
             this.Size = new System.Drawing.Size(1007, 554);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,6 +161,10 @@
         private System.Windows.Forms.Button Btn_todelay;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox_delay;
+        private System.Windows.Forms.TextBox textBox_delay_1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox textBox_delay_2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

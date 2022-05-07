@@ -65,7 +65,7 @@
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(162, 28);
             this.textBox2.TabIndex = 2;
-            this.textBox2.Text = "实验一 事件实验";
+            this.textBox2.Text = "实验二 事件实验";
             // 
             // groupBox1
             // 
