@@ -117,4 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="textBox_main.Text" xml:space="preserve">
+    <value>本项目基于以STM32L431为核心的AHL-STM32L431嵌入式开发套件开发，配合上位机程序完成对实验项目的介绍，演示，结束以及提供帮助文档辅助用户理解实验。
+本项目指在以简单直观的形式呈现出实验过程。
+共支持以下五种实验：
+实验一：延时实验
+实验二：事件实验
+实验三：消息队列实验
+实验四：信号量实验\
+实验五：互斥量实验
+当前运行实验和小灯状态会通过LCD屏显示，实验运行状态会在PC端上
+显示实验流程：
+1.通过顶部菜单栏选取实验
+2.阅读实验简介，知识要点，熟悉实验流程
+3.点击实验开始按钮开始实验</value>
+  </data>
 </root>

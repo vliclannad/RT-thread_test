@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Message_information));
             this.Btn_tomessage = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -108,6 +109,7 @@
             this.textBox_message_2.Multiline = true;
             this.textBox_message_2.Name = "textBox_message_2";
             this.textBox_message_2.ReadOnly = true;
+            this.textBox_message_2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBox_message_2.Size = new System.Drawing.Size(392, 152);
             this.textBox_message_2.TabIndex = 1;
             // 
@@ -115,9 +117,10 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(576, 119);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(537, 100);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(361, 288);
+            this.pictureBox1.Size = new System.Drawing.Size(400, 349);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -125,7 +128,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(707, 416);
+            this.label1.Location = new System.Drawing.Point(691, 455);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 12);
             this.label1.TabIndex = 7;

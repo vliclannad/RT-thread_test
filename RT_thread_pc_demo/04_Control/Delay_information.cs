@@ -17,7 +17,6 @@ namespace RT_thread_pc_demo._04_Control
         public Delay_informaiton()
         {
             InitializeComponent();
-            InitializeComponent();
             textBox_delay_1.Text = OpenTextFile(PublicVar.path_delay_1);
             textBox_delay_2.Text = OpenTextFile(PublicVar.path_delay_2);
         }

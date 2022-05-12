@@ -74,7 +74,7 @@ namespace RT_thread_pc_demo._04_Control
         public void send_command(ref byte[] SendArray, ref string a)
         {
 
-            if (a == "演示开始")
+            if (a == "开始实验")
             {
                 sci = new SCI(PublicVar.g_SCIComNum, PublicVar.g_SCIBaudRate);
                 if (sci.SCIOpen())
@@ -86,7 +86,7 @@ namespace RT_thread_pc_demo._04_Control
                 }
 
             }
-            else if (a == "演示结束")
+            else if (a == "结束实验")
             {
                 sci.DataReceived -= new System.IO.Ports.SerialDataReceivedEventHandler(this.SCIPort_DataReceived);
                 if (sci.IsOpen)

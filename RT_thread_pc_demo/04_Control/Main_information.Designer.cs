@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_information));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox_main = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -59,6 +60,7 @@
             this.textBox_main.ReadOnly = true;
             this.textBox_main.Size = new System.Drawing.Size(663, 324);
             this.textBox_main.TabIndex = 1;
+            this.textBox_main.Text = resources.GetString("textBox_main.Text");
             // 
             // groupBox1
             // 

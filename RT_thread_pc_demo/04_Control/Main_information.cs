@@ -16,7 +16,7 @@ namespace RT_thread_pc_demo._04_Control
         public Main_information()
         {
             InitializeComponent();
-            textBox_main.Text = OpenTextFile(PublicVar.path_main);
+            //textBox_main.Text = OpenTextFile(PublicVar.path_main);
         }
 
         private string OpenTextFile(string path)
