@@ -1,29 +1,17 @@
 #include "includes.h"
-//======================================================================
-//函数名称：app_init
-//函数返回：无
-//参数说明：无
-//功能概要：主线程，要完成全局变量初始化、外设初始化、创建其他用户线程、启动用户线程等工作
-//内部调用：无
-//======================================================================
+
 
 void app_init(void)
 {
-	//（1）======启动部分（开头）==========================================
-	//（1.1）声明main函数使用的局部变量
+
 	rt_thread_t thd_cmdchoose;
 
 
 	
-	//（1.2）【不变】BIOS中API接口表首地址、用户中断处理程序名初始化
-	//（1.3）【不变】关总中断
+
 	DISABLE_INTERRUPTS;
 
-	//（1.4）给主函数使用的局部变量赋初值
 
-	//（1.5）给全局变量赋初值
-
-	//（1.6）用户外设模块初始化
 	printf("  调用gpio_init函数，分别初始化红灯、绿灯、蓝灯\r\n");
 	gpio_init(LIGHT_GREEN,GPIO_OUTPUT,LIGHT_OFF);
 	gpio_init(LIGHT_BLUE,GPIO_OUTPUT,LIGHT_OFF);
@@ -41,9 +29,7 @@ void app_init(void)
     LCD_aotu(4,145,236,155,1);
     LCD_ShowString(6,160,BLACK,GRAY,(char *)"小灯状态:关");
     LCD_aotu(4,180,236,190,1);
-	//（1.7）使能模块中断
 	uart_enable_re_int(UART_User);
-	//（1.8）【不变】开总中断
 	ENABLE_INTERRUPTS;
 	
 	//创建事件字
