@@ -1,0 +1,11 @@
+F:\GIT\RT-thread_test\rule_test\obj\Debug\rule_test.csproj.AssemblyReference.cache
+F:\GIT\RT-thread_test\rule_test\obj\Debug\rule_test.csproj.SuggestedBindingRedirects.cache
+F:\GIT\RT-thread_test\rule_test\obj\Debug\rule_test.Form1.resources
+F:\GIT\RT-thread_test\rule_test\obj\Debug\rule_test.Properties.Resources.resources
+F:\GIT\RT-thread_test\rule_test\obj\Debug\rule_test.csproj.GenerateResource.cache
+F:\GIT\RT-thread_test\rule_test\obj\Debug\rule_test.csproj.CoreCompileInputs.cache
+F:\GIT\RT-thread_test\rule_test\bin\Debug\Door_command.exe.config
+F:\GIT\RT-thread_test\rule_test\bin\Debug\Door_command.exe
+F:\GIT\RT-thread_test\rule_test\bin\Debug\Door_command.pdb
+F:\GIT\RT-thread_test\rule_test\obj\Debug\Door_command.exe
+F:\GIT\RT-thread_test\rule_test\obj\Debug\Door_command.pdb
