@@ -283,9 +283,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(343, 80);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(137, 12);
+            this.label8.Size = new System.Drawing.Size(299, 12);
             this.label8.TabIndex = 25;
-            this.label8.Text = "输入10位有效结束时间戳";
+            this.label8.Text = "输入10位有效结束时间戳，默认2022.04.26-2023.05.01";
             // 
             // linkLabel1
             // 
